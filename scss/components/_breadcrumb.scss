@@ -1,0 +1,18 @@
+.breadcrumb{
+    padding-top: 30px;
+}
+.breadcrumb__text{
+    font-size: 1.5rem;
+    a{
+
+        text-decoration: none;
+        color:#FF6D00 ;
+        text-transform:uppercase;
+    }
+    .sperator{
+        padding:0 3px
+    }
+    &-title{
+        text-transform:capitalize;
+    }
+}

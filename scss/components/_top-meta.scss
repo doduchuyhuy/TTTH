@@ -1,0 +1,25 @@
+.single-top-meta{
+    padding: 80px 0;
+    background: #feb343;
+    margin-top:1px;
+}
+.single-top-meta__title{
+    text-align: center;
+    h1{
+        // text-align: center;
+        color: white;
+        text-transform:capitalize;
+        font-size: 4.5rem;
+        line-height: 60px;
+        margin-bottom: 20px;
+        font-weight: 700;
+        padding:0 100px;
+    }
+    span{
+        color: white;
+        padding: 0 15px;
+    }
+    span:not(span:nth-child(4)){
+        border-right: 1px solid white;
+    }
+}
