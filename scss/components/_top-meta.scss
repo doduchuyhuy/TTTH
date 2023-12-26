@@ -1,25 +1,44 @@
+@use "../abstracts";
+
 .single-top-meta{
+    width: 100%;
     padding: 80px 0;
     background: #feb343;
     margin-top:1px;
+    @include abstracts.breakpoint(lg) {
+        padding: 40px 0;
+       
+    }
 }
 .single-top-meta__title{
     text-align: center;
     h1{
-        // text-align: center;
         color: white;
         text-transform:capitalize;
         font-size: 4.5rem;
-        line-height: 60px;
+        line-height: 2;
         margin-bottom: 20px;
         font-weight: 700;
         padding:0 100px;
+        @include abstracts.breakpoint(sm) {
+                font-size: 2rem;
+                padding: 0;
+                line-height: 1.5;
+        }
+        
     }
+    
     span{
         color: white;
+        font-size: 1.5rem;
         padding: 0 15px;
+        @include abstracts.breakpoint(sm) {
+            font-size: 1.3rem;
+    }
+
     }
     span:not(span:nth-child(4)){
         border-right: 1px solid white;
     }
+    
 }
