@@ -1,8 +1,12 @@
+@use "../abstracts";
 .breadcrumb{
     padding-top: 30px;
 }
 .breadcrumb__text{
     font-size: 1.5rem;
+    @include abstracts.breakpoint(md) {
+        line-height:1.4;
+     }
     a{
 
         text-decoration: none;

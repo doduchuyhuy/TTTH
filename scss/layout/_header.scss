@@ -34,7 +34,7 @@ header{
         text-decoration: none;
         color: white;
     }
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.breakpoint(xl) {
         padding: 20px;
         position: fixed;
         z-index: 10;
