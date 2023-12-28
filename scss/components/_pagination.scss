@@ -1,0 +1,23 @@
+@use "../abstracts";
+.pagination{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    a{
+        text-decoration: none;   
+    }
+    .page-number{
+        min-width: 30px;
+        min-height: 30px;
+        line-height: 30px;
+        text-align: center;
+        display: inline-block;
+        color: black;
+        background-color: #f1f1f1;
+        font-weight: 500; 
+    }
+    li:hover .page-number{
+        color: white;
+        background-color: #feae45;
+    }
+}
