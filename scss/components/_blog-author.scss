@@ -1,3 +1,4 @@
+@use "../abstracts";
 .blog-author{
     padding: 20px;
     border: 1px solid #d9e1ee;
@@ -6,16 +7,25 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include abstracts.breakpoint(md) {
+            flex-direction: column;
+            gap: 10px;
+          }
         .info-left{
             display: flex;
             align-items: center;
+            gap: 15px;
+            @include abstracts.breakpoint(md) {
+                flex-direction: column;
+                gap: 10px;
+              }
             img{
                 border-radius: 50%;
             }
             span{
                 font-size: 1.8rem;
                 font-weight: 700;
-                padding-left: 15px
+                // padding-left: 15px
             };
         }
         .info-right{
@@ -24,6 +34,9 @@
                 font-size: 1.2rem;
                 font-weight: 400;
                 padding-right: 10px;
+                @include abstracts.breakpoint(md) {
+                    display: none;
+                  }
             }
             a{
                 display: inline-block;
@@ -41,19 +54,39 @@
     }
     .info-2{
         display: flex;
+        @include abstracts.breakpoint(md) {
+           flex-direction: column;
+         }
         .quote-left{
-            max-width: 16.653%;
-            flex-basis: 16.653%;
-            padding-top: 10px;
-            padding-left: 30px;
+            max-width: 10.653%;
+            flex-basis: 10.653%;
+            text-align: center;
+            padding-top: 5px;
+            // padding-top: 10px;
+            // padding-left: 30px;
+            @include abstracts.breakpoint(md) {
+                text-align: left;
+              }
+
         }
         .quote-center{
+            max-width: 82.793%;
             font-size: 1.4rem;
             font-weight: 400;
             line-height: 2.4rem;
+            @include abstracts.breakpoint(md) {
+                max-width: 100%;
+              }
         }
         .quote-right{
-            padding-top: 30px;
+            max-width: 6.22%;
+            display: flex;
+            align-items: flex-end;
+            @include abstracts.breakpoint(md) {
+                display: block;
+                max-width: 100%;
+                text-align: right;
+              }
         }
     }
 }

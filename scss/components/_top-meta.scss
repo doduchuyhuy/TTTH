@@ -21,13 +21,12 @@
         font-weight: 700;
         padding:0 100px;
         @include abstracts.breakpoint(lg) {
-            font-size: 3rem;
+            font-size: 3.6rem;
             padding: 0;
-            line-height: 1.4;
         }
-        @include abstracts.breakpoint(sm) {
-            font-size: 2rem;
-    }
+        // @include abstracts.breakpoint(sm) {
+        //     font-size: 2rem;
+        // }
         
     }
     
