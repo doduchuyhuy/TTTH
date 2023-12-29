@@ -1,5 +1,8 @@
 @forward "./top-meta";
 @forward "./breadcrumb";
-@forward "./home";
-@forward "./sidebar";
+@forward "./blog-list";
+@forward "./blog-details";
+@forward "./sidebar-blog-list";
+@forward "./sidebar-blog-details";
 @forward "./pagination";
+@forward "./blog-author";
