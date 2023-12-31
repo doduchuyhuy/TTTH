@@ -15,46 +15,9 @@
 </head>
 <body>
         <header id="header"></header>
-        <div class="single-top-meta">
-            <div class="container">
-                <div class="single-top-meta__title">
-                    <h1>
-                        [2024] laravel là gì? cách cài đặt và sử dụng framework laravel
-                    </h1>
-                    <div class="text-center">
-                        <span>
-                            <i class="fa-regular fa-calendar"></i>
-                            Ngày đăng: 26/12/2023
-                        </span>
-                        <span>
-                            <i class="fa-regular fa-calendar"></i>
-                            Cập nhật: 26/12/2023
-                        </span>
-                        <span>
-                            <i class="fa-solid fa-eye"></i>
-                            1000 lượt xem
-                        </span>
-                        <span>
-                            <i class="fa-solid fa-user"></i>
-                            Đỗ Đức Huy
-                        </span>
-                    </div>     
-                </div>
-            </div>
-        </div>
-        <div class="breadcrumb">
-            <div class="container">
-                <div class="breadcrumb__text">
-                    <a href="#!">Trang chủ</a>
-                    <span class="sperator"> | </span>
-                    <a href="#!">Blog</a>
-                    <span class="sperator"> | </span>
-                    <span class="breadcrumb__text-title">[2024] laravel là gì? cách cài đặt và sử dụng framework laravel</span>
-                </div>
-            </div>
-        </div>
-        
-        <article id="blog-list"></article>
+        <article id="single-top-meta"></article>
+        <article id="breadcrumb"></article>
+        <!-- <article id="blog-list"></article> -->
         <article id="blog-details"></article>
         <footer id="footer"></footer>
     
@@ -62,7 +25,9 @@
         load("#header","./template/header.html");
         load("#footer","./template/footer.html");
         load("#blog-details","./template/blog-details.html");
-        load("#blog-list","./template/blog-list.html");
+        // load("#blog-list","./template/blog-list.html");
+        load("#single-top-meta","./template/single-top-meta.html");
+        load("#breadcrumb","./template/breadcrumb.html");
     </script>
 </body>
 </html>

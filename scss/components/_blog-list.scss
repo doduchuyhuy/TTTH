@@ -42,7 +42,7 @@
                 padding: 15px 20px;
                 border-bottom-left-radius:10px ;
                 border-bottom-right-radius:10px ;
-                h5{
+                h2{
                     font-size: 1.9rem;
                     font-weight: 700;
                     margin-bottom: 15px;
@@ -96,7 +96,7 @@
          }
          .box-text{
             flex: 2;
-            h5{
+            h2{
                 a{
                     text-transform:uppercase;
                     text-decoration: none;
@@ -117,7 +117,7 @@
                      }
                 }    
             }
-            h5:hover{
+            h2:hover{
                 a{
                     color: #F37032;
                 }

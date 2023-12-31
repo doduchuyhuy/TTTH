@@ -3,7 +3,106 @@
         <div class="row">
             <div class="col-9 col-lg-12">
                 <div class="content">
+                    <h5>1. Mục đích:</h5><br>
+                    <p>Tài liệu này dùng để hướng dẫn các Cán bộ và Giáo viên thuộc Học viện Ngoại giao, có thể sử dụng phần mềm Quản Lý Đào Tạo “UniSoft” từ bên ngoài mạng nội bộ của Học viện. Sử dụng các chức năng nghiệp vụ của phần mềm hỗ trợ công tác Đào tạo.</p>
+                    <br>
+                    <h5>2. Nguyên tắc:</h5><br>
+                    <p>- Vì lý do đảm bảo an toàn thông tin, việc sử dụng phần mềm UniSoft, truy cập vào CSDL đào tạo của Học Viện, sẽ được thực hiện thông qua mạng VPN (Mạng bảo mật riêng, kết nối trực tiếp đến Học Viện)</p>
+                    <p>- Chú ý: chỉ sau khi kết nối VPN, mới có thể truy cập và sử dụng phần mềm UniSoft.</p>
+                    <br>
+                    <h5>3. Các bước thực hiện:</h5><br>
+                    <p>Bước 1: Đăng nhập vào VPN thông qua công cụ kết nối VPN bằng tài khoản đã được cấp. Các bước thực hiện kết nối VPN thực hiện theo hướng dẫn tại “Phụ lục : Hướng dẫn cài đặt và kết nối VPN”. </p>
+                    <p>Bước 2: Sau khi đã kết nối được vào VPN, bắt đầu sử dụng phần mềm UniSoft như bình thường.</p>
+                    <p>Bước 3: Sau khi sử dụng xong, thoát khỏi phần mềm UniSoft.</p>
+                    <p>Bước 4: Ngắt kết nối VPN, bằng cách click vào biểu tượng phần mềm FortiClient VPN và click “Disconnect”.</p>
+                    <p>* Việc ngắt kết nối VPN là yêu cầu bắt buộc, để đảm bảo an toàn thông tin cho phần mềm Quản lý đào tạo và tránh chiếm dụng băng thông mạng của Học viện.</p>
+                    <br>
+                    <h4>Phụ lục : Hướng dẫn cài đặt và kết nối QLDT-VPN</h4>
+                    <br>
+                    <h5>1. Yêu cầu về môi trường cài đặt</h5><br>
+                    <p>Yêu cầu máy trạm (Client): Cấu hình tối thiểu.</p>
+                    <ul>
+                        <li><p>CPU: Intel Core i3 hoặc tương đương.</p></li>
+                        <li><p>RAM: 4 GB hoặc cao hơn.</p></li>
+                        <li><p>Ổ cứng: Ít nhất 10 GB dung lượng trống.</p></li>
+                        <li><p>Kết nối Internet ổn định.</p></li>
+                        <li><p>Hỗ trợ hệ điều hành: Hệ điều hành Windows 10/11</p></li>
+                    </ul>
+                    <br>
+                    <h5>2. Quy trình cài đặt</h5><br>
+                    <p>Bước 1: Tải file cài đặt phần mềm VPN từ đường link được cung cấp.</p>
+                    <p>- File tải về có dạng “QLDT_VPN.zip”</p>
+                    <img style="max-width: 100%;" src="../assets/images/anh1.png" alt="">
+                    <br>
+                    <p>Bước 2: Giải nén file cài đặt phần mềm.</p>
+                    <p>- Click nút phải chuột vào file zip đã tải về, chọn “Extract All…” hoặc “Extract Here””</p>
+                    <img style="max-width: 100%;" src="../assets/images/anh2.png" alt="">
+                    <br>
+                    <p>- Người sử dụng sẽ nhìn thấy trong thư mục được giải nén ra như sau:</p>
+                    <img style="max-width: 100%;" src="../assets/images/anh3.png" alt="">
+                    <br>
+                    <p>- Người dùng click đúp để chạy file “FortiClient7-64.exe”</p>
+                    <img style="max-width: 100%;" src="../assets/images/anh4.png" alt="">
+                    <br>
+                    <p>- Tích vào chọn “Yes, I have read and accept the”. Sau đó click “Next”.</p>
+                    <p>- Cửa sổ tiếp theo click “Install” để bắt đầu cài đặt.</p>
+                    <p>- Quá trình cài đặt hiển thị như sau.</p>
+                    <img style="max-width: 100%;" src="../assets/images/anh5.png" alt="">
+                    <br>
+                    <p>- Cuối cùng khi hiện cửa sổ “Completed …”, bạn click “Finish” để hoàn thành.</p>
+                    <img style="max-width: 100%;" src="../assets/images/anh6.png" alt="">
+                    <br>
+                    <h5>3. Cách thức cấu hình hệ thống:</h5><br>
+                    <p>- Sau khi cài đặt thành công thì người dùng tiến hành chạy và cấu hình lần đầu cho phần mềm VPN, bằng cách click đúp vào biểu tượng phần mềm “FortiClient VPN”:</p>
+                    <img style="max-width: 100%;" src="../assets/images/anh7.png" alt="">
+                    <br>
+                    <p>- Màn hình phần mềm VPN hiển thị khi khởi chạy lần đầu như hình dưới.</p>
+                    <img style="max-width: 100%;" src="../assets/images/anh8.png" alt="">
+                    <br>
+                    <p>- Click chuột tại mục “Configure VPN”</p>
+                    <p>- Tiếp theo click chọn mục “XML” như hình dưới</p>
+                    <p>- Và click tiếp vào mục “+ Import XML Configuration”</p>
+                    <img style="max-width: 100%;" src="../assets/images/anh9.png" alt="">
+                    <br>
+                    <p>- Trình Explorer hiện ra, bạn tìm và chọn file “qldt-dav.conf” trong thư mục QLDT_VPN đã tải về và giải nén trước đó.</p>
+                    <img style="max-width: 100%;" src="../assets/images/anh10.png" alt="">
+                    <br>
+                    <p>- Sau khi chọn file “qldt-dav.conf” bạn click “Open” để thực hiện import cấu hình.</p>
+                    <p>- Đợi khoảng 5 giây phần mềm sẽ hoàn thành việc import và hiện thông báo  “Configuration restored successfully”</p>
+                    <img style="max-width: 100%;" src="../assets/images/anh11.png" alt="">
+                    <br>
+                    <p>- Click “OK” để tiếp tục</p>
+                    <img style="max-width: 100%;" src="../assets/images/anh12.png" alt="">
+                    <br>
+                    <p>- Đến đây chúng ta đã hoàn thành việc cài đặt và cấu hình cho phần mềm VPN.</p>
+                    <img style="max-width: 100%;" src="../assets/images/anh13.png" alt="">
+                    <br>
+                    <p>- Để kết nối trực tiếp đến mạng nội bộ của Học viện, bạn nhập Username và Password đã được cung cấp, sau đó click “Connect”</p>
+                    <p>- Thông báo kết nối hoàn thành, sẽ hiển thị nhanh tại góc phải dưới của màn hình.</p>
+                    <img style="max-width: 100%;" src="../assets/images/anh14.png" alt="">
+                    <br>
+                    <p>- Khi đã kết nối, nếu bạn click vào biểu tượng phần mềm VPN, cửa sổ giao diện sẽ hiển thị như hình dưới.</p>
+                    <p>- Hết phiên làm việc, bạn nên click vào “Disconnect” để đảm bảo an toàn thông tin.</p>
+                    <img style="max-width: 100%;" src="../assets/images/anh15.png" alt="">
+                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     
+
+
+
                 </div>
                 <div class="blog-author">
                     <div class="info-1">
@@ -121,7 +220,7 @@
                                 <a class="box-text__link" href="#!">
                                     [Tìm Hiểu] CentOS là gì? | Tổng hợp kiến thức về hệ điều hành CentOS 2024
                                 </a>
-                            </h5>
+                            </h5><br>
                         </div>  
                     </div>
                     <div class="box-sidebar">
@@ -135,7 +234,7 @@
                                 <a class="box-text__link" href="#!">
                                     Quản trị Server là gì? | 11 phần mềm quản trị Server tốt nhất 2024
                                 </a>
-                            </h5>
+                            </h5><br>
                         </div>
                     </div>
                     <div class="box-sidebar">
@@ -149,7 +248,7 @@
                                 <a class="box-text__link" href="#!">
                                     [2024] Hướng dẫn cách cài đặt WordPress trên VPS chi tiết [A-Z]
                                 </a>
-                            </h5>
+                            </h5><br>
                         </div>
                     </div>
                     <div class="box-sidebar">
@@ -163,7 +262,7 @@
                                 <a class="box-text__link" href="#!">
                                     [2024] VPS Forex là gì? | Những lợi ích tuyệt vời của VPS Forex
                                 </a>
-                            </h5>
+                            </h5><br>
                         </div>
                     </div>
                 </aside>
