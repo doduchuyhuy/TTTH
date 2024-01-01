@@ -1776,12 +1776,44 @@ footer {
   font-weight: 400;
   text-align: justify;
 }
-.content img {
-  display: block;
+.content .content-image {
+  text-align: center;
+}
+.content .content-image img {
+  display: inline-block;
 }
 .content ul {
   list-style-type: disc;
   padding-left: 50px;
+}
+.content .center {
+  text-align: center;
+}
+.content .fi {
+  font-style: italic;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  padding-top: 25vh;
+}
+.modal .close {
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+.modal .modal-content {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: auto;
 }
 
 .sidebar-blog-list {
@@ -1891,7 +1923,7 @@ footer {
   padding: 8px 10px;
 }
 .sidebar-blog-details .box-sidebar {
-  padding: 15px 10px;
+  padding: 10px;
   display: flex;
   gap: 10px;
   border-bottom: 1px solid silver;
@@ -1914,7 +1946,7 @@ footer {
   transform: scale(1);
 }
 .sidebar-blog-details .box-sidebar .box-text {
-  flex: 3;
+  flex: 2;
 }
 .sidebar-blog-details .box-sidebar .box-text h5 a {
   text-transform: capitalize;

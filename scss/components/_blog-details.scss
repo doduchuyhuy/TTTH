@@ -17,12 +17,43 @@
         font-weight: 400;
         text-align: justify;
     }
-    img{
-        display:block;
+    .content-image{
+        text-align: center;
+        img{
+            display:inline-block;
+        }
     }
     ul{
         list-style-type: disc;
         padding-left: 50px;
     }
-    
+    .center{
+        text-align: center;
+    }
+    .fi{
+        font-style: italic;
+    }   
+}
+//Modal
+.modal{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.8); 
+    z-index: 1;
+    padding-top: 25vh;
+    .close{
+        position: absolute;
+        top: 60px;
+        right: 30px;
+        color: white;
+        font-size: 35px;
+        cursor: pointer;
+    }
+    .modal-content{
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        margin: auto;
+    }
 }

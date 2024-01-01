@@ -51,3 +51,34 @@ function initJsToggle() {
         };
     });
 }
+
+window.onload = function(){ 
+    // Lấy phần Modal
+var modal = document.getElementById('myModal');
+// Lấy đường dẫn của hình ảnh và gán vào trong phần Modal
+var images = document.getElementsByClassName('myImg');
+var modalImg = document.getElementById("img01");
+for (var i = 0; i < images.length; i++) {
+    var img = images[i];
+    // and attach our click listener for this image.
+    img.onclick = function(evt) {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    }
+  }
+// lấy button span có chức năng đóng Modal
+// var span = document.getElementsByClassName("close")[0];
+//Khi button được click, đóng modal
+// span.onclick = function() { 
+//     modal.style.display = "none";
+// }
+modal.onclick = function() { 
+    modal.style.display = "none";
+}
+
+
+}
+
+
+
+
