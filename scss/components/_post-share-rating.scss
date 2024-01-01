@@ -1,0 +1,104 @@
+@use "../abstracts";
+.post-share-rating{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    @include abstracts.breakpoint(md) {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+    .share{
+        span{
+            font-size: 1.5rem;
+            padding-right: 2px;
+        }
+        a{
+            text-decoration: none;
+        }
+        .facebook{
+            font-size: 1.5rem;
+            display: inline-block;
+            color:white;
+            margin: 0 2px;
+            background-color:#3a589d!important;
+            border-radius: 4px;
+            width: 30px;
+            height: 30px;
+            line-height: 3rem;
+            text-align: center;
+        }
+        .facebook:hover{
+            background-color: #2E467E!important;
+        }
+        
+        .twitter{
+            font-size: 1.5rem;
+            display: inline-block;
+            background-color: #2478ba!important;
+            color: white;
+            margin: 0 2px;
+            border-radius: 4px;
+            width: 30px;
+            height: 30px;
+            line-height: 3rem;
+            text-align: center;
+        }
+        .twitter:hover{
+            background-color:#1D6095!important ;
+        }
+        .pinterest{
+            
+            font-size: 1.5rem;
+            display: inline-block;
+            margin: 0 2px;
+            background-color: #cb2320!important;;
+            color: white;
+            border-radius: 4px;
+            width: 30px;
+            height: 30px;
+            line-height: 3rem;
+            text-align: center;
+        }
+        
+        .pinterest:hover{
+            background-color:#A21C1A!important;
+        }
+        .linkedin{
+            font-size: 1.5rem;
+            margin: 0 2px;
+            display: inline-block;
+            background-color: #0072b7!important;
+            color: white;
+            border-radius: 4px;
+            width: 30px;
+            height: 30px;
+            line-height: 3rem;
+            text-align: center;
+        }
+        .linkedin:hover{
+            background-color: #005B92!important;
+        }
+    }
+    .rating{
+        display: flex;
+        gap:5px;
+        line-height:2.5rem ;
+        span:first-of-type{
+            font-weight: 500;
+        }
+        ul{
+            display: flex;
+            li{
+                cursor: pointer;
+                font-size: 2.5rem;
+            }
+        }
+        span:last-of-type{
+            font-size: 14px !important;
+            color: #3c4859;
+        }
+        
+    }
+    
+}
