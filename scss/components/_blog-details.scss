@@ -1,59 +1,61 @@
 @use "../abstracts";
-.content{
-    margin-top: 30px;
-    h4{
-        text-align: center;
-        font-weight: 700;
-        font-size: 2.8rem;
-        line-height:4.2rem ;
-    }
-    h5{
-        font-weight: 700;
-        font-size: 2rem;
-        
-    }
-    p{
-        line-height: 2.4rem;
-        font-weight: 400;
-        text-align: justify;
-    }
-    .content-image{
-        text-align: center;
-        img{
-            display:inline-block;
+.blog-details{
+    .content{
+        margin-top: 30px;
+        h4{
+            text-align: center;
+            font-weight: 700;
+            font-size: 2.8rem;
+            line-height:4.2rem ;
         }
+        h5{
+            font-weight: 700;
+            font-size: 2rem;
+            
+        }
+        p{
+            line-height: 2.4rem;
+            font-weight: 400;
+            text-align: justify;
+        }
+        .content-image{
+            text-align: center;
+            img{
+                display:inline-block;
+            }
+        }
+        ul{
+            list-style-type: disc;
+            padding-left: 50px;
+        }
+        .center{
+            text-align: center;
+        }
+        .fi{
+            font-style: italic;
+        }   
     }
-    ul{
-        list-style-type: disc;
-        padding-left: 50px;
-    }
-    .center{
-        text-align: center;
-    }
-    .fi{
-        font-style: italic;
-    }   
-}
-//Modal
-.modal{
-    display: none;
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0,0,0,0.9); 
-    z-index: 1;
-    padding-top: 25vh;
-    .close{
-        position: absolute;
-        top: 60px;
-        right: 30px;
-        color: white;
-        font-size: 35px;
-        cursor: pointer;
-    }
-    .modal-content{
-        max-width: 100%;
-        max-height: 100%;
-        display: block;
-        margin: auto;
+    //Modal
+    .modal{
+        display: none;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0,0,0,0.9); 
+        z-index: 1;
+        padding-top: 25vh;
+        .close{
+            position: absolute;
+            top: 60px;
+            right: 30px;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        }
+        .modal-content{
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            margin: auto;
+        }
     }
 }

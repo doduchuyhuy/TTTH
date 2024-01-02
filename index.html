@@ -16,7 +16,8 @@
     <title>Document</title>
 </head>
 <body>
-        <header id="header"></header>
+        <div id="headerpro"></div>
+        <!-- <header id="header"></header> -->
         <article id="single-top-meta"></article>
         <article id="breadcrumb"></article>
         <!-- <article id="blog-list"></article> -->
@@ -33,6 +34,7 @@
         // load("#breadcrumb","./template/breadcrumb.html");
 
         $(document).ready(function(){
+            $('#headerpro').load("./template/headerpro.html");
             $('#header').load("./template/header.html", function(){
                 $('.js-toggle').on("click", function(){
                 $('#navbar').toggleClass('show');
