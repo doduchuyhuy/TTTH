@@ -33,9 +33,29 @@
         // load("#breadcrumb","./template/breadcrumb.html");
 
         $(document).ready(function(){
-            $('#header').load("./template/header.html");
+            $('#header').load("./template/header.html", function(){
+                $('.js-toggle').on("click", function(){
+                $('#navbar').toggleClass('show');
+            });
+            });
             $('#footer').load("./template/footer.html");
-            $('#blog-details').load("./template/blog-details.html");
+            $('#blog-details').load("./template/blog-details.html", function(){
+            var modal = document.getElementById('myModal');
+          // Lấy đường dẫn của hình ảnh và gán vào trong phần Modal
+            var images = document.getElementsByClassName('myImg');
+            var modalImg = document.getElementById("img01");
+            for (var i = 0; i < images.length; i++) {
+            var img = images[i];
+            // and attach our click listener for this image.
+            img.onclick = function(evt) {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+                }
+            }
+            modal.onclick = function(evt) { 
+            modal.style.display = "none";
+            }            
+            });
             // $('#blog-list').load("./template/blog-list.html");
             $('#single-top-meta').load("./template/single-top-meta.html");
             $('#breadcrumb').load("./template/breadcrumb.html");
