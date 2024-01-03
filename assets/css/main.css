@@ -67,6 +67,10 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+.p-0 {
+  padding: 0;
+}
+
 .row > *, .container-fluid, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
   padding-right: calc(var(--grid-gutter-x) * 0.5);
@@ -2247,12 +2251,12 @@ footer {
 }
 
 #headerpro {
-  padding: 25px;
   background-color: #232323;
+  padding: 25px;
 }
 #headerpro .menupro {
   display: flex;
-  height: 188px;
+  height: 192px;
   align-items: center;
   justify-content: space-between;
 }
@@ -2270,8 +2274,7 @@ footer {
   height: 100%;
 }
 #headerpro .menupro .content .left-flip {
-  width: 94px;
-  height: 100%;
+  width: 96px;
 }
 #headerpro .menupro .content .left-flip .social {
   width: 100%;
@@ -2321,7 +2324,7 @@ footer {
 #headerpro .menupro .content .left-flip .blog {
   height: 50%;
   background-color: orange;
-  line-height: 94px;
+  line-height: 96px;
   font-size: 4rem;
   color: white;
   text-align: center;
@@ -2330,13 +2333,12 @@ footer {
 }
 #headerpro .menupro .content .center-flip {
   flex: 2;
-  height: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 #headerpro .menupro .content .center-flip .flip-inner {
   display: block;
-  height: 100%;
+  height: 96px;
   perspective: 800px;
   border-left: 2px solid #fff;
   border-bottom: 2px solid #fff;
@@ -2384,7 +2386,7 @@ footer {
 }
 #headerpro .menupro .content .right-flip {
   font-size: 1.2rem;
-  flex: 1;
+  width: 222px;
   height: 100%;
   background-color: #0c66aa;
 }
@@ -2393,23 +2395,23 @@ footer {
   display: flex;
 }
 #headerpro .menupro .content .right-flip .top .top-3 {
-  flex: 2;
+  width: 136px;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 #headerpro .menupro .content .right-flip .top .top-3_1 {
-  height: 50%;
-  line-height: 47px;
+  height: 46px;
+  line-height: 46px;
   text-align: center;
   color: white;
   border-left: 2px solid #fff;
   border-top: 2px solid #fff;
 }
 #headerpro .menupro .content .right-flip .top .top-3_2 {
-  height: 50%;
+  height: 50px;
   display: flex;
-  line-height: 47px;
+  line-height: 50px;
 }
 #headerpro .menupro .content .right-flip .top .top-3_2-item {
   flex: 1;
@@ -2429,7 +2431,7 @@ footer {
   line-height: 15px;
   transition: all 0.2s linear;
   top: 20px;
-  left: 69px;
+  left: 70px;
 }
 #headerpro .menupro .content .right-flip .top .top-3_2-item:first-child {
   border-left: 2px solid #fff;
@@ -2452,7 +2454,7 @@ footer {
 #headerpro .menupro .content .right-flip .top .top-2 {
   flex: 1;
   height: 100%;
-  line-height: 47px;
+  line-height: 48px;
 }
 #headerpro .menupro .content .right-flip .top .top-2_item {
   height: 50%;
@@ -2473,13 +2475,13 @@ footer {
   height: 50%;
 }
 #headerpro .menupro .content .right-flip .bottom-2 {
-  flex: 2;
+  width: 136px;
   height: 100%;
   display: flex;
 }
 #headerpro .menupro .content .right-flip .bottom-2_item {
   flex: 1;
-  line-height: 94px;
+  line-height: 96px;
   height: 100%;
   font-size: 3rem;
   color: white;
@@ -2491,7 +2493,7 @@ footer {
   flex: 1;
 }
 #headerpro .menupro .content .right-flip .bottom-1_item {
-  line-height: 94px;
+  line-height: 96px;
   height: 100%;
   font-size: 3rem;
   color: white;
