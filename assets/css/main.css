@@ -2248,23 +2248,24 @@ footer {
 
 #headerpro {
   padding: 25px;
+  background-color: #232323;
 }
 #headerpro .menupro {
   display: flex;
   height: 188px;
   align-items: center;
+  justify-content: space-between;
 }
 #headerpro .menupro .logo {
-  flex: 1;
-  background-color: white;
+  flex: 2;
 }
 #headerpro .menupro .logo img {
   display: block;
-  max-width: 300px;
+  max-width: 100%;
   max-height: 100%;
 }
 #headerpro .menupro .content {
-  flex: 2;
+  flex: 3;
   display: flex;
   height: 100%;
 }
@@ -2277,6 +2278,9 @@ footer {
   height: 50%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
 }
 #headerpro .menupro .content .left-flip .social .facebook {
   width: 100%;
@@ -2317,6 +2321,12 @@ footer {
 #headerpro .menupro .content .left-flip .blog {
   height: 50%;
   background-color: orange;
+  line-height: 94px;
+  font-size: 4rem;
+  color: white;
+  text-align: center;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
 }
 #headerpro .menupro .content .center-flip {
   flex: 2;
@@ -2326,9 +2336,10 @@ footer {
 }
 #headerpro .menupro .content .center-flip .flip-inner {
   display: block;
-  flex: 1;
   height: 100%;
   perspective: 800px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
 }
 #headerpro .menupro .content .center-flip .flip-inner .icon-flip {
   position: relative;
@@ -2365,13 +2376,129 @@ footer {
   color: white;
   transform: rotateY(180deg);
 }
+#headerpro .menupro .content .center-flip .flip-inner.one, #headerpro .menupro .content .center-flip .flip-inner.two, #headerpro .menupro .content .center-flip .flip-inner.three {
+  border-top: 2px solid #fff;
+}
 #headerpro .menupro .content .center-flip .flip-inner:hover .icon-flip {
   transform: rotateY(180deg);
 }
 #headerpro .menupro .content .right-flip {
+  font-size: 1.2rem;
   flex: 1;
   height: 100%;
   background-color: #0c66aa;
+}
+#headerpro .menupro .content .right-flip .top {
+  height: 50%;
+  display: flex;
+}
+#headerpro .menupro .content .right-flip .top .top-3 {
+  flex: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#headerpro .menupro .content .right-flip .top .top-3_1 {
+  height: 50%;
+  line-height: 47px;
+  text-align: center;
+  color: white;
+  border-left: 2px solid #fff;
+  border-top: 2px solid #fff;
+}
+#headerpro .menupro .content .right-flip .top .top-3_2 {
+  height: 50%;
+  display: flex;
+  line-height: 47px;
+}
+#headerpro .menupro .content .right-flip .top .top-3_2-item {
+  flex: 1;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+#headerpro .menupro .content .right-flip .top .top-3_2-item span {
+  cursor: pointer;
+  position: absolute;
+  font-size: 0.9rem;
+  display: block;
+  width: 100%;
+  height: 15px;
+  line-height: 15px;
+  transition: all 0.2s linear;
+  top: 20px;
+  left: 69px;
+}
+#headerpro .menupro .content .right-flip .top .top-3_2-item:first-child {
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  background-color: #98cb02;
+}
+#headerpro .menupro .content .right-flip .top .top-3_2-item:first-child span {
+  background-color: rgba(96, 129, 0, 0.7);
+}
+#headerpro .menupro .content .right-flip .top .top-3_2-item:last-child {
+  border-bottom: 2px solid #fff;
+  background-color: #78797b;
+}
+#headerpro .menupro .content .right-flip .top .top-3_2-item:last-child span {
+  background-color: rgba(65, 66, 69, 0.7);
+}
+#headerpro .menupro .content .right-flip .top .top-3_2-item:hover span {
+  left: 0;
+}
+#headerpro .menupro .content .right-flip .top .top-2 {
+  flex: 1;
+  height: 100%;
+  line-height: 47px;
+}
+#headerpro .menupro .content .right-flip .top .top-2_item {
+  height: 50%;
+  text-align: center;
+  color: white;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+#headerpro .menupro .content .right-flip .top .top-2_item:first-child {
+  border-top: 2px solid #fff;
+}
+#headerpro .menupro .content .right-flip .top .top-2_item:last-child {
+  font-size: 1rem;
+}
+#headerpro .menupro .content .right-flip .bottom {
+  display: flex;
+  height: 50%;
+}
+#headerpro .menupro .content .right-flip .bottom-2 {
+  flex: 2;
+  height: 100%;
+  display: flex;
+}
+#headerpro .menupro .content .right-flip .bottom-2_item {
+  flex: 1;
+  line-height: 94px;
+  height: 100%;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+#headerpro .menupro .content .right-flip .bottom-1 {
+  flex: 1;
+}
+#headerpro .menupro .content .right-flip .bottom-1_item {
+  line-height: 94px;
+  height: 100%;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
 }
 
 /*# sourceMappingURL=main.css.map */
