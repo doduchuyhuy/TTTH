@@ -1,0 +1,35 @@
+#signin-signup{
+    background-color: #232323;
+    border-bottom: 2px solid #fff;
+    height: 40px;
+    .container{
+        padding: 0;
+        .content-signin-signup{
+            display: flex;
+            justify-content: flex-end;
+            .signin-link, .signup-link{
+                text-decoration: none;
+                color: #F5F9FC;
+                display: block;
+                padding: 0 15px;
+                line-height: 38px;
+                transition: all 0.2s linear;
+            }
+            .signin-link{
+                border-left: 2px solid #fff;
+                border-right: 2px solid #fff;
+            }
+            .signup-link{
+                border-left: 2px solid #fff;
+            }
+            .signin-link:hover, .signup-link:hover{
+                background: #0C66AA;
+            }
+            i{
+                margin-right: 5px;
+            }
+        }
+    
+    }
+    
+}

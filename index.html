@@ -16,6 +16,7 @@
     <title>Document</title>
 </head>
 <body>
+        <div id="signin-signup"></div>
         <div id="headerpro"></div>
         <!-- <header id="header"></header> -->
         <article id="single-top-meta"></article>
@@ -34,6 +35,7 @@
         // load("#breadcrumb","./template/breadcrumb.html");
 
         $(document).ready(function(){
+            $('#signin-signup').load("./template/header-signin-signup.html");
             $('#headerpro').load("./template/headerpro.html");
             $('#header').load("./template/header.html", function(){
                 $('.js-toggle').on("click", function(){
