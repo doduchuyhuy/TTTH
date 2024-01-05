@@ -6,9 +6,19 @@
 
 html {
     font-size: 62.5%;
+    --background-back:#feb343;
+    --background-font:#232323;
+    --color-font:#fff;
+    --color-back:white;
+    --border:#fff;
 }
 
 body {
     font-size: 1.6rem;
     font-family: Roboto, sans-serif;
+}
+
+.sticky{
+    position: sticky;
+    top: 0.5vh;
 }

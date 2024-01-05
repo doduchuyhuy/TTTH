@@ -1,5 +1,5 @@
 #signin-signup{
-    background-color: #232323;
+    background-color:var(--background-font);
     border-bottom: 2px solid #fff;
     height: 40px;
     .container{
@@ -23,7 +23,7 @@
                 border-left: 2px solid #fff;
             }
             .signin-link:hover, .signup-link:hover{
-                background: #0C66AA;
+                background: var(--background-back);
             }
             i{
                 margin-right: 5px;
