@@ -31,38 +31,22 @@ $(document).ready(function(){
       $('#'+id+'-'+count).css('color', '#ffcc00');
     }
   });
-  //click đánh giá sao 
-
-  // $('.js-toggle').on("click", function(){
-  //   $('#navbar').toggleClass('show');
-  //   // $('.sidebar').toggleClass('sidebar-open');
-  //   // alert('hihi')
-  // });
-        
-        //   var modal = document.getElementById('myModal');
-        //   // Lấy đường dẫn của hình ảnh và gán vào trong phần Modal
-        //   var images = document.getElementsByClassName('myImg');
-        //   var modalImg = document.getElementById("img01");
-        //   for (var i = 0; i < images.length; i++) {
-        //       var img = images[i];
-        //       // and attach our click listener for this image.
-        //       img.onclick = function(evt) {
-        //       modal.style.display = "block";
-        //       modalImg.src = this.src;
-        //         }
-        //     }
-        //     // lấy button span có chức năng đóng Modal
-        //     // var span = document.getElementsByClassName("close")[0];
-        //     //Khi button được click, đóng modal
-        //     // span.onclick = function() { 
-        //     //     modal.style.display = "none";
-        //     // }
-        //  modal.onclick = function(evt) { 
-        //  modal.style.display = "none";
-        //     }            
-  
 });
-
+//Hieu ung khi scroll va load
+window.addEventListener('load',reveal); //scroll la ban dau 
+function reveal(){
+  var reveals = document.querySelectorAll('.reveal');
+  for(var i =0; i< reveals.length; i++){
+    var windowheight = window.innerHeight;
+    var revealtop = reveals[i].getBoundingClientRect().top;
+    var revealpoint = 200;
+    if(revealtop < windowheight - revealpoint){
+      reveals[i].classList.add('active');
+    }else{
+      reveals[i].classList.remove('active');
+    }
+  }
+}
 
 
     
@@ -70,36 +54,7 @@ $(document).ready(function(){
 
     
 
-// $(window).on('load', function(){
 
-//   $('.js-toggle').on("click", function(){
-//     $('#navbar').toggleClass('show');
-//     // $('.sidebar').toggleClass('sidebar-open');
-//     // alert('hihi')
-//   });
-        
-//           var modal = document.getElementById('myModal');
-//           // Lấy đường dẫn của hình ảnh và gán vào trong phần Modal
-//           var images = document.getElementsByClassName('myImg');
-//           var modalImg = document.getElementById("img01");
-//           for (var i = 0; i < images.length; i++) {
-//               var img = images[i];
-//               // and attach our click listener for this image.
-//               img.onclick = function(evt) {
-//               modal.style.display = "block";
-//               modalImg.src = this.src;
-//                 }
-//             }
-//             // lấy button span có chức năng đóng Modal
-//             // var span = document.getElementsByClassName("close")[0];
-//             //Khi button được click, đóng modal
-//             // span.onclick = function() { 
-//             //     modal.style.display = "none";
-//             // }
-//          modal.onclick = function(evt) { 
-//          modal.style.display = "none";
-//             }            
-// })
 
 
     
