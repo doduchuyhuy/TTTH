@@ -2791,5 +2791,74 @@ footer {
 #home .one .container .grid-one .grid-box .box:hover .box-hover {
   transform: translateY(0);
 }
+#home .two {
+  background-color: #F5F9FC;
+  padding-top: 30px;
+}
+#home .two .container {
+  display: flex;
+}
+#home .two .container .section-left {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  max-height: 100px;
+}
+#home .two .container .section-left .first {
+  flex: 1;
+  font-size: 1.4rem;
+  color: #232323;
+  font-weight: bold;
+  padding-left: 2%;
+  text-align: center;
+}
+#home .two .container .section-left .second {
+  flex: 1;
+  font-size: 1.4rem;
+  color: #232323;
+  font-weight: bold;
+  border-right: 1px solid #232323;
+  border-left: 1px solid #232323;
+  padding: 0 20px;
+  line-height: 22px;
+  text-align: center;
+  min-height: 100px;
+}
+#home .two .container .section-left .third {
+  flex: 1;
+  font-size: 1.4rem;
+  color: #232323;
+  font-weight: bold;
+  padding-left: 2%;
+  text-align: center;
+}
+#home .two .container .section-right {
+  flex: 1;
+  font-size: 1.5rem;
+  text-decoration: none;
+  position: relative;
+  top: -30px;
+}
+#home .two .container .section-right .title {
+  background: #94c11c;
+  width: 200px;
+  height: auto;
+  color: white;
+  line-height: 1.5;
+  text-align: center;
+}
+#home .two .container .section-right .title p {
+  padding: 5px;
+}
+#home .two .container .section-right .title p i {
+  font-style: italic;
+}
+#home .two .container .section-right .title p span {
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+#home .two .container .section-right svg polygon {
+  fill: #94c11c;
+}
 
 /*# sourceMappingURL=main.css.map */

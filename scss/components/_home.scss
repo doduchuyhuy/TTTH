@@ -1,4 +1,5 @@
 #home{
+    //one
     .one{
         .container{
             padding: 0;
@@ -108,4 +109,85 @@
 
         }
     }
+
+
+    //two
+    .two{
+        background-color: #F5F9FC;
+        padding-top: 30px;
+        .container{
+            display: flex;
+            .section-left{
+                flex: 3;
+                // flex: 3 0 0%;
+                display: flex;
+                justify-content: center;
+                max-height: 100px;
+                
+                
+                
+                .first{
+                    flex: 1;
+                    font-size: 1.4rem;
+                    color: #232323;
+                    font-weight: bold;
+                    padding-left: 2%;
+                    text-align: center;
+                }
+                .second{
+                    flex: 1;
+                    font-size: 1.4rem;
+                    color: #232323;
+                    font-weight: bold;
+                    border-right: 1px solid #232323;
+                    border-left: 1px solid #232323;
+                    padding: 0 20px;
+                    line-height: 22px;
+                    text-align: center;
+                    min-height: 100px;
+                    
+                }
+                .third{
+                    flex: 1;
+                    font-size: 1.4rem;
+                    color: #232323;
+                    font-weight: bold;
+                    padding-left: 2%;
+                    text-align: center;
+                }
+            }
+            .section-right{
+                flex: 1;
+                font-size: 1.5rem;
+                text-decoration: none;
+                position: relative;
+                top: -30px;
+                .title{
+                    background: #94c11c;
+                    width: 200px;
+                    height: auto;
+                    color: white;
+                    line-height: 1.5;
+                    text-align: center;
+                    p{
+                        padding: 5px;
+                        i{
+                            font-style: italic;
+                        }
+                        span{
+                            text-transform: uppercase;
+                            font-weight: bolder;
+                        }
+                    }
+                    
+                }
+                svg{
+                    polygon{
+                        fill: #94c11c;
+                    }
+                }
+            }
+        }
+    }
+
 }
