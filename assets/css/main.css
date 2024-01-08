@@ -2860,5 +2860,36 @@ footer {
 #home .two .container .section-right svg polygon {
   fill: #94c11c;
 }
+#home .three {
+  background: url(../../assets/slide/slide2ok.jpg) 0 0px no-repeat;
+  height: 400px;
+}
+#home .three .container {
+  height: 400px;
+  background: rgba(255, 255, 255, 0.5);
+}
+#home .three .container .section-center {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home .three .container .section-center .content {
+  text-align: center;
+}
+#home .three .container .section-center .content h3 {
+  font-size: 2.45rem;
+  color: #232323;
+  margin-bottom: 10px;
+}
+#home .three .container .section-center .content p {
+  color: #232323;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+}
+#home .three .container .section-center .content p .medium {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
 
 /*# sourceMappingURL=main.css.map */

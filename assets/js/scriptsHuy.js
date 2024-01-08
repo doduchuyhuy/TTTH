@@ -32,21 +32,21 @@ $(document).ready(function(){
     }
   });
 });
-//Hieu ung khi scroll va load
-window.addEventListener('load',reveal); //scroll la ban dau 
-function reveal(){
-  var reveals = document.querySelectorAll('.reveal');
-  for(var i =0; i< reveals.length; i++){
-    var windowheight = window.innerHeight;
-    var revealtop = reveals[i].getBoundingClientRect().top;
-    var revealpoint = 200;
-    if(revealtop < windowheight - revealpoint){
-      reveals[i].classList.add('active');
-    }else{
-      reveals[i].classList.remove('active');
-    }
-  }
-}
+// //Hieu ung khi scroll va load
+// window.addEventListener('load',reveal); //scroll la ban dau 
+// function reveal(){
+//   var reveals = document.querySelectorAll('.reveal');
+//   for(var i =0; i< reveals.length; i++){
+//     var windowheight = window.innerHeight;
+//     var revealtop = reveals[i].getBoundingClientRect().top;
+//     var revealpoint = 200;
+//     if(revealtop < windowheight - revealpoint){
+//       reveals[i].classList.add('active');
+//     }else{
+//       reveals[i].classList.remove('active');
+//     }
+//   }
+// }
 
 
     
