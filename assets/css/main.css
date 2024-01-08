@@ -2891,5 +2891,78 @@ footer {
   font-size: 1.8rem;
   font-weight: 700;
 }
+#home .four {
+  background: #f5f9fc;
+}
+#home .four .container {
+  padding: 40px 0;
+}
+#home .four .container .content-left {
+  line-height: 22px;
+  margin-right: 8%;
+  text-align: center;
+}
+#home .four .container .content-left h3 {
+  font-size: 2.45rem;
+  line-height: 4rem;
+  color: #232323;
+  font-weight: 400;
+  margin: 10px 0;
+  text-align: left;
+}
+#home .four .container .content-left p {
+  font-size: 1.5rem;
+  color: #232323;
+  text-align: left;
+}
+#home .four .container .content-left p .medium {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+#home .four .container .content-left .quote {
+  text-align: left;
+  background-color: white;
+  padding: 15px 15px 30px 15px;
+  border-radius: 5px;
+  margin: 15px 0;
+}
+#home .four .container .content-left .label {
+  text-align: center;
+  width: 40%;
+}
+#home .four .container .content-right {
+  margin-left: 8%;
+}
+#home .four .container .content-right h3 {
+  font-size: 2.45rem;
+  line-height: 4rem;
+  color: #232323;
+  font-weight: 400;
+  margin: 10px 0;
+}
+#home .four .container .content-right table {
+  font-size: 1.5rem;
+  color: #232323;
+  line-height: 22px;
+}
+#home .four .container .content-right table tr:not(tr:first-child) {
+  border-top: 1px solid #fff;
+}
+#home .four .container .content-right table tr + tr > td:first-child {
+  background: #94c11c;
+  color: white;
+}
+#home .four .container .content-right table tr > td:nth-child(3) {
+  background: #fff2e9;
+}
+#home .four .container .content-right table tr + tr > td:first-child img {
+  width: 15%;
+}
+#home .four .container .content-right table tr td {
+  width: 20%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 8px;
+}
 
 /*# sourceMappingURL=main.css.map */
