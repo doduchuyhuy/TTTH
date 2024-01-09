@@ -192,13 +192,10 @@
     }
     .three{
         background: url(../../assets/slide/slide2ok.jpg) 0 0px no-repeat;
-        height: 400px;
-        
         .container{
-            height: 400px;
             background: rgba(255, 255, 255, 0.5);
             .section-center{
-                height: 300px;
+                padding: 50px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -226,11 +223,15 @@
     .four{
         background:#f5f9fc;;
         .container{
-            padding: 40px 0;
+            // padding: 40px 0;
             .content-left{
                 line-height: 22px;
                 margin-right: 8%;
                 text-align: center;
+                @include abstracts.breakpoint(md) {
+                    margin-right: 0;
+                    
+                 }
                 h3{
                     font-size: 2.45rem;
                     line-height: 4rem;
@@ -272,6 +273,10 @@
             }
             .content-right{
                 margin-left: 8%;
+                @include abstracts.breakpoint(md) {
+                    margin-left: 0;
+                    
+                 }
                 h3{
                     font-size: 2.45rem;
                     line-height: 4rem;
@@ -283,8 +288,10 @@
                     font-size: 1.5rem;
                     color: #232323;
                     line-height: 22px;
+                    
                     tr:not(tr:first-child){
                         border-top: 1px solid #fff;
+                        border-right: 1px solid #fff;
                     }
                     
                     tr + tr > td:first-child{
@@ -312,7 +319,7 @@
 
     .five{
         // padding: 20px;
-        height: 473px;
+        // height: 473px;
         // overflow: hidden;
         .content-left{
             height: 100%;

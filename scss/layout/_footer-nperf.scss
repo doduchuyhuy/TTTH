@@ -1,0 +1,86 @@
+@use "../abstracts";
+#footer-nperf{
+    background: #232323;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    .container{
+        .content{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            @include abstracts.breakpoint(md) {
+                grid-template-columns: repeat(2,1fr);
+                
+             }
+            li, a{
+                font-size: 1.5rem;
+                line-height: 20px;
+                color: #707070;
+            }
+            .title{
+                font-weight: bold;
+            }
+            .footer_one{
+                position: relative;
+                flex: 1;
+                    .android{
+                        background: url(../../assets/icons/footer.png)0 0 no-repeat;
+                        width: 30px;
+                        height: 40px;
+                        vertical-align: middle;
+                        display: inline-block;
+                        margin-right: 8px;
+                        margin-bottom: 10px;
+                    }
+                    .apple{
+                        background: url(../../assets/icons/footer.png)0 -52px no-repeat;
+                        width: 30px;
+                        height: 40px;
+                        vertical-align: middle;
+                        display: inline-block;
+                        margin-right: 8px;
+                        margin-bottom: 10px;
+                    }
+                    .window{
+                        background: url(../../assets/icons/footer.png)0 -146px no-repeat;
+                        width: 30px;
+                        height: 40px;
+                        vertical-align: middle;
+                        display: inline-block;
+                        margin-right: 8px;
+                        margin-bottom: 10px;
+                    }
+              
+                
+            }
+            
+            .footer_two{
+                position: relative;
+                flex: 1;
+            }
+            .footer_three{
+                position: relative;
+                flex: 1;
+            }
+            .footer_four{
+                flex: 1;
+            }
+
+            .cut::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 2px;
+                height: 180px;
+                background: url(../../assets/icons/cut.png) repeat-y;
+                display: inline-block;
+                margin-right: 15px;
+                @include abstracts.breakpoint(md) {
+                    display: none;
+                    
+                 }
+
+            }
+        }
+    }
+}
