@@ -2926,6 +2926,9 @@ footer {
   border-radius: 5px;
   margin: 15px 0;
 }
+#home .four .container .content-left .quote p img {
+  vertical-align: middle;
+}
 #home .four .container .content-left .label {
   text-align: center;
   width: 40%;
@@ -2963,6 +2966,69 @@ footer {
   text-align: center;
   vertical-align: middle;
   padding: 8px;
+}
+#home .five {
+  height: 473px;
+}
+#home .five .content-left {
+  height: 100%;
+}
+#home .five .content-left .left-top {
+  background-color: #232323;
+  color: white;
+  padding: 14px 0;
+}
+#home .five .content-left .left-top_content {
+  margin-left: 30%;
+}
+#home .five .content-left .left-top_content h3 {
+  font-size: 2.45rem;
+  line-height: 4rem;
+}
+#home .five .content-left .left-top_content p {
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+}
+#home .five .content-left .left-top_content p span {
+  margin-left: 30px;
+}
+#home .five .content-left .left-bottom div {
+  display: flex;
+}
+#home .five .content-left .left-bottom div p:first-child {
+  flex: 1;
+  font-size: 1.5rem;
+  text-align: right;
+}
+#home .five .content-left .left-bottom div p:last-child {
+  flex: 1;
+  background: #d5cece;
+  font-weight: bolder;
+  font-size: 22px;
+  color: #725049;
+  text-align: center;
+}
+#home .five .content-left .left-bottom div p {
+  padding: 20px;
+}
+#home .five .content-left .left-bottom div:not(div:last-child) {
+  border-bottom: 1px solid #efebeb;
+}
+#home .five .content-right {
+  position: relative;
+  padding-top: 49.7%;
+}
+#home .five .content-right .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+#home .five .content-right .image img {
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
