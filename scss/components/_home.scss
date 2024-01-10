@@ -221,7 +221,8 @@
     }
 
     .four{
-        background:#f5f9fc;;
+        background:#f5f9fc;
+        padding: 30px 0;
         .container{
             // padding: 40px 0;
             .content-left{
@@ -318,19 +319,19 @@
     }
 
     .five{
-        // padding: 20px;
-        // height: 473px;
-        // overflow: hidden;
         .content-left{
             height: 100%;
            
             .left-top{
                 background-color: #232323;
                 color: white;
-                padding: 14px 0;
+                padding: 20px 0;
                 
                 &_content{
                     margin-left:30% ;
+                    @include abstracts.breakpoint(md) {
+                        margin-left:3%;
+                     }
                     h3{
                         font-size: 2.45rem;
                         line-height: 4rem;

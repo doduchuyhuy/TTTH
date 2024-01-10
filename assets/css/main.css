@@ -1564,6 +1564,13 @@ header {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+#footer-nperf .container .content a {
+  transition: all 0.3s;
+}
+#footer-nperf .container .content li a:hover {
+  padding-left: 7px;
+  color: white;
+}
 #footer-nperf .container .content li, #footer-nperf .container .content a {
   font-size: 1.5rem;
   line-height: 20px;
@@ -3004,6 +3011,7 @@ header {
 }
 #home .four {
   background: #f5f9fc;
+  padding: 30px 0;
 }
 #home .four .container .content-left {
   line-height: 22px;
@@ -3092,10 +3100,15 @@ header {
 #home .five .content-left .left-top {
   background-color: #232323;
   color: white;
-  padding: 14px 0;
+  padding: 20px 0;
 }
 #home .five .content-left .left-top_content {
   margin-left: 30%;
+}
+@media (max-width: 767.98px) {
+  #home .five .content-left .left-top_content {
+    margin-left: 3%;
+  }
 }
 #home .five .content-left .left-top_content h3 {
   font-size: 2.45rem;

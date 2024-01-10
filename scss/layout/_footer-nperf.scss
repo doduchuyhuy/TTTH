@@ -11,6 +11,15 @@
                 grid-template-columns: repeat(2,1fr);
                 
              }
+            a{
+                transition: all .3s;
+            }
+            li{
+                a:hover{
+                    padding-left: 7px;
+                    color: white;
+                }
+            }
             li, a{
                 font-size: 1.5rem;
                 line-height: 20px;
