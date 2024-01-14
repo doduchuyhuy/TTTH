@@ -39,7 +39,11 @@
 
         $(document).ready(function(){
             $('#signin-signup').load("./template/header-signin-signup.html");
-            $('#headerpro').load("./template/headerpro.html");
+            $('#headerpro').load("./template/headerpro.html", function(){
+                $('.toggle-headerpro').on("click", function(){
+                $('.bars').toggleClass('active');
+            });
+            });
             $('#header').load("./template/header.html", function(){
                 $('.js-toggle').on("click", function(){
                 $('#navbar').toggleClass('show');

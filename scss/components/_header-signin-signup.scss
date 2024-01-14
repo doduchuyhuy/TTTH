@@ -1,7 +1,11 @@
+@use "../abstracts";
 #signin-signup{
     background-color:var(--background-font);
     border-bottom: 2px solid #fff;
     height: 40px;
+    @include abstracts.breakpoint(xl) {
+        display: none;
+      }
     .container{
         padding: 0;
         .content-signin-signup{
