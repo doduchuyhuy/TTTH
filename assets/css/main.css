@@ -2395,23 +2395,55 @@ header {
   }
   #headerpro .container .menupro .bars .nav {
     display: none;
+    top: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  #headerpro .container .menupro .bars .nav .navresponsive a {
+    background: #232323;
+    display: block;
+    text-decoration: none;
+    color: #F5F9FC;
+    border-bottom: 1px solid #F5F9FC;
+    padding-left: 8%;
+    font-size: 1.5rem;
+  }
+  #headerpro .container .menupro .bars .nav .navresponsive a img {
+    vertical-align: middle;
+  }
+  #headerpro .container .menupro .bars .nav .navresponsive .user .useroff a:hover {
+    background-color: #C00;
+  }
+  #headerpro .container .menupro .bars .nav .navresponsive .category li a:hover {
+    background-color: #feb343;
+  }
+  #headerpro .container .menupro .bars .nav .navresponsive .app {
+    display: flex;
+  }
+  #headerpro .container .menupro .bars .nav .navresponsive .app li {
+    flex: 1;
+    text-align: center;
+  }
+  #headerpro .container .menupro .bars .nav .navresponsive .app li .android {
+    padding: 0;
+    background-color: #98cb02;
+    border-right: 1px solid #f5f9fc;
+  }
+  #headerpro .container .menupro .bars .nav .navresponsive .app li .iphone {
+    padding: 0;
+    background-color: #78797b;
+  }
+  #headerpro .container .menupro .bars .nav .navresponsive .contactus li a {
+    background: #FF8933;
   }
 }
 @media (max-width: 1199.98px) {
   #headerpro .container .menupro .bars.active {
     text-align: left;
-    width: 50%;
+    width: 60%;
   }
   #headerpro .container .menupro .bars.active .nav {
     display: block;
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    background: #232323;
-  }
-  #headerpro .container .menupro .bars.active .nav .navresponsive a {
-    text-decoration: none;
-    color: #F5F9FC;
   }
 }
 #headerpro .container .menupro .logo {

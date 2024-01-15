@@ -39,6 +39,57 @@
                     }
                     .nav{
                         display: none;
+                        top: 100%;
+                        width: 100%;
+                        
+                        position: absolute;
+                        .navresponsive{
+                            a{
+                                background: #232323;
+                                display: block;
+                                text-decoration: none;
+                                color: #F5F9FC;
+                                border-bottom: 1px solid #F5F9FC;
+                                padding-left: 8%;
+                                font-size: 1.5rem;
+                                img{
+                                    vertical-align: middle;
+                                }
+                            }
+                            .user{
+                                .useroff{
+                                    a:hover{
+                                        background-color: #C00;
+                                    }
+                                }
+                            }
+                            .category li a:hover{
+                                background-color: #feb343;
+                            }
+                            .app{
+                                display: flex;
+                                li{
+                                    flex: 1;
+                                    text-align: center;
+                                    .android{
+                                        padding: 0;
+                                        background-color: #98cb02;
+                                        border-right: 1px solid #f5f9fc;
+                                    }
+                                    .iphone{
+                                        padding: 0;
+                                        background-color: #78797b;
+                                    }
+                                }
+                            }
+                            .contactus{
+                                li{
+                                    a{
+                                        background: #FF8933;
+                                    }
+                                }
+                            }
+                        }
                     }
                   }
                 
@@ -46,19 +97,9 @@
             .bars.active{
                 @include abstracts.breakpoint(xl) {
                     text-align: left;
-                    width: 50%;
+                    width: 60%;
                     .nav{
-                        display: block;
-                        position: absolute;
-                        top: 100%;
-                        width: 100%;
-                        background: #232323;
-                        .navresponsive{
-                            a{
-                                text-decoration: none;
-                                color: #F5F9FC;
-                            }
-                        }
+                        display: block;  
                     }
                   }  
             }
