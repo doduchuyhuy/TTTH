@@ -1,13 +1,14 @@
 @use "../abstracts";
 #headerpro{
     background-color: var(--background-font);
-    border-bottom: 2px solid white;
+    // border-bottom: 2px solid white;
     height: 190px;
     position: relative;
     @include abstracts.breakpoint(xl) {
         height: 60px;
       }
     .container{
+        width: 1200px;
         padding: 0;
         height: 100%;
         @include abstracts.breakpoint(xl) {

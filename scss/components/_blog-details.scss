@@ -1,7 +1,11 @@
 @use "../abstracts";
 .blog-details{
-    .content{
+    padding-bottom: 30px;
+    .content-details{
         margin-top: 30px;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
         h4{
             text-align: center;
             font-weight: 700;
