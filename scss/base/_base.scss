@@ -1,3 +1,4 @@
+@use "../abstracts";
 *,
 ::before,
 ::after {
@@ -16,6 +17,10 @@ html {
 body {
     font-size: 1.6rem;
     font-family: Roboto, sans-serif;
+    background-color:#f7f7f9 ;
+    @include abstracts.breakpoint(md) {
+        background-color:#fff ;
+      }
 }
 
 .sticky{

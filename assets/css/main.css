@@ -70,6 +70,12 @@ html {
 body {
   font-size: 1.6rem;
   font-family: Roboto, sans-serif;
+  background-color: #f7f7f9;
+}
+@media (max-width: 767.98px) {
+  body {
+    background-color: #fff;
+  }
 }
 
 .sticky {
@@ -95,7 +101,7 @@ a {
 }
 
 .container {
-  width: 1440px;
+  width: 1200px;
 }
 
 .row {
@@ -1863,38 +1869,43 @@ header {
 .blog-details .content-details {
   margin-top: 30px;
   background-color: white;
-  padding: 30px;
+  padding: 40px;
   border-radius: 10px;
 }
-.blog-details .content-details h4 {
+@media (max-width: 767.98px) {
+  .blog-details .content-details {
+    padding: 0;
+  }
+}
+.blog-details .content-details .post h4 {
   text-align: center;
   font-weight: 700;
   font-size: 2.8rem;
   line-height: 4.2rem;
 }
-.blog-details .content-details h5 {
+.blog-details .content-details .post h5 {
   font-weight: 700;
   font-size: 2rem;
 }
-.blog-details .content-details p {
+.blog-details .content-details .post p {
   line-height: 2.4rem;
   font-weight: 400;
   text-align: justify;
 }
-.blog-details .content-details .content-image {
+.blog-details .content-details .post .content-image {
   text-align: center;
 }
-.blog-details .content-details .content-image img {
+.blog-details .content-details .post .content-image img {
   display: inline-block;
 }
-.blog-details .content-details ul {
+.blog-details .content-details .post ul {
   list-style-type: disc;
   padding-left: 50px;
 }
-.blog-details .content-details .center {
+.blog-details .content-details .post .center {
   text-align: center;
 }
-.blog-details .content-details .fi {
+.blog-details .content-details .post .fi {
   font-style: italic;
 }
 .blog-details .modal {
@@ -1997,10 +2008,7 @@ header {
 
 .sidebar-blog-details {
   background-color: #fff;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 10px;
   padding: 15px 15px 0;
 }
 @media (max-width: 991.98px) {
@@ -2023,7 +2031,7 @@ header {
   margin-bottom: 10px;
 }
 .sidebar-blog-details .box-sidebar {
-  padding: 10px;
+  padding: 10px 0;
   display: flex;
   gap: 10px;
 }
@@ -2201,7 +2209,6 @@ header {
   margin: 20px 0;
 }
 .blog-related .content {
-  background-color: #f7f7f9;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -2361,7 +2368,6 @@ header {
   }
 }
 #headerpro .container {
-  width: 1200px;
   padding: 0;
   height: 100%;
 }
@@ -2803,7 +2809,7 @@ header {
   background-color: white;
   margin: 30px 0;
   padding: 15px 15px 0;
-  border-radius: 6px;
+  border-radius: 10px;
 }
 .sidebar-blog-category span {
   display: block;

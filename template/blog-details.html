@@ -3,220 +3,221 @@
         <div class="row">
             <div class="col-9 col-lg-12" >
                 <div class="content-details">
-                    <h5>I. Mục đích:</h5><br>
-                    <p>Tài liệu này dùng để hướng dẫn các Cán bộ và Giáo viên thuộc Học viện Ngoại giao, có thể sử dụng phần mềm Quản Lý Đào Tạo “UniSoft” từ bên ngoài mạng nội bộ của Học viện. Sử dụng các chức năng nghiệp vụ của phần mềm hỗ trợ công tác Đào tạo.</p>
-                    <br>
-                    <h5>II. Nguyên tắc:</h5><br>
-                    <p>- Vì lý do đảm bảo an toàn thông tin, việc sử dụng phần mềm UniSoft, truy cập vào CSDL đào tạo của Học Viện, sẽ được thực hiện thông qua mạng VPN (Mạng bảo mật riêng, kết nối trực tiếp đến Học Viện)</p>
-                    <p>- Chú ý: chỉ sau khi kết nối VPN, mới có thể truy cập và sử dụng phần mềm UniSoft.</p>
-                    <br>
-                    <h5>III. Các bước thực hiện:</h5><br>
-                    <p>Bước 1: Đăng nhập vào VPN thông qua công cụ kết nối VPN bằng tài khoản đã được cấp. Các bước thực hiện kết nối VPN thực hiện theo hướng dẫn tại “Phụ lục : Hướng dẫn cài đặt và kết nối VPN”. </p>
-                    <p>Bước 2: Sau khi đã kết nối được vào VPN, bắt đầu sử dụng phần mềm UniSoft như bình thường.</p>
-                    <p>Bước 3: Sau khi sử dụng xong, thoát khỏi phần mềm UniSoft.</p>
-                    <p>Bước 4: Ngắt kết nối VPN, bằng cách click vào biểu tượng phần mềm FortiClient VPN và click “Disconnect”.</p>
-                    <p>* Việc ngắt kết nối VPN là yêu cầu bắt buộc, để đảm bảo an toàn thông tin cho phần mềm Quản lý đào tạo và tránh chiếm dụng băng thông mạng của Học viện.</p>
-                    <br>
-                    <h4>Hướng dẫn cài đặt và cấu hình</h4>
-                    <br>
-                    <h5>1. Yêu cầu về môi trường cài đặt</h5><br>
-                    <p>Yêu cầu máy trạm (Client): Cấu hình tối thiểu.</p>
-                    <ul>
-                        <li><p>CPU: Intel Core i3 hoặc tương đương.</p></li>
-                        <li><p>RAM: 4 GB hoặc cao hơn.</p></li>
-                        <li><p>Ổ cứng: Ít nhất 10 GB dung lượng trống.</p></li>
-                        <li><p>Kết nối Internet ổn định.</p></li>
-                        <li><p>Hỗ trợ hệ điều hành: Hệ điều hành Windows 10/11</p></li>
-                    </ul>
-                    <br>
-                    <h5>2. Quy trình cài đặt</h5><br>
-                    <p>Tải file cài đặt phần mềm VPN từ đường link được cung cấp.</p><br>
-                    <!-- <p class="center fi"> File tải về có dạng “QLDT_VPN.zip”</p>
-                    <div class="content-image">
-                        <img class="myImg" style="max-width: 100%;" src="./assets/images/anh1.png" alt="">
-                    </div>
-                    <br> -->
-                    <!-- <p>Bước 2: Giải nén file cài đặt phần mềm.</p><br> -->
-                    <p class="center fi">Click nút phải chuột vào file zip đã tải về, chọn “Extract All…” hoặc “Extract Here””</p>
-                    <div class="content-image">
-                        <img class="myImg" style="max-width: 100%;" src="./assets/images/anh2.png" alt="">
-                    </div>
-                    <br>
-                    <br>
-                    <p class="center fi">Người sử dụng sẽ nhìn thấy trong thư mục được giải nén ra như hình dưới</p>
-                    <p class="center fi">Sau đó click đúp để chạy file “FortiClient7-64.exe</p>
-                    <div class="content-image">
-                        <img class="myImg" style="max-width: 100%;" src="./assets/images/anh3.png" alt="">
-                    </div>
-                    <br>
-                    <br>
-                    <p class="center fi">Tích vào chọn “Yes, I have read and accept the”. Sau đó click “Next”</p>
-                    <p class="center fi">Cửa sổ tiếp theo click “Install” để bắt đầu cài đặt</p>
-                    <div class="content-image">
-                        <img class="myImg" style="max-width: 100%;" src="./assets/images/anh4.png" alt="">
-                    </div>
-                    <br>
-                    <br>
-                    <p class="center fi">Quá trình cài đặt hiển thị như sau</p>
-                    <div class="content-image">
-                        <img class="myImg" style="max-width: 100%;" src="./assets/images/anh5.png" alt="">
-                    </div>
-                    <br>
-                    <br>
-                    <p class="center fi">Cuối cùng khi hiện cửa sổ “Completed …”, bạn click “Finish” để hoàn thành</p>
-                    <div class="content-image">
-                        <img class="myImg" style="max-width: 100%;" src="./assets/images/anh6.png" alt="">
-                    </div>
-                    <br>
-                    <br>
-                    <h5>3. Cách thức cấu hình hệ thống:</h5><br>
-                    <p>Sau khi cài đặt thành công thì người dùng tiến hành chạy và cấu hình lần đầu cho phần mềm VPN.</p>
-                    <br>
-                    
-                    <p class="center fi">Click đúp vào biểu tượng phần mềm “FortiClient VPN”</p>
-                    <div class="content-image">
-                        <img class="myImg" style="max-width: 100%;" src="./assets/images/anh7.png" alt="">
-                    </div>
-                    <br>
-                    <br>
-                    <p class="center fi">Màn hình phần mềm VPN hiển thị khi khởi chạy lần đầu như hình dưới</p>
-                    <p class="center fi">Sau đó click chuột tại mục “Configure VPN”</p>
-                    <div class="content-image">
-                        <img class="myImg" style="max-width: 100%;" src="./assets/images/anh8.png" alt="">
-                    </div>
-                    <br>
-                    <br>
-                    <p class="center fi">Tiếp theo click chọn mục “XML” như hình dưới</p>
-                    <p class="center fi">Và click tiếp vào mục “+ Import XML Configuration”</p>
-                    <div class="content-image">
-                        <img class="myImg" style="max-width: 100%;" src="./assets/images/anh9.png" alt="">
-                    </div>
-                    <br>
-                    <br>
-                    <p class="center fi">Trình Explorer hiện ra, bạn tìm và chọn file “qldt-dav.conf” trong thư mục QLDT_VPN đã tải về và giải nén trước đó</p>
-                    <div class="content-image">
-                        <img class="myImg" style="max-width: 100%;" src="./assets/images/anh10.png" alt="">
-                    </div>
-                    <br>
-                    <br>
-                    <p class="center fi">Sau khi chọn file “qldt-dav.conf” bạn click “Open” để thực hiện import cấu hình.</p>
-                    <p class="center fi">Đợi khoảng 5 giây phần mềm sẽ hoàn thành việc import và hiện thông báo  “Configuration restored successfully”</p>
-                    <p class="center fi">Click “OK” để tiếp tục</p>
-                    <div class="content-image">
-                        <img class="myImg" style="max-width: 100%;" src="./assets/images/anh11.png" alt="">
-                    </div>
-                    <br>
-                    <br>
-                    <p class="center fi">Đến đây chúng ta đã hoàn thành việc cài đặt và cấu hình cho phần mềm VPN</p>
-                    <div class="content-image">
-                        <img class="myImg" style="max-width: 100%;" src="./assets/images/anh12.png" alt="">
-                    </div>
-                    <br>
-                    <br>
-                    <p class="center fi">Để kết nối trực tiếp đến mạng nội bộ của Học viện, bạn nhập Username và Password đã được cung cấp, sau đó click “Connect”</p>
-                    <div class="content-image">
-                        <img class="myImg" style="max-width: 100%;" src="./assets/images/anh13.png" alt="">
-                    </div>
-                    <br>
-                    <br>
-                    
-                    <p class="center fi">Thông báo kết nối hoàn thành, sẽ hiển thị nhanh tại góc phải dưới của màn hình</p>
-                    <div class="content-image">
-                        <img class="myImg" style="max-width: 100%;" src="./assets/images/anh14.png" alt="">
-                    </div>
-                    <br>
-                    <br>
-                    <p class="center fi">Khi đã kết nối, nếu bạn click vào biểu tượng phần mềm VPN, cửa sổ giao diện sẽ hiển thị như hình dưới</p>
-                    <p class="center fi">Hết phiên làm việc, bạn nên click vào “Disconnect” để đảm bảo an toàn thông tin.</p>
-                    <div class="content-image">
-                        <img class="myImg" style="max-width: 100%;" src="./assets/images/anh15.png" alt="">
-                    </div>
-                    <br>
-                    <br>
-                    <h5>3. Tổng kết</h5><br>
-                    <p>Trên đây là hướng dẫn cài đặt và cấu hình VPN để có thể kết nối từ ngoài HV đến phần mềm QLĐT. Nếu cần tư vấn thêm, bạn có thể liên hệ với phòng Tin học qua:</p>
-                    <br>
-                    <ul>
-                        <li><p>Email: thainm@dav.edu.vn.</p></li>
-                        <li><p>Hotline: 0963007746.</p></li>
-                    </ul>
-                </div>
-                <div class="post-share-rating">
-                    <div class="share">
-                        <span>Chia sẻ bài viết</span>
-                        <a class="facebook" href="#!">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a class="twitter" href="#!">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                        <a class="pinterest" href="#!">
-                            <i class="fa-brands fa-pinterest"></i>
-                        </a>
-                        <a class="linkedin" href="#!">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                    </div>
-                    <div class="rating">
-                        <span>Đánh giá</span>
+                    <div class="post">
+                        <h5>I. Mục đích:</h5><br>
+                        <p>Tài liệu này dùng để hướng dẫn các Cán bộ và Giáo viên thuộc Học viện Ngoại giao, có thể sử dụng phần mềm Quản Lý Đào Tạo “UniSoft” từ bên ngoài mạng nội bộ của Học viện. Sử dụng các chức năng nghiệp vụ của phần mềm hỗ trợ công tác Đào tạo.</p>
+                        <br>
+                        <h5>II. Nguyên tắc:</h5><br>
+                        <p>- Vì lý do đảm bảo an toàn thông tin, việc sử dụng phần mềm UniSoft, truy cập vào CSDL đào tạo của Học Viện, sẽ được thực hiện thông qua mạng VPN (Mạng bảo mật riêng, kết nối trực tiếp đến Học Viện)</p>
+                        <p>- Chú ý: chỉ sau khi kết nối VPN, mới có thể truy cập và sử dụng phần mềm UniSoft.</p>
+                        <br>
+                        <h5>III. Các bước thực hiện:</h5><br>
+                        <p>Bước 1: Đăng nhập vào VPN thông qua công cụ kết nối VPN bằng tài khoản đã được cấp. Các bước thực hiện kết nối VPN thực hiện theo hướng dẫn tại “Phụ lục : Hướng dẫn cài đặt và kết nối VPN”. </p>
+                        <p>Bước 2: Sau khi đã kết nối được vào VPN, bắt đầu sử dụng phần mềm UniSoft như bình thường.</p>
+                        <p>Bước 3: Sau khi sử dụng xong, thoát khỏi phần mềm UniSoft.</p>
+                        <p>Bước 4: Ngắt kết nối VPN, bằng cách click vào biểu tượng phần mềm FortiClient VPN và click “Disconnect”.</p>
+                        <p>* Việc ngắt kết nối VPN là yêu cầu bắt buộc, để đảm bảo an toàn thông tin cho phần mềm Quản lý đào tạo và tránh chiếm dụng băng thông mạng của Học viện.</p>
+                        <br>
+                        <h4>Hướng dẫn cài đặt và cấu hình</h4>
+                        <br>
+                        <h5>1. Yêu cầu về môi trường cài đặt</h5><br>
+                        <p>Yêu cầu máy trạm (Client): Cấu hình tối thiểu.</p>
                         <ul>
-                            <li id="15-1" data-index="1" class="rating-star" data-rating="">&#9733;</li>
-                            <li id="15-2" data-index="2" class="rating-star" data-rating="">&#9733;</li>
-                            <li id="15-3" data-index="3" class="rating-star" data-rating="">&#9733;</li>
-                            <li id="15-4" data-index="4" class="rating-star" data-rating="">&#9733;</li>
-                            <li id="15-5" data-index="5" class="rating-star" data-rating="">&#9733;</li>
+                            <li><p>CPU: Intel Core i3 hoặc tương đương.</p></li>
+                            <li><p>RAM: 4 GB hoặc cao hơn.</p></li>
+                            <li><p>Ổ cứng: Ít nhất 10 GB dung lượng trống.</p></li>
+                            <li><p>Kết nối Internet ổn định.</p></li>
+                            <li><p>Hỗ trợ hệ điều hành: Hệ điều hành Windows 10/11</p></li>
                         </ul>
-                        <span>5/5 - (5 bình chọn)</span>
-                    </div>
-                    
-                </div>
-                 <!-- Modal image -->
-                <div id="myModal" class="modal">
-                    <div class="container">
-                        <!-- <span class="close">&times;</span> -->
-                        <img class="modal-content" id="img01">
-                        <!-- <div id="caption">
-                        Lamborghini thường tạo ra những chiếc xe đặc biệt nhân dịp
-                        kỷ niệm của hãng. Centenario giới hạn 40 chiếc lên tới 1,9 triệu USD
-                        </div> -->
-                    </div>
-                    
-                </div>
-
-
-
-                <div class="blog-author">
-                    <div class="info-1">
-                        <div class="info-left">
-                            <img src="https://secure.gravatar.com/avatar/1438c30f2fa93536323f2d328f9cf472?s=50&d=identicon&r=g" alt="">
-                            <span>Ngô Anh Phong</span>
+                        <br>
+                        <h5>2. Quy trình cài đặt</h5><br>
+                        <p>Tải file cài đặt phần mềm VPN từ đường link được cung cấp.</p><br>
+                        <!-- <p class="center fi"> File tải về có dạng “QLDT_VPN.zip”</p>
+                        <div class="content-image">
+                            <img class="myImg" style="max-width: 100%;" src="./assets/images/anh1.png" alt="">
                         </div>
-                        <div class="info-right">
-                            <span>Kết nối với mình qua</span>
-                            <a href="">
+                        <br> -->
+                        <!-- <p>Bước 2: Giải nén file cài đặt phần mềm.</p><br> -->
+                        <p class="center fi">Click nút phải chuột vào file zip đã tải về, chọn “Extract All…” hoặc “Extract Here””</p>
+                        <div class="content-image">
+                            <img class="myImg" style="max-width: 100%;" src="./assets/images/anh2.png" alt="">
+                        </div>
+                        <br>
+                        <br>
+                        <p class="center fi">Người sử dụng sẽ nhìn thấy trong thư mục được giải nén ra như hình dưới</p>
+                        <p class="center fi">Sau đó click đúp để chạy file “FortiClient7-64.exe</p>
+                        <div class="content-image">
+                            <img class="myImg" style="max-width: 100%;" src="./assets/images/anh3.png" alt="">
+                        </div>
+                        <br>
+                        <br>
+                        <p class="center fi">Tích vào chọn “Yes, I have read and accept the”. Sau đó click “Next”</p>
+                        <p class="center fi">Cửa sổ tiếp theo click “Install” để bắt đầu cài đặt</p>
+                        <div class="content-image">
+                            <img class="myImg" style="max-width: 100%;" src="./assets/images/anh4.png" alt="">
+                        </div>
+                        <br>
+                        <br>
+                        <p class="center fi">Quá trình cài đặt hiển thị như sau</p>
+                        <div class="content-image">
+                            <img class="myImg" style="max-width: 100%;" src="./assets/images/anh5.png" alt="">
+                        </div>
+                        <br>
+                        <br>
+                        <p class="center fi">Cuối cùng khi hiện cửa sổ “Completed …”, bạn click “Finish” để hoàn thành</p>
+                        <div class="content-image">
+                            <img class="myImg" style="max-width: 100%;" src="./assets/images/anh6.png" alt="">
+                        </div>
+                        <br>
+                        <br>
+                        <h5>3. Cách thức cấu hình hệ thống:</h5><br>
+                        <p>Sau khi cài đặt thành công thì người dùng tiến hành chạy và cấu hình lần đầu cho phần mềm VPN.</p>
+                        <br>
+                        
+                        <p class="center fi">Click đúp vào biểu tượng phần mềm “FortiClient VPN”</p>
+                        <div class="content-image">
+                            <img class="myImg" style="max-width: 100%;" src="./assets/images/anh7.png" alt="">
+                        </div>
+                        <br>
+                        <br>
+                        <p class="center fi">Màn hình phần mềm VPN hiển thị khi khởi chạy lần đầu như hình dưới</p>
+                        <p class="center fi">Sau đó click chuột tại mục “Configure VPN”</p>
+                        <div class="content-image">
+                            <img class="myImg" style="max-width: 100%;" src="./assets/images/anh8.png" alt="">
+                        </div>
+                        <br>
+                        <br>
+                        <p class="center fi">Tiếp theo click chọn mục “XML” như hình dưới</p>
+                        <p class="center fi">Và click tiếp vào mục “+ Import XML Configuration”</p>
+                        <div class="content-image">
+                            <img class="myImg" style="max-width: 100%;" src="./assets/images/anh9.png" alt="">
+                        </div>
+                        <br>
+                        <br>
+                        <p class="center fi">Trình Explorer hiện ra, bạn tìm và chọn file “qldt-dav.conf” trong thư mục QLDT_VPN đã tải về và giải nén trước đó</p>
+                        <div class="content-image">
+                            <img class="myImg" style="max-width: 100%;" src="./assets/images/anh10.png" alt="">
+                        </div>
+                        <br>
+                        <br>
+                        <p class="center fi">Sau khi chọn file “qldt-dav.conf” bạn click “Open” để thực hiện import cấu hình.</p>
+                        <p class="center fi">Đợi khoảng 5 giây phần mềm sẽ hoàn thành việc import và hiện thông báo  “Configuration restored successfully”</p>
+                        <p class="center fi">Click “OK” để tiếp tục</p>
+                        <div class="content-image">
+                            <img class="myImg" style="max-width: 100%;" src="./assets/images/anh11.png" alt="">
+                        </div>
+                        <br>
+                        <br>
+                        <p class="center fi">Đến đây chúng ta đã hoàn thành việc cài đặt và cấu hình cho phần mềm VPN</p>
+                        <div class="content-image">
+                            <img class="myImg" style="max-width: 100%;" src="./assets/images/anh12.png" alt="">
+                        </div>
+                        <br>
+                        <br>
+                        <p class="center fi">Để kết nối trực tiếp đến mạng nội bộ của Học viện, bạn nhập Username và Password đã được cung cấp, sau đó click “Connect”</p>
+                        <div class="content-image">
+                            <img class="myImg" style="max-width: 100%;" src="./assets/images/anh13.png" alt="">
+                        </div>
+                        <br>
+                        <br>
+                        
+                        <p class="center fi">Thông báo kết nối hoàn thành, sẽ hiển thị nhanh tại góc phải dưới của màn hình</p>
+                        <div class="content-image">
+                            <img class="myImg" style="max-width: 100%;" src="./assets/images/anh14.png" alt="">
+                        </div>
+                        <br>
+                        <br>
+                        <p class="center fi">Khi đã kết nối, nếu bạn click vào biểu tượng phần mềm VPN, cửa sổ giao diện sẽ hiển thị như hình dưới</p>
+                        <p class="center fi">Hết phiên làm việc, bạn nên click vào “Disconnect” để đảm bảo an toàn thông tin.</p>
+                        <div class="content-image">
+                            <img class="myImg" style="max-width: 100%;" src="./assets/images/anh15.png" alt="">
+                        </div>
+                        <br>
+                        <br>
+                        <h5>3. Tổng kết</h5><br>
+                        <p>Trên đây là hướng dẫn cài đặt và cấu hình VPN để có thể kết nối từ ngoài HV đến phần mềm QLĐT. Nếu cần tư vấn thêm, bạn có thể liên hệ với phòng Tin học qua:</p>
+                        <br>
+                        <ul>
+                            <li><p>Email: thainm@dav.edu.vn.</p></li>
+                            <li><p>Hotline: 0963007746.</p></li>
+                        </ul>
+                    </div>
+                    <div class="post-share-rating">
+                        <div class="share">
+                            <span>Chia sẻ bài viết</span>
+                            <a class="facebook" href="#!">
                                 <i class="fa-brands fa-facebook-f"></i>
                             </a>
-                            <a href="">
+                            <a class="twitter" href="#!">
                                 <i class="fa-brands fa-twitter"></i>
                             </a>
-                            <a href="">
+                            <a class="pinterest" href="#!">
+                                <i class="fa-brands fa-pinterest"></i>
+                            </a>
+                            <a class="linkedin" href="#!">
                                 <i class="fa-brands fa-linkedin"></i>
                             </a>
                         </div>
+                        <div class="rating">
+                            <span>Đánh giá</span>
+                            <ul>
+                                <li id="15-1" data-index="1" class="rating-star" data-rating="">&#9733;</li>
+                                <li id="15-2" data-index="2" class="rating-star" data-rating="">&#9733;</li>
+                                <li id="15-3" data-index="3" class="rating-star" data-rating="">&#9733;</li>
+                                <li id="15-4" data-index="4" class="rating-star" data-rating="">&#9733;</li>
+                                <li id="15-5" data-index="5" class="rating-star" data-rating="">&#9733;</li>
+                            </ul>
+                            <span>5/5 - (5 bình chọn)</span>
+                        </div>
+                        
                     </div>
-                    <div class="info-2">
-                        <div class="quote-left">
-                            <img src="https://vinahost.vn/wp-content/themes/flatsome-child/assets/images/author-bio.svg" alt="">
+                     <!-- Modal image -->
+                    <div id="myModal" class="modal">
+                        <div class="container">
+                            <!-- <span class="close">&times;</span> -->
+                            <img class="modal-content" id="img01">
+                            <!-- <div id="caption">
+                            Lamborghini thường tạo ra những chiếc xe đặc biệt nhân dịp
+                            kỷ niệm của hãng. Centenario giới hạn 40 chiếc lên tới 1,9 triệu USD
+                            </div> -->
                         </div>
-                        <div class="quote-center">
-                            <p>
-                                Mình là Ngô Phong, tốt nghiệp trường Đại học Tổng hợp Hà Nội và mình có hơn 20 năm kinh nghiệm trong lĩnh vực sáng tạo nội dung trong nhiều lĩnh vực như hosting, domain, vps, cloud, email,…</p>
+                        
+                    </div>
+    
+                    <div class="blog-author">
+                        <div class="info-1">
+                            <div class="info-left">
+                                <img src="https://secure.gravatar.com/avatar/1438c30f2fa93536323f2d328f9cf472?s=50&d=identicon&r=g" alt="">
+                                <span>Ngô Anh Phong</span>
+                            </div>
+                            <div class="info-right">
+                                <span>Kết nối với mình qua</span>
+                                <a href="">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                            </div>
                         </div>
-                        <div class="quote-right">
-                            <img src="https://vinahost.vn/wp-content/themes/flatsome-child/assets/images/author-bio-right.svg" alt="">
+                        <div class="info-2">
+                            <div class="quote-left">
+                                <img src="https://vinahost.vn/wp-content/themes/flatsome-child/assets/images/author-bio.svg" alt="">
+                            </div>
+                            <div class="quote-center">
+                                <p>
+                                    Mình là Ngô Phong, tốt nghiệp trường Đại học Tổng hợp Hà Nội và mình có hơn 20 năm kinh nghiệm trong lĩnh vực sáng tạo nội dung trong nhiều lĩnh vực như hosting, domain, vps, cloud, email,…</p>
+                            </div>
+                            <div class="quote-right">
+                                <img src="https://vinahost.vn/wp-content/themes/flatsome-child/assets/images/author-bio-right.svg" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
+                
                 <div class="blog-related">
                     <div class="title">
                         Bài viết liên quan
