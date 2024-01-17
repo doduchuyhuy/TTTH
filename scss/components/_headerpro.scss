@@ -433,10 +433,29 @@
                                       }
                                 }
                             }
-                            .bottom-hover:hover .bottom-1_item{
-                                transform: rotateY(180deg);
+                            // .bottom-hover:hover .bottom-1_item{
+                            //     transform: rotateY(180deg);
+                            // } 
+                        }
+                        .modalsearch{
+                            position: fixed;
+                            inset: 0;
+                            background-color: rgba(0,0,0,0.5);
+                            z-index: 1;
+                            .modalsearch-container{
+                                // position: absolute;
+                                height: 100%;
+                                width: 100%;
+                                padding: 30px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                .box-search{
+                                    // width: 600px;
+                                    // height: 60px;
+                                    // background-color: #F5F9FC;
+                                }
                             }
-                           
                         }
                     }
                 } 
