@@ -43,6 +43,9 @@
                 $('.toggle-headerpro').on("click", function(){
                 $('.bars').toggleClass('active');
             });
+                $('.toggle-search').on("click", function(){
+                $('#myModalsearch').toggleClass('active');
+            });
             });
             $('#header').load("./template/header.html", function(){
                 $('.js-toggle').on("click", function(){

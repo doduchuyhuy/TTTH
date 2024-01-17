@@ -2767,6 +2767,7 @@ header {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
+  display: none;
 }
 #headerpro .container .menupro .content .right-flip .bottom .modalsearch .modalsearch-container {
   height: 100%;
@@ -2776,6 +2777,42 @@ header {
   align-items: center;
   justify-content: center;
 }
+#headerpro .container .menupro .content .right-flip .bottom .modalsearch .modalsearch-container .box-search {
+  width: 600px;
+}
+#headerpro .container .menupro .content .right-flip .bottom .modalsearch .modalsearch-container .box-search .box-form {
+  display: flex;
+}
+#headerpro .container .menupro .content .right-flip .bottom .modalsearch .modalsearch-container .box-search .box-form input {
+  flex: 1;
+  padding: 10px;
+  font-size: 2.5rem;
+  border: none;
+  outline: none;
+}
+#headerpro .container .menupro .content .right-flip .bottom .modalsearch .modalsearch-container .box-search .box-form button {
+  padding: 15px;
+  font-size: 2.5rem;
+  border: none;
+  background-color: #232323;
+  color: white;
+}
+#headerpro .container .menupro .content .right-flip .bottom .modalsearch .close {
+  position: fixed;
+  right: 0;
+  top: 0;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  opacity: 0.6;
+  font-size: 40px;
+}
+#headerpro .container .menupro .content .right-flip .bottom .modalsearch.active {
+  display: block;
+}
+
 #signin-signup {
   background-color: var(--background-font);
   border-bottom: 2px solid #fff;
