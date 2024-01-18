@@ -19,12 +19,12 @@
         <div id="signin-signup"></div>
         <div id="headerpro"></div>
         <!-- <header id="header"></header> -->
-        <!-- <div id="slideshow"></div>
-        <div id="home"></div> -->
-        <article id="single-top-meta"></article>
-        <article id="breadcrumb"></article>
+        <div id="slideshow"></div>
+        <div id="home"></div>
+        <!-- <article id="single-top-meta"></article>
+        <article id="breadcrumb"></article> -->
         <!-- <article id="blog-list"></article> -->
-        <article id="blog-details"></article>
+        <!-- <article id="blog-details"></article> -->
         <!-- <footer id="footer-host"></footer> -->
         <footer id="footer-nperf"></footer>
         
@@ -45,7 +45,12 @@
             });
                 $('.toggle-search').on("click", function(){
                 $('#myModalsearch').toggleClass('active');
+                
             });
+                $('.box-search').on("click", function(e){
+                    e.stopPropagation(); 
+                });
+                
             });
             $('#header').load("./template/header.html", function(){
                 $('.js-toggle').on("click", function(){
