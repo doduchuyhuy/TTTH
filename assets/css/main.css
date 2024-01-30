@@ -1644,6 +1644,117 @@ header {
   }
 }
 
+#exam .container img {
+  width: 95px;
+  height: 90px;
+}
+#exam .container .header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+#exam .container .header .left {
+  flex: 1;
+}
+#exam .container .header .center {
+  flex: 2;
+}
+#exam .container .header .center h1 {
+  font-size: 32px;
+  color: #31708f;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+#exam .container .header .center h2 {
+  font-size: 40px;
+  color: #31708f;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+#exam .container .header .right {
+  flex: 1;
+}
+#exam .container .content {
+  text-align: center;
+}
+#exam .container .content h3 {
+  font-size: 28px;
+  color: #31708f;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+#exam .container .content h4 {
+  font-size: 24px;
+  color: #31708f;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+#exam .container nav {
+  padding: 8px;
+}
+#exam .container nav .question-time {
+  display: flex;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+#exam .container nav .question-time .index-question {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 16px;
+  align-items: center;
+}
+#exam .container nav .question-time .index-question .index {
+  text-align: center;
+  border: 1px solid #17a2b8;
+  font-size: 11px;
+  height: 18px;
+  width: 16px;
+  margin: 4px 4px 4px 0;
+  line-height: 1.6;
+}
+#exam .container nav .question-time .remaining-time {
+  flex: 1;
+  display: flex;
+}
+#exam .container nav .question-time .remaining-time .circle-time {
+  padding: 0 15px;
+}
+#exam .container nav .question-time .remaining-time .circle-time .circle {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  text-transform: uppercase;
+  background-color: #0a90eb !important;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+}
+#exam .container .question-item {
+  padding: 10px;
+  line-height: 1.7;
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  margin-bottom: 1.5rem;
+}
+#exam .container .question-item b {
+  font-weight: bolder;
+  color: #212529;
+}
+#exam .container .question-item .answer {
+  margin-bottom: 8px;
+  font-weight: 400;
+  color: #212529;
+  padding-left: 16px;
+}
+
 #single-top-meta {
   margin-top: 2px;
 }
