@@ -1705,21 +1705,23 @@ header {
   flex: 3;
   display: flex;
   flex-wrap: wrap;
-  padding-left: 16px;
   align-items: center;
 }
 #exam .container nav .question-time .index-question .index {
   text-align: center;
   border: 1px solid #17a2b8;
   font-size: 11px;
-  height: 18px;
-  width: 16px;
+  height: 30px;
+  width: 30px;
   margin: 4px 4px 4px 0;
-  line-height: 1.6;
+  line-height: 30px;
+  text-decoration: none;
+  color: black;
 }
 #exam .container nav .question-time .remaining-time {
   flex: 1;
   display: flex;
+  justify-content: center;
 }
 #exam .container nav .question-time .remaining-time .circle-time {
   padding: 0 15px;
