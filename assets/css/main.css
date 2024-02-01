@@ -1731,7 +1731,7 @@ header {
   height: 40px;
   width: 40px;
   text-transform: uppercase;
-  background-color: #0a90eb !important;
+  background-color: #0a90eb;
   line-height: 40px;
   text-align: center;
   color: white;
@@ -1750,11 +1750,17 @@ header {
   font-weight: bolder;
   color: #212529;
 }
+#exam .container .question-item .question p:first-of-type {
+  display: inline;
+}
 #exam .container .question-item .answer {
   margin-bottom: 8px;
   font-weight: 400;
   color: #212529;
   padding-left: 16px;
+}
+#exam .container .question-item .answer label p {
+  display: inline;
 }
 
 #single-top-meta {

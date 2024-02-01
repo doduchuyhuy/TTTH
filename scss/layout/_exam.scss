@@ -86,7 +86,7 @@
                             height: 40px;
                             width: 40px;
                             text-transform: uppercase;
-                            background-color: #0a90eb !important;
+                            background-color: #0a90eb;
                             line-height: 40px;
                             text-align: center;
                             color: white;
@@ -109,12 +109,23 @@
                 font-weight: bolder;
                 color: #212529;
             }
+            .question{
+                p:first-of-type{
+                    display: inline;
+                }
+                
+            }
             
             .answer{
                 margin-bottom: 8px;
                 font-weight: 400;
                 color: #212529;
                 padding-left: 16px;
+                label{
+                    p{
+                        display: inline;
+                    }
+                }
             }
         }
     }
