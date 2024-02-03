@@ -87,6 +87,19 @@ a {
   text-decoration: none;
 }
 
+.btn-success {
+  background-color: #17a2b8;
+  color: white !important;
+}
+
+.btn-light {
+  color: black;
+}
+
+.border-success {
+  border-color: #17a2b8 !important;
+}
+
 .row > *, .container-fluid, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
   padding-right: calc(var(--grid-gutter-x) * 0.5);
@@ -1706,6 +1719,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  padding-right: 20px;
 }
 #exam .container nav .question-time .index-question .index {
   text-align: center;
@@ -1718,24 +1732,50 @@ header {
   text-decoration: none;
   color: black;
 }
-#exam .container nav .question-time .remaining-time {
-  flex: 1;
+#exam .container nav .question-time .base-timer {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+#exam .container nav .question-time .base-timer .base-timer__svg {
+  transform: scaleX(-1);
+}
+#exam .container nav .question-time .base-timer .base-timer__svg .base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+#exam .container nav .question-time .base-timer .base-timer__svg .base-timer__circle .base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+#exam .container nav .question-time .base-timer .base-timer__svg .base-timer__circle .base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+#exam .container nav .question-time .base-timer .base-timer__svg .base-timer__circle .base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+#exam .container nav .question-time .base-timer .base-timer__svg .base-timer__circle .base-timer__path-remaining.orange {
+  color: orange;
+}
+#exam .container nav .question-time .base-timer .base-timer__svg .base-timer__circle .base-timer__path-remaining.red {
+  color: red;
+}
+#exam .container nav .question-time .base-timer .base-timer__label {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 0;
   display: flex;
+  align-items: center;
   justify-content: center;
-}
-#exam .container nav .question-time .remaining-time .circle-time {
-  padding: 0 15px;
-}
-#exam .container nav .question-time .remaining-time .circle-time .circle {
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  text-transform: uppercase;
-  background-color: #0a90eb;
-  line-height: 40px;
-  text-align: center;
-  color: white;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: bold;
 }
 #exam .container .question-item {
   padding: 10px;
