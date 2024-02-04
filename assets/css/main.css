@@ -1708,6 +1708,9 @@ header {
 }
 #exam .container nav {
   padding: 8px;
+  position: sticky;
+  top: 0;
+  background-color: #f7f7f9;
 }
 #exam .container nav .question-time {
   display: flex;
@@ -1718,7 +1721,6 @@ header {
   flex: 3;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   padding-right: 20px;
 }
 #exam .container nav .question-time .index-question .index {
@@ -1777,7 +1779,7 @@ header {
   font-size: 20px;
   font-weight: bold;
 }
-#exam .container .question-item {
+#exam .container .question-container .question-item {
   padding: 10px;
   line-height: 1.7;
   background-color: white;
@@ -1786,20 +1788,23 @@ header {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   margin-bottom: 1.5rem;
 }
-#exam .container .question-item b {
+#exam .container .question-container .question-item b {
   font-weight: bolder;
   color: #212529;
 }
-#exam .container .question-item .question p:first-of-type {
+#exam .container .question-container .question-item .question {
+  margin-bottom: 5px;
+}
+#exam .container .question-container .question-item .question p:first-of-type {
   display: inline;
 }
-#exam .container .question-item .answer {
+#exam .container .question-container .question-item .answer {
   margin-bottom: 8px;
   font-weight: 400;
   color: #212529;
   padding-left: 16px;
 }
-#exam .container .question-item .answer label p {
+#exam .container .question-container .question-item .answer label p {
   display: inline;
 }
 
@@ -3474,6 +3479,47 @@ header {
 #home .five .content-right .image img {
   width: 100%;
   height: 100%;
+}
+
+#header-exam {
+  width: 100%;
+  padding: 5px 0;
+  text-align: center;
+  background: white;
+  box-shadow: 0 -10px 20px rgb(170, 170, 170);
+}
+#header-exam .container nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header-exam .container nav .content-exam {
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #31708f;
+}
+#header-exam .container nav .content-exam h1 {
+  font-size: 25px;
+  font-weight: 700;
+}
+#header-exam .container nav .content-exam h2 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.scroll-down #header-exam {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up #header-exam {
+  filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+}
+
+.menu-is-open {
+  overflow: hidden;
+}
+.menu-is-open #header-exam {
+  filter: none;
 }
 
 /*# sourceMappingURL=main.css.map */

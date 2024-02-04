@@ -29,6 +29,7 @@
         <!-- <footer id="footer-nperf"></footer> -->
 
         <!-- EXAM -->
+        <div id="header-exam"></div>
         <div id="exam"></div>
 
         
@@ -100,7 +101,26 @@
             $('#footer-nperf').load("./template/footer-nperf.html");
             //EXAM
             $('#exam').load("./template/exam.html");
-            
+            $('#header-exam').load("./template/header-exam.html",function(){
+
+                // let lastScroll = 0;
+                // const $body = $("body"); // Lưu trữ tham chiếu tới 'body'
+                // $(window).on("scroll", function() {
+                //     const currentScroll = $(this).scrollTop();
+
+                //     if (currentScroll <= 0) {
+                //         $body.removeClass("scroll-up");
+                //         return;
+                //     }
+                //     if (currentScroll > lastScroll && !$body.hasClass("scroll-down")) {
+                //         $body.removeClass("scroll-up").addClass("scroll-down");
+                //     } else if (currentScroll < lastScroll && $body.hasClass("scroll-down")) {
+                //         $body.removeClass("scroll-down").addClass("scroll-up");
+                //     }
+                //     lastScroll = currentScroll;
+                // });
+
+            });   
         });
     </script>
     <script src="./assets/js/scriptsHuy.js"></script>
