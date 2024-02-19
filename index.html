@@ -42,7 +42,9 @@
         // load("#blog-list","./template/blog-list.html");
         // load("#single-top-meta","./template/single-top-meta.html");
         // load("#breadcrumb","./template/breadcrumb.html");
-
+        function show(anything) {
+            $('.textBox').val(anything); // Cập nhật giá trị cho textBox sử dụng jQuery
+        }
         $(document).ready(function(){
             $('#signin-signup').load("./template/header-signin-signup.html");
             $('#headerpro').load("./template/headerpro.html", function(){
@@ -100,7 +102,18 @@
             $('#breadcrumb').load("./template/breadcrumb.html");
             $('#footer-nperf').load("./template/footer-nperf.html");
             //EXAM
-            $('#exam').load("./template/exam.html");
+            $('#exam').load("./template/exam.html",function(){
+                $('.dropdown').click(function() {
+                $(this).toggleClass('active'); // Toggle class 'active' sử dụng jQuery
+            });
+            // Bổ sung: Đóng dropdown khi người dùng click ngoài phạm vi của dropdown
+            $(document).on('click', function(e) {
+                if (!$(e.target).closest('.dropdown').length) {
+                    $('.dropdown').removeClass('active');
+                }
+            });
+
+            });
             $('#header-exam').load("./template/header-exam.html",function(){
 
                 // let lastScroll = 0;
