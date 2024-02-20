@@ -160,39 +160,78 @@
                 <p><b>&nbsp;Ngày nay Công nghệ thông tin có thể được ứng dụng rộng rãi trong nông nghiệp do:</b></p>
             </div>
             <div class="answer">
-                <input type="radio" name="1" value="option_a">
+                <!-- <input type="radio" name="1" value="option_a">
                 <label for="">
                     <b>A. </b>
                     <p>Tập trung hoá thông tin.</p>
+                </label> -->
+                <label for="myRadioId1" class="radio">
+                    <input type="radio" name="myRadioField" id="myRadioId1" class="radio__input">
+                    <div class="radio__radio"></div>
+                    Visual Studio
                 </label>
             </div>
             <div class="answer">
-                <input type="radio" name="1" value="option_b">
+                <!-- <input type="radio" name="1" value="option_a">
                 <label for="">
-                    <b>B.</b>
-                    <p>Kết nối chi phí thấp và phổ biến.</p>
+                    <b>A. </b>
+                    <p>Tập trung hoá thông tin.</p>
+                </label> -->
+                <label for="myRadioId2" class="radio">
+                    <input type="radio" name="myRadioField" id="myRadioId2" class="radio__input">
+                    <div class="radio__radio"></div>
+                    Visual Studio
                 </label>
             </div>
             <div class="answer">
-                <input type="radio" name="1" value="option_c">
+                <!-- <input type="radio" name="1" value="option_a">
                 <label for="">
-                    <b>C. </b>
-                    <p>Những tiến bộ trong lưu trữ và trao đổi dữ liệu.</p>
+                    <b>A. </b>
+                    <p>Tập trung hoá thông tin.</p>
+                </label> -->
+                <label for="myRadioId3" class="radio">
+                    <input type="radio" name="myRadioField" id="myRadioId3" class="radio__input">
+                    <div class="radio__radio"></div>
+                    Visual Studio
                 </label>
             </div>
             <div class="answer">
-                <input type="radio" name="1" value="option_d">
+                <!-- <input type="radio" name="1" value="option_a">
                 <label for="">
-                    <b>D. </b>
-                    <p>Tất cả các lý do trên.</p>  
+                    <b>A. </b>
+                    <p>Tập trung hoá thông tin.</p>
+                </label> -->
+                <label for="myRadioId4" class="radio">
+                    <input type="radio" name="myRadioField" id="myRadioId4" class="radio__input">
+                    <div class="radio__radio"></div>
+                    Visual Studio
                 </label>
             </div>
             <div class="answer">
-                <input type="radio" name="1" value="skip">
+                <!-- <input type="radio" name="1" value="option_a">
                 <label for="">
-                    <b style="font-style: italic; font-weight: 500;">Bỏ qua câu hỏi này.</b>
+                    <b>A. </b>
+                    <p>Tập trung hoá thông tin.</p>
+                </label> -->
+                <label for="myRadioId5" class="radio">
+                    <input type="radio" name="myRadioField" id="myRadioId5" class="radio__input">
+                    <div class="radio__radio"></div>
+                    Visual Studio
                 </label>
             </div>
+            <div class="answer">
+                <!-- <input type="radio" name="1" value="option_a">
+                <label for="">
+                    <b>A. </b>
+                    <p>Tập trung hoá thông tin.</p>
+                </label> -->
+                <label for="myRadioId6" class="radio">
+                    <input type="radio" name="myRadioField" id="myRadioId6" class="radio__input">
+                    <div class="radio__radio"></div>
+                    Visual Studio
+                </label>
+            </div>
+            
         </div>
         <div id="1-card" class="question-item">
             <div class="question">
@@ -201,16 +240,33 @@
             </div>
             <div class="answer-matching">
                 <div class="content">
-    
+                    <div class="item">Cái mà để tạo các chức năng động cho trang web</div>
                 </div>
                 <div class="dropdown">
-                    <input type="text" class="textBox" placeholder="Chọn" readonly>
+                    <input id="textBox1" type="text" class="textBox" placeholder="Chọn" readonly>
                     <div class="option">
-                        <div onclick="show('HTML')"><ion-icon name="logo-html5"></ion-icon> HTML</div>
-                        <div onclick="show('CSS')"><ion-icon name="logo-css3"></ion-icon> CSS</div>
-                        <div onclick="show('Javascript')"><ion-icon name="logo-nodejs"></ion-icon> Javascript</div>
-                        <div onclick="show('Figma')"><ion-icon name="logo-firefox"></ion-icon> Figma</div>
-                        <div onclick="show('ReactJS')"><ion-icon name="logo-react"></ion-icon> ReactJS</div>
+                        <div data-value=""> Chọn</div> <!-- Option để reset -->
+                        <div data-value="HTML"><ion-icon name="logo-html5"></ion-icon> HTML</div>
+                        <div data-value="CSS"><ion-icon name="logo-css3"></ion-icon> CSS</div>
+                        <div data-value="Javascript"><ion-icon name="logo-nodejs"></ion-icon> Javascript</div>
+                        <div data-value="Figma"><ion-icon name="logo-firefox"></ion-icon> Figma</div>
+                        <div data-value="ReactJS"><ion-icon name="logo-react"></ion-icon> ReactJS</div>
+                    </div>
+                </div>
+            </div>
+            <div class="answer-matching">
+                <div class="content">
+                    <div class="item">Cái gì là chữ viết tắt của Cascading Style Sheets, nó là một ngôn ngữ được sử dụng để tìm và định dạng lại các phần tử được tạo ra bởi các ngôn ngữ đánh dấu (HTML). Nói ngắn gọn hơn là ngôn ngữ tạo phong cách cho trang web </div>
+                </div>
+                <div class="dropdown">
+                    <input id="textBox2" type="text" class="textBox" placeholder="Chọn" readonly>
+                    <div class="option">
+                        <div data-value=""> Chọn</div> <!-- Option để reset -->
+                        <div data-value="HTML"><ion-icon name="logo-html5"></ion-icon> HTML</div>
+                        <div data-value="CSS"><ion-icon name="logo-css3"></ion-icon> CSS</div>
+                        <div data-value="Javascript"><ion-icon name="logo-nodejs"></ion-icon> Javascript</div>
+                        <div data-value="Figma"><ion-icon name="logo-firefox"></ion-icon> Figma</div>
+                        <div data-value="ReactJS"><ion-icon name="logo-react"></ion-icon> ReactJS</div>
                     </div>
                 </div>
             </div>
