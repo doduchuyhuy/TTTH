@@ -1657,6 +1657,9 @@ header {
   }
 }
 
+#exam {
+  height: 100%;
+}
 #exam .container img {
   width: 95px;
   height: 90px;
@@ -1802,7 +1805,7 @@ header {
   margin-bottom: 8px;
   font-weight: 400;
   color: #212529;
-  padding-left: 16px;
+  padding-left: 20px;
 }
 #exam .container .question-container .question-item .answer label p {
   display: inline;
@@ -1917,6 +1920,82 @@ header {
   border-radius: 50%;
   transform: scale(0);
   transition: transform 0.15s;
+}
+#exam .answer-multichoice {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+  padding-left: 20px;
+}
+#exam .answer-multichoice input[type=checkbox] {
+  appearance: none;
+  width: 1.55em;
+  height: 1.55em;
+  background-color: #d5d5d5;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#exam .answer-multichoice input[type=checkbox]:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  font-weight: 900;
+  font-size: 50px;
+  font-size: 1.25em;
+  color: white;
+  display: none;
+}
+#exam .answer-multichoice input[type=checkbox]:hover {
+  background-color: #a5a5a5;
+}
+#exam .answer-multichoice input[type=checkbox]:checked {
+  background: #009879;
+}
+#exam .answer-multichoice input[type=checkbox]:checked::after {
+  display: block;
+}
+#exam .answer-fill {
+  position: relative;
+  width: 250px;
+  margin-bottom: 8px;
+}
+#exam .answer-fill input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: #1d2b3a;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  font-size: 1em;
+  transition: 0.5s;
+}
+#exam .answer-fill span {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.25);
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+#exam .answer-fill input:valid ~ span,
+#exam .answer-fill input:focus ~ span {
+  color: #00dfc4;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background: #1d2b3a;
+  border-left: 1px solid #00dfc4;
+  border-right: 1px solid #00dfc4;
+  letter-spacing: 0.2em;
+}
+#exam .answer-fill input:valid,
+#exam .answer-fill input:focus {
+  border: 1px solid #00dfc4;
 }
 
 #single-top-meta {
