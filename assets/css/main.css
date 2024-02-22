@@ -1658,7 +1658,7 @@ header {
 }
 
 #exam {
-  height: 100%;
+  height: 2000px;
 }
 #exam .container img {
   width: 95px;
@@ -1957,47 +1957,22 @@ header {
   display: block;
 }
 #exam .answer-fill {
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   width: 250px;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
 }
 #exam .answer-fill input {
   width: 100%;
   padding: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: #1d2b3a;
+  border: 2px solid #E0E3E0;
+  background: #FFF;
   border-radius: 5px;
   outline: none;
-  color: #fff;
   font-size: 1em;
   transition: 0.5s;
 }
-#exam .answer-fill span {
-  position: absolute;
-  left: 0;
-  padding: 10px;
-  pointer-events: none;
-  font-size: 1em;
-  color: rgba(255, 255, 255, 0.25);
-  text-transform: uppercase;
-  transition: 0.5s;
-}
-#exam .answer-fill input:valid ~ span,
-#exam .answer-fill input:focus ~ span {
-  color: #00dfc4;
-  transform: translateX(10px) translateY(-7px);
-  font-size: 0.65em;
-  padding: 0 10px;
-  background: #1d2b3a;
-  border-left: 1px solid #00dfc4;
-  border-right: 1px solid #00dfc4;
-  letter-spacing: 0.2em;
-}
-#exam .answer-fill input:valid,
-#exam .answer-fill input:focus {
-  border: 1px solid #00dfc4;
-}
-
 #single-top-meta {
   margin-top: 2px;
 }
