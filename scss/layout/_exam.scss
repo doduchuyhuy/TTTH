@@ -184,6 +184,13 @@
                         }
                     }
                 }
+                .answer-multichoice{
+                    label{
+                        p{
+                            display: inline;
+                        }
+                    }
+                }
                 .answer-matching{
                     display: flex;
                     gap: 30px;
@@ -215,7 +222,7 @@
                             padding: 12px 20px;
                             border-radius: 10px;  
                         }
-                        .option{
+                        .matching-select{
                             position: absolute;
                             border: 1px solid #ddd;
                             top: 50px;
@@ -265,7 +272,7 @@
                         transform: rotate(-225deg);
                     }
                     .dropdown.active{
-                        .option{
+                        .matching-select{
                             display: block;
                         }
                         

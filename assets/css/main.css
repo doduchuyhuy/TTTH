@@ -1810,6 +1810,9 @@ header {
 #exam .container .question-container .question-item .answer label p {
   display: inline;
 }
+#exam .container .question-container .question-item .answer-multichoice label p {
+  display: inline;
+}
 #exam .container .question-container .question-item .answer-matching {
   display: flex;
   gap: 30px;
@@ -1840,7 +1843,7 @@ header {
   padding: 12px 20px;
   border-radius: 10px;
 }
-#exam .container .question-container .question-item .answer-matching .dropdown .option {
+#exam .container .question-container .question-item .answer-matching .dropdown .matching-select {
   position: absolute;
   border: 1px solid #ddd;
   top: 50px;
@@ -1853,18 +1856,18 @@ header {
   z-index: 5;
   font-size: 1.5rem;
 }
-#exam .container .question-container .question-item .answer-matching .dropdown .option div:first-of-type {
+#exam .container .question-container .question-item .answer-matching .dropdown .matching-select div:first-of-type {
   background: #ededed;
 }
-#exam .container .question-container .question-item .answer-matching .dropdown .option div:hover:not(div:first-of-type) {
+#exam .container .question-container .question-item .answer-matching .dropdown .matching-select div:hover:not(div:first-of-type) {
   background: #62baed;
   color: #FFF;
 }
-#exam .container .question-container .question-item .answer-matching .dropdown .option div {
+#exam .container .question-container .question-item .answer-matching .dropdown .matching-select div {
   padding: 5px 20px;
   cursor: pointer;
 }
-#exam .container .question-container .question-item .answer-matching .dropdown .option div ion-icon {
+#exam .container .question-container .question-item .answer-matching .dropdown .matching-select div ion-icon {
   position: relative;
   top: 2px;
 }
@@ -1887,7 +1890,7 @@ header {
   top: 22px;
   transform: rotate(-225deg);
 }
-#exam .container .question-container .question-item .answer-matching .dropdown.active .option {
+#exam .container .question-container .question-item .answer-matching .dropdown.active .matching-select {
   display: block;
 }
 #exam .radio {

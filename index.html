@@ -116,7 +116,7 @@
             //     $('#' + textBoxId).val(value ? $(this).text().trim() : ''); // Nếu value là rỗng, reset textBox
             // });
 
-            $('.dropdown .option div').click(function() {
+            $('.dropdown .matching-select div').click(function() {
                 var value = $(this).data('value'); // Lấy giá trị từ data-value
                 var textBoxId = $(this).closest('.dropdown').find('.textBox').attr('id');
                 $('#' + textBoxId).val(value ? $(this).text().trim() : ''); // Nếu value là rỗng, reset textBox
