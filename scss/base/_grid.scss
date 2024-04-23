@@ -187,6 +187,13 @@ $gutters: (
     
 }
 
+.container-exam {
+    @extend .container-fluid;
+    // width: 1370px;
+    width: 1650px;
+    
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;

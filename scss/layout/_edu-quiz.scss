@@ -1,0 +1,102 @@
+#edu-quiz{
+    .container-exam{
+        .row{
+            .left{
+                padding: 32px 0 0 32px;
+            }
+            .center{
+                padding: 32px 0 0 32px;
+                height: auto;
+                .root{
+                    background-color: rgb(255, 255, 255);
+                    color: rgb(17, 24, 39);
+                    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                    overflow: hidden;
+                    border-radius: 16px;
+                    box-shadow: rgba(0, 0, 0, 0.04) 0px 10px 10px 4px;
+                    display: flex;
+                    flex-direction: column;
+                    .header{
+                        display: flex;
+                        align-items: center;
+                        padding: 16px 24px 0px;
+                        span{
+                            margin: 0px;
+                            font-size: 14px;
+                            font-weight: 500;
+                            font-family: Inter, sans-serif;
+                            line-height: 1.334;
+                            display: block;
+                        }
+                    }
+                    .content{
+                        padding: 16px 24px;
+                        .content-header{
+                            margin-bottom: 15px;
+                            h4{
+                                margin: 0px;
+                                font-size: 16px;
+                                font-weight: 500;
+                                font-family: Inter, sans-serif;
+                                line-height: 1.235;
+                            }
+                        }
+                        hr{
+                            margin: 0px;
+                            flex-shrink: 0;
+                            border-width: 0px 0px thin;
+                            border-style: solid;
+                            border-color: rgba(0, 0, 0, 0.12);
+                        }
+                        .content-content{
+                            margin-top: 15px;
+                            ul{
+                                list-style: none;
+                                margin: 0px;
+                                padding: 8px 0px;
+                                position: relative;
+                                .content-item{
+                                    -webkit-tap-highlight-color: transparent;
+                                    background-color: transparent;
+                                    outline: 0px;
+                                    border: 0px;
+                                    margin: 0px;
+                                    border-radius: 0px;
+                                    cursor: pointer;
+                                    user-select: none;
+                                    vertical-align: middle;
+                                    appearance: none;
+                                    color: inherit;
+                                    display: flex;
+                                    -webkit-box-pack: start;
+                                    justify-content: flex-start;
+                                    -webkit-box-align: center;
+                                    align-items: center;
+                                    position: relative;
+                                    text-decoration: none;
+                                    width: 100%;
+                                    box-sizing: border-box;
+                                    text-align: left;
+                                    padding: 8px 16px;
+                                    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                                    span{
+                                        margin: 0px;
+                                        font-size: 15px;
+                                        font-family: Inter, sans-serif;
+                                        font-weight: 400;
+                                        line-height: 1.5;
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+            .right{
+                padding: 32px 0 0 32px;
+            }
+        }
+    }
+}
