@@ -2072,8 +2072,106 @@ header {
   line-height: 1.5;
   display: block;
 }
+#edu-quiz .container-exam .row .center .root .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 24px 16px;
+  /* You can add :hover effect for button here */
+}
+#edu-quiz .container-exam .row .center .root .footer button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 64px;
+  padding: 6px 16px;
+  border: none;
+  border-radius: 8px;
+}
+#edu-quiz .container-exam .row .center .root .footer .btn-circle {
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 12px;
+}
+#edu-quiz .container-exam .row .center .root .footer .btn-circle .fa-circle {
+  color: #ddd; /* or any color you prefer */
+  font-size: 25px;
+}
+#edu-quiz .container-exam .row .center .root .footer .btn-circle .inside {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: black; /* or any color you prefer */
+}
+#edu-quiz .container-exam .row .center .root .footer .btn-circle:hover .fa-circle {
+  color: #ccc; /* darker shade for hover effect */
+}
 #edu-quiz .container-exam .row .right {
   padding: 32px 0 0 32px;
+}
+#edu-quiz .container-exam .row .right .root {
+  background-color: rgb(255, 255, 255);
+  color: rgb(17, 24, 39);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 10px 10px 4px;
+  display: flex;
+  flex-direction: column;
+}
+#edu-quiz .container-exam .row .right .root .header {
+  padding: 16px 24px 0px;
+}
+#edu-quiz .container-exam .row .right .root .header h3 {
+  color: rgb(17, 24, 39);
+  font-weight: 600;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+#edu-quiz .container-exam .row .right .root .content {
+  padding: 16px 24px;
+  height: 100%;
+}
+#edu-quiz .container-exam .row .right .root .content .content-content {
+  max-height: 320px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+#edu-quiz .container-exam .row .right .root .content .content-content button {
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0px;
+  border: 0px currentcolor;
+  margin: 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.75;
+  min-width: 64px;
+  padding: 6px 16px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: inherit;
+  background-color: rgb(224, 224, 224);
+  box-shadow: none;
+  border-radius: 8px;
 }
 
 #single-top-meta {
@@ -3805,7 +3903,7 @@ header {
 .radio .radio__radio {
   width: 1.25em;
   height: 1.25em;
-  border: 2px solid #d8e4e2;
+  border: 2px solid rgb(107, 114, 128);
   border-radius: 50%;
   margin-right: 20px;
   box-sizing: border-box;
