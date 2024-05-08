@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -1983,6 +1984,120 @@ header {
 #edu-quiz .container-exam .row .left {
   padding: 32px 0 0 32px;
 }
+#edu-quiz .container-exam .row .left .root {
+  background-color: rgb(255, 255, 255);
+  color: rgb(17, 24, 39);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 10px 10px 4px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+#edu-quiz .container-exam .row .left .root .header {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 16px 24px 0px;
+}
+#edu-quiz .container-exam .row .left .root .header .header-content {
+  overflow: hidden;
+}
+#edu-quiz .container-exam .row .left .root .header .header-content span {
+  color: rgb(17, 24, 39);
+  font-weight: 600;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+#edu-quiz .container-exam .row .left .root .content {
+  height: 100%;
+  padding: 8px 24px;
+}
+#edu-quiz .container-exam .row .left .root .content .content-1 {
+  display: flex;
+  justify-content: space-between;
+}
+#edu-quiz .container-exam .row .left .root .content .content-1 div {
+  display: flex;
+  align-items: center;
+}
+#edu-quiz .container-exam .row .left .root .content .content-1 div div {
+  position: relative;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: Inter, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  user-select: none;
+  width: 30px;
+  height: 30px;
+}
+#edu-quiz .container-exam .row .left .root .content .content-1 div div img {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  object-fit: cover;
+  color: transparent;
+  text-indent: 10000px;
+}
+#edu-quiz .container-exam .row .left .root .content .content-1 div p {
+  margin: 0px;
+  font-size: 14px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgb(107, 114, 128);
+  margin-left: 10px;
+}
+#edu-quiz .container-exam .row .left .root .content .content-2 {
+  display: flex;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+#edu-quiz .container-exam .row .left .root .content .content-2 div {
+  display: flex;
+  justify-content: space-around;
+  font-size: 13px;
+}
+#edu-quiz .container-exam .row .left .root .content .content-2 div p:last-child {
+  margin-left: 5px;
+}
+#edu-quiz .container-exam .row .left .root .content hr {
+  border-width: 0px 0px thin;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+#edu-quiz .container-exam .row .left .root .content .content-3 {
+  display: flex;
+  font-size: 14px;
+  gap: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+#edu-quiz .container-exam .row .left .root .content .content-3 p:last-child {
+  font-weight: 600;
+}
+#edu-quiz .container-exam .row .left .root .content .content-4 {
+  line-height: 1.5;
+}
+#edu-quiz .container-exam .row .left .root .content .content-4 p {
+  font-size: 14px;
+}
+#edu-quiz .container-exam .row .left .root .content .content-4 div {
+  font-size: 18px;
+  font-weight: 700;
+}
 #edu-quiz .container-exam .row .center {
   padding: 32px 0 0 32px;
   height: auto;
@@ -2172,6 +2287,45 @@ header {
   background-color: rgb(224, 224, 224);
   box-shadow: none;
   border-radius: 8px;
+}
+#edu-quiz .container-exam .row .right .root .footer {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 8px 24px 16px;
+}
+#edu-quiz .container-exam .row .right .root .footer button {
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0px;
+  border: 0px;
+  margin: 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  min-width: 64px;
+  padding: 6px 16px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: rgb(255, 255, 255);
+  background-color: rgb(10, 143, 220);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+  border-radius: 8px;
+  text-transform: capitalize;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
 }
 
 #single-top-meta {
@@ -3919,6 +4073,114 @@ header {
   border-radius: 50%;
   transform: scale(0);
   transition: transform 0.15s;
+}
+
+.select select {
+  width: 66.666667%;
+  padding: 11px;
+  font-size: 14px;
+  border: 1.9px solid lightgrey;
+  border-radius: 8px;
+  color: #39325A;
+  outline: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background: #fff;
+}
+.select .title {
+  position: relative;
+  color: #908D92;
+}
+.select .title::before {
+  position: absolute;
+  content: "Tự động chuyển câu";
+  top: -15px;
+  left: -208px;
+  background: #fff;
+  text-align: center;
+  font-size: 11.5px;
+}
+.select .icon {
+  position: relative;
+  font-size: 12px;
+  color: #908D92;
+  left: -43px;
+  pointer-events: none;
+  padding: 19px 9px 15px 9px;
+}
+
+.dropdown {
+  flex: 1;
+  position: relative;
+  width: 300px;
+  height: 50px;
+}
+.dropdown input {
+  border: 2px solid #E0E3E0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: #fff;
+  outline: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 12px 20px;
+  border-radius: 10px;
+}
+.dropdown .matching-select {
+  position: absolute;
+  border: 1px solid #ddd;
+  top: 50px;
+  width: 100%;
+  background: #FFF;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+  z-index: 5;
+  font-size: 1.5rem;
+}
+.dropdown .matching-select div:first-of-type {
+  background: #ededed;
+}
+.dropdown .matching-select div:hover:not(div:first-of-type) {
+  background: #62baed;
+  color: #FFF;
+}
+.dropdown .matching-select div {
+  padding: 5px 20px;
+  cursor: pointer;
+}
+.dropdown .matching-select div ion-icon {
+  position: relative;
+  top: 2px;
+}
+
+.dropdown::before {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #333;
+  border-top: 2px solid #FFF;
+  border-right: 2px solid #fff;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.dropdown.active::before {
+  top: 22px;
+  transform: rotate(-225deg);
+}
+
+.dropdown.active .matching-select {
+  display: block;
 }
 
 /*# sourceMappingURL=main.css.map */

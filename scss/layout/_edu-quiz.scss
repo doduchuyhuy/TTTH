@@ -3,6 +3,123 @@
         .row{
             .left{
                 padding: 32px 0 0 32px;
+                .root{
+                    background-color: rgb(255, 255, 255);
+                    color: rgb(17, 24, 39);
+                    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                    overflow: hidden;
+                    border-radius: 16px;
+                    box-shadow: rgba(0, 0, 0, 0.04) 0px 10px 10px 4px;
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 5px;
+                    .header{
+                        display: flex;
+                        -webkit-box-align: center;
+                        align-items: center;
+                        padding: 16px 24px 0px;
+                        .header-content{
+                            overflow: hidden;
+                            span{
+                                color: rgb(17, 24, 39);
+                                font-weight: 600;
+                                font-size: 16px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .content{
+                        height: 100%;
+                        padding: 8px 24px;
+                        .content-1{
+                            display: flex;
+                            justify-content: space-between;
+                            div{
+                                display: flex;
+                                align-items: center;
+                                div{
+                                    position: relative;
+                                    display: flex;
+                                    -webkit-box-align: center;
+                                    align-items: center;
+                                    -webkit-box-pack: center;
+                                    justify-content: center;
+                                    flex-shrink: 0;
+                                    font-family: Inter, sans-serif;
+                                    font-size: 1.25rem;
+                                    line-height: 1;
+                                    border-radius: 50%;
+                                    overflow: hidden;
+                                    user-select: none;
+                                    width: 30px;
+                                    height: 30px;
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                        text-align: center;
+                                        object-fit: cover;
+                                        color: transparent;
+                                        text-indent: 10000px;
+                                    }
+                                }
+                                p{
+                                    margin: 0px;
+                                    font-size: 14px;
+                                    font-family: Inter, sans-serif;
+                                    font-weight: 400;
+                                    line-height: 1.5;
+                                    color: rgb(107, 114, 128);
+                                    margin-left: 10px;
+
+                                }
+                            }
+                        }
+                        .content-2{
+                            display: flex;
+                            margin-top: 12px;
+                            margin-bottom: 20px;
+                            gap: 20px;
+                            div{
+                                display: flex;
+                                justify-content: space-around;
+                                font-size: 13px;
+                                p:last-child{
+                                    margin-left: 5px;
+                                }
+                                
+                            }
+                        }
+                        hr{
+                            border-width: 0px 0px thin;
+                            border-style: solid;
+                            border-color: rgba(0, 0, 0, 0.12);  
+
+                        }
+                        .content-3{
+                            display: flex;
+                            font-size: 14px;
+                            gap: 5px;
+                            margin-bottom: 10px;
+                            margin-top: 10px;
+                            p:last-child{
+                                font-weight: 600;
+                            }
+                        }
+                        .content-4{
+                            line-height: 1.5;
+                            p{
+                                font-size: 14px;
+                            }
+                            div{
+                                font-size: 18px;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
             }
             .center{
                 padding: 32px 0 0 32px;
@@ -197,6 +314,45 @@
                                 border-radius: 8px;
                                 
                             }
+                        }
+                    }
+                    .footer{
+                        display: flex;
+                        -webkit-box-align: center;
+                        align-items: center;
+                        padding: 8px 24px 16px;
+                        button{
+                            display: inline-flex;
+                            -webkit-box-align: center;
+                            align-items: center;
+                            -webkit-box-pack: center;
+                            justify-content: center;
+                            position: relative;
+                            box-sizing: border-box;
+                            -webkit-tap-highlight-color: transparent;
+                            outline: 0px;
+                            border: 0px;
+                            margin: 0px;
+                            cursor: pointer;
+                            user-select: none;
+                            vertical-align: middle;
+                            appearance: none;
+                            text-decoration: none;
+                            font-family: Inter, sans-serif;
+                            font-weight: 500;
+                            font-size: 0.875rem;
+                            line-height: 1.75;
+                            min-width: 64px;
+                            padding: 6px 16px;
+                            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                            color: rgb(255, 255, 255);
+                            background-color: rgb(10, 143, 220);
+                            box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+                            border-radius: 8px;
+                            text-transform: capitalize;
+                            margin-left: auto;
+                            margin-right: auto;
+                            font-size: 14px;
                         }
                     }
                 }

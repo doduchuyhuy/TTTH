@@ -159,9 +159,13 @@
                 // });
 
             });
-            $('#edu-quiz').load("./template/edu-quiz.html");   
+            $('#edu-quiz').load("./template/edu-quiz.html", function(){
+                select();
+                
+            });   
         });
     </script>
     <script src="./assets/js/scriptsHuy.js"></script>
+    <script src="./assets/js/script-select.js"></script>
 </body>
 </html>
