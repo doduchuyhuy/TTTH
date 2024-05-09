@@ -73,3 +73,24 @@ function select(){
 //         }
 //     })
 //     })
+
+ function loadselect(){
+    $('.dropdown .matching-select div').click(function() {
+        var value = $(this).data('value'); // Lấy giá trị từ data-value
+        var textBoxId = $(this).closest('.dropdown').find('.textBox').attr('id');
+        $('#' + textBoxId).val(value ? $(this).text().trim() : ''); // Nếu value là rỗng, reset textBox
+    });
+
+    $('.dropdown').click(function() {
+        // Đóng tất cả các dropdown khác trước khi toggle dropdown hiện tại
+        $('.dropdown').not(this).removeClass('active');
+        $(this).toggleClass('active');
+    });
+
+    // Đóng dropdown khi click ngoài
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.dropdown').length) {
+            $('.dropdown').removeClass('active');
+        }
+    });
+ }

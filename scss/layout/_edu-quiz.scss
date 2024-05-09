@@ -7,7 +7,7 @@
                     background-color: rgb(255, 255, 255);
                     color: rgb(17, 24, 39);
                     transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-                    overflow: hidden;
+                    // overflow: hidden;
                     border-radius: 16px;
                     box-shadow: rgba(0, 0, 0, 0.04) 0px 10px 10px 4px;
                     display: flex;
@@ -109,13 +109,28 @@
                             }
                         }
                         .content-4{
-                            line-height: 1.5;
+                            line-height: 1.7;
                             p{
                                 font-size: 14px;
                             }
                             div{
                                 font-size: 18px;
                                 font-weight: 700;
+                            }
+                        }
+                        .content-5{
+                            margin-top: 20px;
+                        }
+                    }
+                    .footer{
+                        margin-top: 10px;
+                        padding: 8px 24px 16px;
+                        .footer-icon{
+                            display: flex;
+                            justify-content: space-between;
+                            div{
+                                display: flex;
+                                gap: 20px;
                             }
                         }
                     }
