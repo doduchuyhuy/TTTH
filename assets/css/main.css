@@ -2162,6 +2162,9 @@ header {
 #edu-quiz .container-exam .row .center .root .content .content-content {
   margin-top: 15px;
 }
+#edu-quiz .container-exam .row .center .root .content .content-content p {
+  font-weight: 600;
+}
 #edu-quiz .container-exam .row .center .root .content .content-content ul {
   list-style: none;
   margin: 0px;
@@ -2236,6 +2239,9 @@ header {
 }
 #edu-quiz .container-exam .row .center .root .footer .btn-circle:hover .fa-circle {
   color: #ccc; /* darker shade for hover effect */
+}
+#edu-quiz .container-exam .row .center .root ~ .root {
+  margin-top: 10px;
 }
 #edu-quiz .container-exam .row .right {
   padding: 32px 0 0 32px;
@@ -4174,6 +4180,52 @@ header {
 }
 
 .dropdown.active .matching-select {
+  display: block;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  cursor: pointer;
+}
+.checkbox input[type=checkbox] {
+  margin-right: 20px;
+  appearance: none;
+  width: 1.45em;
+  height: 1.45em;
+  background-color: #d5d5d5;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.checkbox label {
+  margin: 0px;
+  font-size: 15px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  display: block;
+}
+.checkbox input[type=checkbox]:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  font-weight: 900;
+  font-size: 50px;
+  font-size: 1.15em;
+  color: white;
+  display: none;
+}
+.checkbox input[type=checkbox]:hover {
+  background-color: #a5a5a5;
+}
+.checkbox input[type=checkbox]:checked {
+  background: #009879;
+}
+.checkbox input[type=checkbox]:checked::after {
   display: block;
 }
 

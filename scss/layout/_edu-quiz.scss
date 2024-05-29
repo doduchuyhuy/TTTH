@@ -181,6 +181,9 @@
                             border-color: rgba(0, 0, 0, 0.12);
                         }
                         .content-content{
+                            p{
+                                font-weight: 600;
+                            }
                             margin-top: 15px;
                             ul{
                                 list-style: none;
@@ -265,6 +268,9 @@
                           }
                     }
 
+                }
+                .root ~ .root{
+                    margin-top: 10px;
                 }
             }
             .right{
