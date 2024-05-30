@@ -182,7 +182,7 @@
                         }
                         .content-content{
                             p{
-                                font-weight: 600;
+                                // font-weight: 600;
                             }
                             margin-top: 15px;
                             ul{
@@ -221,6 +221,38 @@
                                         font-weight: 400;
                                         line-height: 1.5;
                                         display: block;
+                                    }
+                                }
+                            }
+                            .matching{
+                                padding: 3px;
+                                .matching-item{
+                                    display: flex;
+                                    padding: 5px;
+                                    border-radius: 6px;
+                                    border: 1px solid #eee;
+                                    gap: 6px;
+                                    margin-top: 6px;
+                                    margin-bottom: 6px;
+                                    font-size: 15px;
+                                    font-family: Inter, sans-serif;
+                                    font-weight: 400;
+                                    line-height: 1.5;
+                                    .item-left{
+                                        width: 50%;
+                                        padding: 4px;
+                                    }
+                                    .item-right{
+                                        width: 50%;
+                                        div{
+                                            padding: 4px;
+                                            box-shadow: #ccdbe8 3px 3px 6px 0px inset, hsla(0,0%,100%,.5) -3px -3px 6px 1px inset !important;
+                                            height: 100%;
+                                            min-height: 60px;
+                                            border-width: 1px;
+                                            border-radius: 6px;
+                                            
+                                        }
                                     }
                                 }
                             }

@@ -2162,9 +2162,6 @@ header {
 #edu-quiz .container-exam .row .center .root .content .content-content {
   margin-top: 15px;
 }
-#edu-quiz .container-exam .row .center .root .content .content-content p {
-  font-weight: 600;
-}
 #edu-quiz .container-exam .row .center .root .content .content-content ul {
   list-style: none;
   margin: 0px;
@@ -2203,6 +2200,37 @@ header {
   font-weight: 400;
   line-height: 1.5;
   display: block;
+}
+#edu-quiz .container-exam .row .center .root .content .content-content .matching {
+  padding: 3px;
+}
+#edu-quiz .container-exam .row .center .root .content .content-content .matching .matching-item {
+  display: flex;
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  gap: 6px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  font-size: 15px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+#edu-quiz .container-exam .row .center .root .content .content-content .matching .matching-item .item-left {
+  width: 50%;
+  padding: 4px;
+}
+#edu-quiz .container-exam .row .center .root .content .content-content .matching .matching-item .item-right {
+  width: 50%;
+}
+#edu-quiz .container-exam .row .center .root .content .content-content .matching .matching-item .item-right div {
+  padding: 4px;
+  box-shadow: #ccdbe8 3px 3px 6px 0px inset, hsla(0, 0%, 100%, 0.5) -3px -3px 6px 1px inset !important;
+  height: 100%;
+  min-height: 60px;
+  border-width: 1px;
+  border-radius: 6px;
 }
 #edu-quiz .container-exam .row .center .root .footer {
   display: flex;
