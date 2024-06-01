@@ -24,6 +24,15 @@ body {
       }
 }
 
+::-webkit-scrollbar{
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: rgb(224, 224, 224);
+}
+
 .sticky{
     position: sticky;
     top: 0.5vh;
