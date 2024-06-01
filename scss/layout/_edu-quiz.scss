@@ -228,7 +228,7 @@
                                 padding: 3px;
                                 .matching-item{
                                     display: flex;
-                                    padding: 5px;
+                                    padding: 6px;
                                     border-radius: 6px;
                                     border: 1px solid #eee;
                                     gap: 6px;
@@ -240,7 +240,7 @@
                                     line-height: 1.5;
                                     .item-left{
                                         width: 50%;
-                                        padding: 4px;
+                                        padding: 6px;
                                     }
                                     .item-right{
                                         width: 50%;
@@ -253,6 +253,29 @@
                                             border-radius: 6px;
                                             
                                         }
+                                    }
+                                }
+                                .matching-instruction{
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    margin-top: 1.2rem !important;
+                                    margin-bottom: 1.2rem !important;
+                                }
+                                .matching-answer{
+                                    display: grid;
+                                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                                    gap: 1.2rem;
+                                    background-color: rgb(245 245 245/ 1);
+                                    border-radius: .6rem;
+                                    padding:8px;
+                                    div{
+                                        padding: 8px;
+                                        background-color: rgb(255 255 255/ 1);
+                                        border-radius: .6rem;
+                                        min-height: 60px;
+                                        border: 0 solid #eee;
+
                                     }
                                 }
                             }
