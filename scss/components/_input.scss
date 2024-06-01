@@ -1,0 +1,18 @@
+.input{
+    // position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 250px;
+    margin-bottom: 5px;
+    input{
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #E0E3E0;
+        background: #FFF;
+        border-radius: 5px;
+        outline: none;
+        font-size: 1em;
+        transition: 0.5s;
+    }
+}

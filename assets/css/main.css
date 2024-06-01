@@ -71,7 +71,6 @@ html {
 
 body {
   font-size: 1.4rem;
-  font-family: Roboto, sans-serif;
   background-color: #f7f7f9;
 }
 @media (max-width: 767.98px) {
@@ -4309,6 +4308,24 @@ header {
 }
 .checkbox input[type=checkbox]:checked::after {
   display: block;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 250px;
+  margin-bottom: 5px;
+}
+.input input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #E0E3E0;
+  background: #FFF;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1em;
+  transition: 0.5s;
 }
 
 /*# sourceMappingURL=main.css.map */
