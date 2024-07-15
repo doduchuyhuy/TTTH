@@ -43,6 +43,16 @@
                             00 : 02 : 49
                         </div>
                     </div>
+                    <div class="content-5">
+                        <div class="toggle-switch">
+                            <label class="switch">
+                                <input type="checkbox" id="displayResultsToggle" checked>
+                                <span class="slider round"></span>
+                            </label>
+                            <span class="toggle-label">Hiển thị kết quả</span>
+                        </div>
+                    </div>
+                    
                     <hr>
                     <div class="content-5">
                         <div class="dropdown">
@@ -100,6 +110,10 @@
                                     <p>Sai: </p>
                                     <p>&nbsp0</p>
                                 </div>
+                                <div class="sub-content-item-2-3">
+                                    <p>Gần Đúng: </p>
+                                    <p>&nbsp0</p>
+                                </div>
                             </div>
                         </div>
                         <div class="content-item">
@@ -121,6 +135,10 @@
                                 </div>
                                 <div class="sub-content-item-2-2">
                                     <p>Sai: </p>
+                                    <p>&nbsp0</p>
+                                </div>
+                                <div class="sub-content-item-2-3">
+                                    <p>Gần Đúng: </p>
                                     <p>&nbsp0</p>
                                 </div>
                             </div>
@@ -149,7 +167,7 @@
                     <div class="content-content">
                         <ul>
                             <div class="content-item">
-                                <label for="myRadioId1" class="radio">
+                                <label for="myRadioId1" class="radio disabled">
                                     <input type="radio" name="myRadioField" id="myRadioId1" class="radio__input">
                                     <div class="radio__radio"></div>
                                     <span>
@@ -179,13 +197,13 @@
                     </div>      
                 </div>
                 <div class="footer">
-                    <button id="prev-button">
+                    <button id="prev-button" class="disabledButton">
                         <div class="btn-circle">
                             <i class="fas fa-circle"></i><i class="fas fa-chevron-left inside"></i>
                         </div>
                         <span>Trước</span>  
                     </button>
-                    <button id="next-button">
+                    <button id="next-button" class="activeButton">
                         <span>Sau</span>
                         <div class="btn-circle">
                             <i class="fas fa-circle"></i><i class="fas fa-chevron-right inside"></i>   
@@ -338,7 +356,7 @@
                     <div class="content-content">
                         <ul>
                             <div class="content-item">
-                                <div class="checkbox">
+                                <div class="checkbox disabled">
                                     <input type="checkbox" id="check1">
                                     <label for="check1">
                                         A. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thểVì có hai loại lao động là lao động trừu tượng và lao động cụ thểVì có hai loại lao động là lao động trừu tượng và lao động cụ thể
@@ -347,7 +365,7 @@
                             </div>
                             <div class="content-item">
                                 <div class="checkbox">
-                                    <input type="checkbox" id="check2">
+                                    <input type="checkbox" id="check2" >
                                     <label for="check2">
                                         A. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thểVì có hai loại lao động là lao động trừu tượng và lao động cụ thểVì có hai loại lao động là lao động trừu tượng và lao động cụ thể
                                     </label>    
@@ -562,8 +580,79 @@
                 </div>
                 <div class="footer">
                     <button>Làm lại Câu sai</button>
+                    <button id="submitBtn">Nộp bài</button>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+
+<!-- Background overlay -->
+<div id="modalOverlay" class="modal-overlay" style="display:none;"></div>
+
+<!-- Result Modal -->
+<div id="resultModal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <div class="title_subject">
+            <p class="title">Kết quả làm bài thi</p>
+            <p class="subject">CNTT</p>
+        </div>
+        <div class="row markAndDetails">
+            <div class="col-6 mark">
+                <div class="mark_image">
+                    <img src="../assets/exam/img_hoanthanh@2x.webp" alt="">
+                </div>
+                <div class="mark_title">Bạn đã hoàn thành phần thi</div>
+                <div class="mark_mark">0.8 điểm</div>
+                <div class="mark_rank">
+                    <span>xếp loại:</span>
+                    <button>Yếu</button >
+                </div>
+                <div class="mark_correct_time">
+                    <div>số câu đúng: 10/100</div>
+                    <div>Thời gian: 00:55:55</div>
+                </div>
+                <div class="mark_evaluate">Đánh giá đề thi</div>
+                <div class="mark_rating">
+                    <div class="stars">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <div class="mark_response">
+                        <label for="">Đánh giá</label>
+                        <div>
+                            <textarea spellcheck="none" placeholder="Nhập nội dung đánh giá"></textarea>
+                        </div>
+                </div>
+                <div class="mark_button">
+                    <button>Đánh giá</button>
+                </div>
+                
+            </div>
+            <div class="col-6 Details">
+                <div class="accordion">
+                    <div class="contentBx">
+                        <div class="label">
+                            <p>Phần 1</p>
+                            <p>Tổng:100</p>
+                            <div class="final">
+                                <p>Đúng: 20</p>
+                                <p>Sai: 30</p>
+                                <p>Gần đúng: 20</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ad iusto atque ducimus commodi omnis nobis eaque doloremque consequuntur recusandae perspiciatis temporibus debitis tenetur alias, veritatis officiis excepturi accusantium nihil!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="closeModal">Đóng</button>
     </div>
 </div>

@@ -6,9 +6,11 @@
     input[type="checkbox"]{
         margin-right: 20px;
         appearance: none;
-        width: 1.45em;
-        height: 1.45em;
-        background-color: #d5d5d5;
+        width: 1.40em;
+        height: 1.40em;
+        // background-color: #d5d5d5;
+        background-color: #eaeaea;
+        border: 1px solid #626262;
         border-radius: 5px;
         cursor: pointer;
         display: flex;
@@ -16,6 +18,7 @@
         align-items: center;
         flex-shrink: 0;
     }
+    
     label{
         margin: 0px;
         font-size: 15px;
@@ -29,17 +32,33 @@
         content: "\f00c";
         font-weight: 900;
         font-size: 50px;
-        font-size: 1.15em;
+        font-size: 1em;
         color: white;
         display: none;
     }
-    input[type="checkbox"]:hover{
-        background-color: #a5a5a5;
-    }
+    // input[type="checkbox"]:hover{
+    //     background-color: #a5a5a5;
+    // }
     input[type="checkbox"]:checked{
-        background: #009879;
+        // background: #009879;
+        background: #196ebf;
+        border: none;
     }
+    
     input[type="checkbox"]:checked::after{
         display: block;
+    }
+}
+
+
+.checkbox.disabled{
+    input[type="checkbox"]:checked{
+        background-color: #c3c3c3;
+        border: none;
+    }
+
+    input[type="checkbox"]{
+        border: 1px solid #c3c3c3;
+        background-color: #f9f9f9;
     }
 }

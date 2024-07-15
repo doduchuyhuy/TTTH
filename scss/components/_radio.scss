@@ -2,32 +2,65 @@
     display: flex;
     align-items: center;
     padding: 6px;
+    flex: 1 1 auto;
     cursor: pointer;
     // margin-right: 10px;
     .radio__input{
         display: none;
     }
     .radio__input:checked + .radio__radio::after{
-        transform: scale(1);
+        // transform: scale(1);
+        display: block;
     }
     .radio__radio{
         width: 1.25em;
         height: 1.25em;
-        border: 2px solid rgb(107, 114, 128);
+        border: 1px solid #626262;
         border-radius: 50%;
         margin-right: 20px;
         box-sizing: border-box;
         padding: 2px;
         flex-shrink: 0;
+        background-color: #eaeaea;
     }
     .radio__radio::after{
         content: "";
         width: 100%;
         height: 100%;
-        display: block;
-        background: #009879;
+        display: none;
+        // background: #009879;
+        background: #196ebf;
         border-radius: 50%;
-        transform: scale(0);
-        transition: transform 0.15s;
+        // transform: scale(0);
+        // transition: transform 0.15s;
+    }
+
+
+    .radio__input:checked + .radio__radio{
+        background-color: #fff;
+    }
+
+    .questError{
+        background: red;
+        color: rgb(255, 255, 255);
+        padding: 4px;
+    }
+
+    .questSuccess{
+        background: green;
+        color: rgb(255, 255, 255);
+        padding: 4px;
+    }
+}
+
+
+.radio.disabled{
+    .radio__input:checked + .radio__radio::after{
+        background-color: #c3c3c3;
+    }
+    
+    .radio__input + .radio__radio{
+        border: 1px solid #c3c3c3;
+        background-color: #f9f9f9;
     }
 }

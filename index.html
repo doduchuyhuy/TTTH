@@ -16,17 +16,19 @@
     <title>Document</title>
 </head>
 <body>
-        <!-- <div id="signin-signup"></div> -->
-        <!-- <div id="headerpro"></div> -->
+        <!-- <div id="signin-signup"></div>
+        <div id="headerpro"></div>
+        <div id="slideshow"></div>
+        <div id="home"></div>
+        <footer id="footer-nperf"></footer> -->
+
         <!-- <header id="header"></header> -->
-        <!-- <div id="slideshow"></div> -->
-        <!-- <div id="home"></div> -->
         <!-- <article id="single-top-meta"></article>
         <article id="breadcrumb"></article> -->
         <!-- <article id="blog-list"></article> -->
         <!-- <article id="blog-details"></article> -->
         <!-- <footer id="footer-host"></footer> -->
-        <!-- <footer id="footer-nperf"></footer> -->
+        
 
         <!-- EXAM -->
         <div id="header-exam"></div>
@@ -161,6 +163,56 @@
             });
             $('#edu-quiz').load("./template/edu-quiz.html", function(){
                 loadselect();
+                  // Xử lý khi nhấn nút Nộp bài
+                    $('#submitBtn').click(function() {
+                        $('#modalOverlay, #resultModal').fadeIn(); // Hiển thị cả lớp phủ và modal
+                    });
+
+                    // Xử lý khi nhấn nút Đóng trong modal
+                    $('#closeModal').click(function() {
+                        $('#modalOverlay, #resultModal').fadeOut(); // Ẩn cả lớp phủ và modal
+                    });
+
+                    // Xử lý khi nhấn vào lớp phủ ngoài để tắt modal
+                    $('#modalOverlay').click(function(e) {
+                        // Kiểm tra xem sự kiện click có phát sinh từ modalOverlay (không phải từ modal-content)
+                        if (e.target.id === "modalOverlay") {
+                            $('#modalOverlay, #resultModal').fadeOut(); // Ẩn cả lớp phủ và modal
+                        }
+                    });
+
+                    var rating = 0; // Khởi tạo số sao đánh giá là 0
+
+                    // Xử lý sự kiện hover vào sao
+                    $('.fa-star').hover(function() {
+                        // Xóa lớp 'gold' khỏi tất cả các sao
+                        $('.fa-star').removeClass('gold');
+                        // Lấy index của sao đang hover và bôi vàng các sao từ đầu đến sao này
+                        var index = $(this).index();
+                        $('.fa-star:lt(' + (index + 1) + ')').addClass('gold');
+                    }, function() {
+                        // Khi không hover nữa, xóa màu vàng khỏi tất cả các sao
+                        $('.fa-star').removeClass('gold');
+                        // Áp dụng lại màu vàng cho các sao đã đánh giá
+                        $('.fa-star:lt(' + rating + ')').addClass('gold');
+                    });
+
+                    // Xử lý sự kiện click vào sao
+                    $('.fa-star').click(function() {
+                        rating = $(this).index() + 1; // Cập nhật số sao đánh giá
+                        $('.fa-star').removeClass('gold'); // Xóa lớp 'gold' khỏi tất cả các sao
+                        $('.fa-star:lt(' + rating + ')').addClass('gold'); // Bôi vàng các sao đã chọn
+                    });
+
+                    $('.contentBx').click(function() {
+                        $(this).toggleClass('active');
+                    });
+
+
+                
+
+
+                    
                 
             });   
         });

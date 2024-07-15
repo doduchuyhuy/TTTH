@@ -224,6 +224,12 @@
                                             color: red;
                                         }
                                     }
+                                    .sub-content-item-2-3{
+                                        display: flex;
+                                        p:last-child{
+                                            color: #999900;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -289,9 +295,9 @@
                             border-color: rgba(0, 0, 0, 0.12);
                         }
                         .content-content{
-                            p{
-                                // font-weight: 600;
-                            }
+                            // p{
+                            //     font-weight: 600;
+                            // }
                             margin-top: 15px;
                             ul{
                                 list-style: none;
@@ -299,7 +305,7 @@
                                 padding: 8px 0px;
                                 position: relative;
                                 .content-item{
-                                    border: 1px solid transparent;
+                                    border: 2px solid transparent;
                                     margin-top: 6px;
                                     margin-bottom: 6px;
                                     -webkit-tap-highlight-color: transparent;
@@ -398,41 +404,75 @@
                         justify-content: space-between;
                         align-items: center;
                         padding: 8px 24px 16px;
+                        .activeButton {
+                            background-color: rgb(10, 143, 220)!important;
+                            color: white!important;
+                        }
+                    
+                        .disabledButton{
+                            background-color: rgba(0, 0, 0, 0.12) !important;
+                            color: rgba(0, 0, 0, 0.26) !important;
+                        }
                         button{
                             display: flex;
                             align-items: center;
                             gap: 5px;
                             // justify-content: space-around;
-                            min-width: 64px;
+                            min-width: 65px;
                             padding: 6px 16px;
                             border: none;
                             border-radius: 8px;
-                            
+                            span{
+                                font-size: 12px;;
+                            }
+
+                            .btn-circle {
+                                position: relative;
+                                background-color: transparent;
+                                cursor: pointer;
+                                font-size: 12px;
+                              }
+                              
+                            .btn-circle .fa-circle {
+                                // color: #ddd; /* or any color you prefer */
+                                font-size: 20px;
+                              }
+    
+                            .btn-circle .fa-chevron-right{
+                                font-size: 11px;
+                              }
+    
+                            .btn-circle .fa-chevron-left{
+                                font-size: 11px;
+                              }
+                              
+                            .btn-circle .inside {
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50%, -50%);
+                                // color: black; /* or any color you prefer */
+                                // color: rgb(10, 143, 220);
+                            }   
                         }
-                        .btn-circle {
-                            position: relative;
-                            background-color: transparent;
-                            cursor: pointer;
-                            font-size: 12px;
-                          }
-                          
-                          .btn-circle .fa-circle {
-                            color: #ddd; /* or any color you prefer */
-                            font-size: 25px;
-                          }
-                          
-                          .btn-circle .inside {
-                            position: absolute;
-                            left: 50%;
-                            top: 50%;
-                            transform: translate(-50%, -50%);
-                            color: black; /* or any color you prefer */
-                          }
+
+                        button.activeButton{
+                            .btn-circle .inside {
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50%, -50%);
+                                // color: black; /* or any color you prefer */
+                                color: rgb(10, 143, 220);
+                            } 
+                        }
+                        
+
                           
                           /* You can add :hover effect for button here */
-                          .btn-circle:hover .fa-circle {
-                            color: #ccc; /* darker shade for hover effect */
-                          }
+                        //   .btn-circle:hover .fa-circle {
+                        //     color: #ccc; /* darker shade for hover effect */
+                        //   }
                     }
 
                 }

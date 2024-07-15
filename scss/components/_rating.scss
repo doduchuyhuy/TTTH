@@ -1,0 +1,14 @@
+.stars {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.fa-star {
+    color: gray; /* Màu xám cho các sao chưa được chọn hoặc hover qua */
+    transition: color 0.2s; /* Cho hiệu ứng chuyển màu mượt mà */
+    font-size: 16px;
+}
+
+.fa-star.gold {
+    color: rgb(250, 175, 0); /* Màu vàng khi sao được đánh giá hoặc hover */
+}
