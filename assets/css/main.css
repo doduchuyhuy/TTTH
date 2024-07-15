@@ -4748,24 +4748,78 @@ header {
 .accordion .contentBx .label {
   position: relative;
   padding: 10px;
-  background-color: #2694af;
-  color: #fff;
+  border-radius: 4px;
   cursor: pointer;
   display: flex;
-  gap: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.accordion .contentBx .label p {
+  flex: 1;
+  line-height: 3.5;
 }
 .accordion .contentBx .label .final {
+  flex: 2;
   display: flex;
-  justify-content: center;
-  gap: 20px;
+}
+.accordion .contentBx .label .final .btgreen {
+  min-width: 40px;
+  outline: 0px;
+  border: 0px;
+  cursor: pointer;
+  user-select: none;
+  appearance: none;
+  font-weight: 500;
+  padding: 10px 10px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(46, 125, 50);
+  box-shadow: none;
+  border-radius: 8px;
+  text-transform: capitalize;
+}
+.accordion .contentBx .label .final .btred {
+  min-width: 40px;
+  outline: 0px;
+  border: 0px;
+  cursor: pointer;
+  user-select: none;
+  appearance: none;
+  font-weight: 500;
+  padding: 10px 10px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(211, 47, 47);
+  box-shadow: none;
+  border-radius: 8px;
+  text-transform: capitalize;
+}
+.accordion .contentBx .label .final .btyellow {
+  min-width: 40px;
+  outline: 0px;
+  border: 0px;
+  cursor: pointer;
+  user-select: none;
+  appearance: none;
+  font-weight: 500;
+  padding: 10px 10px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(211, 194, 47);
+  box-shadow: none;
+  border-radius: 8px;
+  text-transform: capitalize;
 }
 .accordion .contentBx .label::before {
-  content: "+";
+  content: "";
   position: absolute;
-  top: 50%;
   right: 20px;
-  transform: translateY(-50%);
-  font-size: 1.5em;
+  top: 15px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #333;
+  border-top: 2px solid #FFF;
+  border-right: 2px solid #fff;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 3;
 }
 .accordion .contentBx .content {
   position: relative;
