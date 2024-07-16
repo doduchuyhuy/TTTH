@@ -589,78 +589,106 @@
 
 
 <!-- Background overlay -->
-<div id="modalOverlay" class="modal-overlay" style="display:none;"></div>
+<!-- <div id="modalOverlay" class="modal-overlay" style="display:none;"></div> -->
 
 <!-- Result Modal -->
-<div id="resultModal" class="modal" style="display:none;">
-    <div class="modal-content">
-        <div class="title_subject">
-            <p class="title">Kết quả làm bài thi</p>
-            <p class="subject">CNTT</p>
-        </div>
-        <div class="row markAndDetails">
-            <div class="col-6 mark">
-                <div class="mark_image">
-                    <img src="../assets/exam/img_hoanthanh@2x.webp" alt="">
-                </div>
-                <div class="mark_title">Bạn đã hoàn thành phần thi</div>
-                <div class="mark_mark">0.8 điểm</div>
-                <div class="mark_rank">
-                    <span>xếp loại:</span>
-                    <button>Yếu</button >
-                </div>
-                <div class="mark_correct_time">
-                    <div>số câu đúng: 10/100</div>
-                    <div>Thời gian: 00:55:55</div>
-                </div>
-                <div class="mark_evaluate">Đánh giá đề thi</div>
-                <div class="mark_rating">
-                    <div class="stars">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                </div>
-                <div class="mark_response">
-                        <label for="">Đánh giá</label>
-                        <div>
-                            <textarea spellcheck="none" placeholder="Nhập nội dung đánh giá"></textarea>
-                        </div>
-                </div>
-                <div class="mark_button">
-                    <button>Đánh giá</button>
-                </div>
-                
+<div id="resultModal" class="modal-overlay" style="display:none;">
+    <div class="modal-result">
+        <div class="modal-content">
+            <div class="title_subject">
+                <p class="title">Kết quả làm bài thi</p>
+                <p class="subject">CNTT</p>
             </div>
-            <div class="col-6 Details">
-                <div class="accordion">
-                    <div class="contentBx">
-                        <div class="label">
-                            <p>Phần 1</p>   
-                            <div class="final">
-                                <p>Tổng:
-                                    <strong>200</strong>
-                                </p>
-                                <p>Đúng: 
-                                    <button class="btgreen">10</button>
-                                </p>
-                                <p>Sai:
-                                    <button class="btred">20</button>
-                                </p>
-                                <p>Gần đúng: 
-                                    <button class="btyellow">10</button>
-                                </p>
+            <div class="row markAndDetails">
+                <div class="col-6 mark">
+                    <div class="mark_image">
+                        <img src="../assets/exam/img_hoanthanh@2x.webp" alt="">
+                    </div>
+                    <div class="mark_title">Bạn đã hoàn thành phần thi</div>
+                    <div class="mark_mark">0.8 điểm</div>
+                    <div class="mark_rank">
+                        <span>xếp loại:</span>
+                        <button>Yếu</button >
+                    </div>
+                    <div class="mark_correct_time">
+                        <div>số câu đúng: 10/100</div>
+                        <div>Thời gian: 00:55:55</div>
+                    </div>
+                    <div class="mark_evaluate">Đánh giá đề thi</div>
+                    <div class="mark_rating">
+                        <div class="stars">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="mark_response">
+                            <label for="">Đánh giá</label>
+                            <div>
+                                <textarea spellcheck="none" placeholder="Nhập nội dung đánh giá"></textarea>
+                            </div>
+                    </div>
+                    <div class="mark_button">
+                        <button>Đánh giá</button>
+                    </div>
+                    
+                </div>
+                <div class="col-6 Details">
+                    <div class="accordion">
+                        <div class="contentBx">
+                            <div class="label">
+                                <p>Phần 1</p>   
+                                <div class="final">
+                                    <p>Tổng:
+                                        <strong>200</strong>
+                                    </p>
+                                    <p>Đúng: 
+                                        <button class="btgreen">10</button>
+                                    </p>
+                                    <p>Sai:
+                                        <button class="btred">20</button>
+                                    </p>
+                                    <p>Trống: 
+                                        <button class="btgray">10</button>
+                                    </p>
+                                    <p>Gần đúng: 
+                                        <button class="btyellow">10</button>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ad iusto atque ducimus commodi omnis nobis eaque doloremque consequuntur recusandae perspiciatis temporibus debitis tenetur alias, veritatis officiis excepturi accusantium nihil!</p>
                             </div>
                         </div>
-                        <div class="content">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ad iusto atque ducimus commodi omnis nobis eaque doloremque consequuntur recusandae perspiciatis temporibus debitis tenetur alias, veritatis officiis excepturi accusantium nihil!</p>
-                        </div>
                     </div>
                 </div>
             </div>
+            <div class="footer-result">
+                <button id="">Làm lại Bài thi</button>
+                <button id="closeModal">Trở về</button>
+            </div>
+            
         </div>
-        <button id="closeModal">Đóng</button>
     </div>
+    
+</div>
+
+
+<div id="confirmModal" class="modal-overlay" style="display: none;">
+    <div class="modal-accept">
+        <div class="modal-header">
+            <span>Bạn có chắc chắn muốn nộp bài thi?</span>
+        </div>
+        <div class="modal-footer">
+            <button id="cancelBtn" class="btn cancel">Hủy</button>
+            <button id="confirmBtn" class="btn confirm">Xác Nhận</button>
+        </div>
+    </div>
+</div>
+
+<!-- Loading Indicator -->
+<div id="loading" class="modal-overlay" style="display:none;">
+    <div class="loading-spinner"></div>
 </div>

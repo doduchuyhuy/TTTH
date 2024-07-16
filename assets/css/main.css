@@ -4497,10 +4497,43 @@ header {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999; /* Đảm bảo lớp phủ nằm dưới modal nhưng trên nội dung khác */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.modal {
+.modal-overlay .modal-accept {
+  background-color: white;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.modal-overlay .modal-accept .modal-header {
+  margin-bottom: 20px;
+}
+.modal-overlay .modal-accept .modal-footer {
+  display: flex;
+  justify-content: space-around;
+}
+.modal-overlay .modal-accept .modal-footer .btn {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 8px;
+  line-height: 1.75;
+  cursor: pointer;
+  font-weight: bold;
+}
+.modal-overlay .modal-accept .modal-footer .cancel {
+  background-color: #f8f9fa;
+  color: #333;
+}
+.modal-overlay .modal-accept .modal-footer .confirm {
+  background-color: rgb(10, 143, 220);
+  color: white;
+}
+.modal-overlay .modal-result {
   background-color: rgb(255, 255, 255);
   color: rgb(17, 24, 39);
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -4519,7 +4552,7 @@ header {
   width: calc(100% - 64px);
   z-index: 1000; /* Đảm bảo modal nằm trên lớp phủ */
 }
-.modal .modal-content .title_subject {
+.modal-overlay .modal-result .modal-content .title_subject {
   margin: 0px;
   font-weight: 700 !important;
   font-family: Inter, sans-serif;
@@ -4530,18 +4563,18 @@ header {
   text-transform: uppercase !important;
   text-align: center !important;
 }
-.modal .modal-content .title_subject .subject {
+.modal-overlay .modal-result .modal-content .title_subject .subject {
   color: rgb(50, 94, 165) !important;
 }
-.modal .modal-content .markAndDetails {
+.modal-overlay .modal-result .modal-content .markAndDetails {
   overflow-y: auto;
   padding: 0 20px 24px;
   gap: 30px;
 }
-.modal .modal-content .markAndDetails .mark {
+.modal-overlay .modal-result .modal-content .markAndDetails .mark {
   flex: 1;
 }
-.modal .modal-content .markAndDetails .mark .mark_image {
+.modal-overlay .modal-result .modal-content .markAndDetails .mark .mark_image {
   max-width: 300px !important;
   height: 200px !important;
   margin-bottom: 2rem !important;
@@ -4549,7 +4582,7 @@ header {
   margin-right: auto !important;
   position: relative;
 }
-.modal .modal-content .markAndDetails .mark .mark_image img {
+.modal-overlay .modal-result .modal-content .markAndDetails .mark .mark_image img {
   position: absolute;
   inset: 0px;
   box-sizing: border-box;
@@ -4564,22 +4597,22 @@ header {
   min-height: 100%;
   max-height: 100%;
 }
-.modal .modal-content .markAndDetails .mark .mark_title {
+.modal-overlay .modal-result .modal-content .markAndDetails .mark .mark_title {
   text-align: center;
   font-size: 17px;
 }
-.modal .modal-content .markAndDetails .mark .mark_mark {
+.modal-overlay .modal-result .modal-content .markAndDetails .mark .mark_mark {
   text-align: center;
   font-size: 17px;
 }
-.modal .modal-content .markAndDetails .mark .mark_mark {
+.modal-overlay .modal-result .modal-content .markAndDetails .mark .mark_mark {
   text-align: center;
   font-size: 28px !important;
   font-weight: 600 !important;
   line-height: 32px !important;
   margin: 10px 0 10px 0;
 }
-.modal .modal-content .markAndDetails .mark .mark_rank {
+.modal-overlay .modal-result .modal-content .markAndDetails .mark .mark_rank {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -4589,10 +4622,10 @@ header {
   text-transform: uppercase;
   font-weight: 600;
 }
-.modal .modal-content .markAndDetails .mark .mark_rank span {
+.modal-overlay .modal-result .modal-content .markAndDetails .mark .mark_rank span {
   color: rgb(94, 92, 99) !important;
 }
-.modal .modal-content .markAndDetails .mark .mark_rank button {
+.modal-overlay .modal-result .modal-content .markAndDetails .mark .mark_rank button {
   display: inline-flex;
   -webkit-box-align: center;
   align-items: center;
@@ -4620,23 +4653,23 @@ header {
   color: rgb(255, 255, 255);
   margin-bottom: 10px;
 }
-.modal .modal-content .markAndDetails .mark .mark_correct_time {
+.modal-overlay .modal-result .modal-content .markAndDetails .mark .mark_correct_time {
   display: flex;
   justify-content: center;
   gap: 15px;
   font-size: 14px;
   margin-bottom: 20px;
 }
-.modal .modal-content .markAndDetails .mark .mark_evaluate {
+.modal-overlay .modal-result .modal-content .markAndDetails .mark .mark_evaluate {
   font-size: 16px;
   text-align: center;
   margin-bottom: 10px;
 }
-.modal .modal-content .markAndDetails .mark .mark_rating {
+.modal-overlay .modal-result .modal-content .markAndDetails .mark .mark_rating {
   text-align: center;
   margin-bottom: 10px;
 }
-.modal .modal-content .markAndDetails .mark .mark_response {
+.modal-overlay .modal-result .modal-content .markAndDetails .mark .mark_response {
   display: inline-flex;
   flex-direction: column;
   position: relative;
@@ -4646,7 +4679,7 @@ header {
   border-radius: 8px;
   margin-bottom: 10px;
 }
-.modal .modal-content .markAndDetails .mark .mark_response label {
+.modal-overlay .modal-result .modal-content .markAndDetails .mark .mark_response label {
   background: #fff;
   color: rgb(107, 114, 128);
   width: 69px;
@@ -4664,10 +4697,10 @@ header {
   pointer-events: auto;
   user-select: none;
 }
-.modal .modal-content .markAndDetails .mark .mark_response div {
+.modal-overlay .modal-result .modal-content .markAndDetails .mark .mark_response div {
   padding: 20px 14px;
 }
-.modal .modal-content .markAndDetails .mark .mark_response div textarea {
+.modal-overlay .modal-result .modal-content .markAndDetails .mark .mark_response div textarea {
   height: 60px;
   font: inherit;
   letter-spacing: inherit;
@@ -4687,10 +4720,10 @@ header {
   padding: 0px;
   outline: none;
 }
-.modal .modal-content .markAndDetails .mark .mark_button {
+.modal-overlay .modal-result .modal-content .markAndDetails .mark .mark_button {
   text-align: right;
 }
-.modal .modal-content .markAndDetails .mark .mark_button button {
+.modal-overlay .modal-result .modal-content .markAndDetails .mark .mark_button button {
   display: inline-flex;
   -webkit-box-align: center;
   align-items: center;
@@ -4722,8 +4755,53 @@ header {
   margin-right: auto;
   font-size: 14px;
 }
-.modal .modal-content .markAndDetails .Details {
+.modal-overlay .modal-result .modal-content .markAndDetails .Details {
   flex: 2;
+}
+.modal-overlay .modal-result .modal-content .footer-result {
+  padding: 20px;
+  text-align: right;
+}
+.modal-overlay .modal-result .modal-content .footer-result button:first-child {
+  font-size: 14px;
+  padding: 6px 16px;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  line-height: 1.75;
+  cursor: pointer;
+  background-color: rgb(10, 143, 220);
+}
+.modal-overlay .modal-result .modal-content .footer-result button:last-child {
+  font-size: 14px;
+  padding: 6px 16px;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  line-height: 1.75;
+  cursor: pointer;
+  background-color: rgb(211, 47, 47);
+}
+
+.loading-spinner {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.no-scroll {
+  overflow: hidden;
 }
 
 .stars {
@@ -4752,6 +4830,7 @@ header {
   cursor: pointer;
   display: flex;
   border: 1px solid rgba(0, 0, 0, 0.12);
+  font-weight: bold;
 }
 .accordion .contentBx .label p {
   flex: 1;
@@ -4806,20 +4885,19 @@ header {
   border-radius: 8px;
   text-transform: capitalize;
 }
-.accordion .contentBx .label::before {
-  content: "";
-  position: absolute;
-  right: 20px;
-  top: 15px;
-  width: 8px;
-  height: 8px;
-  border: 2px solid #333;
-  border-top: 2px solid #FFF;
-  border-right: 2px solid #fff;
-  transform: rotate(-45deg);
-  transition: 0.5s;
-  pointer-events: none;
-  z-index: 3;
+.accordion .contentBx .label .final .btgray {
+  min-width: 40px;
+  outline: 0px;
+  border: 0px;
+  cursor: pointer;
+  user-select: none;
+  appearance: none;
+  font-weight: 500;
+  padding: 10px 10px;
+  background-color: rgb(224, 224, 224);
+  box-shadow: none;
+  border-radius: 8px;
+  text-transform: capitalize;
 }
 .accordion .contentBx .content {
   position: relative;
@@ -4828,10 +4906,8 @@ header {
   overflow: hidden;
   overflow-y: auto;
 }
-.accordion .contentBx.active .label::before {
-  content: "-";
-}
 .accordion .contentBx.active .content {
+  margin-top: 10px;
   height: 150px;
   padding: 10px;
 }

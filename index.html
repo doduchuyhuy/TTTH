@@ -164,22 +164,130 @@
             $('#edu-quiz').load("./template/edu-quiz.html", function(){
                 loadselect();
                   // Xử lý khi nhấn nút Nộp bài
-                    $('#submitBtn').click(function() {
-                        $('#modalOverlay, #resultModal').fadeIn(); // Hiển thị cả lớp phủ và modal
-                    });
+                    // $('#submitBtn').click(function() {
+                    //     // $('#modalOverlay, #resultModal').fadeIn(); // Hiển thị cả lớp phủ và modal
+                    //     $('.modal-overlay').fadeIn();
+                    // });
 
-                    // Xử lý khi nhấn nút Đóng trong modal
-                    $('#closeModal').click(function() {
-                        $('#modalOverlay, #resultModal').fadeOut(); // Ẩn cả lớp phủ và modal
-                    });
+                    // // Xử lý khi nhấn nút Đóng trong modal
+                    // $('#closeModal').click(function() {
+                    //     $('#modalOverlay, #resultModal,').fadeOut(); // Ẩn cả lớp phủ và modal
+                    // });
 
-                    // Xử lý khi nhấn vào lớp phủ ngoài để tắt modal
-                    $('#modalOverlay').click(function(e) {
-                        // Kiểm tra xem sự kiện click có phát sinh từ modalOverlay (không phải từ modal-content)
-                        if (e.target.id === "modalOverlay") {
-                            $('#modalOverlay, #resultModal').fadeOut(); // Ẩn cả lớp phủ và modal
-                        }
-                    });
+                    // // Xử lý khi nhấn vào lớp phủ ngoài để tắt modal
+                    // $('#modalOverlay').click(function(e) {
+                    //     // Kiểm tra xem sự kiện click có phát sinh từ modalOverlay (không phải từ modal-content)
+                    //     if (e.target.id === "modalOverlay") {
+                    //         $('#modalOverlay, #resultModal').fadeOut(); // Ẩn cả lớp phủ và modal
+                    //     }
+                    // });
+
+                    // $('#submitBtn').click(function() {
+                    //     $('#confirmModal').show();
+                    //     $('body').addClass('no-scroll');
+                    // });
+
+                    // $('#confirmBtn').click(function() {
+                    //     $('#confirmModal').hide();
+                    //     $('#loading').show();
+                    //     setTimeout(function() {
+                    //         $('#loading').hide();
+                    //         $('#resultModal').show();
+                    //     }, 5000); // Hiển thị loading trong 5 giây
+                    // });
+
+                    // $('#cancelBtn').click(function() {
+                    //     $('#confirmModal').hide();
+                    //     $('body').removeClass('no-scroll');
+                    // });
+
+                    // $('#closeModal').click(function() {
+                    //     $('#resultModal').hide();
+                    //     $('body').removeClass('no-scroll');
+                    // });
+
+
+
+                // $('#submitBtn').click(function() {
+                //     var scrollBarWidth = window.innerWidth - document.body.offsetWidth;
+                //     $('body').addClass('no-scroll').css('padding-right', scrollBarWidth);
+                //     $('#confirmModal').show();
+                // });
+
+                // $('#cancelBtn, #closeModal').click(function() {
+                //     $('body').removeClass('no-scroll').css('padding-right', '');
+                //     $('.modal-overlay').hide();
+                // });
+
+
+                // Hiển thị modal xác nhận và ngăn scroll
+    // $('#submitBtn').click(function() {
+    //     var scrollBarWidth = window.innerWidth - document.body.offsetWidth;
+    //     $('body').addClass('no-scroll').css('padding-right', scrollBarWidth);
+    //     $('#confirmModal').show();
+    // });
+
+    // // Xử lý khi nhấn 'Xác Nhận' trên modal xác nhận
+    // $('#confirmBtn').click(function() {
+    //     $('#confirmModal').hide();
+    //     $('#loading').show();
+    //     setTimeout(function() {
+    //         $('#loading').hide();
+    //         $('#resultModal').show();
+    //         var scrollBarWidth = window.innerWidth - document.body.offsetWidth;
+    //         $('body').css('padding-right', scrollBarWidth);
+    //     }, 5000); // Hiển thị loading trong 5 giây
+    // });
+
+    // // Xử lý khi nhấn 'Hủy' trên modal xác nhận
+    // $('#cancelBtn').click(function() {
+    //     $('#confirmModal').hide();
+    //     $('body').removeClass('no-scroll').css('padding-right', '');
+    // });
+
+    // // Xử lý khi đóng modal kết quả
+    // $('#closeModal').click(function() {
+    //     $('#resultModal').hide();
+    //     $('body').removeClass('no-scroll').css('padding-right', '');
+    // });
+
+    // Function to toggle scroll lock and padding
+    function toggleScrollLock(action) {
+        if (action === 'lock') {
+            const scrollBarWidth = window.innerWidth - document.body.offsetWidth;
+            $('body').addClass('no-scroll').css('padding-right', scrollBarWidth);
+        } else if (action === 'unlock' && !$('#confirmModal').is(':visible') && !$('#resultModal').is(':visible')) {
+            $('body').removeClass('no-scroll').css('padding-right', '');
+        }
+    }
+
+    $('#submitBtn').click(function() {
+        $('#confirmModal').show();
+        toggleScrollLock('lock');
+    });
+
+    $('#confirmBtn').click(function() {
+        $('#confirmModal').hide();
+        $('#loading').show();
+        setTimeout(function() {
+            $('#loading').hide();
+            $('#resultModal').show();
+        }, 5000);
+    });
+
+    $('#cancelBtn').click(function() {
+        $('#confirmModal').hide();
+        toggleScrollLock('unlock');
+    });
+
+    $('#closeModal').click(function() {
+        $('#resultModal').hide();
+        toggleScrollLock('unlock');
+    });
+    
+
+
+
 
                     var rating = 0; // Khởi tạo số sao đánh giá là 0
 
