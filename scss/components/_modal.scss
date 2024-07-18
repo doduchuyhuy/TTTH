@@ -28,6 +28,7 @@
         padding: 20px;
         box-sizing: border-box;
         z-index: 1000;
+        
         .modal-header {
             margin-bottom: 20px;
         }
@@ -62,8 +63,8 @@
         box-shadow: rgba(0, 0, 0, 0.2) 0px 11px 15px -7px, rgba(0, 0, 0, 0.14) 0px 24px 38px 3px, rgba(0, 0, 0, 0.12) 0px 9px 46px 8px;
         // margin: 32px;
         // position: fixed;
-        top: 50%;
-        left: 50%;
+        // top: 50%;
+        // left: 50%;
         // transform: translate(-50%, -50%);
         overflow-y: auto;
         // display: flex;
@@ -72,6 +73,8 @@
         max-width: 1536px;
         width: calc(100% - 64px);
         z-index: 1000; /* Đảm bảo modal nằm trên lớp phủ */
+        position: absolute;
+        top: 8%; /* Adjust this value to move the modal up */
     
         .modal-content{
             .title_subject{

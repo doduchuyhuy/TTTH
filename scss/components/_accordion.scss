@@ -107,11 +107,14 @@
 
 
         }
-        .content{
-            position: relative;
+        .contentt{
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            border-radius: 4px;
+            // position: relative;
             background: #fff;
-            height: 0;
+            display: none;
             overflow: hidden;
+            height: 400px;
             // transition: 0.5s;
             overflow-y: auto;
         }
@@ -121,10 +124,11 @@
         // .label::before{
         //     content:"-";
         // }
-        .content{
-            margin-top: 10px;
-            height: 150px; 
-            padding: 10px;   
+        .contentt{
+            margin-top: 15px;
+            display: block;
+            // height: 150px; 
+            padding: 20px;   
         }
     }
 }
