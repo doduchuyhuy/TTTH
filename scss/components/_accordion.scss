@@ -17,7 +17,6 @@
             .final{
                 flex: 2;
                 display: flex;
-                
                 .btgreen{
                     min-width: 40px;
                     outline: 0px;
@@ -76,6 +75,11 @@
                     box-shadow: none;
                     border-radius: 8px;
                     text-transform: capitalize; 
+                }
+                .toggle-icon i {
+                    cursor: pointer;
+                    vertical-align: middle;
+                    margin-left: 5px; /* Khoảng cách từ button */
                 }
             
             }

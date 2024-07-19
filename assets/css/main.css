@@ -5096,6 +5096,11 @@ header {
   border-radius: 8px;
   text-transform: capitalize;
 }
+.accordion .contentBx .label .final .toggle-icon i {
+  cursor: pointer;
+  vertical-align: middle;
+  margin-left: 5px; /* Khoảng cách từ button */
+}
 .accordion .contentBx .contentt {
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
