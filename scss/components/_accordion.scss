@@ -1,22 +1,26 @@
 .accordion{
+    overflow: scroll;
+    height: 500px;
     .contentBx{
         position: relative;
-        margin: 10px 20px;
+        margin: 20px 20px;
         .label{
             position: relative;
             padding: 10px;
             border-radius: 4px;
             cursor: pointer;
             display: flex;
+            justify-content: space-between;
             border: 1px solid rgba(0, 0, 0, 0.12);
             font-weight: bold;
             p{
-                flex: 1;
+                // flex: 1;
                 line-height: 3.5;
             }
             .final{
-                flex: 2;
+                // flex: 2;
                 display: flex;
+                gap: 25px;
                 .btgreen{
                     min-width: 40px;
                     outline: 0px;
@@ -76,11 +80,28 @@
                     border-radius: 8px;
                     text-transform: capitalize; 
                 }
+                // .toggle-icon i {
+                //     cursor: pointer;
+                //     vertical-align: middle;
+                //     margin-left: 5px; /* Khoảng cách từ button */
+                // }
                 .toggle-icon i {
+                    font-size: 10px;
                     cursor: pointer;
                     vertical-align: middle;
-                    margin-left: 5px; /* Khoảng cách từ button */
+                    margin-left: 5px;
+                    transition: transform 0.3s ease; /* Thêm hiệu ứng chuyển đổi suôn sẻ */
                 }
+                
+                .toggle-icon i.active {
+                    color: #007bff; /* Thay đổi màu khi active */
+                    transform: rotate(-180deg) scale(1.2); /* Xoay 180 độ và phóng to 1.5 lần */
+                }
+                .toggle-icon i.disabled {
+                    opacity: 0.5;
+                    cursor: not-allowed;
+                }
+                
             
             }
         }
@@ -114,25 +135,21 @@
         .contentt{
             border: 1px solid rgba(0, 0, 0, 0.12);
             border-radius: 4px;
-            // position: relative;
             background: #fff;
             display: none;
             overflow: hidden;
-            height: 400px;
-            // transition: 0.5s;
+            max-height: 400px;
             overflow-y: auto;
+            margin-top: 15px;
+            padding: 20px; 
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .contentt.show {
+            display: block;
+            opacity: 1;
         }
         
     }
-    .contentBx.active{
-        // .label::before{
-        //     content:"-";
-        // }
-        .contentt{
-            margin-top: 15px;
-            display: block;
-            // height: 150px; 
-            padding: 20px;   
-        }
-    }
+    
 }

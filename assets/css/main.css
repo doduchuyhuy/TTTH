@@ -1782,51 +1782,6 @@ header {
   text-decoration: none;
   color: black;
 }
-#exam .container nav .question-time .base-timer {
-  position: relative;
-  width: 120px;
-  height: 120px;
-}
-#exam .container nav .question-time .base-timer .base-timer__svg {
-  transform: scaleX(-1);
-}
-#exam .container nav .question-time .base-timer .base-timer__svg .base-timer__circle {
-  fill: none;
-  stroke: none;
-}
-#exam .container nav .question-time .base-timer .base-timer__svg .base-timer__circle .base-timer__path-elapsed {
-  stroke-width: 7px;
-  stroke: grey;
-}
-#exam .container nav .question-time .base-timer .base-timer__svg .base-timer__circle .base-timer__path-remaining {
-  stroke-width: 7px;
-  stroke-linecap: round;
-  transform: rotate(90deg);
-  transform-origin: center;
-  transition: 1s linear all;
-  fill-rule: nonzero;
-  stroke: currentColor;
-}
-#exam .container nav .question-time .base-timer .base-timer__svg .base-timer__circle .base-timer__path-remaining.green {
-  color: rgb(65, 184, 131);
-}
-#exam .container nav .question-time .base-timer .base-timer__svg .base-timer__circle .base-timer__path-remaining.orange {
-  color: orange;
-}
-#exam .container nav .question-time .base-timer .base-timer__svg .base-timer__circle .base-timer__path-remaining.red {
-  color: red;
-}
-#exam .container nav .question-time .base-timer .base-timer__label {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  font-weight: bold;
-}
 #exam .container .question-container .question-item {
   padding: 10px;
   line-height: 1.7;
@@ -2143,6 +2098,9 @@ header {
 }
 #edu-quiz .container-exam .row .left .root .content .content-container {
   padding: 16px 16px 25px 0;
+}
+#edu-quiz .container-exam .row .left .root .content .content-container .content-item {
+  margin-bottom: 10px;
 }
 #edu-quiz .container-exam .row .left .root .content .content-container .content-item .content-item-1 {
   gap: 20px;
@@ -2759,6 +2717,52 @@ header {
 
 .root-test ~ .root-test {
   margin-top: 10px;
+}
+
+.base-timer {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+.base-timer .base-timer__svg {
+  transform: scaleX(-1);
+}
+.base-timer .base-timer__svg .base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+.base-timer .base-timer__svg .base-timer__circle .base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+.base-timer .base-timer__svg .base-timer__circle .base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+.base-timer .base-timer__svg .base-timer__circle .base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+.base-timer .base-timer__svg .base-timer__circle .base-timer__path-remaining.orange {
+  color: orange;
+}
+.base-timer .base-timer__svg .base-timer__circle .base-timer__path-remaining.red {
+  color: red;
+}
+.base-timer .base-timer__label {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 #single-top-meta {
@@ -4739,7 +4743,7 @@ header {
   color: rgb(17, 24, 39);
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 11px 15px -7px, rgba(0, 0, 0, 0.14) 0px 24px 38px 3px, rgba(0, 0, 0, 0.12) 0px 9px 46px 8px;
-  overflow-y: auto;
+  overflow: hidden;
   max-height: calc(100% - 64px);
   max-width: 1536px;
   width: calc(100% - 64px);
@@ -5016,9 +5020,13 @@ header {
   color: rgb(250, 175, 0); /* Màu vàng khi sao được đánh giá hoặc hover */
 }
 
+.accordion {
+  overflow: scroll;
+  height: 500px;
+}
 .accordion .contentBx {
   position: relative;
-  margin: 10px 20px;
+  margin: 20px 20px;
 }
 .accordion .contentBx .label {
   position: relative;
@@ -5026,16 +5034,16 @@ header {
   border-radius: 4px;
   cursor: pointer;
   display: flex;
+  justify-content: space-between;
   border: 1px solid rgba(0, 0, 0, 0.12);
   font-weight: bold;
 }
 .accordion .contentBx .label p {
-  flex: 1;
   line-height: 3.5;
 }
 .accordion .contentBx .label .final {
-  flex: 2;
   display: flex;
+  gap: 25px;
 }
 .accordion .contentBx .label .final .btgreen {
   min-width: 40px;
@@ -5097,9 +5105,19 @@ header {
   text-transform: capitalize;
 }
 .accordion .contentBx .label .final .toggle-icon i {
+  font-size: 10px;
   cursor: pointer;
   vertical-align: middle;
-  margin-left: 5px; /* Khoảng cách từ button */
+  margin-left: 5px;
+  transition: transform 0.3s ease; /* Thêm hiệu ứng chuyển đổi suôn sẻ */
+}
+.accordion .contentBx .label .final .toggle-icon i.active {
+  color: #007bff; /* Thay đổi màu khi active */
+  transform: rotate(-180deg) scale(1.2); /* Xoay 180 độ và phóng to 1.5 lần */
+}
+.accordion .contentBx .label .final .toggle-icon i.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 .accordion .contentBx .contentt {
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -5107,13 +5125,16 @@ header {
   background: #fff;
   display: none;
   overflow: hidden;
-  height: 400px;
+  max-height: 400px;
   overflow-y: auto;
-}
-.accordion .contentBx.active .contentt {
   margin-top: 15px;
-  display: block;
   padding: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.accordion .contentBx .contentt.show {
+  display: block;
+  opacity: 1;
 }
 
 .switch {
