@@ -1,0 +1,32 @@
+.form-input{
+    width: 300px;
+    display: flex;
+	align-items: center;
+	height: 45px;
+    input{
+        flex-grow: 1;
+        padding: 0 16px;
+        height: 100%;
+        border: none;
+        outline: 0;
+        background: var(--grey);
+        border-radius: 36px 0 0 36px;
+        outline: none;
+        width: 100%;
+        color: var(--dark);
+    }
+    button{
+        width: 36px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(10, 143, 220);
+        color: var(--light);
+        font-size: 18px;
+        border: none;
+        outline: none;
+        border-radius: 0 36px 36px 0;
+        cursor: pointer;
+    }
+}

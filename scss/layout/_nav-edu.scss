@@ -1,0 +1,34 @@
+#header-edu{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    position: fixed;
+    z-index: 1100;
+    top: 0px;
+    left: auto;
+    right: 0px;
+    color: inherit;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    background-color: rgb(255, 255, 255);
+    transition: width 0.5s ease 0s;
+    width: 100%;
+    padding: 0 16px 0 16px;
+    .container-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left{
+
+        }
+        .center{
+            
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+}
