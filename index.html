@@ -34,8 +34,8 @@
 
         <!-- EXAM -->
         <!-- <div id="header-exam"></div> -->
-        <div id="sidebar-edu"></div>
         <div id="nav-edu"></div>
+        <div id="content-edu"></div>
         <!-- <div id="edu-quiz"></div> -->
         <!-- <div id="exam"></div> -->
 
@@ -54,6 +54,9 @@
             $('#sidebar-edu').load("./template/sidebar-edu.html", function(){
                   
             });
+            $('#content-edu').load("./template/content-edu.html", function(){
+                  
+                });
             $('#nav-edu').load("./template/nav-edu.html", function(){
                     $('#profile').on('click', function(e) {
                         e.stopPropagation();
