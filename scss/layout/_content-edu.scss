@@ -50,50 +50,56 @@
             .section-list{
                 width: 100%;
                 background-color: #fff;
-                // height: 300px;
                 color: rgb(17, 24, 39);
                 box-shadow: rgba(0, 0, 0, 0.04) 0px 10px 10px 4px;
                 overflow: hidden;
                 border-radius: 16px;
                 .section-item{
+                    padding: 24px;
                     .section-item-header{
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
-                        padding: 16px 24px 0px;
+                        span{
+                            color: rgb(17, 24, 39);
+                            font-weight: 600;
+                            font-size: 16px;
+                        }
                     }
                     .section-item-content{
-                        padding: 16px 0px;
                         height: 100%;
-                        margin-bottom: 16px;
                         .card-container{
                             display: flex;
-                            padding-bottom: 8px;
+                            gap: 20px;
+                            padding: 20px 0;
                             .card-item {
                                 background-color: #fff;
                                 border-radius: 0.5rem;
                                 box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
                                 padding: 1rem;
                                 min-width: 300px;
+                                max-width: 300px;
                                 border: 1px solid #d1d5db;
+                                border-radius: 16px;
                             
                                 .image-container {
+                                    border-radius: 16px;
                                     position: relative;
-                                    height: 12rem;
+                                    height: 16rem;
                                     overflow: hidden;
-                                    border-radius: 0.5rem;
-                            
+                                    
                                     .quiz-image {
                                         position: absolute;
-                                        height: 100%;
-                                        width: 100%;
+                                        min-width: 100%;
+                                        max-width: 100%;
+                                        min-height: 100%;
+                                        max-height: 100%;
                                         object-fit: cover;
                                     }
                                 }
                             
                                 .quiz-info {
-                                    margin-top: 1rem;
-                            
+                                    margin-top: 2rem;
                                     h2 {
                                         font-weight: 600;
                                     }
@@ -101,8 +107,8 @@
                                     .author-date {
                                         display: flex;
                                         align-items: center;
-                                        margin-top: 0.25rem;
-                                        gap: 1rem;
+                                        margin: 2rem 0 ;
+                                        justify-content: space-between;
                             
                                         .author {
                                             display: flex;
@@ -112,8 +118,8 @@
                                             .author-icon {
                                                 background-color: #3b82f6;
                                                 border-radius: 50%;
-                                                height: 1.5rem;
-                                                width: 1.5rem;
+                                                height: 2rem;
+                                                width: 2rem;
                                                 display: flex;
                                                 align-items: center;
                                                 justify-content: center;
@@ -124,22 +130,21 @@
                                             }
                             
                                             .author-name {
-                                                font-size: 0.875rem;
+                                                // font-size: 0.875rem;
                                             }
                                         }
                             
                                         .date {
                                             p {
-                                                font-size: 0.875rem;
+                                                // font-size: 0.875rem;
                                             }
                                         }
                                     }
                             
                                     .quiz-stats {
                                         display: flex;
-                                        gap: 1rem;
-                                        margin-top: 1rem;
-                                        font-size: 0.875rem;
+                                        gap: 2rem;
+                                        margin: 2rem 0;
                             
                                         .stat-item {
                                             display: flex;
@@ -168,18 +173,21 @@
                             
                                     .quiz-tags {
                                         display: flex;
-                                        gap: 0.25rem;
-                                        margin-top: 1rem;
+                                        gap: 1rem;
+                                        margin: 15px 0;
                             
                                         .tag {
                                             background-color: #e5e7eb;
                                             border-radius: 9999px;
-                                            padding: 0.25rem 0.75rem;
-                                            font-size: 0.75rem;
+                                            padding: 0.8rem 0.8rem;
+                                            overflow: hidden;
+                                            // font-size: 0.75rem;
                                         }
                                     }
                             
                                     .start-btn {
+                                        outline: none;
+                                        border: none;
                                         background-color: #3b82f6;
                                         color: #fff;
                                         border-radius: 9999px;

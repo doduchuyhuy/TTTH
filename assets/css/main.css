@@ -2854,20 +2854,26 @@ a {
   overflow: hidden;
   border-radius: 16px;
 }
+#content-edu .right-content .container-section .section-list .section-item {
+  padding: 24px;
+}
 #content-edu .right-content .container-section .section-list .section-item .section-item-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 24px 0px;
+}
+#content-edu .right-content .container-section .section-list .section-item .section-item-header span {
+  color: rgb(17, 24, 39);
+  font-weight: 600;
+  font-size: 16px;
 }
 #content-edu .right-content .container-section .section-list .section-item .section-item-content {
-  padding: 16px 0px;
   height: 100%;
-  margin-bottom: 16px;
 }
 #content-edu .right-content .container-section .section-list .section-item .section-item-content .card-container {
   display: flex;
-  padding-bottom: 8px;
+  gap: 20px;
+  padding: 20px 0;
 }
 #content-edu .right-content .container-section .section-list .section-item .section-item-content .card-container .card-item {
   background-color: #fff;
@@ -2875,22 +2881,26 @@ a {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   padding: 1rem;
   min-width: 300px;
+  max-width: 300px;
   border: 1px solid #d1d5db;
+  border-radius: 16px;
 }
 #content-edu .right-content .container-section .section-list .section-item .section-item-content .card-container .card-item .image-container {
+  border-radius: 16px;
   position: relative;
-  height: 12rem;
+  height: 16rem;
   overflow: hidden;
-  border-radius: 0.5rem;
 }
 #content-edu .right-content .container-section .section-list .section-item .section-item-content .card-container .card-item .image-container .quiz-image {
   position: absolute;
-  height: 100%;
-  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
   object-fit: cover;
 }
 #content-edu .right-content .container-section .section-list .section-item .section-item-content .card-container .card-item .quiz-info {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 #content-edu .right-content .container-section .section-list .section-item .section-item-content .card-container .card-item .quiz-info h2 {
   font-weight: 600;
@@ -2898,8 +2908,8 @@ a {
 #content-edu .right-content .container-section .section-list .section-item .section-item-content .card-container .card-item .quiz-info .author-date {
   display: flex;
   align-items: center;
-  margin-top: 0.25rem;
-  gap: 1rem;
+  margin: 2rem 0;
+  justify-content: space-between;
 }
 #content-edu .right-content .container-section .section-list .section-item .section-item-content .card-container .card-item .quiz-info .author-date .author {
   display: flex;
@@ -2909,8 +2919,8 @@ a {
 #content-edu .right-content .container-section .section-list .section-item .section-item-content .card-container .card-item .quiz-info .author-date .author .author-icon {
   background-color: #3b82f6;
   border-radius: 50%;
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 2rem;
+  width: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2918,17 +2928,10 @@ a {
 #content-edu .right-content .container-section .section-list .section-item .section-item-content .card-container .card-item .quiz-info .author-date .author .author-icon span {
   color: #fff;
 }
-#content-edu .right-content .container-section .section-list .section-item .section-item-content .card-container .card-item .quiz-info .author-date .author .author-name {
-  font-size: 0.875rem;
-}
-#content-edu .right-content .container-section .section-list .section-item .section-item-content .card-container .card-item .quiz-info .author-date .date p {
-  font-size: 0.875rem;
-}
 #content-edu .right-content .container-section .section-list .section-item .section-item-content .card-container .card-item .quiz-info .quiz-stats {
   display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-  font-size: 0.875rem;
+  gap: 2rem;
+  margin: 2rem 0;
 }
 #content-edu .right-content .container-section .section-list .section-item .section-item-content .card-container .card-item .quiz-info .quiz-stats .stat-item {
   display: flex;
@@ -2952,16 +2955,18 @@ a {
 }
 #content-edu .right-content .container-section .section-list .section-item .section-item-content .card-container .card-item .quiz-info .quiz-tags {
   display: flex;
-  gap: 0.25rem;
-  margin-top: 1rem;
+  gap: 1rem;
+  margin: 15px 0;
 }
 #content-edu .right-content .container-section .section-list .section-item .section-item-content .card-container .card-item .quiz-info .quiz-tags .tag {
   background-color: #e5e7eb;
   border-radius: 9999px;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.75rem;
+  padding: 0.8rem 0.8rem;
+  overflow: hidden;
 }
 #content-edu .right-content .container-section .section-list .section-item .section-item-content .card-container .card-item .quiz-info .start-btn {
+  outline: none;
+  border: none;
   background-color: #3b82f6;
   color: #fff;
   border-radius: 9999px;
