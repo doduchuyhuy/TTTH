@@ -2335,11 +2335,18 @@ a {
 }
 #edu-quiz .container-exam .row .center .root .content .content-content .matching .matching-item .item-right div {
   padding: 4px;
-  box-shadow: #ccdbe8 3px 3px 6px 0px inset, hsla(0, 0%, 100%, 0.5) -3px -3px 6px 1px inset !important;
   height: 100%;
   min-height: 60px;
   border-width: 1px;
   border-radius: 6px;
+}
+#edu-quiz .container-exam .row .center .root .content .content-content .matching .matching-item .item-right div.shadow-matching-active {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px !important;
+  background-color: rgb(227, 242, 253) !important;
+  opacity: 1 !important;
+}
+#edu-quiz .container-exam .row .center .root .content .content-content .matching .matching-item .item-right div.shadow-matching-inactive {
+  box-shadow: #ccdbe8 3px 3px 6px 0px inset, hsla(0, 0%, 100%, 0.5) -3px -3px 6px 1px inset !important;
 }
 #edu-quiz .container-exam .row .center .root .content .content-content .matching .matching-instruction {
   display: flex;
@@ -2637,11 +2644,18 @@ a {
 }
 .root-test .content .content-content .matching .matching-item .item-right div {
   padding: 4px;
-  box-shadow: #ccdbe8 3px 3px 6px 0px inset, hsla(0, 0%, 100%, 0.5) -3px -3px 6px 1px inset !important;
   height: 100%;
   min-height: 60px;
   border-width: 1px;
   border-radius: 6px;
+}
+.root-test .content .content-content .matching .matching-item .item-right div.shadow-matching-active {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px !important;
+  background-color: rgb(227, 242, 253) !important;
+  opacity: 1 !important;
+}
+.root-test .content .content-content .matching .matching-item .item-right div.shadow-matching-inactive {
+  box-shadow: #ccdbe8 3px 3px 6px 0px inset, hsla(0, 0%, 100%, 0.5) -3px -3px 6px 1px inset !important;
 }
 .root-test .content .content-content .matching .matching-instruction {
   display: flex;
