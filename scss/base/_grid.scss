@@ -173,8 +173,8 @@ $gutters: (
 .container-fluid {
     --grid-gutter-x: #{$grid-gutter-width};
     --grid-gutter-y: 0;
-
-    width: 1370px;
+    // width: 1370px;
+    width: 1750px;
     margin-left: auto;
     margin-right: auto;
     @extend %gutter-padding;
@@ -183,16 +183,17 @@ $gutters: (
 .container {
     @extend .container-fluid;
     // width: 1370px;
-    width: 1200px;
+    // width: 1200px;
+    width: 1750px;
     
 }
 
-.container-exam {
-    @extend .container-fluid;
-    // width: 1370px;
-    width: 1650px;
+// .container-exam {
+//     @extend .container-fluid;
+//     // width: 1370px;
+//     width: 1650px;
     
-}
+// }
 
 .row {
     display: flex;
@@ -271,6 +272,10 @@ $gutters: (
 
     @include make-media-query($dimension) {
         .container {
+            max-width: $max-width;
+        }
+
+        .container-#{$breakpoint} {
             max-width: $max-width;
         }
 
