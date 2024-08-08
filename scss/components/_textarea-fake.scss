@@ -1,0 +1,44 @@
+.textarea-fake {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px;
+    max-width: 600px;
+    margin-top: 20px;
+    position: relative;
+
+    .section-header {
+        position: absolute;
+        top: -9px;
+        left: 12px;
+        background: white;
+        // padding: 0 2px;
+        // font-size: 14px;
+        color: rgb(107, 114, 128);
+    }
+
+    .section-content {
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .section-container{
+            line-height: 1.5;
+            .section-title {
+                font-weight: bold;
+            }
+    
+            .section-subtitle {
+                color: #666;
+            }
+        }
+        .question-input {
+            width: 100px;
+            padding: 8.5px 14px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            color: rgb(17, 24, 39);
+            // min-width: 100px;
+        }
+    }
+}

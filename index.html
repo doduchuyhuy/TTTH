@@ -55,91 +55,66 @@
                   
             });
             $('#content-edu').load("./template/content-edu.html", function(){
-                    // const $tabBtns = $('.tab_btn');
-                    // const $contents = $('.content');
-                    // const $line = $('.line');
-
-                    // function handleTabClick() {
-                    //     const $tab = $(this);
-                    //     const tabIndex = $tab.data('tab');
-
-                    //     // Remove active class from all tabs and content
-                    //     $tabBtns.removeClass('active');
-                    //     $contents.removeClass('active');
-
-                    //     // Add active class to clicked tab and corresponding content
-                    //     $tab.addClass('active');
-                    //     $contents.filter(`[data-content="${tabIndex}"]`).addClass('active');
-
-                    //     // Move line
-                    //     $line.css({
-                    //         width: $tab.outerWidth(),
-                    //         left: $tab.position().left
-                    //     });
-                    // }
-
-                    // // Add click event to each tab button
-                    // $tabBtns.on('click', handleTabClick);
-
-                    // // Initialize line position and first tab as active
-                    // $tabBtns.first().addClass('active');
-                    // $contents.first().addClass('active');
-                    // $line.css({
-                    //     width: $tabBtns.first().outerWidth(),
-                    //     left: $tabBtns.first().position().left
-                    // });
-
                     const $tabBtns = $('.tab_btn');
-    const $contents = $('.content');
-    const $line = $('.line');
+                    const $contents = $('.content');
+                    const $line = $('.line');
 
-    function handleTabClick(e) {
-        const $tab = $(this);
-        const tabIndex = $tab.data('tab');
+                    function handleTabClick(e) {
+                        const $tab = $(this);
+                        const tabIndex = $tab.data('tab');
 
-        // Remove active class from all tabs and content
-        $tabBtns.removeClass('active');
-        $contents.removeClass('active');
+                        // Remove active class from all tabs and content
+                        $tabBtns.removeClass('active');
+                        $contents.removeClass('active');
 
-        // Add active class to clicked tab and corresponding content
-        $tab.addClass('active');
-        $contents.filter(`[data-content="${tabIndex}"]`).addClass('active');
+                        // Add active class to clicked tab and corresponding content
+                        $tab.addClass('active');
+                        $contents.filter(`[data-content="${tabIndex}"]`).addClass('active');
 
-        // Move line
-        $line.css({
-            width: $tab.outerWidth(),
-            left: $tab.position().left
-        });
+                        // Move line
+                        $line.css({
+                            width: $tab.outerWidth(),
+                            left: $tab.position().left
+                        });
 
-        // Create ripple effect
-        const ripple = $('<div class="ripple"></div>');
-        const x = $tab.outerWidth() / 2;
-        const y = $tab.outerHeight() / 2;
+                        // Create ripple effect
+                        const ripple = $('<div class="ripple"></div>');
+                        const x = $tab.outerWidth() / 2;
+                        const y = $tab.outerHeight() / 2;
 
-        ripple.css({
-            top: `${y}px`,
-            left: `${x}px`,
-            width: `${$tab.outerWidth() * 2}px`,
-            height: `${$tab.outerWidth() * 2}px`
-        });
+                        ripple.css({
+                            top: `${y}px`,
+                            left: `${x}px`,
+                            width: `${$tab.outerWidth() * 2}px`,
+                            height: `${$tab.outerWidth() * 2}px`
+                        });
 
-        $tab.append(ripple);
+                        $tab.append(ripple);
 
-        setTimeout(() => {
-            ripple.remove();
-        }, 600); // Ripple duration should match the CSS animation duration
-    }
+                        setTimeout(() => {
+                            ripple.remove();
+                        }, 600); // Ripple duration should match the CSS animation duration
+                    }
 
-    // Add click event to each tab button
-    $tabBtns.on('click', handleTabClick);
+                    // Add click event to each tab button
+                    $tabBtns.on('click', handleTabClick);
 
-    // Initialize line position and first tab as active
-    $tabBtns.first().addClass('active');
-    $contents.first().addClass('active');
-    $line.css({
-        width: $tabBtns.first().outerWidth(),
-        left: $tabBtns.first().position().left
-    });
+                    // Initialize line position and first tab as active
+                    $tabBtns.first().addClass('active');
+                    $contents.first().addClass('active');
+                    $line.css({
+                        width: $tabBtns.first().outerWidth(),
+                        left: $tabBtns.first().position().left
+                    });
+
+                    $('#startExam').click(function() {
+                        $('#startModal').show();
+                        toggleScrollLock('lock');
+                    });
+
+                    $('#confirmBtn, .close-modal').on('click', function() {
+                        $('#startModal').css('display', 'none');
+                    });
                 });
             $('#nav-edu').load("./template/nav-edu.html", function(){
                     $('#profile').on('click', function(e) {
