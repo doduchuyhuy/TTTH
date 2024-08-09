@@ -1,4 +1,4 @@
-.dropdown{
+.dropdown2{
     flex: 1;
     position: relative;
     width: 150px;
@@ -46,23 +46,23 @@
             }
         }
     }
-    .title{
-        position: relative;
-        color:#908D92;
+    // .title{
+    //     position: relative;
+    //     color:#908D92;
        
-    }
-    .title::before{
-        position: absolute;
-        content: 'Tự động chuyển câu';
-        width: 108px;
-        top:-5px;
-        left: 15px;
-        background: #fff;
-        text-align: center;
-        font-size: 10.5px;
-    }
+    // }
+    // .title::before{
+    //     position: absolute;
+    //     content: 'Tự động chuyển câu';
+    //     width: 108px;
+    //     top:-5px;
+    //     left: 15px;
+    //     background: #fff;
+    //     text-align: center;
+    //     font-size: 10.5px;
+    // }
 }
-.dropdown::before{
+.dropdown2::before{
     content: '';
     position: absolute;
     right: 20px;
@@ -77,11 +77,11 @@
     pointer-events: none;
     z-index: 3;
 }
-.dropdown.active::before{
+.dropdown2.active::before{
     top: 22px;
     transform: rotate(-225deg);
 }
-.dropdown.active{
+.dropdown2.active{
     .matching-select{
         display: block;
         

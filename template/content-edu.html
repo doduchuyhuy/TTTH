@@ -1343,58 +1343,101 @@
                 </label>
             </div>
             <div class="option-group-title">
-                <div class="option-title">
-                    <i class="fas fa-check-circle"></i>
-                    <p>Không giới hạn thời gian làm đề thi</p>
+                <!-- <div class="option-practice">
+                    <div class="option-title">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Không giới hạn thời gian làm đề thi</p>
+                    </div>
+                    <div class="option-title">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Hiển thị ngay đáp án</p>
+                    </div>
                 </div>
-                <div class="option-title">
-                    <i class="fas fa-check-circle"></i>
-                    <p>Hiển thị ngay đáp án</p>
-                </div>
+                <div class="option-test">
+                    <div class="option-title">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Giới hạn thời gian làm đề thi</p>
+                    </div>
+                    <div class="option-title">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Không hiển thị ngay đáp án</p>
+                    </div>
+                    <div class="option-title">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Kết quả sẽ được hiển thị ngay sau khi bạn nộp bài kiểm tra</p>
+                    </div>
+                </div> -->
+                
             </div>
             <hr>
             <div class="setting">
                 <i class="fa-solid fa-gear"></i>
                 Cài đặt đề thi
             </div>
-            <div class="option-shuffle">
-                <div class="checkbox">
-                    <input type="checkbox" id="autoShuffleQuestions" >
-                    <label for="autoShuffleQuestions">
-                        Tự động đảo câu hỏi
-                    </label>    
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" id="autoShuffleAnswers" >
-                    <label for="autoShuffleAnswers">
-                        Tự động đảo câu trả lời
-                    </label>    
-                </div>
-            </div>
-            <div class="dropdown">
-                <input id="textBox1" type="text" class="textBox" placeholder="Tắt" readonly>
-                <div class="matching-select">
-                    <div data-value="Tắt">Tắt</div> <!-- Option để reset -->
-                    <div data-value="1s">1s</div>
-                    <div data-value="5s"> 5s</div>
-                    <div data-value="10s">10s</div>
-                    <div data-value="15s">15s</div>
-                    <div data-value="20s">20s</div>
-                </div>
-                <span class="title"></span>
-            </div>
-            <div class="textarea-fake">
-                <div class="section-header">Thiết lập phần thi</div>
-                <div class="section-content">
-                    <div class="section-container">
-                        <p class="section-title">Phần 1</p>
-                        <p class="section-subtitle">(Tối đa 74 câu)</p>
+            <div class="all-setting">
+                <!-- <div class="option-time-exam">
+                <span>Thời gian làm bài thi</span>
+                <div class="dropdown2">
+                    <input id="textBox1" type="text" class="textBox" placeholder="30 phút" readonly>
+                    <div class="matching-select">
+                        <div data-value="5">5 phút</div>
+                        <div data-value="10">10 phút</div>
+                        <div data-value="15">15 phút</div>
+                        <div data-value="30">30 phút</div>
+                        <div data-value="45">45 phút</div>
+                        <div data-value="60">60 phút</div>
+                        <div data-value="90">90 phút</div>
+                        <div data-value="120">120 phút</div>
                     </div>
-                    <input type="number" class="question-input" value="74" aria-invalid="false"/>
+                    <span class="title"></span>
                 </div>
+                </div>
+                <div class="detail-shuffle">
+                    <span>Số câu hỏi lấy ra ngẫu nhiên từ đề cương</span>
+                    <div class="textarea-fake">
+                        <div class="section-container">
+                            <div class="section-header">Thiết lập phần thi</div>
+                            <div class="section-content">
+                                <div class="section-content-container">
+                                    <p class="section-title">Phần 1</p>
+                                    <p class="section-subtitle">(Tối đa 74 câu)</p>
+                                </div>
+                                <input type="number" class="question-input" value="74" aria-invalid="false"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="option-shuffle">
+                    <div class="checkbox">
+                        <input type="checkbox" id="autoShuffleQuestions" >
+                        <label for="autoShuffleQuestions">
+                            Tự động đảo câu hỏi
+                        </label>    
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="autoShuffleAnswers" >
+                        <label for="autoShuffleAnswers">
+                            Tự động đảo câu trả lời
+                        </label>    
+                    </div>
+                </div>
+                <div class="option-dropdown">
+                    <div class="dropdown">
+                        <input id="textBox1" type="text" class="textBox" placeholder="Tắt" readonly>
+                        <div class="matching-select">
+                            <div data-value="Tắt">Tắt</div> 
+                            <div data-value="1s">1s</div>
+                            <div data-value="5s"> 5s</div>
+                            <div data-value="10s">10s</div>
+                            <div data-value="15s">15s</div>
+                            <div data-value="20s">20s</div>
+                        </div>
+                        <span class="title"></span>
+                    </div>
+                </div> -->
             </div>
             
-
+            
         </div>
         <div class="modal-footer">
             <button class="button-edu" id="confirmBtn">Xác Nhận Vào Thi</button>

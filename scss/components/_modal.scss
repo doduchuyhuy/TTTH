@@ -406,6 +406,27 @@
                     }
                 }
             }
+            .option-dropdown{
+                margin-bottom: 15px;
+            }
+            .detail-shuffle{
+                margin-bottom: 15px;
+                span{
+                    display: block;
+                    font-weight: 600;
+                    line-height: 1.5;
+                    margin-bottom: 15px;
+                }
+            }
+            .option-time-exam{
+                margin-bottom: 15px;
+                span{
+                    display: block;
+                    font-weight: 600;
+                    line-height: 1.5;
+                    margin-bottom: 10px;
+                }
+            }
         }
 
         .modal-footer {

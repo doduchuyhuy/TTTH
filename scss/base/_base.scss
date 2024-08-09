@@ -29,6 +29,7 @@ html {
 
 body {
     font-size: 1.4rem;
+    line-height: 1.5;
     // font-family: Roboto, sans-serif;
     background-color:#f7f7f9 ;
     @include abstracts.breakpoint(md) {
