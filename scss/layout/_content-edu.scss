@@ -354,7 +354,239 @@
         // min-height: 500px;
         // height: calc(min(500px, 100vh - 175px));
         // overflow-y: auto; // Thêm thanh cuộn dọc nếu nội dung vượt quá chiều cao
+    }  
+}
+
+
+.container-exams{
+    .quiz-management {
+        padding: 20px;
+        background-color: #f9f9f9;
+    
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+    
+            input[type="text"] {
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+    
+            .filter-options {
+                display: flex;
+                align-items: center;
+    
+                input[type="radio"] {
+                    margin-right: 5px;
+                }
+    
+                label {
+                    margin-right: 20px;
+                    cursor: pointer;
+                }
+            }
+    
+            .add-new {
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+    
+                &:hover {
+                    background-color: #0056b3;
+                }
+            }
+        }
+    
+        .quiz-table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed; /* Điều chỉnh kích thước bảng dựa trên nội dung */
+            overflow-x: auto; /* Cho phép cuộn ngang khi cần */
+            display: block; /* Cần thiết để bật tính năng cuộn ngang */
+            position: relative;
+    
+            th, td {
+                padding: 10px;
+                border: 1px solid #ddd;
+                text-align: center;
+                white-space: nowrap; /* Không cho phép xuống dòng */
+                overflow: hidden;
+                text-overflow: ellipsis; /* Hiển thị dấu chấm lửng khi nội dung quá dài */
+            }
+    
+            th.fixed-column, td.fixed-column {
+                position: sticky;
+                z-index: 3;
+                background-color: #fff;
+            }
+    
+            th.fixed-column {
+                top: 0;
+            }
+    
+            .fixed-column:nth-child(1) {
+                left: 0;
+                min-width: 50px; /* Cố định chiều rộng cho cột ID */
+            }
+    
+            .fixed-column:nth-child(2) {
+                left: 59px; /* 50px (ID width) + 10px (padding) */
+                min-width: 100px; /* Cố định chiều rộng cho cột Ảnh đại diện */
+            }
+    
+            .fixed-column:nth-child(3) {
+                left: 158px; /* 60px + 100px (Ảnh đại diện width) + 10px (padding) */
+                min-width: 200px; /* Cố định chiều rộng cho cột Tên đề thi */
+                white-space: normal; /* Cho phép xuống dòng */
+                word-wrap: break-word; /* Đảm bảo từ dài sẽ xuống dòng */
+            }
+    
+            td img {
+                width: 50px;
+                height: auto;
+            }
+    
+            .tag {
+                background-color: #e9ecef;
+                border-radius: 5px;
+                padding: 5px 10px;
+                display: inline-block;
+            }
+    
+            .level {
+                background-color: #d1ecf1;
+            }
+    
+            .status {
+                padding: 5px 10px;
+                border-radius: 5px;
+                color: #fff;
+    
+                &.public {
+                    background-color: #28a745;
+                }
+            }
+    
+            .action {
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 5px;
+    
+                &.edit {
+                    background-image: url('path-to-edit-icon.png');
+                    width: 24px;
+                    height: 24px;
+                    background-size: cover;
+                }
+    
+                &.delete {
+                    background-image: url('path-to-delete-icon.png');
+                    width: 24px;
+                    height: 24px;
+                    background-size: cover;
+                }
+            }
+        }
+    
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+    
+            span {
+                font-size: 14px;
+            }
+    
+            .page-controls {
+                button {
+                    background-color: #007bff;
+                    color: #fff;
+                    border: none;
+                    padding: 5px 10px;
+                    cursor: pointer;
+                    border-radius: 5px;
+    
+                    &:hover {
+                        background-color: #0056b3;
+                    }
+                }
+            }
+        }
+    
+        @media (max-width: 768px) {
+            .quiz-table {
+                min-width: 800px;
+            }
+    
+            .fixed-column:nth-child(1) {
+                left: 0;
+                width: 50px;
+            }
+    
+            .fixed-column:nth-child(2) {
+                left: 60px;
+                width: 80px;
+            }
+    
+            .fixed-column:nth-child(3) {
+                left: 150px;
+                width: 150px;
+            }
+        }
+    
+        @media (max-width: 480px) {
+            .quiz-table {
+                min-width: 600px;
+            }
+    
+            .fixed-column:nth-child(1) {
+                left: 0;
+                width: 50px;
+            }
+    
+            .fixed-column:nth-child(2) {
+                left: 60px;
+                width: 70px;
+            }
+    
+            .fixed-column:nth-child(3) {
+                left: 140px;
+                width: 130px;
+            }
+    
+            .quiz-table th, .quiz-table td {
+                padding: 5px;
+            }
+    
+            .header input[type="text"] {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+    
+            .header .filter-options {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+    
+            .pagination {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
     }
+    
+
+    
+    
+    
     
     
 }
