@@ -45,8 +45,10 @@
         }
     }
     .right-content{
-        margin-left: 135px;
-        margin-top: 45px;
+        // margin-left: 135px;
+        // margin-top: 45px;
+        width: calc(100% - 96px);
+        margin-left: 96px;
         .container-section{
             display: flex;
             flex-direction: column;
@@ -359,22 +361,22 @@
 
 
 .container-exams{
+    margin-top: 40px;
     .quiz-management {
         padding: 20px;
-        background-color: #f9f9f9;
-    
+        background-color: #fff;
+        border-radius: 16px;
+        overflow: hidden;
         .header {
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 20px;
-    
             input[type="text"] {
                 padding: 8px;
                 border: 1px solid #ccc;
                 border-radius: 5px;
             }
-    
             .filter-options {
                 display: flex;
                 align-items: center;
@@ -403,94 +405,137 @@
             }
         }
     
-        .quiz-table {
-            width: 100%;
-            border-collapse: collapse;
-            table-layout: fixed; /* Điều chỉnh kích thước bảng dựa trên nội dung */
-            overflow-x: auto; /* Cho phép cuộn ngang khi cần */
-            display: block; /* Cần thiết để bật tính năng cuộn ngang */
-            position: relative;
-    
-            th, td {
-                padding: 10px;
-                border: 1px solid #ddd;
-                text-align: center;
-                white-space: nowrap; /* Không cho phép xuống dòng */
-                overflow: hidden;
-                text-overflow: ellipsis; /* Hiển thị dấu chấm lửng khi nội dung quá dài */
-            }
-    
-            th.fixed-column, td.fixed-column {
-                position: sticky;
-                z-index: 3;
-                background-color: #fff;
-            }
-    
-            th.fixed-column {
-                top: 0;
-            }
-    
-            .fixed-column:nth-child(1) {
-                left: 0;
-                min-width: 50px; /* Cố định chiều rộng cho cột ID */
-            }
-    
-            .fixed-column:nth-child(2) {
-                left: 59px; /* 50px (ID width) + 10px (padding) */
-                min-width: 100px; /* Cố định chiều rộng cho cột Ảnh đại diện */
-            }
-    
-            .fixed-column:nth-child(3) {
-                left: 158px; /* 60px + 100px (Ảnh đại diện width) + 10px (padding) */
-                min-width: 200px; /* Cố định chiều rộng cho cột Tên đề thi */
-                white-space: normal; /* Cho phép xuống dòng */
-                word-wrap: break-word; /* Đảm bảo từ dài sẽ xuống dòng */
-            }
-    
-            td img {
-                width: 50px;
-                height: auto;
-            }
-    
-            .tag {
-                background-color: #e9ecef;
-                border-radius: 5px;
-                padding: 5px 10px;
-                display: inline-block;
-            }
-    
-            .level {
-                background-color: #d1ecf1;
-            }
-    
-            .status {
-                padding: 5px 10px;
-                border-radius: 5px;
-                color: #fff;
-    
-                &.public {
-                    background-color: #28a745;
+        .table{
+            overflow-x: auto;
+            .quiz-table {
+                border-collapse: separate;
+                border-spacing: 0;
+                table-layout: fixed;
+                padding-bottom: 10px;
+                
+                display: block;
+        
+                th, td {
+                    padding: 10px;
+                    border: 1px solid #bbb;
+                    border-bottom: none;
+                    text-align: center;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
-            }
-    
-            .action {
-                background: none;
-                border: none;
-                cursor: pointer;
-                padding: 5px;
-    
-                &.edit {
-                    background-image: url('path-to-edit-icon.png');
-                    width: 24px;
-                    height: 24px;
-                    background-size: cover;
+                th{
+                    border-bottom: none;
+                    background-color: rgb(244, 247, 254);
+
                 }
     
-                &.delete {
-                    background-image: url('path-to-delete-icon.png');
-                    width: 24px;
-                    height: 24px;
-                    background-size: cover;
+                /* Áp dụng CSS cho tất cả các th và td, trừ các cột từ 1 đến 3 */
+                // th:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)),
+                // td:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)) {
+                //     border-right: none;
+                // }
+
+                th:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:last-child),
+                td:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:last-child) {
+                    border-right: none;
+                }
+                
+                th.fixed-column, td.fixed-column {
+                    position: sticky;
+                    z-index: 2;
+                    background-color: #fff;
+                }
+        
+                th.fixed-column {
+                    top: 0;
+                    z-index: 3;
+                    background-color: rgb(244, 247, 254);
+                }
+        
+                /* Cột ID */
+                .fixed-column:nth-child(1) {
+                    left: 0;
+                    // width: 50px;
+                    min-width: 50px;
+                    border-right: none; /* Không có viền phải cho cột này */
+                    
+                }
+        
+                /* Cột Ảnh đại diện */
+                .fixed-column:nth-child(2) {
+                    left: 60px;
+                    width: 100px;
+                    min-width: 100px;
+                    border-right: none; /* Không có viền phải cho cột này */
+                }
+        
+                /* Cột Tên đề thi */
+                .fixed-column:nth-child(3) {
+                    left: 160px;
+                    width: 200px;
+                    min-width: 200px;
+                    white-space: normal;
+                    word-wrap: break-word;
+                    border-right: none;
+                }
+
+                /* Áp dụng border-right cho th và td cuối cùng */
+                th:last-child, td:last-child {
+                    border-right: 1px solid #bbb;
+                }
+
+                /* Áp dụng border-bottom cho tr cuối cùng trong tbody */
+                tbody tr:last-child td {
+                    border-bottom: 1px solid #bbb;
+                }
+            
+        
+                td img {
+                    width: 50px;
+                    height: auto;
+                }
+        
+                .tag {
+                    background-color: #e9ecef;
+                    border-radius: 5px;
+                    padding: 5px 10px;
+                    display: inline-block;
+                }
+        
+                .level {
+                    background-color: #d1ecf1;
+                }
+        
+                .status {
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    color: #fff;
+        
+                    &.public {
+                        background-color: #28a745;
+                    }
+                }
+        
+                .action {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    padding: 5px;
+        
+                    &.edit {
+                        background-image: url('path-to-edit-icon.png');
+                        width: 24px;
+                        height: 24px;
+                        background-size: cover;
+                    }
+        
+                    &.delete {
+                        background-image: url('path-to-delete-icon.png');
+                        width: 24px;
+                        height: 24px;
+                        background-size: cover;
+                    }
                 }
             }
         }
@@ -522,9 +567,9 @@
         }
     
         @media (max-width: 768px) {
-            .quiz-table {
-                min-width: 800px;
-            }
+            // .quiz-table {
+            //     min-width: 800px;
+            // }
     
             .fixed-column:nth-child(1) {
                 left: 0;
@@ -532,20 +577,20 @@
             }
     
             .fixed-column:nth-child(2) {
-                left: 60px;
+                left: 50px;
                 width: 80px;
             }
     
             .fixed-column:nth-child(3) {
-                left: 150px;
+                left: 130px;
                 width: 150px;
             }
         }
     
         @media (max-width: 480px) {
-            .quiz-table {
-                min-width: 600px;
-            }
+            // .quiz-table {
+            //     min-width: 300px;
+            // }
     
             .fixed-column:nth-child(1) {
                 left: 0;
@@ -553,12 +598,12 @@
             }
     
             .fixed-column:nth-child(2) {
-                left: 60px;
+                left: 50px;
                 width: 70px;
             }
     
             .fixed-column:nth-child(3) {
-                left: 140px;
+                left: 120px;
                 width: 130px;
             }
     
@@ -581,12 +626,52 @@
                 align-items: flex-start;
             }
         }
-    }
-    
-
-    
-    
-    
-    
-    
+    } 
 }
+
+
+.container-add-edit {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 1.5rem);
+    padding-left: var(--bs-gutter-x, 1.5rem);
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  @media (max-width: 575.98px) {
+    .container-add-edit {
+      max-width: 400px;
+    }
+  }
+  
+  @media (min-width: 576px) {
+    .container-add-edit {
+      max-width: 540px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container-add-edit {
+      max-width: 720px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container-add-edit {
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container-add-edit {
+      max-width: 1140px;
+    }
+  }
+  
+  @media (min-width: 1400px) {
+    .container-add-edit {
+      max-width: 1750px;
+    }
+  }
+  
+  

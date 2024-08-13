@@ -1,0 +1,40 @@
+.pagination2{
+    position: relative;
+    background: fff;
+    display: flex;
+    align-items: center;
+    // padding: 10px 20px;
+    // border-radius: 50px;
+    // box-shadow: 0 5px 15px rgba(0,0,0,.2);
+    li{
+        list-style: none;
+        line-height: 5px;
+        margin: 0 5px;
+        a{
+            display: block;
+            text-decoration: none;
+            color: #777;
+            font-weight: 600;
+            border-radius: 50%;
+
+        }
+    }
+    li.pageNumber {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+    
+        a {
+            &:hover {
+                background: #333;
+                color: #fff;
+            }
+        }
+    
+        &.active a {
+            background: #333;
+            color: #fff;
+        }
+    } 
+}
