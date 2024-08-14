@@ -363,34 +363,24 @@
 .container-exams{
     margin-top: 40px;
     .quiz-management {
+        // min-height: calc(100vh - 400px);
         padding: 20px;
         background-color: #fff;
         border-radius: 16px;
-        overflow: hidden;
+        // overflow: scroll;
         .header {
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 20px;
-            input[type="text"] {
-                padding: 8px;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-            }
+           
             .filter-options {
                 display: flex;
                 align-items: center;
-    
-                input[type="radio"] {
-                    margin-right: 5px;
-                }
-    
                 label {
-                    margin-right: 20px;
                     cursor: pointer;
                 }
             }
-    
             .add-new {
                 padding: 10px 20px;
                 background-color: #007bff;
@@ -406,12 +396,17 @@
         }
     
         .table{
-            overflow-x: auto;
+            // overflow-x: auto;
+            // max-height: 500px;
+
+            max-height: calc(-300px + 100vh);
+            height: min(500px, 100vh - 175px);
+            overflow-y: auto;
             .quiz-table {
                 border-collapse: separate;
                 border-spacing: 0;
                 table-layout: fixed;
-                padding-bottom: 10px;
+                padding-bottom: 20px;
                 
                 display: block;
         
@@ -427,15 +422,14 @@
                 th{
                     border-bottom: none;
                     background-color: rgb(244, 247, 254);
+                    position: sticky;
+                    z-index: 2;
+                    top: 0;
 
                 }
     
                 /* Áp dụng CSS cho tất cả các th và td, trừ các cột từ 1 đến 3 */
-                // th:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)),
-                // td:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)) {
-                //     border-right: none;
-                // }
-
+                
                 th:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:last-child),
                 td:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:last-child) {
                     border-right: none;
@@ -489,7 +483,7 @@
                 tbody tr:last-child td {
                     border-bottom: 1px solid #bbb;
                 }
-            
+
         
                 td img {
                     width: 50px;
@@ -540,30 +534,12 @@
             }
         }
     
-        .pagination {
+        .pagination-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: right;
             align-items: center;
             margin-top: 20px;
     
-            span {
-                font-size: 14px;
-            }
-    
-            .page-controls {
-                button {
-                    background-color: #007bff;
-                    color: #fff;
-                    border: none;
-                    padding: 5px 10px;
-                    cursor: pointer;
-                    border-radius: 5px;
-    
-                    &:hover {
-                        background-color: #0056b3;
-                    }
-                }
-            }
         }
     
         @media (max-width: 768px) {
@@ -671,6 +647,25 @@
   @media (min-width: 1400px) {
     .container-add-edit {
       max-width: 1750px;
+    }
+  }
+
+
+  .container-exams-2{
+    margin-top: 40px;
+    h3{
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .quizz-add{
+        background-color: #fff;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        box-shadow: rgba(0, 0, 0, 0.04) 0px 10px 10px 4px;
+        padding: 0 2rem 2rem 2rem;
+        border-radius: 16px;
+
     }
   }
   

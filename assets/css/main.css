@@ -3123,7 +3123,6 @@ a {
   padding: 20px;
   background-color: #fff;
   border-radius: 16px;
-  overflow: hidden;
 }
 .container-exams .quiz-management .header {
   display: flex;
@@ -3131,20 +3130,11 @@ a {
   justify-content: space-between;
   margin-bottom: 20px;
 }
-.container-exams .quiz-management .header input[type=text] {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
 .container-exams .quiz-management .header .filter-options {
   display: flex;
   align-items: center;
 }
-.container-exams .quiz-management .header .filter-options input[type=radio] {
-  margin-right: 5px;
-}
 .container-exams .quiz-management .header .filter-options label {
-  margin-right: 20px;
   cursor: pointer;
 }
 .container-exams .quiz-management .header .add-new {
@@ -3159,13 +3149,15 @@ a {
   background-color: #0056b3;
 }
 .container-exams .quiz-management .table {
-  overflow-x: auto;
+  max-height: calc(-300px + 100vh);
+  height: min(500px, 100vh - 175px);
+  overflow-y: auto;
 }
 .container-exams .quiz-management .table .quiz-table {
   border-collapse: separate;
   border-spacing: 0;
   table-layout: fixed;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   display: block;
   /* Áp dụng CSS cho tất cả các th và td, trừ các cột từ 1 đến 3 */
   /* Cột ID */
@@ -3186,6 +3178,9 @@ a {
 .container-exams .quiz-management .table .quiz-table th {
   border-bottom: none;
   background-color: rgb(244, 247, 254);
+  position: sticky;
+  z-index: 2;
+  top: 0;
 }
 .container-exams .quiz-management .table .quiz-table th:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:last-child),
 .container-exams .quiz-management .table .quiz-table td:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:last-child) {
@@ -3265,25 +3260,11 @@ a {
   height: 24px;
   background-size: cover;
 }
-.container-exams .quiz-management .pagination {
+.container-exams .quiz-management .pagination-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   align-items: center;
   margin-top: 20px;
-}
-.container-exams .quiz-management .pagination span {
-  font-size: 14px;
-}
-.container-exams .quiz-management .pagination .page-controls button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-.container-exams .quiz-management .pagination .page-controls button:hover {
-  background-color: #0056b3;
 }
 @media (max-width: 768px) {
   .container-exams .quiz-management .fixed-column:nth-child(1) {
@@ -3367,6 +3348,23 @@ a {
     max-width: 1750px;
   }
 }
+.container-exams-2 {
+  margin-top: 40px;
+}
+.container-exams-2 h3 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.container-exams-2 .quizz-add {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 10px 10px 4px;
+  padding: 0 2rem 2rem 2rem;
+  border-radius: 16px;
+}
+
 #single-top-meta {
   margin-top: 2px;
 }
@@ -6309,16 +6307,15 @@ input:checked + .slider:before {
   text-align: center;
 }
 .pagination2 li.pageNumber a:hover {
-  background: #333;
+  background-color: rgb(10, 143, 220);
   color: #fff;
 }
 .pagination2 li.pageNumber.active a {
-  background: #333;
+  background-color: rgb(10, 143, 220);
   color: #fff;
 }
 
 .radio-item {
-  position: relative;
   display: flex;
   align-items: center;
 }
@@ -6327,10 +6324,9 @@ input:checked + .slider:before {
 }
 .radio-item label {
   display: block;
-  padding: 20px 60px;
+  padding: 0px 50px;
   border-radius: 6px;
   cursor: pointer;
-  min-width: 250px;
   white-space: nowrap;
   position: relative;
 }
@@ -6344,26 +6340,59 @@ input:checked + .slider:before {
   width: 22px;
   border: 2px solid #5f6368; /* Border của hình tròn ban đầu */
   left: 21px;
-  top: calc(50% - 11px);
+  top: calc(50% - 12px);
   transition: border-color 0.3s ease-in-out;
 }
 .radio-item label:before {
-  background: #524eee;
+  background: rgb(10, 143, 220);
   height: 10px;
   width: 10px;
   left: 27px;
-  top: calc(50% - 5px);
+  top: calc(50% - 6px);
   transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
   opacity: 0;
   visibility: hidden;
 }
 .radio-item input[type=radio]:checked + label:after {
-  border-color: #524eee; /* Đổi màu border của hình tròn sau khi click */
+  border-color: rgb(10, 143, 220); /* Đổi màu border của hình tròn sau khi click */
 }
 .radio-item input[type=radio]:checked + label:before {
   opacity: 1;
   visibility: visible;
   transform: scale(1);
+}
+
+.input2 {
+  position: relative;
+  margin-top: 20px;
+}
+.input2 .exam-name {
+  padding: 15px 10px 5px 10px; /* Điều chỉnh padding để có chỗ cho label */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f1f5f8;
+  color: #333;
+  width: 100%;
+  outline: none;
+}
+.input2 .exam-name:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.input2 .exam-name::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+.input2 .floating-label {
+  position: absolute;
+  top: -10px; /* Điều chỉnh để label nằm ở viền */
+  left: 10px;
+  background-color: #f1f5f8; /* Màu nền giống với màu nền của input */
+  padding: 0 5px; /* Thêm khoảng cách hai bên của label */
+  font-size: 14px;
+  color: #5e6c84;
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=main.css.map */

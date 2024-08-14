@@ -1,5 +1,5 @@
 .radio-item {
-    position: relative;
+    // position: relative;
     display: flex;
     align-items: center;
 
@@ -9,10 +9,10 @@
 
     label {
         display: block;
-        padding: 20px 60px;
+        padding: 0px 50px;
         border-radius: 6px;
         cursor: pointer;
-        min-width: 250px;
+        // min-width: 100px;
         white-space: nowrap;
         position: relative;
         
@@ -28,17 +28,16 @@
             width: 22px;
             border: 2px solid #5f6368;  /* Border của hình tròn ban đầu */
             left: 21px;
-            top: calc(50% - 11px);
+            top: calc(50% - 12px);
             transition: border-color 0.3s ease-in-out;
         }
 
         &:before {
-            background: #524eee;
+            background: rgb(10, 143, 220);;
             height: 10px;
             width: 10px;
             left: 27px;
-            top: calc(50% - 5px);
-            // transform: scale(0);
+            top: calc(50% - 6px);
             transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
             opacity: 0;
             visibility: hidden;
@@ -47,7 +46,7 @@
 
     input[type="radio"]:checked + label {
         &:after {
-            border-color: #524eee; /* Đổi màu border của hình tròn sau khi click */
+            border-color: rgb(10, 143, 220);; /* Đổi màu border của hình tròn sau khi click */
         }
 
         &:before {

@@ -1,0 +1,36 @@
+.input2 {
+    position: relative;
+    margin-top: 20px;
+
+    .exam-name {
+        padding: 15px 10px 5px 10px; /* Điều chỉnh padding để có chỗ cho label */
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #f1f5f8;
+        color: #333;
+        width: 100%;
+        outline: none;
+
+        &:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        &::placeholder {
+            color: #aaa;
+            font-style: italic;
+        }
+    }
+
+    .floating-label {
+        position: absolute;
+        top: -10px; /* Điều chỉnh để label nằm ở viền */
+        left: 10px;
+        background-color: #f1f5f8; /* Màu nền giống với màu nền của input */
+        padding: 0 5px; /* Thêm khoảng cách hai bên của label */
+        font-size: 14px;
+        color: #5e6c84;
+        pointer-events: none;
+    }
+}
