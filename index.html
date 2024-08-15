@@ -276,6 +276,26 @@
                     $('#confirmBtn, .close-modal').on('click', function() {
                         $('#startModal').css('display', 'none');
                     });
+
+
+                    $('.input-dropdown .input-dropdown-select div').click(function() {
+                        var value = $(this).data('value'); // Lấy giá trị từ data-value
+                        var textBoxId = $(this).closest('.input-dropdown').find('.exam-status').attr('id');
+                        $('#' + textBoxId).val(value ? $(this).text().trim() : ''); // Nếu value là rỗng, reset textBox
+                    });
+
+                    $('.input-dropdown').click(function() {
+                        // Đóng tất cả các dropdown khác trước khi toggle dropdown hiện tại
+                        $('.input-dropdown').not(this).removeClass('active');
+                        $(this).toggleClass('active');
+                    });
+
+                    // Đóng dropdown khi click ngoài
+                    $(document).on('click', function(e) {
+                        if (!$(e.target).closest('.input-dropdown').length) {
+                            $('.input-dropdown').removeClass('active');
+                        }
+                    });
                 });
             $('#nav-edu').load("./template/nav-edu.html", function(){
                     $('#profile').on('click', function(e) {

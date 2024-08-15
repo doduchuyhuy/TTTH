@@ -1665,17 +1665,55 @@
                     <div class="line"></div>
                 </div>
             </div>
-            <div class="quiz-add-body">
-                <div class="row">
-                    <div class="col-4">Ảnh đại diện</div>
+            <div class="quiz-add-body mt-1">
+                <div class="row information-exam">
+                    <div class="col-4">
+                        <div class="import-image">
+                            <div class="box-image">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="60" width="60" xmlns="http://www.w3.org/2000/svg"><path d="M4 5h13v7h2V5c0-1.103-.897-2-2-2H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h8v-2H4V5z"></path><path d="m8 11-3 4h11l-4-6-3 4z"></path><path d="M19 14h-2v3h-3v2h3v3h2v-3h3v-2h-3z"></path></svg>
+                            </div>
+                            <p>Ảnh đại diện</p>
+                        </div>
+                    </div>
                     <div class="col-8">
                         <div>
-                            <div class="input2">
+                            <div class="input2 mt-2">
                                 <label for="exam-name" class="floating-label">Tên đề thi*</label>
-                                <input type="text" class="form-control exam-name" id="exam-name" placeholder="Nhập tên đề thi">
+                                <input type="text" class="exam-name" id="exam-name" placeholder="Nhập tên đề thi">
                             </div>
-                            
-                                                       
+                            <div class="textarea2 mt-2">
+                                <label for="exam-description" class="floating-label">Mô tả đề thi</label>
+                                <textarea class="exam-description" id="exam-description" placeholder="Nhập mô tả đề thi"></textarea>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="input-dropdown">
+                                        <input type="text" class="exam-status" id="exam-status" placeholder="Chọn" readonly>
+                                        <div class="input-dropdown-select">
+                                            <div data-value="">Chọn</div>
+                                            <div data-value="1">Riêng tư</div>
+                                            <div data-value="2">Công khai</div>
+                                            <div data-value="3">Không công khai</div>
+                                        </div>
+                                        <span class="title">Trạng thái*</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="input-dropdown">
+                                        <input type="text" class="exam-status" id="exam-status" placeholder="Chọn" readonly>
+                                        <div class="input-dropdown-select">
+                                            <div data-value="">Chọn</div>
+                                            <div data-value="1">Riêng tư</div>
+                                            <div data-value="2">Công khai</div>
+                                            <div data-value="3">Không công khai</div>
+                                        </div>
+                                        <span class="title">Trạng thái*</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="button-edu mt-2">
+                                Xác nhận
+                            </button>                           
                         </div>
                     </div>
                 </div>
