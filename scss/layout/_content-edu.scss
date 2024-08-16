@@ -655,7 +655,6 @@
     margin-top: 40px;
     h3{
         font-weight: 600;
-        margin-bottom: 10px;
         font-size: 16px;
     }
     .quizz-add{
@@ -665,6 +664,72 @@
         box-shadow: rgba(0, 0, 0, 0.04) 0px 10px 10px 4px;
         padding: 0 2rem 2rem 2rem;
         border-radius: 16px;
+
+        .add-exam{
+            .list-all-sections{
+                .list-section-header{
+                    display: flex;
+                    justify-content: space-between;
+                    .section-header-1{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
+                    .section-header-2{
+                        button{
+                            font-size: 13px;
+                            height: auto;
+                            padding: 6px 8px;
+                        }
+                    }
+                }
+                .list-section-body{
+                    p{
+                        text-align: center;
+                        font-style: italic;
+                    }
+                }
+            }
+            .list-all-questions{
+                .list-question-header{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .question-header-1{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
+                    .question-header-2{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        button{
+                            font-size: 13px;
+                            height: auto;
+                            padding: 6px 8px;
+                            .fa-circle-plus{
+                                font-size: 16px;
+                            }
+                            .fa-square-plus{
+                                font-size: 16px;
+                            }
+                        }
+                        button.disabled{
+                            color: rgba(0, 0, 0, 0.26);
+                            box-shadow: none;
+                            background-color: rgba(0, 0, 0, 0.12);
+                        }
+                    }
+                }
+                .list-question-body{
+                    p{
+                        text-align: center;
+                        font-style: italic;
+                    }
+                }
+            }
+        }
 
     }
   }

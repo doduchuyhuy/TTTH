@@ -1317,7 +1317,6 @@
         </div>
     </div> -->
 
-
     <!-- <div class="container-exams container-add-edit">
         <h3>Đề thi</h3>
         <div class="quiz-management">
@@ -1665,12 +1664,12 @@
                     <div class="line"></div>
                 </div>
             </div>
-            <div class="quiz-add-body mt-1">
-                <div class="row information-exam">
+            <div class="quiz-add-body mt-2">
+                <!-- <div class="row information-exam">
                     <div class="col-4">
                         <div class="import-image">
                             <div class="box-image">
-                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="60" width="60" xmlns="http://www.w3.org/2000/svg"><path d="M4 5h13v7h2V5c0-1.103-.897-2-2-2H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h8v-2H4V5z"></path><path d="m8 11-3 4h11l-4-6-3 4z"></path><path d="M19 14h-2v3h-3v2h3v3h2v-3h3v-2h-3z"></path></svg>
+                                <img src="../assets/svg/add-image.svg" alt="">
                             </div>
                             <p>Ảnh đại diện</p>
                         </div>
@@ -1700,7 +1699,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="input-dropdown">
-                                        <input type="text" class="exam-status" id="exam-status" placeholder="Chọn" readonly>
+                                        <input type="text" class="exam-status" id="exam-statuss" placeholder="Chọn" readonly>
                                         <div class="input-dropdown-select">
                                             <div data-value="">Chọn</div>
                                             <div data-value="1">Riêng tư</div>
@@ -1715,6 +1714,53 @@
                                 Xác nhận
                             </button>                           
                         </div>
+                    </div>
+                </div> -->
+
+                <div class="row add-exam">
+                    <div class="col-4">
+                        <div class="list-all-sections">
+                            <div class="list-section-header">
+                                <div class="section-header-1">
+                                    <i class="fa-solid fa-list"></i>
+                                    <h3>Danh sách các phần thi</h3>
+                                </div>
+                                <div class="section-header-2">
+                                    <button class="button-edu" id="addSection">
+                                        <img src="../assets/svg/add-section.svg" alt="">
+                                        Thêm Phần Thi
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="list-section-body mt-4">
+                                <p>Hiện tại chưa có phần thi nào, bạn cần thêm mới phần thi để có thể thêm câu hỏi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="list-all-questions">
+                            <div class="list-question-header">
+                                <div class="question-header-1">
+                                    <i class="fa-solid fa-circle-question"></i>
+                                    <h3>Danh sách câu hỏi</h3>
+                                </div>
+                                <div class="question-header-2">
+                                    <button class="button-edu disabled">
+                                        <i class="fa-solid fa-circle-plus"></i>
+                                        Thêm Câu Hỏi
+                                    </button>
+                                    <button class="button-edu">
+                                        <i class="fa-solid fa-square-plus"></i>
+                                        Thêm Nhanh
+                                    </button>
+                                </div>
+                                
+                            </div>
+                            <div class="list-question-body mt-4">
+                                <p>Không tìm thấy câu hỏi nào</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -1846,6 +1892,40 @@
         </div>
         <div class="modal-footer">
             <button class="button-edu" id="confirmBtn">Xác Nhận Vào Thi</button>
+        </div>
+    </div>
+</div>
+
+
+<div id="addSectionModal" class="modal-overlay" style="display: none;">
+    <div class="modal-add-section">
+        <div class="modal-header">
+            CHỌN CHẾ ĐỘ THI
+            <span class="close-modal-add-section">&times;</span>
+        </div>
+        <div class="modal-body">
+            <div class="input2 mt-">
+                <label for="exam-name" class="floating-label">Tên phần thi*</label>
+                <input type="text" class="exam-name" placeholder="Nhập tên đề thi">
+            </div>
+            <div class="textarea2 mt-3">
+                <label for="exam-description" class="floating-label">Mô tả phần thi</label>
+                <textarea class="exam-description" placeholder="Nhập mô tả đề thi"></textarea>
+            </div>
+            <div class="mt-1">
+                <div class="toggle-switch">
+                    <p>Trạng thái</p>
+                    <label class="switch">
+                        <input type="checkbox" id="displayResultsToggle" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <span id="toggleLabel" class="toggle-label">Active</span>
+                </div>
+            </div>
+             
+        </div>
+        <div class="modal-footer">
+            <button class="button-edu" id="">Xác Nhận</button>
         </div>
     </div>
 </div>

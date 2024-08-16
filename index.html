@@ -277,6 +277,25 @@
                         $('#startModal').css('display', 'none');
                     });
 
+                    $('#addSection').click(function() {
+                        // Hiển thị modal
+                        $('#addSectionModal').show();
+                    });
+
+                    $('.close-modal-add-section').on('click', function() {
+                        $('#addSectionModal').hide();
+                    });
+
+                    $('#displayResultsToggle').on('change', function() {
+                        var toggleLabel = $('#toggleLabel');
+                        if (this.checked) {
+                            toggleLabel.text('Active');
+                        } else {
+                            toggleLabel.text('Inactive');
+                        }
+                    });
+
+
 
                     $('.input-dropdown .input-dropdown-select div').click(function() {
                         var value = $(this).data('value'); // Lấy giá trị từ data-value
