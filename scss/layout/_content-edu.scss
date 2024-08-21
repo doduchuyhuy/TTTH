@@ -667,6 +667,8 @@
 
         .add-exam{
             .list-all-sections{
+                padding: 0 20px;
+                border-right: 1px solid rgba(0, 0, 0, 0.12);
                 .list-section-header{
                     display: flex;
                     justify-content: space-between;
@@ -687,6 +689,53 @@
                     p{
                         text-align: center;
                         font-style: italic;
+                    }
+                    .section-item{
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 10px;
+                        .section-item-left{
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+                        }
+                        .section-item-right{
+                            font-size: 18px;
+                            display: flex;
+                            align-items: center;
+                            gap: 20px;
+                            .icon-wrapper {
+                                position: relative;
+                                display: inline-block;
+                                cursor: pointer;
+                    
+                                .tooltip {
+                                    font-size: 11px;
+                                    position: absolute;
+                                    bottom: 100%;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    background-color: rgba(97, 97, 97, 0.92);
+                                    color: #fff;
+                                    padding: 8px;
+                                    border-radius: 4px;
+                                    font-size: 12px;
+                                    white-space: nowrap;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    transition: opacity 0.2s ease, visibility 0.2s ease;
+                                }
+                                &:hover .tooltip {
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+
+                            
+                        }
+                    }
+                    .section-item.active{
+                        background-color: rgb(217, 217, 217);
                     }
                 }
             }
