@@ -1761,11 +1761,11 @@
                                     <h3>Danh sách câu hỏi</h3>
                                 </div>
                                 <div class="question-header-2">
-                                    <button class="button-edu disabled">
+                                    <button id="addQuestion" class="button-edu disabled">
                                         <i class="fa-solid fa-circle-plus"></i>
                                         Thêm Câu Hỏi
                                     </button>
-                                    <button class="button-edu">
+                                    <button id="QuickAddQuestion" class="button-edu">
                                         <i class="fa-solid fa-square-plus"></i>
                                         Thêm Nhanh
                                     </button>
@@ -1936,6 +1936,57 @@
                         <span class="slider round"></span>
                     </label>
                     <span id="toggleLabel" class="toggle-label">Active</span>
+                </div>
+            </div>
+             
+        </div>
+        <div class="modal-footer">
+            <button class="button-edu" id="">Xác Nhận</button>
+        </div>
+    </div>
+</div>
+
+<div id="addQuestionModal" class="modal-overlay" style="display: none;">
+    <div class="modal-add-question">
+        <div class="modal-header">
+            TRÌNH SOẠN THẢO CÂU HỎI (PHẦN 1)
+            <span class="close-modal-add-section">&times;</span>
+        </div>
+        <div class="modal-body">
+            <div class="question-options">  
+                <div class="radio-item">
+                    <input type="radio" name="filter" id="singleChoice">
+                    <label for="singleChoice">Một đáp án</label>
+                </div>
+                <div class="radio-item">
+                    <input type="radio" name="filter" id="multipleChoice">
+                    <label for="multipleChoice">Nhiều đáp án</label>
+                </div>
+                <div class="radio-item">
+                    <input type="radio" name="filter" id="matchingChoice">
+                    <label for="matchingChoice">Nối từ</label>
+                </div>
+                <label for="fillBlank" class="radio">
+                    <input type="radio" id="fillBlank" class="radio__input">
+                    <div class="radio__radio"></div>
+                    <span>
+                        Điền từ
+                    </span>
+                </label>
+                <div class="radio-item">
+                    <input type="radio" name="filter" id="newest">
+                    <label for="newest">Mới nhất</label>
+                </div>
+                <label for="readingComprehension" class="radio">
+                    <input type="radio" id="readingComprehension" class="radio__input">
+                    <div class="radio__radio"></div>
+                    <span>
+                        Đọc hiểu
+                    </span>
+                </label>
+                <div class="radio-item">
+                    <input type="radio" name="filter" id="newest">
+                    <label for="newest">Mới nhất</label>
                 </div>
             </div>
              
