@@ -1953,42 +1953,51 @@
             <span class="close-modal-add-section">&times;</span>
         </div>
         <div class="modal-body">
-            <div class="question-options">  
-                <div class="radio-item">
+            <p>Loại câu hỏi</p>
+            <div class="question-options mt-1">  
+                <!-- <div class="radio-item">
                     <input type="radio" name="filter" id="singleChoice">
                     <label for="singleChoice">Một đáp án</label>
+                </div> -->
+                <div class="radio-item">
+                    <input type="radio" name="filter" id="singleChoice">
+                    <label for="singleChoice">
+                        <span class="custom-radio"></span> 
+                        Một đáp án
+                    </label>
                 </div>
+                
                 <div class="radio-item">
                     <input type="radio" name="filter" id="multipleChoice">
-                    <label for="multipleChoice">Nhiều đáp án</label>
+                    <label for="multipleChoice">
+                        <span class="custom-radio"></span>
+                        Nhiều đáp án
+                    </label>
                 </div>
                 <div class="radio-item">
                     <input type="radio" name="filter" id="matchingChoice">
-                    <label for="matchingChoice">Nối từ</label>
+                    <label for="matchingChoice">
+                        <span class="custom-radio"></span>
+                        Nối từ
+                    </label>
                 </div>
-                <label for="fillBlank" class="radio">
-                    <input type="radio" id="fillBlank" class="radio__input">
-                    <div class="radio__radio"></div>
-                    <span>
+                <div class="radio-item">
+                    <input type="radio" name="filter" id="fillBlank">
+                    <label for="fillBlank">
+                        <span class="custom-radio"></span>
                         Điền từ
-                    </span>
-                </label>
-                <div class="radio-item">
-                    <input type="radio" name="filter" id="newest">
-                    <label for="newest">Mới nhất</label>
+                    </label>
                 </div>
-                <label for="readingComprehension" class="radio">
-                    <input type="radio" id="readingComprehension" class="radio__input">
-                    <div class="radio__radio"></div>
-                    <span>
-                        Đọc hiểu
-                    </span>
-                </label>
                 <div class="radio-item">
-                    <input type="radio" name="filter" id="newest">
-                    <label for="newest">Mới nhất</label>
+                    <input type="radio" name="filter" id="readingComprehension">
+                    <label for="readingComprehension">
+                        <span class="custom-radio"></span>
+                        Đọc hiểu
+                    </label>
                 </div>
             </div>
+            <p class="mt-2">Tên câu hỏi</p>
+            <textarea name="questionText" id="editor"></textarea>
              
         </div>
         <div class="modal-footer">

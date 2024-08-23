@@ -5880,7 +5880,7 @@ a {
   display: flex;
   flex-direction: column;
   max-height: calc(100% - 64px);
-  max-width: 444px;
+  max-width: 900px;
   width: calc(100% - 64px);
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 4px;
@@ -5913,6 +5913,13 @@ a {
 }
 .modal-overlay .modal-add-question .modal-body {
   padding: 0 25px 25px 25px;
+}
+.modal-overlay .modal-add-question .modal-body p {
+  font-weight: 700;
+}
+.modal-overlay .modal-add-question .modal-body .question-options {
+  display: flex;
+  gap: 40px;
 }
 .modal-overlay .modal-add-question .modal-footer {
   padding: 0 25px 25px 25px;
@@ -6548,43 +6555,42 @@ input:checked + .slider:before {
   display: none;
 }
 .radio-item label {
-  display: block;
-  padding: 0px 50px;
+  display: flex;
+  align-items: center;
   border-radius: 6px;
   cursor: pointer;
   white-space: nowrap;
   position: relative;
 }
-.radio-item label:after, .radio-item label:before {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-}
-.radio-item label:after {
+.radio-item .custom-radio {
   height: 22px;
   width: 22px;
   border: 2px solid #5f6368; /* Border của hình tròn ban đầu */
-  left: 21px;
-  top: calc(50% - 12px);
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
   transition: border-color 0.3s ease-in-out;
 }
-.radio-item label:before {
+.radio-item .custom-radio::before {
+  content: "";
   background: rgb(10, 143, 220);
   height: 10px;
   width: 10px;
-  left: 27px;
-  top: calc(50% - 6px);
-  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   opacity: 0;
   visibility: hidden;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
 }
-.radio-item input[type=radio]:checked + label:after {
+.radio-item input[type=radio]:checked + label .custom-radio {
   border-color: rgb(10, 143, 220); /* Đổi màu border của hình tròn sau khi click */
 }
-.radio-item input[type=radio]:checked + label:before {
+.radio-item input[type=radio]:checked + label .custom-radio::before {
   opacity: 1;
   visibility: visible;
-  transform: scale(1);
 }
 
 .input2 {
