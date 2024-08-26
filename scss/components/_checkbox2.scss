@@ -1,0 +1,53 @@
+.checkbox2 {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    cursor: pointer;
+
+    input[type="checkbox"] {
+        display: none; /* Hide the default checkbox */
+    }
+
+    label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .custom-checkbox {
+        height: 22px;
+        width: 22px;
+        border: 2px solid #5f6368;  /* Border color of the unchecked checkbox */
+        border-radius: 4px; /* Rounded corners for the checkbox */
+        margin-right: 10px;
+        position: relative;
+        background-color: white; /* Initial background color */
+        transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    }
+
+    .custom-checkbox::before {
+        content: '\f00c'; /* Font Awesome checkmark icon */
+        font-family: "Font Awesome 5 Free"; /* Ensure this matches your Font Awesome version */
+        font-weight: 900; /* Necessary for solid icons */
+        font-size: 14px;
+        color: white; /* Color of the checkmark */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+
+    input[type="checkbox"]:checked + label .custom-checkbox {
+        border-color: rgb(10, 143, 220); /* Border color when checked */
+        background-color: rgb(10, 143, 220); /* Background color when checked */
+    }
+
+    input[type="checkbox"]:checked + label .custom-checkbox::before {
+        opacity: 1;
+        visibility: visible;
+    }
+}

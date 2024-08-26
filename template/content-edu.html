@@ -1953,51 +1953,87 @@
             <span class="close-modal-add-section">&times;</span>
         </div>
         <div class="modal-body">
-            <p>Loại câu hỏi</p>
-            <div class="question-options mt-1">  
-                <!-- <div class="radio-item">
-                    <input type="radio" name="filter" id="singleChoice">
-                    <label for="singleChoice">Một đáp án</label>
-                </div> -->
-                <div class="radio-item">
-                    <input type="radio" name="filter" id="singleChoice">
-                    <label for="singleChoice">
-                        <span class="custom-radio"></span> 
-                        Một đáp án
-                    </label>
-                </div>
-                
-                <div class="radio-item">
-                    <input type="radio" name="filter" id="multipleChoice">
-                    <label for="multipleChoice">
-                        <span class="custom-radio"></span>
-                        Nhiều đáp án
-                    </label>
-                </div>
-                <div class="radio-item">
-                    <input type="radio" name="filter" id="matchingChoice">
-                    <label for="matchingChoice">
-                        <span class="custom-radio"></span>
-                        Nối từ
-                    </label>
-                </div>
-                <div class="radio-item">
-                    <input type="radio" name="filter" id="fillBlank">
-                    <label for="fillBlank">
-                        <span class="custom-radio"></span>
-                        Điền từ
-                    </label>
-                </div>
-                <div class="radio-item">
-                    <input type="radio" name="filter" id="readingComprehension">
-                    <label for="readingComprehension">
-                        <span class="custom-radio"></span>
-                        Đọc hiểu
-                    </label>
+            <div class="phase-1">
+                <span class="title-add-question">Loại câu hỏi</span>
+                <div class="question-options mt-1">  
+                    <!-- <div class="radio-item">
+                        <input type="radio" name="filter" id="singleChoice">
+                        <label for="singleChoice">Một đáp án</label>
+                    </div> -->
+                    <div class="radio-item">
+                        <input type="radio" name="filter" id="singleChoice">
+                        <label for="singleChoice">
+                            <span class="custom-radio"></span> 
+                            Một đáp án
+                        </label>
+                    </div>
+                    
+                    <div class="radio-item">
+                        <input type="radio" name="filter" id="multipleChoice">
+                        <label for="multipleChoice">
+                            <span class="custom-radio"></span>
+                            Nhiều đáp án
+                        </label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="filter" id="matchingChoice">
+                        <label for="matchingChoice">
+                            <span class="custom-radio"></span>
+                            Nối từ
+                        </label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="filter" id="fillBlank">
+                        <label for="fillBlank">
+                            <span class="custom-radio"></span>
+                            Điền từ
+                        </label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" name="filter" id="readingComprehension">
+                        <label for="readingComprehension">
+                            <span class="custom-radio"></span>
+                            Đọc hiểu
+                        </label>
+                    </div>
                 </div>
             </div>
-            <p class="mt-2">Tên câu hỏi</p>
-            <textarea name="questionText" id="editor"></textarea>
+            <div class="phase-2 mt-3">
+                <span style="display: block;" class="title-add-question mb-1">Tên câu hỏi</span>
+                <textarea name="questionText" id="editor1"></textarea>
+            </div>
+            <div class="phase-3 mt-3">
+                <div class="file-container">
+                    <div class="file-image">
+                        <p class="mb-1">Upload ảnh</p>
+                        <div class="image-container">
+                            <img src="../assets/images/uploadquestionimage.png" alt="">
+                        </div>
+                    </div>
+                    <div class="file-video-audio">
+                        <div class="file-video">
+                            <div class="checkbox2">
+                                <input type="checkbox" id="add-video" name="exclusiveCheckbox">
+                                <label for="add-video">
+                                    <div class="custom-checkbox"></div>
+                                    Upload video
+                                </label>
+                            </div>
+                        </div>
+                        <div class="file-audio">
+                            <div class="checkbox2">
+                                <input type="checkbox" id="add-audio" name="exclusiveCheckbox">
+                                <label for="add-audio">
+                                    <div class="custom-checkbox"></div>
+                                    Upload audio
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
              
         </div>
         <div class="modal-footer">
@@ -2005,6 +2041,7 @@
         </div>
     </div>
 </div>
+
 
 
 
