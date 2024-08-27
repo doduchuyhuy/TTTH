@@ -286,7 +286,13 @@
                     $('#addQuestion').click(function() {
                         // Hiển thị modal
                         $('#addQuestionModal').show();
-                        CKEDITOR.replace( 'editor1' );
+                        // CKEDITOR.replace( 'editor' );
+                        // Sử dụng jQuery để lặp qua tất cả các phần tử có class 'editor'
+                        $('.editor').each(function() {
+                            // Thay thế từng phần tử bằng CKEditor
+                            CKEDITOR.replace(this);
+                        });
+
                         
                     });
 

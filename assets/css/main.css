@@ -5928,7 +5928,10 @@ a {
   border-radius: 50%;
 }
 .modal-overlay .modal-add-question .modal-body {
-  padding: 0 25px 25px 25px;
+  padding: 0 30px 0 30px;
+  max-height: calc(-300px + 100vh);
+  height: min(600px, 100vh - 175px);
+  overflow-y: auto;
 }
 .modal-overlay .modal-add-question .modal-body .title-add-question {
   font-weight: 700;
@@ -5939,6 +5942,7 @@ a {
 }
 .modal-overlay .modal-add-question .modal-body .phase-3 .file-container {
   display: flex;
+  gap: 50px;
 }
 .modal-overlay .modal-add-question .modal-body .phase-3 .file-container .file-image {
   display: flex;
@@ -5958,11 +5962,26 @@ a {
 }
 .modal-overlay .modal-add-question .modal-body .phase-3 .file-container .file-video-audio {
   display: flex;
+  gap: 30px;
+}
+.modal-overlay .modal-add-question .modal-body .phase-4 .question-options-container .question-option-item {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.modal-overlay .modal-add-question .modal-body .phase-4 .question-options-container .question-option-item .option-item-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.modal-overlay .modal-add-question .modal-body .phase-4 .question-options-container .question-option-item .option-item-list .option-item-list-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 .modal-overlay .modal-add-question .modal-footer {
-  padding: 0 25px 25px 25px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 20px 20px 20px 20px;
+  margin: auto;
 }
 .modal-overlay .modal-add-question .modal-footer .button-edu:hover {
   background: #0056b3;
@@ -6595,6 +6614,7 @@ input:checked + .slider:before {
 .radio-item label {
   display: flex;
   align-items: center;
+  gap: 10px;
   border-radius: 6px;
   cursor: pointer;
   white-space: nowrap;
@@ -6605,7 +6625,6 @@ input:checked + .slider:before {
   width: 22px;
   border: 2px solid #5f6368; /* Border của hình tròn ban đầu */
   border-radius: 50%;
-  margin-right: 10px;
   position: relative;
   transition: border-color 0.3s ease-in-out;
 }
@@ -6795,7 +6814,6 @@ input:checked + .slider:before {
 .checkbox2 {
   display: flex;
   align-items: center;
-  padding: 6px;
   cursor: pointer;
 }
 .checkbox2 input[type=checkbox] {
@@ -6804,6 +6822,7 @@ input:checked + .slider:before {
 .checkbox2 label {
   display: flex;
   align-items: center;
+  gap: 10px;
   cursor: pointer;
   position: relative;
 }
@@ -6812,7 +6831,6 @@ input:checked + .slider:before {
   width: 22px;
   border: 2px solid #5f6368; /* Border color of the unchecked checkbox */
   border-radius: 4px; /* Rounded corners for the checkbox */
-  margin-right: 10px;
   position: relative;
   background-color: white; /* Initial background color */
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
@@ -6838,6 +6856,73 @@ input:checked + .slider:before {
 .checkbox2 input[type=checkbox]:checked + label .custom-checkbox::before {
   opacity: 1;
   visibility: visible;
+}
+
+.icon-drop {
+  height: 22px;
+  width: 22px;
+  border: 2px solid #F24E4E; /* Border của vòng tròn */
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-drop::before {
+  content: "";
+  background: #F24E4E;
+  height: 2px;
+  width: 10px;
+  position: absolute;
+}
+.icon-drop:hover {
+  transform: scale(1.1); /* Hiệu ứng phóng to nhẹ khi hover */
+  transition: transform 0.3s ease;
+}
+
+.btn-add-answer {
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent; /* Màu nền của nút */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: rgb(10, 143, 220); /* Màu của chữ */
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-add-answer:hover {
+  background-color: rgba(10, 143, 220, 0.04); /* Màu nền khi hover */
+}
+.btn-add-answer .icon-plus-circle {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border: 2px solid rgb(10, 143, 220); /* Border của vòng tròn */
+  border-radius: 50%;
+  position: relative;
+}
+.btn-add-answer .icon-plus-circle::before {
+  content: "";
+  position: absolute;
+  background: rgb(10, 143, 220);
+  width: 2px;
+  height: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.btn-add-answer .icon-plus-circle::after {
+  content: "";
+  position: absolute;
+  background: rgb(10, 143, 220);
+  width: 10px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=main.css.map */

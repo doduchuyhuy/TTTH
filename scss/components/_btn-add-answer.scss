@@ -1,0 +1,48 @@
+.btn-add-answer {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent; /* Màu nền của nút */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: rgb(10, 143, 220); /* Màu của chữ */
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: rgba(10, 143, 220, 0.04); /* Màu nền khi hover */
+    }
+
+    .icon-plus-circle {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+        border: 2px solid rgb(10, 143, 220); /* Border của vòng tròn */
+        border-radius: 50%;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            background: rgb(10, 143, 220);
+            width: 2px;
+            height: 10px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            background: rgb(10, 143, 220);
+            width: 10px;
+            height: 2px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

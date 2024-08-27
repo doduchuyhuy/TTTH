@@ -1,0 +1,23 @@
+.icon-drop {
+    height: 22px;
+    width: 22px;
+    border: 2px solid #F24E4E;  /* Border của vòng tròn */
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+        content: '';
+        background: #F24E4E;
+        height: 2px;
+        width: 10px;
+        position: absolute;
+    }
+
+    &:hover {
+        transform: scale(1.1); /* Hiệu ứng phóng to nhẹ khi hover */
+        transition: transform 0.3s ease;
+    }
+}
