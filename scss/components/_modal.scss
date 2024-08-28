@@ -516,7 +516,7 @@
         display: flex;
         flex-direction: column;
         max-height: calc(100% - 64px);
-        max-width: 900px;
+        max-width: 1140px;
         width: calc(100% - 64px);
         transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
         border-radius: 4px;
@@ -595,19 +595,147 @@
             .phase-4{
                 .question-options-container{
                     .question-option-item{
-                        display: flex;
-                        flex-direction: column;
-                        gap: 30px;
-                        .option-item-list{
+                        .singlechoice-container, .multichoice-container{
                             display: flex;
-                            align-items: center;
-                            gap: 20px;
-                            .option-item-list-content{
+                            flex-direction: column;
+                            gap: 30px;
+                            .option-item-list{
                                 display: flex;
-                                flex-direction: column;
-                                gap: 5px;
+                                align-items: center;
+                                gap: 20px;
+                                .option-item-list-content{
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 5px;
+                                }
                             }
                         }
+                        .matching-container{
+                            padding: 20px;
+                            border: 1px solid rgb(238,238,238);
+                            border-radius: 10px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+                            .matching-item{
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+                                .matching-pair{
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 15px;
+                                }
+                            }
+                        }
+                        // .comprehension-container{
+                        //     padding: 20px;
+                        //     border: 1px solid rgb(238,238,238);
+                        //     border-radius: 10px;
+                        //     display: flex;
+                        //     flex-direction: column;
+                        //     gap: 20px;
+                        //     .sub-question{
+                        //         span{
+                                    
+                        //         }
+                        //         .sub-question-header{
+                        //             display: flex;
+                        //             justify-content: space-between;
+                        //             .toggle-sub-questions {
+                        //                 cursor: pointer;
+                        //                 i {
+                        //                     transition: transform 0.3s ease;
+                        //                 }
+                        
+                        //                 &.active i {
+                        //                     transform: rotate(90deg);
+                        //                 }
+                        //             }
+                        //         }
+                        //         .sub-question-list{
+                        //             .sub-singlechoice-container{
+                        //                 display: flex;
+                        //                 flex-wrap: wrap;
+                        //                 gap: 50px;
+                        //                 margin-left: 20px;
+                        //                 .option-item-list{
+                        //                     display: flex;
+                        //                     align-items: center;
+                        //                     gap: 10px;
+                        //                     .option-item-list-content{
+                        //                         display: flex;
+                        //                         flex-direction: column;
+                        //                         gap: 5px;
+                        //                         .custom-radio{
+                        //                             height: 20px;
+                        //                             width: 20px;
+                        //                         }
+                        //                     }
+                        //                 }
+                        //             }
+                        //         }
+                        //     }
+                        // }
+                        .comprehension-container {
+                            padding: 20px;
+                            border: 1px solid rgb(238, 238, 238);
+                            border-radius: 10px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+                        
+                            .sub-question {
+                                .sub-question-header {
+                                    display: flex;
+                                    justify-content: space-between;
+                        
+                                    .toggle-sub-questions {
+                                        cursor: pointer;
+                                        i {
+                                            transition: transform 0.3s ease;
+                                        }
+                        
+                                        &.spin.now i {
+                                            transform: rotate(90deg);
+                                        }
+                                    }
+                                }
+                        
+                                .sub-question-list {
+                                    display: none;
+                        
+                                    &.spin.now {
+                                        display: block;
+                                    }
+                        
+                                    .sub-singlechoice-container {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        gap: 50px;
+                                        margin-left: 20px;
+                        
+                                        .option-item-list {
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 10px;
+                        
+                                            .option-item-list-content {
+                                                display: flex;
+                                                flex-direction: column;
+                                                gap: 5px;
+                        
+                                                .custom-radio {
+                                                    height: 20px;
+                                                    width: 20px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
                     }
                 }
             }
@@ -666,6 +794,13 @@
 .no-scroll {
     overflow: hidden;
 }
+
+/* Tìm khung chứa CKEditor và thêm thuộc tính border-radius */
+.cke_reset {
+    border-radius: 10px; /* Giá trị bo tròn, bạn có thể thay đổi theo ý thích */
+    overflow: hidden; /* Đảm bảo các phần tử con không vượt ra ngoài khung bo tròn */
+}
+
 
 
 

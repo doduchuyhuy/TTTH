@@ -10,29 +10,35 @@ CKEDITOR.editorConfig = function( config ) {
 
 	// The toolbar groups arrangement, optimized for two toolbar rows.
 	config.toolbarGroups = [
-		{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },
-		{ name: 'editing',     groups: [ 'find', 'selection', 'spellchecker' ] },
-		{ name: 'links' },
-		{ name: 'insert' },
-		{ name: 'forms' },
-		{ name: 'tools' },
-		{ name: 'document',	   groups: [ 'mode', 'document', 'doctools' ] },
-		{ name: 'others' },
-		'/',
-		{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
-		{ name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] },
-		{ name: 'styles' },
-		{ name: 'colors' },
-		{ name: 'about' }
-	];
+        { name: 'insert' },
+        { name: 'others' },
+        { name: 'basicstyles', groups: [ 'basicstyles' ] },
+        { name: 'paragraph',   groups: [ 'list', 'indent', 'align', 'bidi' ] },
+        
+    ];
 
 	// Remove some buttons provided by the standard plugins, which are
 	// not needed in the Standard(s) toolbar.
-	config.removeButtons = 'Underline,Subscript,Superscript';
+	config.removeButtons = 'Subscript,Superscript';
 	config.height = 90; 
 
 	// Set the most common block elements.
 	config.format_tags = 'p;h1;h2;h3;pre';
+
+	config.extraPlugins = 'mathjax';
+    config.mathJaxLib = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML';
+
+	config.forcePasteAsPlainText = true;
+	config.allowedContent = {
+        $1: {
+            // Sử dụng các thẻ và thuộc tính mặc định của CKEditor,
+            // nhưng thêm vào đó là việc cho phép tất cả class và style.
+            elements: CKEDITOR.dtd,
+            attributes: true,
+            styles: true,
+            classes: true
+        }
+    };
 
 	// Simplify the dialog windows.
 	config.removeDialogTabs = 'image:advanced;link:advanced';

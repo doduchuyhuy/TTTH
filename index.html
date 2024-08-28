@@ -292,6 +292,19 @@
                             // Thay thế từng phần tử bằng CKEditor
                             CKEDITOR.replace(this);
                         });
+                        $('.toggle-sub-questions').on('click', function() {
+                            var subQuestionList = $(this).closest('.sub-question').find('.sub-question-list');
+                            var icon = $(this).find('i');
+
+                            subQuestionList.toggleClass('spin now');
+                            $(this).toggleClass('spin now');
+
+                            if (subQuestionList.hasClass('spin') && subQuestionList.hasClass('now')) {
+                                icon.removeClass('fa-angle-right').addClass('fa-angle-down');
+                            } else {
+                                icon.removeClass('fa-angle-down').addClass('fa-angle-right');
+                            }
+                        });
 
                         
                     });
