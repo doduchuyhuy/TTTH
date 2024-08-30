@@ -5940,6 +5940,11 @@ a {
   display: flex;
   gap: 40px;
 }
+.modal-overlay .modal-add-question .modal-body .phase-1 .question-options .custom-radio {
+  border-width: 2px;
+  height: 22px;
+  width: 22px;
+}
 .modal-overlay .modal-add-question .modal-body .phase-3 .file-container {
   display: flex;
   gap: 50px;
@@ -5964,20 +5969,33 @@ a {
   display: flex;
   gap: 30px;
 }
+.modal-overlay .modal-add-question .modal-body .phase-4 {
+  display: flex;
+  gap: 50px;
+}
+.modal-overlay .modal-add-question .modal-body .phase-4 .question-options-container {
+  flex: 1;
+}
 .modal-overlay .modal-add-question .modal-body .phase-4 .question-options-container .question-option-item .singlechoice-container, .modal-overlay .modal-add-question .modal-body .phase-4 .question-options-container .question-option-item .multichoice-container {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 45px;
+  margin-left: 20px;
 }
 .modal-overlay .modal-add-question .modal-body .phase-4 .question-options-container .question-option-item .singlechoice-container .option-item-list, .modal-overlay .modal-add-question .modal-body .phase-4 .question-options-container .question-option-item .multichoice-container .option-item-list {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 .modal-overlay .modal-add-question .modal-body .phase-4 .question-options-container .question-option-item .singlechoice-container .option-item-list .option-item-list-content, .modal-overlay .modal-add-question .modal-body .phase-4 .question-options-container .question-option-item .multichoice-container .option-item-list .option-item-list-content {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  flex: 1;
+}
+.modal-overlay .modal-add-question .modal-body .phase-4 .question-options-container .question-option-item .multichoice-container {
+  flex-direction: column;
+  gap: 30px;
 }
 .modal-overlay .modal-add-question .modal-body .phase-4 .question-options-container .question-option-item .matching-container {
   padding: 20px;
@@ -5998,7 +6016,7 @@ a {
   gap: 15px;
 }
 .modal-overlay .modal-add-question .modal-body .phase-4 .question-options-container .question-option-item .comprehension-container {
-  padding: 20px;
+  padding: 15px;
   border: 1px solid rgb(238, 238, 238);
   border-radius: 10px;
   display: flex;
@@ -6007,16 +6025,34 @@ a {
 }
 .modal-overlay .modal-add-question .modal-body .phase-4 .question-options-container .question-option-item .comprehension-container .sub-question .sub-question-header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+}
+.modal-overlay .modal-add-question .modal-body .phase-4 .question-options-container .question-option-item .comprehension-container .sub-question .sub-question-header .sub-question-header-1 {
+  display: flex;
+  align-items: center;
+  color: rgb(62, 101, 254);
+  gap: 5px;
+  padding: 8px 6px;
+  border-radius: 4px;
+}
+.modal-overlay .modal-add-question .modal-body .phase-4 .question-options-container .question-option-item .comprehension-container .sub-question .sub-question-header .sub-question-header-1:hover {
+  background-color: rgba(62, 101, 254, 0.04);
+}
+.modal-overlay .modal-add-question .modal-body .phase-4 .question-options-container .question-option-item .comprehension-container .sub-question .sub-question-header .sub-question-header-2 {
+  color: rgb(211, 47, 47);
+  cursor: pointer;
+  padding: 4px 5px;
+  border-radius: 4px;
+}
+.modal-overlay .modal-add-question .modal-body .phase-4 .question-options-container .question-option-item .comprehension-container .sub-question .sub-question-header .sub-question-header-2:hover {
+  background-color: rgba(211, 47, 47, 0.04);
 }
 .modal-overlay .modal-add-question .modal-body .phase-4 .question-options-container .question-option-item .comprehension-container .sub-question .sub-question-header .toggle-sub-questions {
   cursor: pointer;
 }
 .modal-overlay .modal-add-question .modal-body .phase-4 .question-options-container .question-option-item .comprehension-container .sub-question .sub-question-header .toggle-sub-questions i {
   transition: transform 0.3s ease;
-}
-.modal-overlay .modal-add-question .modal-body .phase-4 .question-options-container .question-option-item .comprehension-container .sub-question .sub-question-header .toggle-sub-questions.spin.now i {
-  transform: rotate(90deg);
 }
 .modal-overlay .modal-add-question .modal-body .phase-4 .question-options-container .question-option-item .comprehension-container .sub-question .sub-question-list {
   display: none;
@@ -6040,9 +6076,26 @@ a {
   flex-direction: column;
   gap: 5px;
 }
-.modal-overlay .modal-add-question .modal-body .phase-4 .question-options-container .question-option-item .comprehension-container .sub-question .sub-question-list .sub-singlechoice-container .option-item-list .option-item-list-content .custom-radio {
-  height: 20px;
-  width: 20px;
+.modal-overlay .modal-add-question .modal-body .phase-4 .question-options-marks {
+  flex: 1;
+}
+.modal-overlay .modal-add-question .modal-body .phase-4 .question-options-marks .input2 input {
+  max-width: 100px;
+  padding: 10px 10px;
+}
+.modal-overlay .modal-add-question .modal-body .phase-4 .question-options-marks .percentage-mark .percentage-item .percentage-percent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.modal-overlay .modal-add-question .modal-body .phase-4 .question-options-marks .percentage-mark .percentage-item .percentage-percent input {
+  padding: 8px 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: #333;
+  width: 100%;
+  outline: none;
+  max-width: 64px;
 }
 .modal-overlay .modal-add-question .modal-footer {
   padding: 20px 20px 20px 20px;
@@ -6692,9 +6745,9 @@ input:checked + .slider:before {
   position: relative;
 }
 .radio-item .custom-radio {
-  height: 22px;
-  width: 22px;
-  border: 2px solid #5f6368; /* Border của hình tròn ban đầu */
+  height: 20px;
+  width: 20px;
+  border: 1px solid #5f6368; /* Border của hình tròn ban đầu */
   border-radius: 50%;
   position: relative;
   transition: border-color 0.3s ease-in-out;
@@ -6898,9 +6951,9 @@ input:checked + .slider:before {
   position: relative;
 }
 .checkbox2 .custom-checkbox {
-  height: 22px;
-  width: 22px;
-  border: 2px solid #5f6368; /* Border color of the unchecked checkbox */
+  height: 19px;
+  width: 19px;
+  border: 1.5px solid #5f6368; /* Border color of the unchecked checkbox */
   border-radius: 4px; /* Rounded corners for the checkbox */
   position: relative;
   background-color: white; /* Initial background color */
@@ -6910,7 +6963,7 @@ input:checked + .slider:before {
   content: "\f00c"; /* Font Awesome checkmark icon */
   font-family: "Font Awesome 5 Free"; /* Ensure this matches your Font Awesome version */
   font-weight: 900; /* Necessary for solid icons */
-  font-size: 14px;
+  font-size: 13px;
   color: white; /* Color of the checkmark */
   position: absolute;
   top: 50%;

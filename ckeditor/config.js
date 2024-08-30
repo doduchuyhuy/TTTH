@@ -40,6 +40,8 @@ CKEDITOR.editorConfig = function( config ) {
         }
     };
 
+	config.removePlugins = 'elementspath';
+
 	// Simplify the dialog windows.
 	config.removeDialogTabs = 'image:advanced;link:advanced';
 };

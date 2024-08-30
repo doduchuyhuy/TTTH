@@ -17,9 +17,9 @@
     }
 
     .custom-checkbox {
-        height: 22px;
-        width: 22px;
-        border: 2px solid #5f6368;  /* Border color of the unchecked checkbox */
+        height: 19px;
+        width: 19px;
+        border: 1.5px solid #5f6368;  /* Border color of the unchecked checkbox */
         border-radius: 4px; /* Rounded corners for the checkbox */
         // margin-right: 10px;
         position: relative;
@@ -31,7 +31,7 @@
         content: '\f00c'; /* Font Awesome checkmark icon */
         font-family: "Font Awesome 5 Free"; /* Ensure this matches your Font Awesome version */
         font-weight: 900; /* Necessary for solid icons */
-        font-size: 14px;
+        font-size: 13px;
         color: white; /* Color of the checkmark */
         position: absolute;
         top: 50%;

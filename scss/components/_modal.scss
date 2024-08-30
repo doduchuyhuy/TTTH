@@ -561,6 +561,11 @@
                 .question-options{
                     display: flex;
                     gap: 40px;
+                    .custom-radio{
+                        border-width: 2px;
+                        height: 22px;
+                        width: 22px;
+                    }
                 }
             }
             .phase-2{
@@ -593,22 +598,32 @@
                 }
             }
             .phase-4{
+                display: flex;
+                gap: 50px;
                 .question-options-container{
+                    flex: 1;
                     .question-option-item{
                         .singlechoice-container, .multichoice-container{
                             display: flex;
-                            flex-direction: column;
-                            gap: 30px;
+                            flex-wrap: wrap;
+                            gap: 45px;
+                            margin-left: 20px;
                             .option-item-list{
                                 display: flex;
                                 align-items: center;
-                                gap: 20px;
+                                gap: 10px;
                                 .option-item-list-content{
                                     display: flex;
                                     flex-direction: column;
                                     gap: 5px;
+                                    flex: 1;
+
                                 }
                             }
+                        }
+                        .multichoice-container{
+                            flex-direction: column;
+                            gap: 30px;
                         }
                         .matching-container{
                             padding: 20px;
@@ -628,57 +643,8 @@
                                 }
                             }
                         }
-                        // .comprehension-container{
-                        //     padding: 20px;
-                        //     border: 1px solid rgb(238,238,238);
-                        //     border-radius: 10px;
-                        //     display: flex;
-                        //     flex-direction: column;
-                        //     gap: 20px;
-                        //     .sub-question{
-                        //         span{
-                                    
-                        //         }
-                        //         .sub-question-header{
-                        //             display: flex;
-                        //             justify-content: space-between;
-                        //             .toggle-sub-questions {
-                        //                 cursor: pointer;
-                        //                 i {
-                        //                     transition: transform 0.3s ease;
-                        //                 }
-                        
-                        //                 &.active i {
-                        //                     transform: rotate(90deg);
-                        //                 }
-                        //             }
-                        //         }
-                        //         .sub-question-list{
-                        //             .sub-singlechoice-container{
-                        //                 display: flex;
-                        //                 flex-wrap: wrap;
-                        //                 gap: 50px;
-                        //                 margin-left: 20px;
-                        //                 .option-item-list{
-                        //                     display: flex;
-                        //                     align-items: center;
-                        //                     gap: 10px;
-                        //                     .option-item-list-content{
-                        //                         display: flex;
-                        //                         flex-direction: column;
-                        //                         gap: 5px;
-                        //                         .custom-radio{
-                        //                             height: 20px;
-                        //                             width: 20px;
-                        //                         }
-                        //                     }
-                        //                 }
-                        //             }
-                        //         }
-                        //     }
-                        // }
                         .comprehension-container {
-                            padding: 20px;
+                            padding: 15px;
                             border: 1px solid rgb(238, 238, 238);
                             border-radius: 10px;
                             display: flex;
@@ -688,16 +654,34 @@
                             .sub-question {
                                 .sub-question-header {
                                     display: flex;
+                                    align-items: center;
                                     justify-content: space-between;
+                                    .sub-question-header-1{
+                                        display: flex;
+                                        align-items: center;
+                                        color: rgb(62, 101, 254);
+                                        gap: 5px;
+                                        padding: 8px 6px;
+                                        border-radius: 4px;
+                                        &:hover{
+                                            background-color: rgba(62, 101, 254, 0.04)
+                                        }
+                                    }
+                                    .sub-question-header-2{
+                                        color: rgb(211, 47, 47);
+                                        cursor: pointer;
+                                        padding: 4px 5px;
+                                        border-radius: 4px;
+                                        &:hover{
+                                            background-color: rgba(211, 47, 47, 0.04);
+                                        }
+                                       
+                                    }
                         
                                     .toggle-sub-questions {
                                         cursor: pointer;
                                         i {
                                             transition: transform 0.3s ease;
-                                        }
-                        
-                                        &.spin.now i {
-                                            transform: rotate(90deg);
                                         }
                                     }
                                 }
@@ -724,11 +708,7 @@
                                                 display: flex;
                                                 flex-direction: column;
                                                 gap: 5px;
-                        
-                                                .custom-radio {
-                                                    height: 20px;
-                                                    width: 20px;
-                                                }
+                                               
                                             }
                                         }
                                     }
@@ -736,6 +716,34 @@
                             }
                         }
                         
+                        
+                    }
+                }
+                .question-options-marks{
+                    flex: 1;
+                    .input2{
+                        input{
+                            max-width: 100px;
+                            padding: 10px 10px;
+                        }
+                    }
+                    .percentage-mark{
+                        .percentage-item{
+                            .percentage-percent{
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                input{
+                                    padding: 8px 8px;
+                                    border: 1px solid #ccc;
+                                    border-radius: 8px;
+                                    color: #333;
+                                    width: 100%;
+                                    outline: none;
+                                    max-width: 64px;
+                                }
+                            }
+                        }
                     }
                 }
             }
