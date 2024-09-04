@@ -30,7 +30,6 @@ html {
 body {
     font-size: 1.4rem;
     line-height: 1.5;
-    // font-family: Roboto, sans-serif;
     background-color:#f7f7f9 ;
     @include abstracts.breakpoint(md) {
         background-color:#fff ;
@@ -45,6 +44,14 @@ body {
     border-radius: 10px;
     background-color: rgb(224, 224, 224);
 }
+
+::placeholder {
+    
+    font-size: 12px !important;
+    opacity: 0.8;
+    font-style: normal !important; /* Loại bỏ in nghiêng cho tất cả các placeholder */
+}
+
 
 .sticky{
     position: sticky;

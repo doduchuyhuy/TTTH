@@ -1765,7 +1765,7 @@
                                         <i class="fa-solid fa-circle-plus"></i>
                                         Thêm Câu Hỏi
                                     </button>
-                                    <button id="QuickAddQuestion" class="button-edu">
+                                    <button id="addQuestionText" class="button-edu">
                                         <i class="fa-solid fa-square-plus"></i>
                                         Thêm Nhanh
                                     </button>
@@ -1963,7 +1963,6 @@
                             Một đáp án
                         </label>
                     </div>
-                    
                     <div class="radio-item">
                         <input type="radio" name="filter" id="multipleChoice">
                         <label for="multipleChoice">
@@ -2099,7 +2098,7 @@
                             </button>
                         </div> -->
 
-                        <div class="multichoice-container">
+                        <!-- <div class="multichoice-container">
                             <div class="option-item-list">
                                 <div class="option-item-list-content">
                                     <div class="checkbox2">
@@ -2165,7 +2164,7 @@
                                 <span class="icon-plus-circle"></span>
                                 Thêm Câu Trả Lời
                             </button>
-                        </div> 
+                        </div>  -->
                         
                         <!-- <div class="matching-container">
                             <div class="matching-item">
@@ -2194,7 +2193,7 @@
                             </button>
                         </div> -->
 
-                        <!-- <div class="comprehension-container">
+                        <div class="comprehension-container">
                             <div class="sub-question">
                                 <div class="sub-question-header">
                                     <div class="sub-question-header-1 toggle-sub-questions">
@@ -2284,7 +2283,7 @@
                         <button class="button-edu mt-1">
                             <i class="fa-regular fa-plus"></i>
                             Thêm câu hỏi
-                        </button> -->
+                        </button>
 
                     </div>
                 </div>
@@ -2314,6 +2313,65 @@
                 </div>
             </div>
             
+        </div>
+        <div class="modal-footer">
+            <button class="button-edu" id="">Xác Nhận</button>
+        </div>
+    </div>
+</div>
+
+
+<div id="addQuestionTextModal" class="modal-overlay" style="display: none;">
+    <div class="modal-add-question-text">
+        <div class="modal-header">
+            Thêm câu hỏi bằng văn bản
+            <span class="close-modal-add-section">&times;</span>
+        </div>
+        <div class="modal-body">
+            <div class="modal-left">
+                <div class="modal-left-header">
+                    <p>Soạn câu hỏi</p>
+                    <button class="button-edu">
+                        <i class="fa-solid fa-person-circle-question"></i>
+                        Xem hướng dẫn
+                    </button>
+                </div>
+                <div class="modal-left-body">
+                    <div class="textarea2 mt-1">
+                        <textarea class="exam-description" placeholder="Vui lòng soạn câu hỏi theo đúng cấu trúc"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-right">
+                <div class="modal-right-header">
+                    <p>Xem trước</p>
+                </div>
+                <div class="modal-right-body">
+                    <!-- <h3>Vui lòng soạn câu hỏi theo hướng dẫn</h3> -->
+                     <div class="question-text-container mt-1">
+                        <span>Danh sách câu hỏi</span>
+                        <div class="indexs-container mt-1">
+                            <div class="button-index">1</div>
+                            <div class="button-index">2</div>
+                            <div class="button-index">3</div>
+                            <div class="button-index">4</div>
+                            <div class="button-index">5</div>
+                            <div class="button-index">6</div>
+                            <div class="button-index">7</div>
+                            <div class="button-index">8</div>
+                            <div class="button-index">1</div>
+                            <div class="button-index">2</div>
+                            <div class="button-index">3</div>
+                            <div class="button-index">4</div>
+                            <div class="button-index">5</div>
+                            <div class="button-index">6</div>
+                            <div class="button-index">7</div>
+                            <div class="button-index">8</div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+             
         </div>
         <div class="modal-footer">
             <button class="button-edu" id="">Xác Nhận</button>

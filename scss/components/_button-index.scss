@@ -1,0 +1,28 @@
+.button-index{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    color: rgb(62, 101, 254);
+    box-shadow: none;
+    text-transform: none;
+    min-width: 40px;
+    line-height: 1rem;
+    outline: 0px;
+    margin: 0px;
+    text-decoration: none;
+    padding: 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: rgb(211, 215, 234)
+}

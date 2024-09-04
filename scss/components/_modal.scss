@@ -561,10 +561,18 @@
                 .question-options{
                     display: flex;
                     gap: 40px;
-                    .custom-radio{
-                        border-width: 2px;
-                        height: 22px;
-                        width: 22px;
+                    .radio-item{
+                        label{
+                            padding: 8px;
+                            .custom-radio{
+                                border-width: 2px;
+                                height: 22px;
+                                width: 22px;
+                            }
+                        }
+                        input[type="radio"]:checked + label {
+                            background-color: aliceblue;
+                        }
                     }
                 }
             }
@@ -601,7 +609,7 @@
                 display: flex;
                 gap: 50px;
                 .question-options-container{
-                    flex: 1;
+                    flex: 2;
                     .question-option-item{
                         .singlechoice-container, .multichoice-container{
                             display: flex;
@@ -764,7 +772,122 @@
             }
         }
     }
+    .modal-add-question-text{
+        background-color: rgb(255, 255, 255);
+        color: rgb(17, 24, 39);
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 11px 15px -7px, rgba(0, 0, 0, 0.14) 0px 24px 38px 3px, rgba(0, 0, 0, 0.12) 0px 9px 46px 8px;
+        max-width: 1140px;
+        display: flex;
+        flex-direction: column;
+        max-height: calc(100% - 64px);
+        width: calc(100% - 64px);
+        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        border-radius: 4px;
+        position: absolute;
+        top: 10%; /* Adjust this value to move the modal up */
+        .modal-header{
+            color: #111827;
+            font-size: 18px;
+            font-weight: 500;
+            // margin-bottom: 25px;
+            text-align: center;
+            position: relative;
+            padding: 25px;
+            .close-modal-add-section {
+                position: absolute;
+                color: #0000008A;
+                line-height: 1.5;
+                // padding: 10px;
+                width: 35px;
+                height: 35px;
+                right: 10px;
+                top: 10px;
+                font-size: 25px;
+                cursor: pointer;
+                user-select: none;
+                &:hover {
+                    background: rgba(0, 0, 0, 0.04);
+                    border-radius: 50%;
+                }
+            }
+        }
+        .modal-body{
+            padding: 0 25px 25px 25px;
+            max-height: calc(-300px + 100vh);
+            height: min(600px, 100vh - 175px);
+            overflow-y: auto;
+            display: flex;
+            gap: 20px;
+            .modal-left{
+                flex: 1;
+                .modal-left-header{
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    p{
+                        color: #433753;
+                        font-weight: 600;
+                    }
+                    .button-edu{
+                        padding: 6px 6px;
+                        height: 30px;
+
+                    }
+                }
+                .modal-left-body{
+                    .exam-description{
+                        height: 520px;
+                    }
+                }
+            }
+            .modal-right{
+                flex: 1;
+                .modal-right-header{
+                    p{
+                        color: rgba(0, 0, 0, 0.87);
+                        font-weight: 600;
+                        font-size: 16px;
+                    }
+                }
+                .modal-right-body{
+                    .question-text-container{
+                        padding: 16px;
+                        border: 1px solid rgba(0, 0, 0, 0.12);
+                        border-radius: 4px;
+                        span{
+                            color: rgba(0, 0, 0, 0.87);
+                            font-weight: 600;
+                            font-size: 16px;
+                        }
+                        .indexs-container{
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 10px;
+
+                        }
+                    }
+                }
+            }
+        }
+        .modal-footer{
+            padding: 0 25px 25px 25px;
+            margin-left: auto;
+            margin-right: auto;
+            .button-edu{
+                &:hover {
+                    background: #0056b3;
+                }
+            }
+            button.disabled{
+                color: rgba(0, 0, 0, 0.26);
+                box-shadow: none;
+                background-color: rgba(0, 0, 0, 0.12);
+            }
+        }
+    }
 }
+
+
 
 
 .loading-spinner {
