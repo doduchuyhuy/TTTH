@@ -863,7 +863,61 @@
                             display: flex;
                             flex-wrap: wrap;
                             gap: 10px;
-
+                            max-height: 150px;
+                            overflow: scroll;
+                        }
+                        .question-single{
+                            span{
+                                color: #000000DE;
+                                font-weight: 500;
+                                font-size: 14px;
+                            }
+                            .question-single-all-options-container{
+                                span{
+                                    color: #000000DE;
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                }
+                                .question-single-all-options{
+                                    display: flex;
+                                    flex-direction: column;
+                                    .question-single-option{
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 16px;
+                                        padding: 12px 8px;
+                                        .question-single-status{
+                                            .fa-circle-xmark{
+                                                font-size: 22px;
+                                                color: rgb(211, 47, 47);
+                                            }
+                                            .fa-circle-check{
+                                                font-size: 22px;
+                                                color: rgb(46, 125, 50); 
+                                            }
+                                        }
+                                        .question-single-text{
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .question-text-attention{
+                        padding: 10px 16px;
+                        background-color: #fff4e5;
+                        .question-text-attention-content{
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            i{
+                                font-size: 20px;
+                                color:#ef7918;
+                            }
+                            span{
+                                color: rgb(102, 60, 0);
+                            }
                         }
                     }
                 }

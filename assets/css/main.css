@@ -6208,6 +6208,55 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  max-height: 150px;
+  overflow: scroll;
+}
+.modal-overlay .modal-add-question-text .modal-body .modal-right .modal-right-body .question-text-container .question-single span {
+  color: rgba(0, 0, 0, 0.8705882353);
+  font-weight: 500;
+  font-size: 14px;
+}
+.modal-overlay .modal-add-question-text .modal-body .modal-right .modal-right-body .question-text-container .question-single .question-single-all-options-container span {
+  color: rgba(0, 0, 0, 0.8705882353);
+  font-size: 16px;
+  font-weight: 600;
+}
+.modal-overlay .modal-add-question-text .modal-body .modal-right .modal-right-body .question-text-container .question-single .question-single-all-options-container .question-single-all-options {
+  display: flex;
+  flex-direction: column;
+}
+.modal-overlay .modal-add-question-text .modal-body .modal-right .modal-right-body .question-text-container .question-single .question-single-all-options-container .question-single-all-options .question-single-option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 8px;
+}
+.modal-overlay .modal-add-question-text .modal-body .modal-right .modal-right-body .question-text-container .question-single .question-single-all-options-container .question-single-all-options .question-single-option .question-single-status .fa-circle-xmark {
+  font-size: 22px;
+  color: rgb(211, 47, 47);
+}
+.modal-overlay .modal-add-question-text .modal-body .modal-right .modal-right-body .question-text-container .question-single .question-single-all-options-container .question-single-all-options .question-single-option .question-single-status .fa-circle-check {
+  font-size: 22px;
+  color: rgb(46, 125, 50);
+}
+.modal-overlay .modal-add-question-text .modal-body .modal-right .modal-right-body .question-text-container .question-single .question-single-all-options-container .question-single-all-options .question-single-option .question-single-text {
+  font-size: 16px;
+}
+.modal-overlay .modal-add-question-text .modal-body .modal-right .modal-right-body .question-text-attention {
+  padding: 10px 16px;
+  background-color: #fff4e5;
+}
+.modal-overlay .modal-add-question-text .modal-body .modal-right .modal-right-body .question-text-attention .question-text-attention-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.modal-overlay .modal-add-question-text .modal-body .modal-right .modal-right-body .question-text-attention .question-text-attention-content i {
+  font-size: 20px;
+  color: #ef7918;
+}
+.modal-overlay .modal-add-question-text .modal-body .modal-right .modal-right-body .question-text-attention .question-text-attention-content span {
+  color: rgb(102, 60, 0);
 }
 .modal-overlay .modal-add-question-text .modal-footer {
   padding: 0 25px 25px 25px;
