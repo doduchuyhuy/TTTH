@@ -2911,6 +2911,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-top: 40px;
 }
 #content-edu .right-content .container-section .section-list {
   width: 100%;
@@ -3045,6 +3046,9 @@ a {
   background-color: #2563eb;
 }
 
+.container-details {
+  margin-top: 40px;
+}
 .container-details .card-item-detail {
   background-color: #fff;
   border-radius: 0.5rem;
@@ -3171,6 +3175,7 @@ a {
 .container-exams .quiz-management .header .filter-options {
   display: flex;
   align-items: center;
+  gap: 30px;
 }
 .container-exams .quiz-management .header .filter-options label {
   cursor: pointer;

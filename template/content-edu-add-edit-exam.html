@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="vn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font -->
+    <link rel="stylesheet" href="../assets/fonts/stylesheet.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Scripts -->
+    <!-- <script src="./assets/js/scripts.js"></script> -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../ckeditor/ckeditor.js"></script>
+    
+    <!-- <script src="https://code.jquery.com/jquery-3.7.0.js"></script> -->
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <div id="nav-edu">
+        <header id="header-edu">
+            <div class="container container-header">
+                <div class="left">
+                    <img src="../assets/svg/new1exam.svg" alt="">
+                </div>
+                <div class="center">
+                    <div class="form-input">
+                        <input type="search" placeholder="Search...">
+                        <button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+                    </div>
+                    <!-- <div class="search-box">
+                        <div class="box-search">
+                            <input type="text" class="input-box" placeholder="Search any thing" autocomplete="off">
+                            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                        <ul class="result-box">
+                            <li>
+                                JS
+                            </li>
+                            <li>
+                                PHP
+                            </li>
+                            <li>
+                                JS
+                            </li>
+                            <li>
+                                PHP
+                            </li>
+                        </ul>
+                    </div> -->
+                </div>
+                <div class="right">
+                    <button class="button-edu">
+                        <img src="../assets/svg/create-exam.svg" alt="">
+                        Thêm câu hỏi
+                    </button>
+                    <div class="profile" id="profile">
+                        <h3>Đỗ Đức Huy<br><span>Chuyên viên</span></h3>
+                        <div class="imgBx">
+                            <img src="../assets/images/unnamed.jpg" alt="">
+                        </div>
+                        
+                            <ul class="menu" id="menu">
+                                <li><a href="#">
+                                    <ion-icon name="person-outline"></ion-icon>Profile
+                                </a></li>
+                                <li><a href="#">
+                                    <ion-icon name="chatbubble-outline"></ion-icon>Inbox
+                                </a></li>
+                                <li><a href="#">
+                                    <ion-icon name="settings-outline"></ion-icon>Settings
+                                </a></li>
+                                <li><a href="#">
+                                    <ion-icon name="help-circle-outline"></ion-icon>Help
+                                </a></li>
+                                <li><a href="#">
+                                    <ion-icon name="log-out-outline"></ion-icon>Profile
+                                </a></li>
+                            </ul>
+                        
+                    </div>
+                </div>
+            </div>
+        </header>            
+    </div>
+    <div id="content-edu">
+        <div class="left-content">
+            <ul>
+                <li>
+                    <a class="active" href="">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Trang chủ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa-brands fa-square-github"></i>
+                        <span>Đề thi của tôi</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa-solid fa-paperclip"></i>
+                        <span>Chính sách</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="right-content">
+            <div class="container-exams-2 container">
+                <h3>Thêm mới đề thi</h3>
+                <div class="quizz-add">
+                    <div class="quiz-add-header">
+                        <div class="tab_box">
+                            <button class="tab_btn" data-tab="0">Thông tin cơ bản</button>
+                            <button class="tab_btn" data-tab="1">Câu hỏi</button>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    <div class="quiz-add-body mt-2">
+                        <!-- <div class="row information-exam">
+                            <div class="col-4">
+                                <div class="import-image">
+                                    <div class="box-image">
+                                        <img src="../assets/svg/add-image.svg" alt="">
+                                    </div>
+                                    <p>Ảnh đại diện</p>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div>
+                                    <div class="input2 mt-2">
+                                        <label for="exam-name" class="floating-label">Tên đề thi*</label>
+                                        <input type="text" class="exam-name" id="exam-name" placeholder="Nhập tên đề thi">
+                                    </div>
+                                    <div class="textarea2 mt-2">
+                                        <label for="exam-description" class="floating-label">Mô tả đề thi</label>
+                                        <textarea class="exam-description" id="exam-description" placeholder="Nhập mô tả đề thi"></textarea>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="input-dropdown">
+                                                <input type="text" class="exam-status" id="exam-status" placeholder="Chọn" readonly>
+                                                <div class="input-dropdown-select">
+                                                    <div data-value="">Chọn</div>
+                                                    <div data-value="1">Riêng tư</div>
+                                                    <div data-value="2">Công khai</div>
+                                                    <div data-value="3">Không công khai</div>
+                                                </div>
+                                                <span class="title">Trạng thái*</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="input-dropdown">
+                                                <input type="text" class="exam-status" id="exam-statuss" placeholder="Chọn" readonly>
+                                                <div class="input-dropdown-select">
+                                                    <div data-value="">Chọn</div>
+                                                    <div data-value="1">Riêng tư</div>
+                                                    <div data-value="2">Công khai</div>
+                                                    <div data-value="3">Không công khai</div>
+                                                </div>
+                                                <span class="title">Trạng thái*</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="button-edu mt-2">
+                                        Xác nhận
+                                    </button>                           
+                                </div>
+                            </div>
+                        </div> -->
+        
+                        <div class="row add-exam">
+                            <div class="col-4">
+                                <div class="list-all-sections">
+                                    <div class="list-section-header">
+                                        <div class="section-header-1">
+                                            <i class="fa-solid fa-list"></i>
+                                            <h3>Danh sách các phần thi</h3>
+                                        </div>
+                                        <div class="section-header-2">
+                                            <button class="button-edu" id="addSection">
+                                                <img src="../assets/svg/add-section.svg" alt="">
+                                                Thêm Phần Thi
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="list-section-body mt-3">
+                                        <!-- <p>Hiện tại chưa có phần thi nào, bạn cần thêm mới phần thi để có thể thêm câu hỏi</p> -->
+                                        <div class="section-item active">
+                                            <div class="section-item-left">
+                                                <img src="../assets/svg/book.svg" alt="">
+                                                Phần 1
+                                            </div>
+                                            <div class="section-item-right">
+                                                <div class="icon-wrapper">
+                                                    <i class="fa-regular fa-pen-to-square"></i>
+                                                    <span class="tooltip">Sửa</span>
+                                                </div>
+                                                <div class="icon-wrapper">
+                                                    <i class="fa-regular fa-trash-can"></i>
+                                                    <span class="tooltip">Xóa</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="list-all-questions">
+                                    <div class="list-question-header">
+                                        <div class="question-header-1">
+                                            <i class="fa-solid fa-circle-question"></i>
+                                            <h3>Danh sách câu hỏi</h3>
+                                        </div>
+                                        <div class="question-header-2">
+                                            <button id="addQuestion" class="button-edu disabled">
+                                                <i class="fa-solid fa-circle-plus"></i>
+                                                Thêm Câu Hỏi
+                                            </button>
+                                            <button id="addQuestionText" class="button-edu">
+                                                <i class="fa-solid fa-square-plus"></i>
+                                                Thêm Nhanh
+                                            </button>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="list-question-body mt-4">
+                                        <p>Không tìm thấy câu hỏi nào</p>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div> 
+            
+            
+            
+            
+    <div id="addSectionModal" class="modal-overlay" style="display: none;">
+        <div class="modal-add-section">
+            <div class="modal-header">
+                CHỌN CHẾ ĐỘ THI
+                <span class="close-modal-add-section">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="input2 mt-">
+                    <label for="exam-name" class="floating-label">Tên phần thi*</label>
+                    <input type="text" class="exam-name" placeholder="Nhập tên đề thi">
+                </div>
+                <div class="textarea2 mt-3">
+                    <label for="exam-description" class="floating-label">Mô tả phần thi</label>
+                    <textarea class="exam-description" placeholder="Nhập mô tả đề thi"></textarea>
+                </div>
+                <div class="mt-1">
+                    <div class="toggle-switch">
+                        <p>Trạng thái</p>
+                        <label class="switch">
+                            <input type="checkbox" id="displayResultsToggle" checked>
+                            <span class="slider round"></span>
+                        </label>
+                        <span id="toggleLabel" class="toggle-label">Active</span>
+                    </div>
+                </div>
+                    
+            </div>
+            <div class="modal-footer">
+                <button class="button-edu" id="">Xác Nhận</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="addQuestionModal" class="modal-overlay" style="display: none;">
+        <div class="modal-add-question">
+            <div class="modal-header">
+                TRÌNH SOẠN THẢO CÂU HỎI (PHẦN 1)
+                <span class="close-modal-add-section">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="phase-1">
+                    <span class="title-add-question">Loại câu hỏi</span>
+                    <div class="question-options mt-1">  
+                        <div class="radio-item">
+                            <input type="radio" name="filter" id="singleChoice">
+                            <label for="singleChoice">
+                                <span class="custom-radio"></span> 
+                                Một đáp án
+                            </label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="filter" id="multipleChoice">
+                            <label for="multipleChoice">
+                                <span class="custom-radio"></span>
+                                Nhiều đáp án
+                            </label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="filter" id="matchingChoice">
+                            <label for="matchingChoice">
+                                <span class="custom-radio"></span>
+                                Nối từ
+                            </label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="filter" id="fillBlank">
+                            <label for="fillBlank">
+                                <span class="custom-radio"></span>
+                                Điền từ
+                            </label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" name="filter" id="readingComprehension">
+                            <label for="readingComprehension">
+                                <span class="custom-radio"></span>
+                                Đọc hiểu
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="phase-2 mt-3">
+                    <span style="display: block;" class="title-add-question mb-1">Nội dung câu hỏi</span>
+                    <textarea name="questionText" class="editor"></textarea>
+                </div>
+                <!-- <div class="phase-3 mt-3">
+                    <div class="file-container">
+                        <div class="file-image">
+                            <p class="mb-1">Upload ảnh</p>
+                            <div class="image-container">
+                                <img src="../assets/images/uploadquestionimage.png" alt="">
+                            </div>
+                        </div>
+                        <div class="file-video-audio">
+                            <div class="file-video">
+                                <div class="checkbox2">
+                                    <input type="checkbox" id="add-video" name="exclusiveCheckbox">
+                                    <label for="add-video">
+                                        <div class="custom-checkbox"></div>
+                                        <span class="title-add-question">Upload video</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="file-audio">
+                                <div class="checkbox2">
+                                    <input type="checkbox" id="add-audio" name="exclusiveCheckbox">
+                                    <label for="add-audio">
+                                        <div class="custom-checkbox"></div>
+                                        <span class="title-add-question">Upload audio</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="phase-4 mt-2">
+                    <div class="question-options-container">
+                        <span class="title-add-question">Đáp án</span>
+                        <div class="question-option-item mt-2">
+                            <!-- <div class="singlechoice-container">
+                                <div class="option-item-list">
+                                    <div class="option-item-list-content">
+                                        <div class="radio-item">
+                                            <input type="radio" name="filterop" id="option1">
+                                            <label for="option1">
+                                                <span class="custom-radio"></span> 
+                                                Đáp án 1
+                                            </label>
+                                        </div>
+                                        <textarea name="questionText" class="editor"></textarea>
+                                    </div>
+                                    <div class="option-item-list-drop">
+                                        <div class="icon-drop"></div>
+                                    </div>
+                                </div>
+                                <div class="option-item-list">
+                                    <div class="option-item-list-content">
+                                        <div class="radio-item">
+                                            <input type="radio" name="filterop" id="option2">
+                                            <label for="option2">
+                                                <span class="custom-radio"></span> 
+                                                Đáp án 2
+                                            </label>
+                                        </div>
+                                        <textarea name="questionText" class="editor"></textarea>
+                                    </div>
+                                    <div class="option-item-list-drop">
+                                        <div class="icon-drop"></div>
+                                    </div>
+                                </div>
+                                <div class="option-item-list">
+                                    <div class="option-item-list-content">
+                                        <div class="radio-item">
+                                            <input type="radio" name="filterop" id="option3">
+                                            <label for="option3">
+                                                <span class="custom-radio"></span> 
+                                                Đáp án 3
+                                            </label>
+                                        </div>
+                                        <textarea name="questionText" class="editor"></textarea>
+                                    </div>
+                                    <div class="option-item-list-drop">
+                                        <div class="icon-drop"></div>
+                                    </div>
+                                </div>
+                                <div class="option-item-list">
+                                    <div class="option-item-list-content">
+                                        <div class="radio-item">
+                                            <input type="radio" name="filterop" id="option4">
+                                            <label for="option4">
+                                                <span class="custom-radio"></span> 
+                                                Đáp án 4
+                                            </label>
+                                        </div>
+                                        <textarea name="questionText" class="editor"></textarea>
+                                    </div>
+                                    <div class="option-item-list-drop">
+                                        <div class="icon-drop"></div>
+                                    </div>
+                                </div>
+                                <button class="btn-add-answer">
+                                    <span class="icon-plus-circle"></span>
+                                    Thêm Câu Trả Lời
+                                </button>
+                            </div> -->
+    
+                            <!-- <div class="multichoice-container">
+                                <div class="option-item-list">
+                                    <div class="option-item-list-content">
+                                        <div class="checkbox2">
+                                            <input type="checkbox" id="add-1">
+                                            <label for="add-1">
+                                                <div class="custom-checkbox"></div>
+                                                Đáp án 1
+                                            </label>
+                                        </div>
+                                        <textarea name="questionText" class="editor"></textarea>
+                                    </div>
+                                    <div class="option-item-list-drop">
+                                        <div class="icon-drop"></div>
+        
+                                    </div>
+                                </div>
+                                <div class="option-item-list">
+                                    <div class="option-item-list-content">
+                                        <div class="checkbox2">
+                                            <input type="checkbox" id="add-2">
+                                            <label for="add-2">
+                                                <div class="custom-checkbox"></div>
+                                                Đáp án 2
+                                            </label>
+                                        </div>
+                                        <textarea name="questionText" class="editor"></textarea>
+                                    </div>
+                                    <div class="option-item-list-drop">
+                                        <div class="icon-drop"></div>
+                                    </div>
+                                </div>
+                                <div class="option-item-list">
+                                    <div class="option-item-list-content">
+                                        <div class="checkbox2">
+                                            <input type="checkbox" id="add-3">
+                                            <label for="add-3">
+                                                <div class="custom-checkbox"></div>
+                                                Đáp án 3
+                                            </label>
+                                        </div>
+                                        <textarea name="questionText" class="editor"></textarea>
+                                    </div>
+                                    <div class="option-item-list-drop">
+                                        <div class="icon-drop"></div>
+                                    </div>
+                                </div>
+                                <div class="option-item-list">
+                                    <div class="option-item-list-content">
+                                        <div class="checkbox2">
+                                            <input type="checkbox" id="add-4">
+                                            <label for="add-4">
+                                                <div class="custom-checkbox"></div>
+                                                Đáp án 4
+                                            </label>
+                                        </div>
+                                        <textarea name="questionText" class="editor"></textarea>
+                                    </div>
+                                    <div class="option-item-list-drop">
+                                        <div class="icon-drop"></div>
+                                    </div>
+                                </div>
+                                <button class="btn-add-answer">
+                                    <span class="icon-plus-circle"></span>
+                                    Thêm Câu Trả Lời
+                                </button>
+                            </div>  -->
+                            
+                            <!-- <div class="matching-container">
+                                <div class="matching-item">
+                                    <p>Cặp 1</p>
+                                    <div class="matching-pair">
+                                        <textarea class="editor" id=""></textarea>
+                                        <textarea class="editor" id=""></textarea>
+                                        <div class="matching-drop">
+                                            <div class="icon-drop"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="matching-item">
+                                    <p>Cặp 1</p>
+                                    <div class="matching-pair">
+                                        <textarea class="editor" id=""></textarea>
+                                        <textarea class="editor" id=""></textarea>
+                                        <div class="matching-drop">
+                                            <div class="icon-drop"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn-add-answer">
+                                    <span class="icon-plus-circle"></span>
+                                    Thêm Cặp
+                                </button>
+                            </div> -->
+    
+                            <div class="comprehension-container">
+                                <div class="sub-question">
+                                    <div class="sub-question-header">
+                                        <div class="sub-question-header-1 toggle-sub-questions">
+                                            Câu hỏi 1
+                                            <i class="fa-solid fa-angle-down"></i>
+                                        </div>
+                                        <div class="sub-question-header-2">
+                                            <i class="fa-regular fa-trash-can"></i>
+                                            Xóa câu trả lời
+                                        </div>
+                                    </div>
+                                    <div class="sub-question-list mt-2">
+                                        <textarea class="editor" id=""></textarea>
+                                        <div class="sub-singlechoice-container mt-2">
+                                            <div class="option-item-list">
+                                                <div class="option-item-list-content">
+                                                    <div class="radio-item">
+                                                        <input type="radio" name="filterop" id="option1">
+                                                        <label for="option1">
+                                                            <span class="custom-radio"></span> 
+                                                            Đáp án 1
+                                                        </label>
+                                                    </div>
+                                                    <textarea name="questionText" class="editor"></textarea>
+                                                </div>
+                                                <div class="option-item-list-drop">
+                                                    <div class="icon-drop"></div>
+                    
+                                                </div>
+                                            </div>
+                                            <div class="option-item-list">
+                                                <div class="option-item-list-content">
+                                                    <div class="radio-item">
+                                                        <input type="radio" name="filterop" id="option2">
+                                                        <label for="option2">
+                                                            <span class="custom-radio"></span> 
+                                                            Đáp án 2
+                                                        </label>
+                                                    </div>
+                                                    <textarea name="questionText" class="editor"></textarea>
+                                                </div>
+                                                <div class="option-item-list-drop">
+                                                    <div class="icon-drop"></div>
+                    
+                                                </div>
+                                            </div>
+                                            <div class="option-item-list">
+                                                <div class="option-item-list-content">
+                                                    <div class="radio-item">
+                                                        <input type="radio" name="filterop" id="option3">
+                                                        <label for="option3">
+                                                            <span class="custom-radio"></span> 
+                                                            Đáp án 3
+                                                        </label>
+                                                    </div>
+                                                    <textarea name="questionText" class="editor"></textarea>
+                                                </div>
+                                                <div class="option-item-list-drop">
+                                                    <div class="icon-drop"></div>
+                    
+                                                </div>
+                                            </div>
+                                            <div class="option-item-list">
+                                                <div class="option-item-list-content">
+                                                    <div class="radio-item">
+                                                        <input type="radio" name="filterop" id="option4">
+                                                        <label for="option4">
+                                                            <span class="custom-radio"></span> 
+                                                            Đáp án 4
+                                                        </label>
+                                                    </div>
+                                                    <textarea name="questionText" class="editor"></textarea>
+                                                </div>
+                                                <div class="option-item-list-drop">
+                                                    <div class="icon-drop"></div>
+                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="btn-add-answer">
+                                            <span class="icon-plus-circle"></span>
+                                            Thêm Câu Trả Lời
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="button-edu mt-1">
+                                <i class="fa-regular fa-plus"></i>
+                                Thêm câu hỏi
+                            </button>
+    
+                        </div>
+                    </div>
+                    <div class="question-options-marks">
+                        <div class="input2 mt-2">
+                            <label for="exam-name" class="floating-label">Điểm</label>
+                            <input type="number" class="exam-name">
+                        </div>
+                        <div class="percentage-mark">
+                            <div class="percentage-item mt-2">
+                                <p>Đúng 1 đáp án (Chọn % điểm cho 1 câu trả lời đúng)</p>
+                                <div class="percentage-percent">
+                                    <input type="number" min="0">
+                                    <span>% => Điểm = 0.00</span>
+                                </div>
+                            </div>
+                            <div class="percentage-item mt-3">
+                                <p>Đúng 2 đáp án (Chọn % điểm cho 2 câu trả lời đúng)</p>
+                                <div class="percentage-percent">
+                                    <input type="number" min="0">
+                                    <span>% => Điểm = 0.00</span>
+                                </div>
+                            </div>
+                        </div>
+    
+    
+                    </div>
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+                <button class="button-edu" id="">Xác Nhận</button>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div id="addQuestionTextModal" class="modal-overlay" style="display: none;">
+        <div class="modal-add-question-text">
+            <div class="modal-header">
+                Thêm câu hỏi bằng văn bản
+                <span class="close-modal-add-section">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-left">
+                    <div class="modal-left-header">
+                        <p>Soạn câu hỏi</p>
+                        <button class="button-edu">
+                            <i class="fa-solid fa-person-circle-question"></i>
+                            Xem hướng dẫn
+                        </button>
+                    </div>
+                    <div class="modal-left-body">
+                        <div class="textarea2 mt-1">
+                            <textarea class="exam-description" placeholder="Vui lòng soạn câu hỏi theo đúng cấu trúc"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-right">
+                    <div class="modal-right-header">
+                        <p>Xem trước</p>
+                    </div>
+                    <div class="modal-right-body">
+                        <!-- <h3>Vui lòng soạn câu hỏi theo hướng dẫn</h3> -->
+                            <div class="question-text-container mt-1">
+                            <span>Danh sách câu hỏi</span>
+                            <div class="indexs-container mt-1">
+                                <div class="button-index">1</div>
+                                <div class="button-index">2</div>
+                                <div class="button-index">3</div>
+                                <div class="button-index">4</div>
+                                <div class="button-index">5</div>
+                                <div class="button-index">6</div>
+                                <div class="button-index">7</div>
+                                <div class="button-index">8</div>
+                                <div class="button-index">1</div>
+                                <div class="button-index">2</div>
+                                <div class="button-index">3</div>
+                                <div class="button-index">4</div>
+                                <div class="button-index">5</div>
+                                <div class="button-index">6</div>
+                                <div class="button-index">7</div>
+                                <div class="button-index">8</div>
+                                <div class="button-index">1</div>
+                                <div class="button-index">2</div>
+                                <div class="button-index">3</div>
+                                <div class="button-index">4</div>
+                                <div class="button-index">5</div>
+                                <div class="button-index">6</div>
+                                <div class="button-index">7</div>
+                                <div class="button-index">8</div>
+                                <div class="button-index">1</div>
+                                <div class="button-index">2</div>
+                                <div class="button-index">3</div>
+                                <div class="button-index">4</div>
+                                <div class="button-index">5</div>
+                                <div class="button-index">6</div>
+                                <div class="button-index">7</div>
+                                <div class="button-index">8</div>
+                                <div class="button-index">1</div>
+                                <div class="button-index">2</div>
+                                <div class="button-index">3</div>
+                                <div class="button-index">4</div>
+                                <div class="button-index">5</div>
+                                <div class="button-index">6</div>
+                                <div class="button-index">7</div>
+                                <div class="button-index">8</div>
+                                <div class="button-index">1</div>
+                                <div class="button-index">2</div>
+                                <div class="button-index">3</div>
+                                <div class="button-index">4</div>
+                                <div class="button-index">5</div>
+                                <div class="button-index">6</div>
+                                <div class="button-index">7</div>
+                                <div class="button-index">8</div>
+                                <div class="button-index">1</div>
+                                <div class="button-index">2</div>
+                                <div class="button-index">3</div>
+                                <div class="button-index">4</div>
+                                <div class="button-index">5</div>
+                                <div class="button-index">6</div>
+                                <div class="button-index">7</div>
+                                <div class="button-index">8</div>
+                                <div class="button-index">1</div>
+                                <div class="button-index">2</div>
+                                <div class="button-index">3</div>
+                                <div class="button-index">4</div>
+                                <div class="button-index">5</div>
+                                <div class="button-index">6</div>
+                                <div class="button-index">7</div>
+                                <div class="button-index">8</div>
+                            </div>
+                            <div class="question-single mt-2">
+                                <span>Câu 1(Một đáp án)</span>
+                                <div class="question-single-all-options-container mt-1">
+                                    <span>When we went back to the bookstore, the bookseller _ the book we wanted.</span>
+                                    <div class="question-single-all-options">
+                                        <div class="question-single-option">
+                                            <div class="question-single-status">
+                                                <i class="fa-solid fa-circle-xmark"></i>
+                                            </div>
+                                            <div class="question-single-text">
+                                                <p>A. sold A. soldA. soldA. soldA. soldA. soldA. soldA. soldA. soldA. sold </p>
+                                            </div>
+                                        </div>
+                                        <div class="question-single-option">
+                                            <div class="question-single-status">
+                                                <i class="fa-solid fa-circle-xmark"></i>
+                                            </div>
+                                            <div class="question-single-text">
+                                                <p>A. sold</p>
+                                            </div>
+                                        </div>
+                                        <div class="question-single-option">
+                                            <div class="question-single-status">
+                                                <i class="fa-solid fa-circle-xmark"></i>
+                                            </div>
+                                            <div class="question-single-text">
+                                                <p>A. sold</p>
+                                            </div>
+                                        </div>
+                                        <div class="question-single-option">
+                                            <div class="question-single-status">
+                                                <i class="fa-solid fa-circle-check"></i>
+                                            </div>
+                                            <div class="question-single-text">
+                                                <p>A. sold</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="question-text-attention mt-1 mb-1">
+                            <div class="question-text-attention-content">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                <span>
+                                    Vui lòng kiểm tra các câu hỏi trước khi xác nhận thêm
+                                </span>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+                    
+            </div>
+            <div class="modal-footer">
+                <button class="button-edu" id="">Xác Nhận</button>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<script>     
+    $(document).ready(function(){
+        const $tabBtns = $('.tab_btn');
+        const $contents = $('.content');
+        const $line = $('.line');
+        function handleTabClick(e) {
+            const $tab = $(this);
+            const tabIndex = $tab.data('tab');
+
+            // Remove active class from all tabs and content
+            $tabBtns.removeClass('active');
+            $contents.removeClass('active');
+
+            // Add active class to clicked tab and corresponding content
+            $tab.addClass('active');
+            $contents.filter(`[data-content="${tabIndex}"]`).addClass('active');
+
+            // Move line
+            $line.css({
+                width: $tab.outerWidth(),
+                left: $tab.position().left
+            });
+
+            // Create ripple effect
+            const ripple = $('<div class="ripple"></div>');
+            const x = $tab.outerWidth() / 2;
+            const y = $tab.outerHeight() / 2;
+
+            ripple.css({
+                top: `${y}px`,
+                left: `${x}px`,
+                width: `${$tab.outerWidth() * 2}px`,
+                height: `${$tab.outerWidth() * 2}px`
+            });
+
+            $tab.append(ripple);
+
+            setTimeout(() => {
+                ripple.remove();
+            }, 600); // Ripple duration should match the CSS animation duration
+        }
+
+        // Add click event to each tab button
+        $tabBtns.on('click', handleTabClick);
+
+        // Initialize line position and first tab as active
+        $tabBtns.first().addClass('active');
+        $contents.first().addClass('active');
+        $line.css({
+            width: $tabBtns.first().outerWidth(),
+            left: $tabBtns.first().position().left
+        });
+
+        
+
+        $('#confirmBtn, .close-modal').on('click', function() {
+            $('#startModal').css('display', 'none');
+        });
+
+        $('#addSection').click(function() {
+            // Hiển thị modal
+            $('#addSectionModal').show();
+        });
+
+        $('#addQuestionText').click(function() {
+            // Hiển thị modal
+            $('#addQuestionTextModal').show();
+        });
+
+        $('#addQuestion').click(function() {
+            // Hiển thị modal
+            $('#addQuestionModal').show();
+            // CKEDITOR.replace( 'editor' );
+            // Sử dụng jQuery để lặp qua tất cả các phần tử có class 'editor'
+            $('.editor').each(function() {
+                // Thay thế từng phần tử bằng CKEditor
+                CKEDITOR.replace(this);
+            });
+            $('.toggle-sub-questions').on('click', function() {
+                var subQuestionList = $(this).closest('.sub-question').find('.sub-question-list');
+                var icon = $(this).find('i');
+
+                subQuestionList.toggleClass('spin now');
+                $(this).toggleClass('spin');
+
+                if (subQuestionList.hasClass('spin')) {
+                    icon.removeClass('fa-angle-right').addClass('fa-angle-down');
+                } else {
+                    icon.removeClass('fa-angle-down').addClass('fa-angle-right');
+                }
+            });
+
+            
+        });
+
+        $('.close-modal-add-section').on('click', function() {
+            $('#addSectionModal').hide();
+        });
+
+        $('#displayResultsToggle').on('change', function() {
+            var toggleLabel = $('#toggleLabel');
+            if (this.checked) {
+                toggleLabel.text('Active');
+            } else {
+                toggleLabel.text('Inactive');
+            }
+        });
+
+
+
+        $('.input-dropdown .input-dropdown-select div').click(function() {
+            var value = $(this).data('value'); // Lấy giá trị từ data-value
+            var textBoxId = $(this).closest('.input-dropdown').find('.exam-status').attr('id');
+            $('#' + textBoxId).val(value ? $(this).text().trim() : ''); // Nếu value là rỗng, reset textBox
+        });
+
+        $('.input-dropdown').click(function() {
+            // Đóng tất cả các dropdown khác trước khi toggle dropdown hiện tại
+            $('.input-dropdown').not(this).removeClass('active');
+            $(this).toggleClass('active');
+        });
+
+        // Đóng dropdown khi click ngoài
+        $(document).on('click', function(e) {
+            if (!$(e.target).closest('.input-dropdown').length) {
+                $('.input-dropdown').removeClass('active');
+            }
+        });
+        $('input[name="exclusiveCheckbox"]').on('change', function() {
+            if ($(this).is(':checked')) {
+                $('input[name="exclusiveCheckbox"]').not(this).prop('checked', false);
+            }
+        });
+        $('#nav-edu').load("./template/nav-edu.html", function(){
+                $('#profile').on('click', function(e) {
+                    e.stopPropagation();
+                    $(this).toggleClass('active');
+                });
+
+                $(document).on('click', function(e) {
+                    if (!$(e.target).closest('#menu, #profile').length) {
+                        $('#profile').removeClass('active');
+                    }
+                });
+        });
+    });   
+</script>    
+
+    
+    
+    <script src="./assets/js/scriptsHuy.js"></script>
+    <script src="./assets/js/script-select.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+    
