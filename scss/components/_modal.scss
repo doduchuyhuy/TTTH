@@ -939,6 +939,149 @@
             }
         }
     }
+    .modal-signin {
+        border-radius: 15px;
+        position: absolute;
+        top: 10%; /* Điều chỉnh vị trí modal */
+        max-width: 576px;
+        display: flex;
+        flex-direction: column;
+        max-height: calc(100% - 64px);
+        width: calc(100% - 64px);
+        z-index: 1; /* Đảm bảo phần tử chính có lớp trên */
+      
+        /* Pseudo-element ::before */
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #fff; /* Màu nền trắng */
+          z-index: -2; /* Lớp nền ở dưới */
+          border-radius: inherit; /* Đảm bảo bo góc giống với phần tử cha nếu có */
+        }
+      
+        /* Pseudo-element ::after */
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: -1; /* Lớp sau cùng */
+          opacity: 0.08;
+          background-image: radial-gradient(#ffffff40, #fff0 40%), 
+                            radial-gradient(hsl(44, 100%, 66%) 30%, hsl(338, 68%, 65%), hsla(338, 68%, 65%, .4) 41%, transparent 52%), 
+                            radial-gradient(hsl(272, 100%, 60%) 37%, transparent 46%), 
+                            linear-gradient(155deg, transparent 65%, hsl(142, 70%, 49%) 95%), 
+                            linear-gradient(45deg, #0065e0, #0f8bff);
+          background-size: 200% 200%, 285% 500%, 285% 500%, cover, cover;
+          background-position: bottom left, 109% 68%, 109% 68%, center, center;
+          border-radius: inherit; /* Giữ bo góc giống với cha */
+        }
+        .modal-header{
+            position: relative;
+            padding: 25px;
+            button{
+                padding: 0;
+                font-weight: 500;
+                position: absolute;
+                top: 16px;
+                right: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                color: #333;
+                // color: #787a7e;
+                background: #16182308;
+                font-size: 2.8rem;
+                line-height: 0;
+                cursor: pointer;
+                border: none;
+                outline: none;
+                box-shadow: none;
+                &:hover {
+                    background: rgba(0, 0, 0, 0.04);
+                    
+                }
+            }
+        }
+        .modal-body{
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            h1{
+                font-size: 2.8rem;
+                font-weight: 700;
+            }
+            .signin-options{
+                width: 360px;
+                button{
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 44px;
+                    padding-left: 16px;
+                    margin-top: 15px;
+                    border: 2px solid #dce0e3;
+                    border-radius: 44px;
+                    background-color: #fff;
+                    text-align: center;
+                    cursor: pointer;
+                    user-select: none;
+                    transition: background-color .2s;
+                    img{
+                        position: absolute;
+                        top: 50%;
+                        translate: 0 -50%;
+                        left: 16px;
+                    }
+                    span{
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        line-height: 40px;
+                    }
+                }
+            }
+        }
+        .modal-footer{
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            padding: 25px;
+            .text-signin{
+               
+            }
+            .text-link{
+                font-weight: 600;
+                text-decoration: underline;
+                color: #f05123;
+            }
+            .text-policy{
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                padding: 16px;
+                width: min(400px, 100%);
+                font-size: 1.1rem;
+                color: #666;
+                a{
+                    text-decoration: underline;
+                    cursor: pointer;
+                    color: inherit;
+                }
+            }
+        }
+      }
+      
 }
 
 

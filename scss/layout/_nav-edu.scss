@@ -31,6 +31,37 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
+                .signin-signup{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    button{
+                        border: none;
+                        outline: none;
+                        box-shadow: none;
+                        display: block;
+                        background: transparent;
+                        font-weight: 600;
+                    }
+                    button:nth-of-type(2) {
+                        flex-shrink: 0;
+                        padding: 9px 20px;
+                        border-radius: 99px;
+                        color: #fff;
+                        // background: linear-gradient(to right bottom, #ff8f26, #ff5117);
+                        background: linear-gradient(to right bottom, rgb(10, 143, 220), rgb(0, 102, 204));// Màu xanh gradient
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        cursor: pointer;
+                        transition: opacity .25s;          // ví dụ: thay đổi con trỏ khi hover
+                    
+                        &:hover {
+                        //   background-color: #0056b3; // ví dụ: thay đổi màu khi hover
+                        //   opacity: .9;
+                          background: linear-gradient(to right bottom, rgb(5, 120, 190), rgb(0, 85, 170));
+                        }
+                    }
+                }
             }
         }
     }
