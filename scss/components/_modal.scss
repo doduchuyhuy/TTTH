@@ -821,6 +821,7 @@
             .modal-left{
                 flex: 1;
                 .modal-left-header{
+                    height: 30px;
                     display: flex;
                     justify-content: space-around;
                     align-items: center;
@@ -843,6 +844,10 @@
             .modal-right{
                 flex: 1;
                 .modal-right-header{
+                    height: 30px;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
                     p{
                         color: rgba(0, 0, 0, 0.87);
                         font-weight: 600;
@@ -851,9 +856,11 @@
                 }
                 .modal-right-body{
                     .question-text-container{
+                        height: 520px;
                         padding: 16px;
-                        border: 1px solid rgba(0, 0, 0, 0.12);
-                        border-radius: 4px;
+                        // border: 1px solid rgba(0, 0, 0, 0.12);
+                        border-radius: 8px;
+                        border: 1px solid #ccc;
                         span{
                             color: rgba(0, 0, 0, 0.87);
                             font-weight: 600;
@@ -875,17 +882,22 @@
                             .question-single-all-options-container{
                                 span{
                                     color: #000000DE;
-                                    font-size: 16px;
+                                    font-size: 15px;
                                     font-weight: 600;
                                 }
                                 .question-single-all-options{
                                     display: flex;
                                     flex-direction: column;
+                                    justify-content: center;
+                                    gap: 20px;
+                                    // max-height: calc(-300px + 100vh);
+                                    // height: min(250px, 100vh - 175px);
+                                    // overflow-y: auto;
                                     .question-single-option{
                                         display: flex;
                                         align-items: center;
                                         gap: 16px;
-                                        padding: 12px 8px;
+                                        // padding: 12px 8px;
                                         .question-single-status{
                                             .fa-circle-xmark{
                                                 font-size: 22px;
@@ -896,9 +908,7 @@
                                                 color: rgb(46, 125, 50); 
                                             }
                                         }
-                                        .question-single-text{
-                                            font-size: 16px;
-                                        }
+                                        
                                     }
                                 }
                             }
