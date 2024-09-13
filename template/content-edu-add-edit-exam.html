@@ -354,7 +354,10 @@
         <div class="modal-add-section">
             <div class="modal-header">
                 CHỌN CHẾ ĐỘ THI
-                <span class="close-modal-add-section">&times;</span>
+                <!-- <span class="close-modal-add-section">&times;</span> -->
+                <button class="close-modal-auth">
+                    <span>×</span>
+                </button>
             </div>
             <div class="modal-body">
                 <div class="input2 mt-">
@@ -387,7 +390,10 @@
         <div class="modal-add-question">
             <div class="modal-header">
                 TRÌNH SOẠN THẢO CÂU HỎI (PHẦN 1)
-                <span class="close-modal-add-section">&times;</span>
+                <!-- <span class="close-modal-add-section">&times;</span> -->
+                <button class="close-modal-auth">
+                    <span>×</span>
+                </button>
             </div>
             <div class="modal-body">
                 <div class="phase-1">
@@ -762,7 +768,10 @@
         <div class="modal-add-question-text">
             <div class="modal-header">
                 Thêm câu hỏi bằng văn bản
-                <span class="close-modal-add-section">&times;</span>
+                <!-- <span class="close-modal-add-section">&times;</span> -->
+                <button class="close-modal-auth">
+                    <span>×</span>
+                </button>
             </div>
             <div class="modal-body">
                 <div class="modal-left">
@@ -782,141 +791,86 @@
                 <div class="modal-right">
                     <div class="modal-right-header">
                         <p>Xem trước</p>
+                        <div class="question-text-attention mt-1 mb-1">
+                            <div class="question-text-attention-content">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                <span>
+                                    Vui lòng kiểm tra các câu hỏi trước khi xác nhận thêm
+                                </span>
+                            </div>
+                        </div>
                     </div>
                     <div class="modal-right-body">
-                        <!-- <h3>Vui lòng soạn câu hỏi theo hướng dẫn</h3> -->
-                            <div class="question-text-container mt-1">
+                        <div class="question-text-container mt-1">
                             <span>Danh sách câu hỏi</span>
-                            <div class="indexs-container mt-1">
-                                <div class="button-index">1</div>
-                                <div class="button-index">2</div>
-                                <div class="button-index">3</div>
-                                <div class="button-index">4</div>
-                                <div class="button-index">5</div>
-                                <div class="button-index">6</div>
-                                <div class="button-index">7</div>
-                                <div class="button-index">8</div>
-                                <div class="button-index">1</div>
-                                <div class="button-index">2</div>
-                                <div class="button-index">3</div>
-                                <div class="button-index">4</div>
-                                <div class="button-index">5</div>
-                                <div class="button-index">6</div>
-                                <div class="button-index">7</div>
-                                <div class="button-index">8</div>
-                                <div class="button-index">1</div>
-                                <div class="button-index">2</div>
-                                <div class="button-index">3</div>
-                                <div class="button-index">4</div>
-                                <div class="button-index">5</div>
-                                <div class="button-index">6</div>
-                                <div class="button-index">7</div>
-                                <div class="button-index">8</div>
-                                <div class="button-index">1</div>
-                                <div class="button-index">2</div>
-                                <div class="button-index">3</div>
-                                <div class="button-index">4</div>
-                                <div class="button-index">5</div>
-                                <div class="button-index">6</div>
-                                <div class="button-index">7</div>
-                                <div class="button-index">8</div>
-                                <div class="button-index">1</div>
-                                <div class="button-index">2</div>
-                                <div class="button-index">3</div>
-                                <div class="button-index">4</div>
-                                <div class="button-index">5</div>
-                                <div class="button-index">6</div>
-                                <div class="button-index">7</div>
-                                <div class="button-index">8</div>
-                                <div class="button-index">1</div>
-                                <div class="button-index">2</div>
-                                <div class="button-index">3</div>
-                                <div class="button-index">4</div>
-                                <div class="button-index">5</div>
-                                <div class="button-index">6</div>
-                                <div class="button-index">7</div>
-                                <div class="button-index">8</div>
-                                <div class="button-index">1</div>
-                                <div class="button-index">2</div>
-                                <div class="button-index">3</div>
-                                <div class="button-index">4</div>
-                                <div class="button-index">5</div>
-                                <div class="button-index">6</div>
-                                <div class="button-index">7</div>
-                                <div class="button-index">8</div>
-                                <div class="button-index">1</div>
-                                <div class="button-index">2</div>
-                                <div class="button-index">3</div>
-                                <div class="button-index">4</div>
-                                <div class="button-index">5</div>
-                                <div class="button-index">6</div>
-                                <div class="button-index">7</div>
-                                <div class="button-index">8</div>
-                            </div>
                             <div class="question-single mt-2">
-                                <span>Câu 1(Một đáp án)</span>
-                                <div class="question-single-all-options-container">
-                                    <span>When we went back to the bookstore, the bookseller _ the book we wanted.</span>
-                                    <div class="question-single-all-options">
-                                        <div class="question-single-option">
-                                            <div class="question-single-status">
-                                                <i class="fa-solid fa-circle-xmark"></i>
-                                            </div>
-                                            <div class="question-single-text">
-                                                <p>A. sold A. soldA. soldA. soldA. soldA. soldA. soldA. soldA. soldA. sold </p>
-                                            </div>
-                                        </div>
-                                        <div class="question-single-option">
-                                            <div class="question-single-status">
-                                                <i class="fa-solid fa-circle-xmark"></i>
-                                            </div>
-                                            <div class="question-single-text">
-                                                <p>A. sold</p>
-                                            </div>
-                                        </div>
-                                        <div class="question-single-option">
-                                            <div class="question-single-status">
-                                                <i class="fa-solid fa-circle-xmark"></i>
-                                            </div>
-                                            <div class="question-single-text">
-                                                <p>A. sold</p>
-                                            </div>
-                                        </div>
-                                        <div class="question-single-option">
-                                            <div class="question-single-status">
-                                                <i class="fa-solid fa-circle-check"></i>
-                                            </div>
-                                            <div class="question-single-text">
-                                                <p>A. sold</p>
-                                            </div>
-                                        </div>
-                                        <div class="question-single-option">
-                                            <div class="question-single-status">
-                                                <i class="fa-solid fa-circle-check"></i>
-                                            </div>
-                                            <div class="question-single-text">
-                                                <p>A. sold</p>
-                                            </div>
-                                        </div>
-                                        
+                                <div class="question-text-single mt-1">
+                                    <p>Câu 1: </p>
+                                    When we went back to the bookstore, the bookseller _ the book we wanted.
+                                </div>
+                                <div class="question-single-all-options mt-1">
+                                    <div class="question-single-text">
+                                        <p>A. Đây là đâu </p>
+                                    </div>
+                                    <div class="question-single-text">
+                                        <p>B. Tôi là ai </p>
+                                    </div>
+                                    <div class="question-single-text">
+                                        <p>C. Bạn ok ko </p>
+                                    </div>
+                                    <div class="question-single-text">
+                                        <p>D. B có khả năng gì </p>
                                     </div>
                                 </div>
                             </div>
-                            </div>
-                            <!-- <div class="question-text-attention mt-1 mb-1">
-                                <div class="question-text-attention-content">
-                                    <i class="fa-solid fa-triangle-exclamation"></i>
-                                    <span>
-                                        Vui lòng kiểm tra các câu hỏi trước khi xác nhận thêm
-                                    </span>
+                            <div class="question-single mt-2">
+                                <div class="question-text-single mt-1">
+                                    <p>Câu 1: </p>
+                                    When we went back to the bookstore, the bookseller _ the book we wanted.
                                 </div>
-                            </div> -->
+                                <div class="question-single-all-options mt-1">
+                                    <div class="question-single-text">
+                                        <p>A. Đây là đâu </p>
+                                    </div>
+                                    <div class="question-single-text">
+                                        <p>B. Tôi là ai </p>
+                                    </div>
+                                    <div class="question-single-text">
+                                        <p>C. Bạn ok ko </p>
+                                    </div>
+                                    <div class="question-single-text">
+                                        <p>D. B có khả năng gì </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-single mt-2">
+                                <div class="question-text-single mt-1">
+                                    <p>Câu 3: </p>
+                                    When we went back to the bookstore, the bookseller _ the book we wanted.
+                                </div>
+                                <div class="question-single-all-options mt-1">
+                                    <div class="question-single-text">
+                                        <p>A. Đây là đâu </p>
+                                    </div>
+                                    <div class="question-single-text">
+                                        <p>B. Tôi là ai </p>
+                                    </div>
+                                    <div class="question-single-text">
+                                        <p>C. Bạn ok ko </p>
+                                    </div>
+                                    <div class="question-single-text">
+                                        <p>D. B có khả năng gì </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                     
             </div>
             <div class="modal-footer">
                 <button class="button-edu" id="">Xác Nhận</button>
+                
             </div>
         </div>
     </div>
@@ -977,9 +931,9 @@
 
         
 
-        $('#confirmBtn, .close-modal').on('click', function() {
-            $('#startModal').css('display', 'none');
-        });
+        // $('#confirmBtn, .close-modal').on('click', function() {
+        //     $('#startModal').css('display', 'none');
+        // });
 
         $('#addSection').click(function() {
             // Hiển thị modal
@@ -1017,9 +971,40 @@
             
         });
 
-        $('.close-modal-add-section').on('click', function() {
-            $('#addSectionModal').hide();
+        // $('.close-modal-add-section').on('click', function() {
+        //     $('#addSectionModal').hide();
+        // });
+
+        // // Sự kiện khi click vào nút đóng
+        // $('#addQuestionTextModal .close-modal-auth').on('click', function() {
+        //     $('#addQuestionTextModal').hide();
+        // });
+
+        // // Sự kiện khi click vào modal nhưng không phải là nội dung bên trong modal
+        // $('#addQuestionTextModal').on('click', function(event) {
+        //     // Kiểm tra xem người dùng có click vào chính modal (nền) hay không
+        //     if ($(event.target).is('#addQuestionTextModal')) {
+        //         $('#addQuestionTextModal').hide();
+        //     }
+        // });
+
+
+        // Sự kiện khi click vào nút đóng
+        $('.close-modal-auth').on('click', function() {
+            // Tìm modal gần nhất chứa nút được click và ẩn nó
+            $(this).closest('.modal-overlay').hide();
         });
+
+        // Sự kiện khi click vào nền modal (đóng modal nếu click ra ngoài nội dung)
+        $('.modal').on('click', function(event) {
+            // Kiểm tra nếu click xảy ra trên chính nền modal (không phải nội dung bên trong)
+            if ($(event.target).is('.modal-overlay')) {
+                $(this).hide();
+            }
+        });
+
+
+        
 
         $('#displayResultsToggle').on('change', function() {
             var toggleLabel = $('#toggleLabel');
@@ -1067,6 +1052,7 @@
                     }
                 });
         });
+
     });   
 </script>    
 
