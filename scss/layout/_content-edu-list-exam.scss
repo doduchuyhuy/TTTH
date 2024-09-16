@@ -1,0 +1,286 @@
+.container-edu-list-exam{
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 1.5rem);
+    padding-left: var(--bs-gutter-x, 1.5rem);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+    .quiz-management {
+        // min-height: calc(100vh - 400px);
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 16px;
+        // overflow: scroll;
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+           
+            .filter-options {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                label {
+                    cursor: pointer;
+                }
+            }
+            .add-new {
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+    
+                &:hover {
+                    background-color: #0056b3;
+                }
+            }
+        }
+    
+        .table{
+            // overflow-x: auto;
+            // max-height: 500px;
+
+            max-height: calc(-300px + 100vh);
+            height: min(500px, 100vh - 175px);
+            overflow-y: auto;
+            .quiz-table {
+                border-collapse: separate;
+                border-spacing: 0;
+                table-layout: fixed;
+                padding-bottom: 20px;
+                
+                display: block;
+        
+                th, td {
+                    padding: 10px;
+                    border: 1px solid #bbb;
+                    border-bottom: none;
+                    text-align: center;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                th{
+                    border-bottom: none;
+                    background-color: rgb(244, 247, 254);
+                    position: sticky;
+                    z-index: 2;
+                    top: 0;
+
+                }
+    
+                /* Áp dụng CSS cho tất cả các th và td, trừ các cột từ 1 đến 3 */
+                
+                th:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:last-child),
+                td:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:last-child) {
+                    border-right: none;
+                }
+                
+                th.fixed-column, td.fixed-column {
+                    position: sticky;
+                    z-index: 2;
+                    background-color: #fff;
+                }
+        
+                th.fixed-column {
+                    top: 0;
+                    z-index: 3;
+                    background-color: rgb(244, 247, 254);
+                }
+        
+                /* Cột ID */
+                .fixed-column:nth-child(1) {
+                    left: 0;
+                    // width: 50px;
+                    min-width: 50px;
+                    border-right: none; /* Không có viền phải cho cột này */
+                    
+                }
+        
+                /* Cột Ảnh đại diện */
+                .fixed-column:nth-child(2) {
+                    left: 60px;
+                    width: 100px;
+                    min-width: 100px;
+                    border-right: none; /* Không có viền phải cho cột này */
+                }
+        
+                /* Cột Tên đề thi */
+                .fixed-column:nth-child(3) {
+                    left: 160px;
+                    width: 200px;
+                    min-width: 200px;
+                    white-space: normal;
+                    word-wrap: break-word;
+                    border-right: none;
+                }
+
+                /* Áp dụng border-right cho th và td cuối cùng */
+                th:last-child, td:last-child {
+                    border-right: 1px solid #bbb;
+                }
+
+                /* Áp dụng border-bottom cho tr cuối cùng trong tbody */
+                tbody tr:last-child td {
+                    border-bottom: 1px solid #bbb;
+                }
+
+        
+                td img {
+                    width: 50px;
+                    height: auto;
+                }
+        
+                .tag {
+                    background-color: #e9ecef;
+                    border-radius: 5px;
+                    padding: 5px 10px;
+                    display: inline-block;
+                }
+        
+                .level {
+                    background-color: #d1ecf1;
+                }
+        
+                .status {
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    color: #fff;
+        
+                    &.public {
+                        background-color: #28a745;
+                    }
+                }
+        
+                .action {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    padding: 5px;
+        
+                    &.edit {
+                        background-image: url('path-to-edit-icon.png');
+                        width: 24px;
+                        height: 24px;
+                        background-size: cover;
+                    }
+        
+                    &.delete {
+                        background-image: url('path-to-delete-icon.png');
+                        width: 24px;
+                        height: 24px;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+    
+        .pagination-container {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            margin-top: 20px;
+    
+        }
+    
+        @media (max-width: 768px) {
+            // .quiz-table {
+            //     min-width: 800px;
+            // }
+    
+            .fixed-column:nth-child(1) {
+                left: 0;
+                width: 50px;
+            }
+    
+            .fixed-column:nth-child(2) {
+                left: 50px;
+                width: 80px;
+            }
+    
+            .fixed-column:nth-child(3) {
+                left: 130px;
+                width: 150px;
+            }
+        }
+    
+        @media (max-width: 480px) {
+            // .quiz-table {
+            //     min-width: 300px;
+            // }
+    
+            .fixed-column:nth-child(1) {
+                left: 0;
+                width: 50px;
+            }
+    
+            .fixed-column:nth-child(2) {
+                left: 50px;
+                width: 70px;
+            }
+    
+            .fixed-column:nth-child(3) {
+                left: 120px;
+                width: 130px;
+            }
+    
+            .quiz-table th, .quiz-table td {
+                padding: 5px;
+            }
+    
+            .header input[type="text"] {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+    
+            .header .filter-options {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+    
+            .pagination {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    } 
+}
+
+  @media (max-width: 575.98px) {
+    .container-edu-list-exam {
+      max-width: 400px;
+    }
+  }
+  
+  @media (min-width: 576px) {
+    .container-edu-list-exam {
+      max-width: 540px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container-edu-list-exam {
+      max-width: 720px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container-edu-list-exam {
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container-edu-list-exam {
+      max-width: 1140px;
+    }
+  }
+  
+  @media (min-width: 1400px) {
+    .container-edu-list-exam {
+      max-width: 1750px;
+    }
+  }
