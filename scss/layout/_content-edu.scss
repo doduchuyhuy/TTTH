@@ -1,11 +1,12 @@
 #content-edu{
     // position: fixed;
     margin-top: 83px;
-    display: flex;
-    position: relative;
+    // display: flex;
+    // position: relative;
     .left-content{
         // position: sticky;
         position: fixed;
+        z-index: 999;
         // top: 83px;
         // height: calc(100vh - 83px);
         height: 100vh;
@@ -44,12 +45,33 @@
             }
         }
     }
+    
     .right-content{
         // margin-left: 135px;
         // margin-top: 45px;
-        width: calc(100% - 96px);
+        // width: calc(100% - 96px);
+        padding-top: 30px;
+        padding-bottom: 30px;
         margin-left: 96px;
     } 
+    @media (max-width: 768px) {
+        .left-content {
+            width: 100%;
+            height: auto;
+            top: unset;
+            left: 0;
+            bottom: 0;
+            border-top: 1px solid #e8ebed;
+            ul{
+                display: flex;
+                justify-content: space-evenly;
+            }
+        }
+        .right-content{
+            margin-left: auto;
+            margin-right: auto;
+        } 
+    }
 }
 
 

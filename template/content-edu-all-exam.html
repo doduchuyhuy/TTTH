@@ -22,9 +22,20 @@
 <body>
     <div id="nav-edu">
         <header id="header-edu">
-            <div class="container container-header">
+            <div class="container-header">
                 <div class="left">
-                    <img src="../assets/svg/new1exam.svg" alt="">
+                    <!-- <img src="../assets/svg/new1exam.svg" alt=""> -->
+                    <picture>
+                        
+                        <!-- Ảnh cho màn hình trung bình (tablet) -->
+                        <source media="(min-width: 768px)" srcset="../assets/svg/new1exam.svg">
+                
+                        <!-- Ảnh cho màn hình nhỏ (mobile) -->
+                        <source media="(max-width: 767px)" srcset="../assets/svg/logoCNTTDAV-sm.svg">
+                
+                        <!-- Ảnh mặc định nếu không có điều kiện nào ở trên phù hợp -->
+                        <img src="../assets/images/image-default.jpg" alt="Responsive Image">
+                    </picture>
                 </div>
                 <div class="center">
                     <div class="form-input">
@@ -83,7 +94,7 @@
                         
                     </div> -->
                     <div class="signin-signup">
-                        <button>Đăng ký</button>
+                        <button class="d-lg-none">Đăng ký</button>
                         <button id="signIn-button">Đăng nhập</button>
                     </div>
 
