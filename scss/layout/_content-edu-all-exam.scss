@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-left: auto;
+    margin-right: auto;
     /* XS (extra small) dưới 576px */
     @media (max-width: 575.98px) {
         width: 100%; /* Full width */

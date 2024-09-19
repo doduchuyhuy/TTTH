@@ -61,6 +61,7 @@
 .radio-item {
     display: flex;
     align-items: center;
+    user-select: none;
 
     input[type="radio"] {
         display: none;
