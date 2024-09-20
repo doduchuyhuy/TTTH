@@ -5748,7 +5748,6 @@ a {
   overflow: hidden;
   display: none;
   z-index: 5;
-  font-size: 1.5rem;
 }
 .dropdown .matching-select div:first-of-type {
   background: #ededed;
@@ -5758,49 +5757,30 @@ a {
   color: #FFF;
 }
 .dropdown .matching-select div {
-  padding: 5px 20px;
+  padding: 5px 12px;
   cursor: pointer;
-}
-.dropdown .matching-select div ion-icon {
-  position: relative;
-  top: 2px;
 }
 .dropdown .title {
   position: relative;
   color: #908D92;
-}
-.dropdown .title::before {
-  position: absolute;
-  content: "Tự động chuyển câu";
-  width: 108px;
-  top: -5px;
-  left: 15px;
+  font-size: 11.5px;
   background: #fff;
+  width: 108px;
+  top: -9px;
+  left: 15px;
   text-align: center;
-  font-size: 10.5px;
 }
-
-.dropdown::before {
-  content: "";
+.dropdown .dropdown-icon {
   position: absolute;
   right: 20px;
   top: 15px;
-  width: 8px;
-  height: 8px;
-  border: 2px solid #333;
-  border-top: 2px solid #FFF;
-  border-right: 2px solid #fff;
-  transform: rotate(-45deg);
-  transition: 0.5s;
+  font-size: 12px;
+  transition: transform 0.5s;
   pointer-events: none;
-  z-index: 3;
 }
-
-.dropdown.active::before {
-  top: 22px;
-  transform: rotate(-225deg);
+.dropdown.active .dropdown-icon {
+  transform: rotate(180deg);
 }
-
 .dropdown.active .matching-select {
   display: block;
 }
@@ -6239,7 +6219,7 @@ a {
 .modal-overlay .modal-mode .modal-body .setting {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .modal-overlay .modal-mode .modal-body .setting i {
   margin-right: 10px;
@@ -6268,7 +6248,7 @@ a {
   display: block;
   font-weight: 600;
   line-height: 1.5;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .modal-overlay .modal-mode .modal-body .option-time-exam {
   margin-bottom: 15px;
@@ -7268,7 +7248,7 @@ input:checked + .slider:before {
 }
 .textarea-fake .section-container .section-header {
   position: absolute;
-  top: -9px;
+  top: -12px;
   left: 12px;
   background: white;
   color: rgb(107, 114, 128);
