@@ -30,10 +30,10 @@ html {
 body {
     font-size: 1.4rem;
     line-height: 1.5;
-    background-color:#f7f7f9 ;
-    @include abstracts.breakpoint(md) {
-        background-color:#fff ;
-      }
+    // background-color:#f7f7f9 ;
+    // @include abstracts.breakpoint(md) {
+    //     background-color:#fff ;
+    //   }
 }
 
 ::-webkit-scrollbar{

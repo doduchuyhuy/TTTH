@@ -83,12 +83,6 @@ html {
 body {
   font-size: 1.4rem;
   line-height: 1.5;
-  background-color: #f7f7f9;
-}
-@media (min-width: 991.98px) {
-  body {
-    background-color: #fff;
-  }
 }
 
 ::-webkit-scrollbar {
@@ -2948,12 +2942,8 @@ a {
 /*   color variables */
 /*   border radius */
 .container-edu-list-exam {
-  width: 100%;
-  padding-right: var(--bs-gutter-x, 1.5rem);
-  padding-left: var(--bs-gutter-x, 1.5rem);
   margin-right: auto;
   margin-left: auto;
-  margin-top: 40px;
 }
 .container-edu-list-exam .toolbar {
   display: flex;
@@ -3025,291 +3015,124 @@ a {
   border-bottom: none;
 }
 .container-edu-list-exam .table .table-row .table-cell {
-  padding: 8px;
+  padding: 15px;
   flex: 1;
   display: flex;
   align-items: center;
 }
-.container-edu-list-exam .table .table-row .table-cell.checkbox {
+.container-edu-list-exam .table .table-row .table-cell:nth-child(1) {
   flex: 0.5;
+}
+.container-edu-list-exam .table .table-row .table-cell:nth-child(2) {
+  flex-basis: 200px;
+  flex-shrink: 0;
+}
+.container-edu-list-exam .table .table-row .table-cell:last-child {
+  display: flex;
+  gap: 15px;
   justify-content: center;
 }
-.container-edu-list-exam .table .table-row .table-cell:nth-child(3) {
-  flex: 3; /* Adjust for longer text in 'Name' column */
+.container-edu-list-exam .table .table-row .table-cell .icon-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 }
-.container-edu-list-exam .table .table-row .table-cell:nth-child(7) {
-  background-color: #ffeb3b; /* Hạn xử lý column with color */
-  text-align: center;
+.container-edu-list-exam .table .table-row .table-cell .icon-wrapper .tooltip {
+  font-size: 11px;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(97, 97, 97, 0.92);
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
 }
-.container-edu-list-exam .table .table-row .table-cell:nth-child(8) {
-  background-color: #f8d7da; /* Hoàn thành column with color */
-  text-align: center;
+.container-edu-list-exam .table .table-row .table-cell .icon-wrapper:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
 }
 .container-edu-list-exam .table .table-row.header {
   font-weight: bold;
   background-color: transparent; /* No background for header */
 }
 
+.container-edu-list-exam {
+  /* XS (extra small) dưới 576px */
+  /* SM (small) từ 576px đến 767px */
+  /* MD (medium) từ 768px đến 991px */
+  /* LG (large) từ 992px đến 1199px */
+  /* XL (extra large) từ 1200px đến 1399px */
+  /* XXL (extra extra large) từ 1400px đến 1569px */
+  /* XXXL (extra extra extra large) từ 1570px trở lên */
+}
 @media (max-width: 575.98px) {
   .container-edu-list-exam {
-    max-width: 400px;
+    width: 100%; /* Full width */
   }
-}
-@media (min-width: 576px) {
-  .container-edu-list-exam {
-    max-width: 540px;
+  .container-edu-list-exam .table {
+    overflow: scroll;
   }
-}
-@media (min-width: 768px) {
-  .container-edu-list-exam {
-    max-width: 720px;
+  .container-edu-list-exam .table .table-row {
+    width: 1000px;
   }
-}
-@media (min-width: 992px) {
-  .container-edu-list-exam {
-    max-width: 960px;
-  }
-}
-@media (min-width: 1200px) {
-  .container-edu-list-exam {
-    max-width: 1140px;
-  }
-}
-@media (min-width: 1400px) {
-  .container-edu-list-exam {
-    max-width: 1750px;
-  }
-}
-.container-edu-list-exam {
-  width: 100%;
-  padding-right: var(--bs-gutter-x, 1.5rem);
-  padding-left: var(--bs-gutter-x, 1.5rem);
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 40px;
-}
-.container-edu-list-exam .quiz-management {
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 16px;
-}
-.container-edu-list-exam .quiz-management .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-.container-edu-list-exam .quiz-management .header .filter-options {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-.container-edu-list-exam .quiz-management .header .filter-options label {
-  cursor: pointer;
-}
-.container-edu-list-exam .quiz-management .header .add-new {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.container-edu-list-exam .quiz-management .header .add-new:hover {
-  background-color: #0056b3;
-}
-.container-edu-list-exam .quiz-management .table {
-  max-height: calc(-300px + 100vh);
-  height: min(500px, 100vh - 175px);
-  overflow-y: auto;
-}
-.container-edu-list-exam .quiz-management .table .quiz-table {
-  border-collapse: separate;
-  border-spacing: 0;
-  table-layout: fixed;
-  padding-bottom: 20px;
-  display: block;
-  /* Áp dụng CSS cho tất cả các th và td, trừ các cột từ 1 đến 3 */
-  /* Cột ID */
-  /* Cột Ảnh đại diện */
-  /* Cột Tên đề thi */
-  /* Áp dụng border-right cho th và td cuối cùng */
-  /* Áp dụng border-bottom cho tr cuối cùng trong tbody */
-}
-.container-edu-list-exam .quiz-management .table .quiz-table th, .container-edu-list-exam .quiz-management .table .quiz-table td {
-  padding: 10px;
-  border: 1px solid #bbb;
-  border-bottom: none;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.container-edu-list-exam .quiz-management .table .quiz-table th {
-  border-bottom: none;
-  background-color: rgb(244, 247, 254);
-  position: sticky;
-  z-index: 2;
-  top: 0;
-}
-.container-edu-list-exam .quiz-management .table .quiz-table th:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:last-child),
-.container-edu-list-exam .quiz-management .table .quiz-table td:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:last-child) {
-  border-right: none;
-}
-.container-edu-list-exam .quiz-management .table .quiz-table th.fixed-column, .container-edu-list-exam .quiz-management .table .quiz-table td.fixed-column {
-  position: sticky;
-  z-index: 2;
-  background-color: #fff;
-}
-.container-edu-list-exam .quiz-management .table .quiz-table th.fixed-column {
-  top: 0;
-  z-index: 3;
-  background-color: rgb(244, 247, 254);
-}
-.container-edu-list-exam .quiz-management .table .quiz-table .fixed-column:nth-child(1) {
-  left: 0;
-  min-width: 50px;
-  border-right: none; /* Không có viền phải cho cột này */
-}
-.container-edu-list-exam .quiz-management .table .quiz-table .fixed-column:nth-child(2) {
-  left: 60px;
-  width: 100px;
-  min-width: 100px;
-  border-right: none; /* Không có viền phải cho cột này */
-}
-.container-edu-list-exam .quiz-management .table .quiz-table .fixed-column:nth-child(3) {
-  left: 160px;
-  width: 200px;
-  min-width: 200px;
-  white-space: normal;
-  word-wrap: break-word;
-  border-right: none;
-}
-.container-edu-list-exam .quiz-management .table .quiz-table th:last-child, .container-edu-list-exam .quiz-management .table .quiz-table td:last-child {
-  border-right: 1px solid #bbb;
-}
-.container-edu-list-exam .quiz-management .table .quiz-table tbody tr:last-child td {
-  border-bottom: 1px solid #bbb;
-}
-.container-edu-list-exam .quiz-management .table .quiz-table td img {
-  width: 50px;
-  height: auto;
-}
-.container-edu-list-exam .quiz-management .table .quiz-table .tag {
-  background-color: #e9ecef;
-  border-radius: 5px;
-  padding: 5px 10px;
-  display: inline-block;
-}
-.container-edu-list-exam .quiz-management .table .quiz-table .level {
-  background-color: #d1ecf1;
-}
-.container-edu-list-exam .quiz-management .table .quiz-table .status {
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: #fff;
-}
-.container-edu-list-exam .quiz-management .table .quiz-table .status.public {
-  background-color: #28a745;
-}
-.container-edu-list-exam .quiz-management .table .quiz-table .action {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 5px;
-}
-.container-edu-list-exam .quiz-management .table .quiz-table .action.edit {
-  background-image: url("path-to-edit-icon.png");
-  width: 24px;
-  height: 24px;
-  background-size: cover;
-}
-.container-edu-list-exam .quiz-management .table .quiz-table .action.delete {
-  background-image: url("path-to-delete-icon.png");
-  width: 24px;
-  height: 24px;
-  background-size: cover;
-}
-.container-edu-list-exam .quiz-management .pagination-container {
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  margin-top: 20px;
-}
-@media (max-width: 768px) {
-  .container-edu-list-exam .quiz-management .fixed-column:nth-child(1) {
+  .container-edu-list-exam .table .table-row .table-cell:nth-child(1), .container-edu-list-exam .table .table-row .table-cell:nth-child(2) {
+    position: sticky; /* Makes the first two columns fixed */
     left: 0;
-    width: 50px;
-  }
-  .container-edu-list-exam .quiz-management .fixed-column:nth-child(2) {
-    left: 50px;
-    width: 80px;
-  }
-  .container-edu-list-exam .quiz-management .fixed-column:nth-child(3) {
-    left: 130px;
-    width: 150px;
+    z-index: 1; /* Ensure it is above other content */
+    background-color: #fff; /* Add background to prevent overlap */
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
   }
 }
-@media (max-width: 480px) {
-  .container-edu-list-exam .quiz-management .fixed-column:nth-child(1) {
-    left: 0;
-    width: 50px;
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container-edu-list-exam {
+    width: 540px;
   }
-  .container-edu-list-exam .quiz-management .fixed-column:nth-child(2) {
-    left: 50px;
-    width: 70px;
+  .container-edu-list-exam .table {
+    overflow: scroll;
   }
-  .container-edu-list-exam .quiz-management .fixed-column:nth-child(3) {
-    left: 120px;
-    width: 130px;
+  .container-edu-list-exam .table .table-row {
+    width: 1000px;
   }
-  .container-edu-list-exam .quiz-management .quiz-table th, .container-edu-list-exam .quiz-management .quiz-table td {
-    padding: 5px;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container-edu-list-exam {
+    width: 720px;
   }
-  .container-edu-list-exam .quiz-management .header input[type=text] {
-    width: 100%;
-    margin-bottom: 10px;
+  .container-edu-list-exam .table {
+    overflow: scroll;
   }
-  .container-edu-list-exam .quiz-management .header .filter-options {
-    flex-direction: column;
-    align-items: flex-start;
+  .container-edu-list-exam .table .table-cell {
+    flex-basis: 200px;
+    flex-shrink: 0;
   }
-  .container-edu-list-exam .quiz-management .pagination {
-    flex-direction: column;
-    align-items: flex-start;
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container-edu-list-exam {
+    width: 960px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .container-edu-list-exam {
+    width: 1140px;
+  }
+}
+@media (min-width: 1400px) and (max-width: 1669.98px) {
+  .container-edu-list-exam {
+    width: 1320px;
+  }
+}
+@media (min-width: 1670px) {
+  .container-edu-list-exam {
+    width: 1670px;
   }
 }
 
-@media (max-width: 575.98px) {
-  .container-edu-list-exam {
-    max-width: 400px;
-  }
-}
-@media (min-width: 576px) {
-  .container-edu-list-exam {
-    max-width: 540px;
-  }
-}
-@media (min-width: 768px) {
-  .container-edu-list-exam {
-    max-width: 720px;
-  }
-}
-@media (min-width: 992px) {
-  .container-edu-list-exam {
-    max-width: 960px;
-  }
-}
-@media (min-width: 1200px) {
-  .container-edu-list-exam {
-    max-width: 1140px;
-  }
-}
-@media (min-width: 1400px) {
-  .container-edu-list-exam {
-    max-width: 1750px;
-  }
-}
 .container-edu-all-exam {
   display: flex;
   flex-direction: column;

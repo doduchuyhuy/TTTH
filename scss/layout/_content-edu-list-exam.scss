@@ -21,12 +21,8 @@ $clr-link: #2962ff;
 /*   border radius */
 $radius: 0.2rem;
 .container-edu-list-exam{
-    width: 100%;
-    padding-right: var(--bs-gutter-x, 1.5rem);
-    padding-left: var(--bs-gutter-x, 1.5rem);
     margin-right: auto;
     margin-left: auto;
-    margin-top: 40px;
     .toolbar {
         display: flex;
         justify-content: space-between;
@@ -93,6 +89,7 @@ $radius: 0.2rem;
         border-radius: 6px;
       
         .table-row {
+
           display: flex;
           border-bottom: 1px solid #ddd;
       
@@ -109,28 +106,53 @@ $radius: 0.2rem;
           }
       
           .table-cell {
-            padding: 8px;
+            padding: 15px;
             flex: 1;
             display: flex;
             align-items: center;
       
-            &.checkbox {
-              flex: 0.5;
+            // &.checkbox {
+            //   flex: 0.5;
+            //   justify-content: center;
+            // }
+            &:nth-child(1) { 
+                flex: 0.5;
+            }
+      
+            &:nth-child(2) { 
+              flex-basis: 200px;
+              flex-shrink: 0;
+            }
+
+            &:last-child {
+              display: flex;
+              gap: 15px;
               justify-content: center;
             }
-      
-            &:nth-child(3) {
-              flex: 3; /* Adjust for longer text in 'Name' column */
-            }
-      
-            &:nth-child(7) {
-              background-color: #ffeb3b; /* Hạn xử lý column with color */
-              text-align: center;
-            }
-      
-            &:nth-child(8) {
-              background-color: #f8d7da; /* Hoàn thành column with color */
-              text-align: center;
+            .icon-wrapper {
+              position: relative;
+              display: inline-block;
+              cursor: pointer;
+              .tooltip {
+                  font-size: 11px;
+                  position: absolute;
+                  bottom: 100%;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  background-color: rgba(97, 97, 97, 0.92);
+                  color: #fff;
+                  padding: 8px;
+                  border-radius: 4px;
+                  font-size: 12px;
+                  white-space: nowrap;
+                  opacity: 0;
+                  visibility: hidden;
+                  transition: opacity 0.2s ease, visibility 0.2s ease;
+              }
+              &:hover .tooltip {
+                  opacity: 1;
+                  visibility: visible;
+              }
             }
           }
       
@@ -139,46 +161,86 @@ $radius: 0.2rem;
             background-color: transparent; /* No background for header */
           }
         }
-      }
-      
-    
-      
+      }     
 }
 
+.container-edu-list-exam{
+  /* XS (extra small) dưới 576px */
   @media (max-width: 575.98px) {
-    .container-edu-list-exam {
-      max-width: 400px;
-    }
+      width: 100%; /* Full width */
+      .table{
+        overflow: scroll;
+        .table-row{
+          width: 1000px;
+          .table-cell{
+            &:nth-child(1), 
+            &:nth-child(2) {
+              position: sticky; /* Makes the first two columns fixed */
+              left: 0;
+              z-index: 1; /* Ensure it is above other content */
+              background-color: #fff; /* Add background to prevent overlap */
+              box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+            }
+            
+
+            &:nth-child(2) { 
+              // left: 60px; /* Adjust to make sure this column appears next to the first one */
+            }
+          }
+          
+        }
+      }
+      
   }
-  
-  @media (min-width: 576px) {
-    .container-edu-list-exam {
-      max-width: 540px;
-    }
+
+  /* SM (small) từ 576px đến 767px */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+      width: 540px;
+      .table{
+        overflow: scroll;
+        .table-row{
+          width: 1000px;
+        }
+      }
+      
   }
-  
-  @media (min-width: 768px) {
-    .container-edu-list-exam {
-      max-width: 720px;
-    }
+
+  /* MD (medium) từ 768px đến 991px */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+      width: 720px;
+      .table{
+        overflow: scroll;
+        .table-cell{
+          flex-basis: 200px;
+          flex-shrink: 0;
+        }
+      }
+      
   }
-  
-  @media (min-width: 992px) {
-    .container-edu-list-exam {
-      max-width: 960px;
-    }
+
+  /* LG (large) từ 992px đến 1199px */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+      width: 960px;
+      
   }
-  
-  @media (min-width: 1200px) {
-    .container-edu-list-exam {
-      max-width: 1140px;
-    }
+
+  /* XL (extra large) từ 1200px đến 1399px */
+  @media (min-width: 1200px) and (max-width: 1399.98px) {
+      width: 1140px;
+      
   }
-  
-  @media (min-width: 1400px) {
-    .container-edu-list-exam {
-      max-width: 1750px;
-    }
+
+  /* XXL (extra extra large) từ 1400px đến 1569px */
+  @media (min-width: 1400px) and (max-width: 1669.98px) {
+      width: 1320px;
+     
   }
+
+  /* XXXL (extra extra extra large) từ 1570px trở lên */
+  @media (min-width: 1670px) {
+      width: 1670px;
+  }
+}
+
 
   
