@@ -1,5 +1,6 @@
 .container-edu-add-edit-exam{
-    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
     h3{
         font-weight: 600;
         font-size: 16px;
@@ -215,5 +216,52 @@
             }
         }
 
+    }
+  }
+
+
+  .container-edu-add-edit-exam{
+    /* XS (extra small) dưới 576px */
+    @media (max-width: 575.98px) {
+        width: 100%; /* Full width */
+        
+        
+    }
+  
+    /* SM (small) từ 576px đến 767px */
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        width: 540px;
+        
+        
+    }
+  
+    /* MD (medium) từ 768px đến 991px */
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        width: 720px;
+        
+        
+    }
+  
+    /* LG (large) từ 992px đến 1199px */
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        width: 960px;
+        
+    }
+  
+    /* XL (extra large) từ 1200px đến 1399px */
+    @media (min-width: 1200px) and (max-width: 1399.98px) {
+        width: 1140px;
+        
+    }
+  
+    /* XXL (extra extra large) từ 1400px đến 1569px */
+    @media (min-width: 1400px) and (max-width: 1669.98px) {
+        width: 1320px;
+       
+    }
+  
+    /* XXXL (extra extra extra large) từ 1570px trở lên */
+    @media (min-width: 1670px) {
+        width: 1670px;
     }
   }

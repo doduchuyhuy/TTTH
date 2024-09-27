@@ -22,9 +22,20 @@
 <body>
     <div id="nav-edu">
         <header id="header-edu">
-            <div class="container container-header">
+            <div class="container-header">
                 <div class="left">
-                    <img src="../assets/svg/new1exam.svg" alt="">
+                    <!-- <img src="../assets/svg/new1exam.svg" alt=""> -->
+                    <picture>
+                        
+                        <!-- Ảnh cho màn hình trung bình (tablet) -->
+                        <source media="(min-width: 768px)" srcset="../assets/svg/new1exam.svg">
+                
+                        <!-- Ảnh cho màn hình nhỏ (mobile) -->
+                        <source media="(max-width: 767px)" srcset="../assets/svg/logoCNTTDAV-sm.svg">
+                
+                        <!-- Ảnh mặc định nếu không có điều kiện nào ở trên phù hợp -->
+                        <img src="../assets/images/image-default.jpg" alt="Responsive Image">
+                    </picture>
                 </div>
                 <div class="center">
                     <div class="form-input">
@@ -53,16 +64,15 @@
                     </div> -->
                 </div>
                 <div class="right">
-                    <button class="button-edu">
+                    <!-- <button class="button-edu">
                         <img src="../assets/svg/create-exam.svg" alt="">
                         Thêm câu hỏi
-                    </button>
+                    </button> -->
                     <div class="profile" id="profile">
-                        <h3>Đỗ Đức Huy<br><span>Chuyên viên</span></h3>
+                        <h3 class="d-lg-none">Đỗ Đức Huy<br><span>Chuyên viên</span></h3>
                         <div class="imgBx">
                             <img src="../assets/images/unnamed.jpg" alt="">
                         </div>
-                        
                             <ul class="menu" id="menu">
                                 <li><a href="#">
                                     <ion-icon name="person-outline"></ion-icon>Profile
@@ -80,11 +90,10 @@
                                     <ion-icon name="log-out-outline"></ion-icon>Profile
                                 </a></li>
                             </ul>
-                        
                     </div>
                 </div>
             </div>
-        </header>            
+        </header>      
     </div>
     <div id="content-edu">
         <div class="left-content">
@@ -110,8 +119,8 @@
             </ul>
         </div>
         <div class="right-content">
-            <div class="container-edu-add-edit-exam container">
-                <h3>Thêm mới đề thi</h3>
+            <div class="container-edu-add-edit-exam">
+                <h3 class="mb-2">Thêm mới đề thi</h3>
                 <div class="quizz-add">
                     <div class="quiz-add-header">
                         <div class="tab_box">
