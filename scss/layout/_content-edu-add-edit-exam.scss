@@ -10,14 +10,18 @@
         border-radius: 0.5rem;
         box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
         box-shadow: rgba(0, 0, 0, 0.04) 0px 10px 10px 4px;
-        padding: 0 2rem 2rem 2rem;
+        // padding: 0 2rem 2rem 2rem;
         border-radius: 16px;
         .add-exam{
+            display: flex;
+            // gap: 20px;
+            padding-bottom: 20px;
+            
             .left-col{
+                width: 25%;
+                padding: 0 20px;
                 border-right: 1px solid rgba(0, 0, 0, 0.12);
                 .list-all-sections{
-                    padding: 0 20px;
-                    
                     .list-section-header{
                         display: flex;
                         justify-content: space-between;
@@ -49,7 +53,7 @@
                                 gap: 8px;
                             }
                             .section-item-right{
-                                font-size: 18px;
+                                font-size: 15px;
                                 display: flex;
                                 align-items: center;
                                 gap: 20px;
@@ -88,132 +92,142 @@
                     }
                 }
             }
-            .list-all-questions{
-                .list-question-header{
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    .question-header-1{
+            .right-col{
+                width: 75%;
+                padding: 0 20px;
+                .list-all-questions{
+                    .list-question-header{
                         display: flex;
+                        justify-content: space-between;
                         align-items: center;
-                        gap: 10px;
-                    }
-                    .question-header-2{
-                        display: flex;
-                        align-items: center;
-                        gap: 10px;
-                        button{
-                            font-size: 13px;
-                            height: auto;
-                            padding: 6px 8px;
-                            .fa-circle-plus{
-                                font-size: 16px;
-                            }
-                            .fa-square-plus{
-                                font-size: 16px;
-                            }
+                        .question-header-1{
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
                         }
-                        button.disabled{
-                            color: rgba(0, 0, 0, 0.26);
-                            box-shadow: none;
-                            background-color: rgba(0, 0, 0, 0.12);
-                        }
-                    }
-                }
-                .list-question-body{
-                    display: grid;
-                    grid-template-columns: 1fr 1fr; /* Mỗi cột chiếm 1 phần đều nhau */
-                    gap: 20px; /* Khoảng cách giữa các cột */
-                    max-height: calc(-300px + 100vh);
-                    height: min(600px, 100vh - 175px);
-                    overflow-y: auto;
-                    
-                    p{
-                        text-align: center;
-                        font-style: italic;
-                    }
-                    .root{
-                        background-color: rgb(255, 255, 255);
-                        color: rgb(17, 24, 39);
-                        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-                        border-radius: 16px;
-                        box-shadow: rgba(0, 0, 0, 0.04) 0px 10px 10px 4px;
-                        display: flex;
-                        flex-direction: column;
-                        border: 1px solid rgba(0, 0, 0, 0.12);
-                        .header{
-                            padding: 16px 24px 0px;
-                            .header-content{
-                                display: flex;
-                                justify-content: space-between;
-                                .header-content-mng{
-                                    display: flex;
-                                    gap: 15px;
-                                    cursor: pointer;
+                        .question-header-2{
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            button{
+                                font-size: 13px;
+                                height: auto;
+                                padding: 6px 8px;
+                                .fa-circle-plus{
+                                    font-size: 16px;
+                                }
+                                .fa-square-plus{
+                                    font-size: 16px;
                                 }
                             }
-                            h3{
-                                color: rgb(17, 24, 39);
-                                font-weight: 600;
-                                font-size: 16px;
-                                overflow: hidden;
-                                text-overflow: ellipsis;
-                                white-space: nowrap;
-                                width: 100%;
+                            button.disabled{
+                                color: rgba(0, 0, 0, 0.26);
+                                box-shadow: none;
+                                background-color: rgba(0, 0, 0, 0.12);
                             }
                         }
-                        .content{
-                            padding: 16px 24px;
-                            // height: 100%;
-                            .content-content{
-                                max-height: 300px;
-                                display: flex;
-                                justify-content: center;
-                                flex-wrap: wrap;
-                                overflow-y: auto;
-                                // scrollbar-width: none;
-                                .content-item{
+                    }
+                    .list-question-body{
+                        padding-right: 20px;
+                        display: grid;
+                        grid-template-columns: 1fr 1fr; /* Mỗi cột chiếm 1 phần đều nhau */
+                        gap: 20px; /* Khoảng cách giữa các cột */
+                        max-height: calc(-300px + 100vh);
+                        height: min(600px, 100vh - 175px);
+                        overflow-y: auto;
+                        padding-bottom: 20px;
+                        
+                        
+                        p{
+                            text-align: center;
+                            font-style: italic;
+                        }
+                        .root{
+                            background-color: rgb(255, 255, 255);
+                            color: rgb(17, 24, 39);
+                            border-radius: 16px;
+                            box-shadow: rgba(0, 0, 0, 0.04) 0px 10px 10px 4px;
+                            display: flex;
+                            flex-direction: column;
+                            border: 1px solid rgba(0, 0, 0, 0.12);
+                            // max-height: 460px;
+                            align-self: start; /* Đảm bảo rằng cột sẽ chỉ cao theo nội dung */
+                            .header{
+                                padding: 16px 24px 0px;
+                                .header-content{
                                     display: flex;
-                                    flex-direction: column;
-                                    gap: 15px;
+                                    justify-content: space-between;
+                                    .header-content-mng{
+                                        display: flex;
+                                        gap: 15px;
+                                        cursor: pointer;
+                                    }
                                 }
-
-                                
-                                button{
-                                    display: inline-flex;
-                                    -webkit-box-align: center;
-                                    align-items: center;
-                                    -webkit-box-pack: center;
+                                h3{
+                                    color: rgb(17, 24, 39);
+                                    font-weight: 600;
+                                    font-size: 16px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    width: 100%;
+                                }
+                            }
+                            .content{
+                                padding: 16px 24px;
+                                // height: 100%;
+                                .content-content{
+                                    max-height: 320px;
+                                    display: flex;
                                     justify-content: center;
-                                    position: relative;
-                                    box-sizing: border-box;
-                                    -webkit-tap-highlight-color: transparent;
-                                    outline: 0px;
-                                    border: 0px currentcolor;
-                                    margin: 6px;
-                                    cursor: pointer;
-                                    user-select: none;
-                                    vertical-align: middle;
-                                    appearance: none;
-                                    text-decoration: none;
-                                    font-family: Inter, sans-serif;
-                                    font-weight: 500;
-                                    font-size: 1.4rem;
-                                    line-height: 1.75;
-                                    min-width: 64px;
-                                    padding: 6px 16px;
-                                    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-                                    color: inherit;
-                                    background-color: rgb(224, 224, 224);
-                                    box-shadow: none;
-                                    border-radius: 8px;
+                                    flex-wrap: wrap;
+                                    overflow-y: auto;
+                                    // scrollbar-width: none;
+                                    .content-item{
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 15px;
+                                        overflow: auto;
+                                    }
+    
                                     
+                                    button{
+                                        display: inline-flex;
+                                        -webkit-box-align: center;
+                                        align-items: center;
+                                        -webkit-box-pack: center;
+                                        justify-content: center;
+                                        position: relative;
+                                        box-sizing: border-box;
+                                        -webkit-tap-highlight-color: transparent;
+                                        outline: 0px;
+                                        border: 0px currentcolor;
+                                        margin: 6px;
+                                        cursor: pointer;
+                                        user-select: none;
+                                        vertical-align: middle;
+                                        appearance: none;
+                                        text-decoration: none;
+                                        font-family: Inter, sans-serif;
+                                        font-weight: 500;
+                                        font-size: 1.4rem;
+                                        line-height: 1.75;
+                                        min-width: 64px;
+                                        padding: 6px 16px;
+                                        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                                        color: inherit;
+                                        background-color: rgb(224, 224, 224);
+                                        box-shadow: none;
+                                        border-radius: 8px;
+                                        
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
+            
         }
 
     }
@@ -224,6 +238,26 @@
     /* XS (extra small) dưới 576px */
     @media (max-width: 575.98px) {
         width: 100%; /* Full width */
+        .quizz-add{
+            margin-bottom: 50px;
+            .add-exam{
+                flex-direction: column;
+                gap: 20px;
+                .left-col{
+                    width: 100%;
+                }
+                .right-col{
+                    width: 100%;
+                    .list-all-questions{
+                        .list-question-body{
+                            
+                            grid-template-columns: 1fr;
+                        }
+                    }
+                }
+            }
+        }
+        
         
         
     }
@@ -231,6 +265,24 @@
     /* SM (small) từ 576px đến 767px */
     @media (min-width: 576px) and (max-width: 767.98px) {
         width: 540px;
+        .quizz-add{
+            margin-bottom: 50px;
+            .add-exam{
+                flex-direction: column;
+                gap: 20px;
+                .left-col{
+                    width: 100%;
+                }
+                .right-col{
+                    width: 100%;
+                    .list-all-questions{
+                        .list-question-body{
+                            grid-template-columns: 1fr;
+                        }
+                    }
+                }
+            }
+        }
         
         
     }
@@ -238,6 +290,23 @@
     /* MD (medium) từ 768px đến 991px */
     @media (min-width: 768px) and (max-width: 991.98px) {
         width: 720px;
+        .quizz-add{
+            .add-exam{
+                flex-direction: column;
+                gap: 20px;
+                .left-col{
+                    width: 100%;
+                }
+                .right-col{
+                    width: 100%;
+                    .list-all-questions{
+                        .list-question-body{
+                            grid-template-columns: 1fr;
+                        }
+                    }
+                }
+            }
+        }
         
         
     }

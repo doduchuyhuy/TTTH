@@ -255,7 +255,9 @@
 }
 .container-content-detail-exam{
     /* XS (extra small) dưới 576px */
+    
     @media (max-width: 575.98px) {
+        margin-bottom: 50px;
         flex-direction: column;
         width: 100%; /* Full width */
         .detail-exam-left{
@@ -268,6 +270,7 @@
 
     /* SM (small) từ 576px đến 767px */
     @media (min-width: 576px) and (max-width: 767.98px) {
+        margin-bottom: 65px;
         width: 540px;
         flex-direction: column;
         .detail-exam-left{
