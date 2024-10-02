@@ -1,0 +1,192 @@
+.comprehension-form{
+    .comprehension-form-header{
+        .title-passage{
+            display: block;
+            font-weight: 700;
+        }
+    }
+    .comprehension-form-body{
+        display: flex;
+        gap: 50px;
+        .comprehension-left{
+            flex: 2;
+            .title-question{
+                display: block;
+                font-weight: 700;
+            }
+            .comprehension-questions {
+                padding: 15px;
+                border: 1px solid rgb(238, 238, 238);
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .sub-question {
+                    .sub-question-header {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        .sub-question-header-1{
+                            display: flex;
+                            align-items: center;
+                            color: rgb(62, 101, 254);
+                            gap: 5px;
+                            padding: 8px 6px;
+                            border-radius: 4px;
+                            &:hover{
+                                background-color: rgba(62, 101, 254, 0.04)
+                            }
+                        }
+                        .sub-question-header-2{
+                            color: rgb(211, 47, 47);
+                            cursor: pointer;
+                            padding: 4px 5px;
+                            border-radius: 4px;
+                            &:hover{
+                                background-color: rgba(211, 47, 47, 0.04);
+                            }
+                            
+                        }
+            
+                        .toggle-sub-questions {
+                            cursor: pointer;
+                            i {
+                                transition: transform 0.3s ease;
+                            }
+                        }
+                    }
+            
+                    .sub-question-list {
+                        display: none;
+            
+                        &.spin.now {
+                            display: block;
+                        }
+            
+                        .sub-singlechoice-container {
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 50px;
+                            margin-left: 20px;
+            
+                            .option-item-list {
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+            
+                                .option-item-list-content {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 5px;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .comprehension-right{
+            flex: 1;
+            .input2{
+                input{
+                    max-width: 100px;
+                    padding: 10px 10px;
+                }
+            }
+            .percentage-mark{
+                .percentage-item{
+                    .percentage-percent{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        input{
+                            padding: 8px 8px;
+                            border: 1px solid #ccc;
+                            border-radius: 8px;
+                            color: #333;
+                            width: 100%;
+                            outline: none;
+                            max-width: 64px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.comprehension-form{
+    /* XS (extra small) dưới 576px */
+    @media (max-width: 575.98px) {
+        width: 100%; /* Full width */
+        .comprehension-form-body{
+            font-size: 13px;
+            flex-direction: column;
+            gap: 20px;
+            .button-edu{
+                font-size: 13px;
+                padding: 5px 10px;
+            }   
+        }
+        
+    }
+  
+    /* SM (small) từ 576px đến 767px */
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        width: 100%;
+        .comprehension-form-body{
+            font-size: 13px;
+            flex-direction: column;
+            gap: 20px;
+            .button-edu{
+                font-size: 13px;
+                padding: 5px 10px;
+            }   
+        }
+        
+           
+    }
+  
+    /* MD (medium) từ 768px đến 991px */
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        width: 100%;
+        .comprehension-form-body{
+            font-size: 13px;
+            flex-direction: column;
+            gap: 20px;
+            .button-edu{
+                font-size: 13px;
+                padding: 5px 10px;
+            }   
+        }
+        
+         
+    }
+  
+    // /* LG (large) từ 992px đến 1199px */
+    // @media (min-width: 992px) and (max-width: 1199.98px) {
+    //     width: 960px;
+        
+    // }
+  
+    // /* XL (extra large) từ 1200px đến 1399px */
+    // @media (min-width: 1200px) and (max-width: 1399.98px) {
+    //     width: 1140px;
+        
+    // }
+  
+    // /* XXL (extra extra large) từ 1400px đến 1569px */
+    // @media (min-width: 1400px) and (max-width: 1669.98px) {
+    //     width: 1320px;
+       
+    // }
+  
+    // /* XXXL (extra extra extra large) từ 1570px trở lên */
+    // @media (min-width: 1670px) {
+    //     width: 1670px;
+    // }
+  }

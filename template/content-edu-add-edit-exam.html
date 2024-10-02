@@ -471,7 +471,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="phase-1">
+                <div class="body-header">
                     <span class="title-add-question">Loại câu hỏi</span>
                     <div class="question-options mt-1">  
                         <div class="radio-item">
@@ -511,326 +511,132 @@
                         </div>
                     </div>
                 </div>
-                <div class="phase-2 mt-3">
-                    <span style="display: block;" class="title-add-question mb-1">Nội dung câu hỏi</span>
-                    <textarea name="questionText" class="editor"></textarea>
-                </div>
-                <!-- <div class="phase-3 mt-3">
-                    <div class="file-container">
-                        <div class="file-image">
-                            <p class="mb-1">Upload ảnh</p>
-                            <div class="image-container">
-                                <img src="../assets/images/uploadquestionimage.png" alt="">
-                            </div>
+                <div class="body-body">
+                    <div class="comprehension-form">
+                        <div class="comprehension-form-header mt-3">
+                            <span class="title-passage mb-1">Nội dung đoạn văn</span>
+                            <textarea name="passageText" class="editor"></textarea>
                         </div>
-                        <div class="file-video-audio">
-                            <div class="file-video">
-                                <div class="checkbox2">
-                                    <input type="checkbox" id="add-video" name="exclusiveCheckbox">
-                                    <label for="add-video">
-                                        <div class="custom-checkbox"></div>
-                                        <span class="title-add-question">Upload video</span>
-                                    </label>
+                        <div class="comprehension-form-body mt-2">
+                            <div class="comprehension-left">
+                                <span class="title-question mb-1">Các câu hỏi</span>
+                                <div class="comprehension-questions">
+                                    <div class="sub-question">
+                                        <div class="sub-question-header">
+                                            <div class="sub-question-header-1 toggle-sub-questions">
+                                                Câu hỏi 1
+                                                <i class="fa-solid fa-angle-down"></i>
+                                            </div>
+                                            <div class="sub-question-header-2">
+                                                <i class="fa-regular fa-trash-can"></i>
+                                                Xóa câu trả lời
+                                            </div>
+                                        </div>
+                                        <div class="sub-question-list mt-2">
+                                            <textarea class="editor" id=""></textarea>
+                                            <div class="sub-singlechoice-container mt-2">
+                                                <div class="option-item-list">
+                                                    <div class="option-item-list-content">
+                                                        <div class="radio-item">
+                                                            <input type="radio" name="filterop" id="option1">
+                                                            <label for="option1">
+                                                                <span class="custom-radio"></span> 
+                                                                Đáp án 1
+                                                            </label>
+                                                        </div>
+                                                        <textarea name="questionText" class="editor"></textarea>
+                                                    </div>
+                                                    <div class="option-item-list-drop">
+                                                        <div class="icon-drop"></div>
+                        
+                                                    </div>
+                                                </div>
+                                                <div class="option-item-list">
+                                                    <div class="option-item-list-content">
+                                                        <div class="radio-item">
+                                                            <input type="radio" name="filterop" id="option2">
+                                                            <label for="option2">
+                                                                <span class="custom-radio"></span> 
+                                                                Đáp án 2
+                                                            </label>
+                                                        </div>
+                                                        <textarea name="questionText" class="editor"></textarea>
+                                                    </div>
+                                                    <div class="option-item-list-drop">
+                                                        <div class="icon-drop"></div>
+                        
+                                                    </div>
+                                                </div>
+                                                <div class="option-item-list">
+                                                    <div class="option-item-list-content">
+                                                        <div class="radio-item">
+                                                            <input type="radio" name="filterop" id="option3">
+                                                            <label for="option3">
+                                                                <span class="custom-radio"></span> 
+                                                                Đáp án 3
+                                                            </label>
+                                                        </div>
+                                                        <textarea name="questionText" class="editor"></textarea>
+                                                    </div>
+                                                    <div class="option-item-list-drop">
+                                                        <div class="icon-drop"></div>
+                        
+                                                    </div>
+                                                </div>
+                                                <div class="option-item-list">
+                                                    <div class="option-item-list-content">
+                                                        <div class="radio-item">
+                                                            <input type="radio" name="filterop" id="option4">
+                                                            <label for="option4">
+                                                                <span class="custom-radio"></span> 
+                                                                Đáp án 4
+                                                            </label>
+                                                        </div>
+                                                        <textarea name="questionText" class="editor"></textarea>
+                                                    </div>
+                                                    <div class="option-item-list-drop">
+                                                        <div class="icon-drop"></div>
+                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="btn-add-answer mt-1">
+                                                <span class="icon-plus-circle"></span>
+                                                Thêm Câu Trả Lời
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
+                                <button class="button-edu mt-1">
+                                    <i class="fa-regular fa-plus"></i>
+                                    Thêm câu hỏi
+                                </button>    
                             </div>
-                            <div class="file-audio">
-                                <div class="checkbox2">
-                                    <input type="checkbox" id="add-audio" name="exclusiveCheckbox">
-                                    <label for="add-audio">
-                                        <div class="custom-checkbox"></div>
-                                        <span class="title-add-question">Upload audio</span>
-                                    </label>
+                            <div class="comprehension-right">
+                                <div class="input2 mt-2">
+                                    <label for="exam-name" class="floating-label">Điểm</label>
+                                    <input type="number" class="exam-name">
+                                </div>
+                                <div class="percentage-mark">
+                                    <div class="percentage-item mt-2">
+                                        <p>Đúng 1 câu hỏi (Chọn % điểm cho 1 câu trả lời đúng)</p>
+                                        <div class="percentage-percent">
+                                            <input type="number" min="0">
+                                            <span>% => Điểm = 0.00</span>
+                                        </div>
+                                    </div>
+                                    <div class="percentage-item mt-3">
+                                        <p>Đúng 2 câu hỏi (Chọn % điểm cho 2 câu trả lời đúng)</p>
+                                        <div class="percentage-percent">
+                                            <input type="number" min="0">
+                                            <span>% => Điểm = 0.00</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div> -->
-                <div class="phase-4 mt-2">
-                    <div class="question-options-container">
-                        <span class="title-add-question">Đáp án</span>
-                        <div class="question-option-item mt-2">
-                            <!-- <div class="singlechoice-container">
-                                <div class="option-item-list">
-                                    <div class="option-item-list-content">
-                                        <div class="radio-item">
-                                            <input type="radio" name="filterop" id="option1">
-                                            <label for="option1">
-                                                <span class="custom-radio"></span> 
-                                                Đáp án 1
-                                            </label>
-                                        </div>
-                                        <textarea name="questionText" class="editor"></textarea>
-                                    </div>
-                                    <div class="option-item-list-drop">
-                                        <div class="icon-drop"></div>
-                                    </div>
-                                </div>
-                                <div class="option-item-list">
-                                    <div class="option-item-list-content">
-                                        <div class="radio-item">
-                                            <input type="radio" name="filterop" id="option2">
-                                            <label for="option2">
-                                                <span class="custom-radio"></span> 
-                                                Đáp án 2
-                                            </label>
-                                        </div>
-                                        <textarea name="questionText" class="editor"></textarea>
-                                    </div>
-                                    <div class="option-item-list-drop">
-                                        <div class="icon-drop"></div>
-                                    </div>
-                                </div>
-                                <div class="option-item-list">
-                                    <div class="option-item-list-content">
-                                        <div class="radio-item">
-                                            <input type="radio" name="filterop" id="option3">
-                                            <label for="option3">
-                                                <span class="custom-radio"></span> 
-                                                Đáp án 3
-                                            </label>
-                                        </div>
-                                        <textarea name="questionText" class="editor"></textarea>
-                                    </div>
-                                    <div class="option-item-list-drop">
-                                        <div class="icon-drop"></div>
-                                    </div>
-                                </div>
-                                <div class="option-item-list">
-                                    <div class="option-item-list-content">
-                                        <div class="radio-item">
-                                            <input type="radio" name="filterop" id="option4">
-                                            <label for="option4">
-                                                <span class="custom-radio"></span> 
-                                                Đáp án 4
-                                            </label>
-                                        </div>
-                                        <textarea name="questionText" class="editor"></textarea>
-                                    </div>
-                                    <div class="option-item-list-drop">
-                                        <div class="icon-drop"></div>
-                                    </div>
-                                </div>
-                                <button class="btn-add-answer">
-                                    <span class="icon-plus-circle"></span>
-                                    Thêm Câu Trả Lời
-                                </button>
-                            </div> -->
-    
-                            <!-- <div class="multichoice-container">
-                                <div class="option-item-list">
-                                    <div class="option-item-list-content">
-                                        <div class="checkbox2">
-                                            <input type="checkbox" id="add-1">
-                                            <label for="add-1">
-                                                <div class="custom-checkbox"></div>
-                                                Đáp án 1
-                                            </label>
-                                        </div>
-                                        <textarea name="questionText" class="editor"></textarea>
-                                    </div>
-                                    <div class="option-item-list-drop">
-                                        <div class="icon-drop"></div>
-        
-                                    </div>
-                                </div>
-                                <div class="option-item-list">
-                                    <div class="option-item-list-content">
-                                        <div class="checkbox2">
-                                            <input type="checkbox" id="add-2">
-                                            <label for="add-2">
-                                                <div class="custom-checkbox"></div>
-                                                Đáp án 2
-                                            </label>
-                                        </div>
-                                        <textarea name="questionText" class="editor"></textarea>
-                                    </div>
-                                    <div class="option-item-list-drop">
-                                        <div class="icon-drop"></div>
-                                    </div>
-                                </div>
-                                <div class="option-item-list">
-                                    <div class="option-item-list-content">
-                                        <div class="checkbox2">
-                                            <input type="checkbox" id="add-3">
-                                            <label for="add-3">
-                                                <div class="custom-checkbox"></div>
-                                                Đáp án 3
-                                            </label>
-                                        </div>
-                                        <textarea name="questionText" class="editor"></textarea>
-                                    </div>
-                                    <div class="option-item-list-drop">
-                                        <div class="icon-drop"></div>
-                                    </div>
-                                </div>
-                                <div class="option-item-list">
-                                    <div class="option-item-list-content">
-                                        <div class="checkbox2">
-                                            <input type="checkbox" id="add-4">
-                                            <label for="add-4">
-                                                <div class="custom-checkbox"></div>
-                                                Đáp án 4
-                                            </label>
-                                        </div>
-                                        <textarea name="questionText" class="editor"></textarea>
-                                    </div>
-                                    <div class="option-item-list-drop">
-                                        <div class="icon-drop"></div>
-                                    </div>
-                                </div>
-                                <button class="btn-add-answer">
-                                    <span class="icon-plus-circle"></span>
-                                    Thêm Câu Trả Lời
-                                </button>
-                            </div>  -->
-                            
-                            <!-- <div class="matching-container">
-                                <div class="matching-item">
-                                    <p>Cặp 1</p>
-                                    <div class="matching-pair">
-                                        <textarea class="editor" id=""></textarea>
-                                        <textarea class="editor" id=""></textarea>
-                                        <div class="matching-drop">
-                                            <div class="icon-drop"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="matching-item">
-                                    <p>Cặp 1</p>
-                                    <div class="matching-pair">
-                                        <textarea class="editor" id=""></textarea>
-                                        <textarea class="editor" id=""></textarea>
-                                        <div class="matching-drop">
-                                            <div class="icon-drop"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="btn-add-answer">
-                                    <span class="icon-plus-circle"></span>
-                                    Thêm Cặp
-                                </button>
-                            </div> -->
-    
-                            <div class="comprehension-container">
-                                <div class="sub-question">
-                                    <div class="sub-question-header">
-                                        <div class="sub-question-header-1 toggle-sub-questions">
-                                            Câu hỏi 1
-                                            <i class="fa-solid fa-angle-down"></i>
-                                        </div>
-                                        <div class="sub-question-header-2">
-                                            <i class="fa-regular fa-trash-can"></i>
-                                            Xóa câu trả lời
-                                        </div>
-                                    </div>
-                                    <div class="sub-question-list mt-2">
-                                        <textarea class="editor" id=""></textarea>
-                                        <div class="sub-singlechoice-container mt-2">
-                                            <div class="option-item-list">
-                                                <div class="option-item-list-content">
-                                                    <div class="radio-item">
-                                                        <input type="radio" name="filterop" id="option1">
-                                                        <label for="option1">
-                                                            <span class="custom-radio"></span> 
-                                                            Đáp án 1
-                                                        </label>
-                                                    </div>
-                                                    <textarea name="questionText" class="editor"></textarea>
-                                                </div>
-                                                <div class="option-item-list-drop">
-                                                    <div class="icon-drop"></div>
-                    
-                                                </div>
-                                            </div>
-                                            <div class="option-item-list">
-                                                <div class="option-item-list-content">
-                                                    <div class="radio-item">
-                                                        <input type="radio" name="filterop" id="option2">
-                                                        <label for="option2">
-                                                            <span class="custom-radio"></span> 
-                                                            Đáp án 2
-                                                        </label>
-                                                    </div>
-                                                    <textarea name="questionText" class="editor"></textarea>
-                                                </div>
-                                                <div class="option-item-list-drop">
-                                                    <div class="icon-drop"></div>
-                    
-                                                </div>
-                                            </div>
-                                            <div class="option-item-list">
-                                                <div class="option-item-list-content">
-                                                    <div class="radio-item">
-                                                        <input type="radio" name="filterop" id="option3">
-                                                        <label for="option3">
-                                                            <span class="custom-radio"></span> 
-                                                            Đáp án 3
-                                                        </label>
-                                                    </div>
-                                                    <textarea name="questionText" class="editor"></textarea>
-                                                </div>
-                                                <div class="option-item-list-drop">
-                                                    <div class="icon-drop"></div>
-                    
-                                                </div>
-                                            </div>
-                                            <div class="option-item-list">
-                                                <div class="option-item-list-content">
-                                                    <div class="radio-item">
-                                                        <input type="radio" name="filterop" id="option4">
-                                                        <label for="option4">
-                                                            <span class="custom-radio"></span> 
-                                                            Đáp án 4
-                                                        </label>
-                                                    </div>
-                                                    <textarea name="questionText" class="editor"></textarea>
-                                                </div>
-                                                <div class="option-item-list-drop">
-                                                    <div class="icon-drop"></div>
-                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button class="btn-add-answer mt-1">
-                                            <span class="icon-plus-circle"></span>
-                                            Thêm Câu Trả Lời
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="button-edu mt-1">
-                                <i class="fa-regular fa-plus"></i>
-                                Thêm câu hỏi
-                            </button>
-    
-                        </div>
-                    </div>
-                    <div class="question-options-marks">
-                        <div class="input2 mt-2">
-                            <label for="exam-name" class="floating-label">Điểm</label>
-                            <input type="number" class="exam-name">
-                        </div>
-                        <div class="percentage-mark">
-                            <div class="percentage-item mt-2">
-                                <p>Đúng 1 đáp án (Chọn % điểm cho 1 câu trả lời đúng)</p>
-                                <div class="percentage-percent">
-                                    <input type="number" min="0">
-                                    <span>% => Điểm = 0.00</span>
-                                </div>
-                            </div>
-                            <div class="percentage-item mt-3">
-                                <p>Đúng 2 đáp án (Chọn % điểm cho 2 câu trả lời đúng)</p>
-                                <div class="percentage-percent">
-                                    <input type="number" min="0">
-                                    <span>% => Điểm = 0.00</span>
-                                </div>
-                            </div>
-                        </div>
-    
-    
-                    </div>
-                </div>
-                
+                </div>  
             </div>
             <div class="modal-footer">
                 <button class="button-edu" id="">Xác Nhận</button>
