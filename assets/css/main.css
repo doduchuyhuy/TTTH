@@ -4286,7 +4286,7 @@ a {
   border-radius: 50%;
 }
 .modal-add-question .modal-body {
-  padding: 0 30px 0 30px;
+  padding: 0 30px 10px 30px;
   max-height: calc(-300px + 100vh);
   height: min(600px, 100vh - 175px);
   overflow-y: auto;
@@ -4535,6 +4535,327 @@ a {
   .comprehension-form .comprehension-form-body .button-edu {
     font-size: 13px;
     padding: 5px 10px;
+  }
+}
+
+.multichoice-form .multichoice-form-header .title-question {
+  display: block;
+  font-weight: 700;
+}
+.multichoice-form .multichoice-form-body {
+  display: flex;
+  gap: 50px;
+}
+.multichoice-form .multichoice-form-body .multichoice-left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.multichoice-form .multichoice-form-body .multichoice-left .title-question {
+  display: block;
+  font-weight: 700;
+}
+.multichoice-form .multichoice-form-body .multichoice-left .option-item-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.multichoice-form .multichoice-form-body .multichoice-left .option-item-list .option-item-list-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+.multichoice-form .multichoice-form-body .multichoice-left .option-item-list .option-item-list-content .checkbox2 .custom-checkbox {
+  width: 18px;
+  height: 18px;
+}
+.multichoice-form .multichoice-form-body .multichoice-right {
+  flex: 1;
+}
+.multichoice-form .multichoice-form-body .multichoice-right .input2 input {
+  max-width: 100px;
+  padding: 10px 10px;
+}
+.multichoice-form .multichoice-form-body .multichoice-right .percentage-mark .percentage-item .percentage-percent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.multichoice-form .multichoice-form-body .multichoice-right .percentage-mark .percentage-item .percentage-percent input {
+  padding: 8px 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: #333;
+  width: 100%;
+  outline: none;
+  max-width: 64px;
+}
+
+.multichoice-form {
+  /* XS (extra small) dưới 576px */
+  /* SM (small) từ 576px đến 767px */
+  /* MD (medium) từ 768px đến 991px */
+}
+@media (max-width: 575.98px) {
+  .multichoice-form {
+    width: 100%; /* Full width */
+  }
+  .multichoice-form .multichoice-form-body {
+    font-size: 13px;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .multichoice-form {
+    width: 100%;
+  }
+  .multichoice-form .multichoice-form-body {
+    font-size: 13px;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .multichoice-form {
+    width: 100%;
+  }
+  .multichoice-form .multichoice-form-body {
+    font-size: 13px;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.singlechoice-form .singlechoice-form-header .title-question {
+  display: block;
+  font-weight: 700;
+}
+.singlechoice-form .singlechoice-form-body .title-question {
+  display: block;
+  font-weight: 700;
+}
+.singlechoice-form .singlechoice-form-body .singlechoice-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.singlechoice-form .singlechoice-form-body .singlechoice-options .option-item-list {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.singlechoice-form .singlechoice-form-body .singlechoice-options .option-item-list .option-item-list-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.singlechoice-form {
+  /* XS (extra small) dưới 576px */
+  /* SM (small) từ 576px đến 767px */
+  /* MD (medium) từ 768px đến 991px */
+}
+@media (max-width: 575.98px) {
+  .singlechoice-form {
+    width: 100%; /* Full width */
+  }
+  .singlechoice-form .singlechoice-form-body .singlechoice-options {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .singlechoice-form {
+    width: 100%;
+  }
+  .singlechoice-form .singlechoice-form-body .singlechoice-options {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .singlechoice-form {
+    width: 100%;
+  }
+  .singlechoice-form .singlechoice-form-body {
+    font-size: 13px;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.matching-form .matching-form-header .title-question {
+  display: block;
+  font-weight: 700;
+}
+.matching-form .matching-form-body {
+  display: flex;
+  gap: 50px;
+}
+.matching-form .matching-form-body .matching-left {
+  flex: 2.5;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.matching-form .matching-form-body .matching-left .title-question {
+  display: block;
+  font-weight: 700;
+}
+.matching-form .matching-form-body .matching-left .matching-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.matching-form .matching-form-body .matching-left .matching-item .matching-pair {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.matching-form .matching-form-body .matching-right {
+  flex: 1;
+}
+.matching-form .matching-form-body .matching-right .input2 input {
+  max-width: 100px;
+  padding: 10px 10px;
+}
+.matching-form .matching-form-body .matching-right .percentage-mark .percentage-item .percentage-percent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.matching-form .matching-form-body .matching-right .percentage-mark .percentage-item .percentage-percent input {
+  padding: 8px 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: #333;
+  width: 100%;
+  outline: none;
+  max-width: 64px;
+}
+
+.matching-form {
+  /* XS (extra small) dưới 576px */
+  /* SM (small) từ 576px đến 767px */
+  /* MD (medium) từ 768px đến 991px */
+}
+@media (max-width: 575.98px) {
+  .matching-form {
+    width: 100%; /* Full width */
+  }
+  .matching-form .matching-form-body {
+    font-size: 13px;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .matching-form {
+    width: 100%;
+  }
+  .matching-form .matching-form-body {
+    font-size: 13px;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .matching-form {
+    width: 100%;
+  }
+  .matching-form .matching-form-body {
+    font-size: 13px;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.blank-form .blank-form-header .title-question {
+  display: block;
+  font-weight: 700;
+}
+.blank-form .blank-form-body {
+  display: flex;
+  gap: 50px;
+}
+.blank-form .blank-form-body .blank-left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.blank-form .blank-form-body .blank-left .title-question {
+  display: block;
+  font-weight: 700;
+}
+.blank-form .blank-form-body .blank-left .option-item-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.blank-form .blank-form-body .blank-left .option-item-list .option-item-list-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+.blank-form .blank-form-body .blank-right {
+  flex: 1;
+}
+.blank-form .blank-form-body .blank-right .input2 input {
+  max-width: 100px;
+  padding: 10px 10px;
+}
+.blank-form .blank-form-body .blank-right .percentage-mark .percentage-item .percentage-percent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.blank-form .blank-form-body .blank-right .percentage-mark .percentage-item .percentage-percent input {
+  padding: 8px 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: #333;
+  width: 100%;
+  outline: none;
+  max-width: 64px;
+}
+
+.blank-form {
+  /* XS (extra small) dưới 576px */
+  /* SM (small) từ 576px đến 767px */
+  /* MD (medium) từ 768px đến 991px */
+}
+@media (max-width: 575.98px) {
+  .blank-form {
+    width: 100%; /* Full width */
+  }
+  .blank-form .blank-form-body {
+    font-size: 13px;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .blank-form {
+    width: 100%;
+  }
+  .blank-form .blank-form-body {
+    font-size: 13px;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .blank-form {
+    width: 100%;
+  }
+  .blank-form .blank-form-body {
+    font-size: 13px;
+    flex-direction: column;
+    gap: 20px;
   }
 }
 
@@ -7795,7 +8116,7 @@ input:checked + .slider:before {
 .checkbox2 {
   display: flex;
   align-items: center;
-  cursor: pointer;
+  user-select: none;
 }
 .checkbox2 input[type=checkbox] {
   display: none; /* Hide the default checkbox */
@@ -7872,6 +8193,7 @@ input:checked + .slider:before {
   font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  max-width: 200px;
 }
 .btn-add-answer:hover {
   background-color: rgba(10, 143, 220, 0.04); /* Màu nền khi hover */
@@ -8009,6 +8331,22 @@ input:checked + .slider:before {
 .checkbox-item input[type=checkbox]:checked + label .custom-checkbox i {
   opacity: 1; /* Keep checkmark visible when checked */
   color: #fff; /* White checkmark color when checked */
+}
+
+.textarea-custom {
+  padding: 0.625rem;
+  color: #111827;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+}
+.textarea-custom:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+.textarea-custom::placeholder {
+  color: #9ca3af;
 }
 
 /*# sourceMappingURL=main.css.map */

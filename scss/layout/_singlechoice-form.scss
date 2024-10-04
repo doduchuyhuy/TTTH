@@ -1,0 +1,101 @@
+.singlechoice-form{
+    .singlechoice-form-header{
+        .title-question{
+            display: block;
+            font-weight: 700;
+        }
+    }
+    .singlechoice-form-body{
+        .title-question{
+            display: block;
+            font-weight: 700;
+        }
+        .singlechoice-options{
+            // display: flex;
+            // flex-wrap: wrap;
+            // gap: 40px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            .option-item-list{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                .option-item-list-content{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    flex: 1;
+                    
+                }
+            }
+        }  
+    }
+}
+
+
+
+
+.singlechoice-form{
+    /* XS (extra small) dưới 576px */
+    @media (max-width: 575.98px) {
+        width: 100%; /* Full width */
+        .singlechoice-form-body{
+            .singlechoice-options{
+                grid-template-columns: 1fr;
+            }
+               
+        }
+        
+    }
+  
+    /* SM (small) từ 576px đến 767px */
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        width: 100%;
+        .singlechoice-form-body{
+            .singlechoice-options{
+                grid-template-columns: 1fr;
+            }
+             
+        }
+        
+           
+    }
+  
+    /* MD (medium) từ 768px đến 991px */
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        width: 100%;
+        .singlechoice-form-body{
+            font-size: 13px;
+            flex-direction: column;
+            gap: 20px;
+               
+        }
+        
+         
+    }
+  
+    // /* LG (large) từ 992px đến 1199px */
+    // @media (min-width: 992px) and (max-width: 1199.98px) {
+    //     width: 960px;
+        
+    // }
+  
+    // /* XL (extra large) từ 1200px đến 1399px */
+    // @media (min-width: 1200px) and (max-width: 1399.98px) {
+    //     width: 1140px;
+        
+    // }
+  
+    // /* XXL (extra extra large) từ 1400px đến 1569px */
+    // @media (min-width: 1400px) and (max-width: 1669.98px) {
+    //     width: 1320px;
+       
+    // }
+  
+    // /* XXXL (extra extra extra large) từ 1570px trở lên */
+    // @media (min-width: 1670px) {
+    //     width: 1670px;
+    // }
+  }

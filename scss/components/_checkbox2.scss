@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     // padding: 6px;
-    cursor: pointer;
+    user-select: none;
 
     input[type="checkbox"] {
         display: none; /* Hide the default checkbox */
