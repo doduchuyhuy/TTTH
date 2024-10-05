@@ -1,4 +1,5 @@
 #edu-quiz{
+    margin-top: 94px;
     .container-exam{
         .row{
             .left{
@@ -306,13 +307,12 @@
                                 padding: 8px 0px;
                                 position: relative;
                                 .content-item{
-                                    border: 2px solid transparent;
+                                    border: 1px solid #eee;
+                                    border-radius: 8px;
                                     margin-top: 6px;
-                                    margin-bottom: 6px;
+                                    margin-bottom: 12px;
                                     -webkit-tap-highlight-color: transparent;
                                     background-color: transparent;
-                                    
-                                    border-radius: 0px;
                                     cursor: pointer;
                                     user-select: none;
                                     vertical-align: middle;

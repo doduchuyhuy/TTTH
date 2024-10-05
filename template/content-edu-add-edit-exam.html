@@ -1126,11 +1126,6 @@
         });
 
         
-
-        // $('#confirmBtn, .close-modal').on('click', function() {
-        //     $('#startModal').css('display', 'none');
-        // });
-
         $('#addSection').click(function() {
             // Hiển thị modal
             $('#addSectionModal').show();
@@ -1167,23 +1162,6 @@
             
         });
 
-        // $('.close-modal-add-section').on('click', function() {
-        //     $('#addSectionModal').hide();
-        // });
-
-        // // Sự kiện khi click vào nút đóng
-        // $('#addQuestionTextModal .close-modal-auth').on('click', function() {
-        //     $('#addQuestionTextModal').hide();
-        // });
-
-        // // Sự kiện khi click vào modal nhưng không phải là nội dung bên trong modal
-        // $('#addQuestionTextModal').on('click', function(event) {
-        //     // Kiểm tra xem người dùng có click vào chính modal (nền) hay không
-        //     if ($(event.target).is('#addQuestionTextModal')) {
-        //         $('#addQuestionTextModal').hide();
-        //     }
-        // });
-
 
         // Sự kiện khi click vào nút đóng
         $('.close-modal-auth').on('click', function() {
@@ -1202,40 +1180,9 @@
 
         
 
-        $('#displayResultsToggle').on('change', function() {
-            var toggleLabel = $('#toggleLabel');
-            if (this.checked) {
-                toggleLabel.text('Active');
-            } else {
-                toggleLabel.text('Inactive');
-            }
-        });
+        
 
-
-
-        $('.input-dropdown .input-dropdown-select div').click(function() {
-            var value = $(this).data('value'); // Lấy giá trị từ data-value
-            var textBoxId = $(this).closest('.input-dropdown').find('.exam-status').attr('id');
-            $('#' + textBoxId).val(value ? $(this).text().trim() : ''); // Nếu value là rỗng, reset textBox
-        });
-
-        $('.input-dropdown').click(function() {
-            // Đóng tất cả các dropdown khác trước khi toggle dropdown hiện tại
-            $('.input-dropdown').not(this).removeClass('active');
-            $(this).toggleClass('active');
-        });
-
-        // Đóng dropdown khi click ngoài
-        $(document).on('click', function(e) {
-            if (!$(e.target).closest('.input-dropdown').length) {
-                $('.input-dropdown').removeClass('active');
-            }
-        });
-        $('input[name="exclusiveCheckbox"]').on('change', function() {
-            if ($(this).is(':checked')) {
-                $('input[name="exclusiveCheckbox"]').not(this).prop('checked', false);
-            }
-        });
+        
         $('#nav-edu').load("./template/nav-edu.html", function(){
                 $('#profile').on('click', function(e) {
                     e.stopPropagation();
