@@ -1,4 +1,5 @@
 .radio{
+    border: 1px solid transparent; // Viền mặc định
     display: flex;
     align-items: center;
     padding: 6px;
@@ -36,6 +37,27 @@
         border-radius: 50%;
         // transform: scale(0);
         // transition: transform 0.15s;
+    }
+
+    .radio__icon {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #626262;
+        border-radius: 50%;
+        background-color: transparent;
+        color: transparent; // Ẩn biểu tượng khi chưa chọn
+        margin-right: 10px;
+        transition: background-color 0.2s, color 0.2s;
+    }
+
+    .radio__input:checked + .radio__icon {
+        background-color: #eeaa81; // Màu nền cam khi chọn
+        border-color: #eeaa81 ;
+        color: white; // Hiển thị biểu tượng khi chọn
     }
 
 
