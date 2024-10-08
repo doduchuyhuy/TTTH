@@ -2254,10 +2254,26 @@ a {
   display: flex;
   gap: 20px;
 }
+#edu-quiz .container-exam .row .left .header-md .timer-md {
+  text-align: center;
+}
+#edu-quiz .container-exam .row .left .header-md .section-md {
+  display: flex;
+  justify-content: space-between;
+}
+#edu-quiz .container-exam .row .left .header-md .questions-section {
+  display: flex;
+  overflow: hidden;
+}
+#edu-quiz .container-exam .row .left .header-md .questions-section div {
+  background-color: #259172;
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 5px;
+}
 #edu-quiz .container-exam .row .center .root {
   background-color: rgb(255, 255, 255);
   color: rgb(17, 24, 39);
-  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   overflow: hidden;
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.04) 0px 10px 10px 4px;

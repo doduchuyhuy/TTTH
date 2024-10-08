@@ -1,9 +1,9 @@
+@use "../abstracts";
 #edu-quiz{
     margin-top: 100px;
     .container-exam{
         .row{
             .left{
-                // padding: 32px 0 0 32px;
                 .root{
                     background-color: rgb(255, 255, 255);
                     color: rgb(17, 24, 39);
@@ -251,14 +251,30 @@
                         }
                     }
                 }
+                .header-md{
+                    .timer-md{
+                        text-align: center;
+                    }
+                    .section-md{
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    .questions-section{
+                        display: flex;
+                        overflow: hidden;
+                        div{
+                            background-color: #259172;
+                            flex-grow: 1;
+                            flex-shrink: 0;
+                            padding: 5px;
+                        }
+                    }
+                }
             }
             .center{
-                // padding: 32px 0 0 32px;
-                // height: auto;
                 .root{
                     background-color: rgb(255, 255, 255);
                     color: rgb(17, 24, 39);
-                    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
                     overflow: hidden;
                     border-radius: 16px;
                     box-shadow: rgba(0, 0, 0, 0.04) 0px 10px 10px 4px;
@@ -298,20 +314,14 @@
                             border-color: rgba(0, 0, 0, 0.12);
                         }
                         .content-content{
-                            // p{
-                            //     font-weight: 600;
-                            // }
-                            // margin-top: 15px;
+                        
                             ul{
                                 list-style: none;
                                 margin: 0px;
-                                // padding: 8px 0px;
+                               
                                 position: relative;
                                 .content-item{
                                     border-bottom: 1px solid #eee;
-                                    // border-radius: 8px;
-                                    // margin-top: 6px;
-                                    // margin-bottom: 12px;
                                     -webkit-tap-highlight-color: transparent;
                                     background-color: transparent;
                                     cursor: pointer;
