@@ -19,41 +19,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
-<body>
-    <div id="nav-edu">
-        <header id="header-edu">
-            <div class="container-header">
-                <div class="left">
-                    <!-- <img src="../assets/svg/new1exam.svg" alt=""> -->
-                    <picture>
-                        
-                        <!-- Ảnh cho màn hình trung bình (tablet) -->
-                        <source media="(min-width: 768px)" srcset="../assets/svg/new1exam.svg">
-                
-                        <!-- Ảnh cho màn hình nhỏ (mobile) -->
-                        <source media="(max-width: 767px)" srcset="../assets/svg/logoCNTTDAV-sm.svg">
-                
-                        <!-- Ảnh mặc định nếu không có điều kiện nào ở trên phù hợp -->
-                        <img src="../assets/images/image-default.jpg" alt="Responsive Image">
-                    </picture>
-                </div>
-                <div class="center">
-                    <div class="form-input">
-                        <input type="search" placeholder="Search...">
-                        <button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
-                    </div>
-                   
-                </div>
-                <div class="right">
-                    <div class="signin-signup">
-                        <button class="d-lg-none">Đăng ký</button>
-                        <button id="signIn-button">Đăng nhập</button>
-                    </div>
+<style>
+ 
 
-                </div>
-            </div>
-        </header>            
-    </div>
+
+ 
+
+
+
+
+</style>
+<body>
+    
     <div id="edu-quiz">
         <div class="container-exam container">
             <div class="row">
@@ -70,20 +47,17 @@
                             </div>
                         </div>
                         <div class="questions-section">
-                            <div>Câu 1</div>
-                            <div>Câu 2</div>
-                            <div>Câu 3</div>
-                            <div>Câu 4</div>
-                            <div>Câu 5</div>
-                            <div>Câu 6</div>
-                            <div>Câu 7</div>
-                            <div>Câu 8</div>
-                            <div>Câu 9</div>
-                            <div>Câu 10</div>
+                            <div class="question-tab">Câu 1</div>
+                            <div class="question-tab">Câu 2</div>
+                            <div class="question-tab">Câu 3</div>
+                            <div class="question-tab">Câu 4</div>
+                            <div class="question-tab">Câu 5</div>
+                            <div class="indicator"></div> <!-- Dòng kẻ xanh -->
                         </div>
+                        
                     </div>
                 </div>
-                <div class="col-6 col-xl-12 center">
+                <div class="col-6 col-xl-12 center mt-1">
                     <div class="root">
                         <div class="header">
                             <div class="header-content">
@@ -153,13 +127,220 @@
                             </button>    
                         </div>
                     </div>
+                    <div class="root">
+                        <div class="header">
+                            <div class="header-content">
+                                <span>
+                                    Câu 1(1 đáp án)
+                                </span>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="content-header">
+                                <h4>Sheena Southall, a 22-year-old student, was keen to test her limit when she agreed to appear on a TV show. It has been described as one of the most fascinating shows in the world.
+        
+                                    She saw an advert which said: “Do you want to make some quick cash and do you want to travel?” She talked to herself: “Why don't I have a try? I'm always looking for an opportunity to test myself.” So, she applied for the job, went for an interview, and got it. At the interview, she explained how she was prepared for any challenges. Then, just as she was leaving for Singapore she found out that she was going to become a skyscraper window cleaner.
+                                 
+                                    The job was challenging. She had to pull herself up and down carrying heavy water buckets. If she didn't clean the windows properly, they would tell her to go back and do it again. But she admits the experience has changed her. As soon as she got back, she finished her studies and graduated. She started hunting for a job that would be both exciting and tough. Sheena says: “Nothing will ever be as exciting and scary as that first day of cleaning windows up in the air. But if you don't face your fears and accept what life offers you, how will you know what you are capable of? It has been the best experience of my life so far."</h4>
+                            </div>
+                            <hr>
+                            <div class="content-content">
+                                <p>Câu 1: Vì sao hàng hóa có hai thuộc tính là giá trị và giá trị sử dụng?</p>
+                                <ul>
+                                    <div class="content-item">
+                                        <label for="myRadioId1" class="radio">
+                                            <input type="radio" name="myRadioField" id="myRadioId1" class="radio__input">
+                                            <div class="radio__radio"></div>
+                                            <span>
+                                                a. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="content-item">
+                                        <label for="myRadioId2" class="radio">
+                                            <input type="radio" name="myRadioField" id="myRadioId2" class="radio__input">
+                                            <div class="radio__radio"></div>
+                                            <span>
+                                                b. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="content-item">
+                                        <label for="myRadioId3" class="radio">
+                                            <input type="radio" name="myRadioField" id="myRadioId3" class="radio__input">
+                                            <div class="radio__radio"></div>
+                                            <span>
+                                                c. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                            </span>
+                                        </label>
+                                    </div>
+                                </ul>
+                            </div>
+                            <div class="content-content">
+                                <p>Câu 2: Vì sao hàng hóa có hai thuộc tính là giá trị và giá trị sử dụng?</p>
+                                <ul>
+                                    <div class="content-item">
+                                        <label for="myRadioId1" class="radio">
+                                            <input type="radio" name="myRadioField" id="myRadioId1" class="radio__input">
+                                            <div class="radio__radio"></div>
+                                            <span>
+                                                a. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="content-item">
+                                        <label for="myRadioId2" class="radio">
+                                            <input type="radio" name="myRadioField" id="myRadioId2" class="radio__input">
+                                            <div class="radio__radio"></div>
+                                            <span>
+                                                b. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="content-item">
+                                        <label for="myRadioId3" class="radio">
+                                            <input type="radio" name="myRadioField" id="myRadioId3" class="radio__input">
+                                            <div class="radio__radio"></div>
+                                            <span>
+                                                c. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                            </span>
+                                        </label>
+                                    </div>
+                                </ul>
+                            </div>
+                            <div class="content-content">
+                                <p>Câu 3: Vì sao hàng hóa có hai thuộc tính là giá trị và giá trị sử dụng?</p>
+                                <ul>
+                                    <div class="content-item">
+                                        <label for="myRadioId1" class="radio">
+                                            <input type="radio" name="myRadioField" id="myRadioId1" class="radio__input">
+                                            <div class="radio__radio"></div>
+                                            <span>
+                                                a. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="content-item">
+                                        <label for="myRadioId2" class="radio">
+                                            <input type="radio" name="myRadioField" id="myRadioId2" class="radio__input">
+                                            <div class="radio__radio"></div>
+                                            <span>
+                                                b. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="content-item">
+                                        <label for="myRadioId3" class="radio">
+                                            <input type="radio" name="myRadioField" id="myRadioId3" class="radio__input">
+                                            <div class="radio__radio"></div>
+                                            <span>
+                                                c. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                            </span>
+                                        </label>
+                                    </div>
+                                </ul>
+                            </div>      
+                        </div>
+                        <div class="footer">
+                            <button id="prev-button">
+                                <div class="btn-circle">
+                                    <i class="fas fa-circle"></i><i class="fas fa-chevron-left inside"></i>
+                                </div>
+                                <span>Trước</span>  
+                            </button>
+                            <button id="next-button">
+                                <span>Sau</span>
+                                <div class="btn-circle">
+                                    <i class="fas fa-circle"></i><i class="fas fa-chevron-right inside"></i>   
+                                </div>
+                            </button>    
+                        </div>
+                    </div>
+                    
                     
                 </div>
                
             </div>
         </div>
     </div>
-    
+<script>
+   $(document).ready(function() {
+    let currentIndex = 0;
+    const questions = $('.center .root');
+    const totalQuestions = questions.length;
+    const tabs = $('.questions-section .question-tab');
+    const indicator = $('.questions-section .indicator');
+
+    function updateIndicatorPosition() {
+        // Tính toán vị trí của dòng kẻ dựa trên tab hiện tại
+        const activeTab = $(tabs[currentIndex]);
+        const tabOffset = activeTab.position().left;
+        const tabWidth = activeTab.outerWidth();
+
+        // Di chuyển dòng kẻ tới vị trí của tab được chọn
+        indicator.css({
+            transform: `translateX(${tabOffset}px)`,
+            width: `${tabWidth}px`
+        });
+    }
+
+    function showQuestion(index) {
+        // Kiểm tra chỉ số index hợp lệ
+        if (index >= 0 && index < totalQuestions) {
+            // Ẩn tất cả các câu hỏi và hiển thị câu hỏi hiện tại
+            questions.removeClass('active').hide();
+            $(questions[index]).addClass('active').show();
+
+            // Cập nhật chỉ số câu hỏi và vị trí dòng kẻ
+            currentIndex = index;
+
+            // Xóa class active khỏi tất cả các tab và thêm vào tab hiện tại
+            tabs.removeClass('active');
+            $(tabs[currentIndex]).addClass('active');
+
+            // Cập nhật vị trí của dòng kẻ
+            updateIndicatorPosition();
+        }
+    }
+
+    // Sự kiện click vào tab câu hỏi
+    tabs.click(function() {
+        const newIndex = $(this).index();
+        showQuestion(newIndex);
+    });
+
+    // Sự kiện touchstart, touchmove, và touchend để xác định hành vi vuốt
+    let startX = 0;
+    let endX = 0;
+    $('.root').on('touchstart', function(event) {
+        startX = event.originalEvent.touches[0].clientX;
+    });
+
+    $('.root').on('touchmove', function(event) {
+        endX = event.originalEvent.touches[0].clientX;
+    });
+
+    $('.root').on('touchend', function() {
+        if (startX > endX + 50) {
+            // Vuốt sang trái
+            if (currentIndex < totalQuestions - 1) {
+                showQuestion(currentIndex + 1);
+            }
+        } else if (startX < endX - 50) {
+            // Vuốt sang phải
+            if (currentIndex > 0) {
+                showQuestion(currentIndex - 1);
+            }
+        }
+    });
+
+    // Hiển thị câu hỏi đầu tiên và cập nhật vị trí dòng kẻ khi tải trang
+    showQuestion(currentIndex);
+    updateIndicatorPosition();
+});
+
+
+</script>
 </body>
 </html>
 

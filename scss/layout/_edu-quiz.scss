@@ -254,19 +254,43 @@
                 .header-md{
                     .timer-md{
                         text-align: center;
+                        padding: 10px;
+                        background-color: #3987c7;
+                        color: #fff;
                     }
                     .section-md{
                         display: flex;
                         justify-content: space-between;
+                        padding: 15px;
                     }
                     .questions-section{
                         display: flex;
+                        position: relative;
                         overflow: hidden;
-                        div{
-                            background-color: #259172;
+                        border-bottom: 1px solid #ddd;
+                        .question-tab{
+                            -webkit-tap-highlight-color: transparent; /* Xóa highlight trên iOS và Android */
+                            -webkit-user-select: none; /* Ngăn chặn chọn văn bản khi nhấn vào tab */
+                            user-select: none; /* Ngăn chặn chọn văn bản khi nhấn vào tab */
+                            touch-action: manipulation; /* Đảm bảo chỉ thao tác chạm */
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: #72757c;
                             flex-grow: 1;
                             flex-shrink: 0;
-                            padding: 5px;
+                            padding: 10px;
+                            cursor: pointer;
+                            &.active{
+                                color: #3987c7;
+                            }
+                        }
+                        .indicator {
+                            position: absolute;
+                            bottom: 0;
+                            height: 2px;
+                            background-color: #3987c7;
+                            transition: transform 0.3s ease;
                         }
                     }
                 }

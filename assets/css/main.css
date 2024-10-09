@@ -2256,20 +2256,44 @@ a {
 }
 #edu-quiz .container-exam .row .left .header-md .timer-md {
   text-align: center;
+  padding: 10px;
+  background-color: #3987c7;
+  color: #fff;
 }
 #edu-quiz .container-exam .row .left .header-md .section-md {
   display: flex;
   justify-content: space-between;
+  padding: 15px;
 }
 #edu-quiz .container-exam .row .left .header-md .questions-section {
   display: flex;
+  position: relative;
   overflow: hidden;
+  border-bottom: 1px solid #ddd;
 }
-#edu-quiz .container-exam .row .left .header-md .questions-section div {
-  background-color: #259172;
+#edu-quiz .container-exam .row .left .header-md .questions-section .question-tab {
+  -webkit-tap-highlight-color: transparent; /* Xóa highlight trên iOS và Android */
+  -webkit-user-select: none; /* Ngăn chặn chọn văn bản khi nhấn vào tab */
+  user-select: none; /* Ngăn chặn chọn văn bản khi nhấn vào tab */
+  touch-action: manipulation; /* Đảm bảo chỉ thao tác chạm */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #72757c;
   flex-grow: 1;
   flex-shrink: 0;
-  padding: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+#edu-quiz .container-exam .row .left .header-md .questions-section .question-tab.active {
+  color: #3987c7;
+}
+#edu-quiz .container-exam .row .left .header-md .questions-section .indicator {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: #3987c7;
+  transition: transform 0.3s ease;
 }
 #edu-quiz .container-exam .row .center .root {
   background-color: rgb(255, 255, 255);
