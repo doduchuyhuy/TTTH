@@ -1,6 +1,6 @@
 @use "../abstracts";
 #edu-quiz{
-    margin-top: 100px;
+    // margin-top: 100px;
     .container-exam{
         .row{
             .left{
@@ -264,11 +264,20 @@
                         padding: 15px;
                     }
                     .questions-section{
-                        display: flex;
-                        position: relative;
-                        overflow: hidden;
+                        // display: flex;
+                        // position: relative;
+                        // overflow: hidden;
                         border-bottom: 1px solid #ddd;
+
+                        display: flex;
+                        overflow-x: auto;
+                        white-space: nowrap;
+                        scrollbar-width: none; /* Ẩn scrollbar trên Firefox */
+                        position: relative;
+                        scroll-behavior: smooth; 
+                        
                         .question-tab{
+                            
                             -webkit-tap-highlight-color: transparent; /* Xóa highlight trên iOS và Android */
                             -webkit-user-select: none; /* Ngăn chặn chọn văn bản khi nhấn vào tab */
                             user-select: none; /* Ngăn chặn chọn văn bản khi nhấn vào tab */
@@ -291,6 +300,8 @@
                             height: 2px;
                             background-color: #3987c7;
                             transition: transform 0.3s ease;
+
+                            
                         }
                     }
                 }

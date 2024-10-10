@@ -1,0 +1,38 @@
+.modal-overlay-mobile{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4); /* Màu nền mờ khi modal hiển thị */
+    display: flex;
+    justify-content: flex-end; /* Đẩy modal-content xuống dưới */
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 1000; /* Đảm bảo modal nằm trên các thành phần khác */
+    .modal-section-mobile{
+        background: #fff;
+    width: 100%;
+    max-height: 70%; /* Giới hạn chiều cao của modal */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+       
+    }
+}
+
+.modal-overlay-mobile.show {
+    opacity: 1;
+    visibility: visible;
+}
+.modal-overlay-mobile.show .modal-section-mobile {
+    transform: translateY(0); /* Hiển thị modal từ dưới lên */
+}
+
+
+
