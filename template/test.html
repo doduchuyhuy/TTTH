@@ -1312,9 +1312,47 @@
                 </button>
             </div>
             <div class="modal-body">
-              kakaakakak
+                <p>Tự động chuyển câu</p>
+                <div class="dropdown">
+                    <input type="text" class="textBox" placeholder="Tắt" readonly>
+                    <div class="matching-select">
+                        <div data-value="0">Tắt</div>
+                        <div data-value="1s">1s</div>
+                        <div data-value="5s">5s</div>
+                        <div data-value="10s">10s</div>
+                        <div data-value="15s">15s</div>
+                        <div data-value="20s">20s</div>
+                    </div>
+                    <i class="dropdown-icon fa fa-chevron-down"></i> 
+                </div>
+                <button class="button-edu">Làm lại Câu sai</button>
             </div>
-            <div class="modal-footer mt-3">
+            <div class="modal-footer">
+                <p>Chọn phần thi</p>
+                <div class="quiz-section">
+                    <div class="quiz-section-left">
+                        <div class="section-header">
+                            <h3>Phần 1</h3>
+                            <span class="question-count">(32 câu)</span>
+                        </div>
+                        <div class="progress">
+                            <span>Tiến độ (0/32)</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </div>
+                        <div class="result-info">
+                            <span class="correct">Đúng: <span class="correct-count">0 câu</span></span>
+                            <span class="incorrect">Sai: <span class="incorrect-count">0 câu</span></span>
+                        </div>
+                    </div>
+                    <div class="quiz-section-right">
+                        <div class="radio-button">
+                            <input type="radio" id="section1" name="quiz-section" checked>
+                            <label for="section1"></label>
+                        </div>
+                    </div>
+                </div>
                 
             </div>
         </div>

@@ -4906,8 +4906,7 @@ a {
   top: 0;
   background: rgba(0, 0, 0, 0.4); /* Màu nền mờ khi modal hiển thị */
   display: flex;
-  justify-content: flex-end; /* Đẩy modal-content xuống dưới */
-  align-items: center;
+  align-items: end;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
@@ -4923,6 +4922,144 @@ a {
   box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
   transform: translateY(100%);
   transition: transform 0.3s ease-in-out;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-header {
+  margin-bottom: 40px;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-header .close-modal-auth {
+  width: 35px;
+  height: 35px;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-body {
+  border-bottom: 1px solid #ddd;
+  padding: 0px 20px 20px 20px;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-body p {
+  font-weight: 550;
+  margin-bottom: 10px;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-body .dropdown {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-body .button-edu {
+  width: 100%;
+  justify-content: center;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-footer {
+  padding: 20px;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-footer p {
+  font-weight: 550;
+  margin-bottom: 10px;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section {
+  background: #f6f3fe; /* Màu nền nhạt */
+  border-radius: 12px;
+  border: 1px solid #7551b6;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-left {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-left .section-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #453d5d; /* Màu tím nhạt */
+  font-weight: 550;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-left .section-header .question-count {
+  font-size: 14px;
+  color: #72727a;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-left .progress span {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+  color: #72727a; /* Màu tím nhạt */
+}
+.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-left .progress .progress-bar {
+  background: #e4cfff; /* Màu nền thanh tiến độ */
+  border-radius: 8px;
+  height: 6px;
+  position: relative;
+  overflow: hidden;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-left .progress .progress-bar .progress-fill {
+  background: #e0cffb; /* Màu tím cho thanh tiến độ */
+  height: 100%;
+  width: 0%; /* Chỉnh độ rộng dựa vào tiến độ */
+  transition: width 0.3s ease;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-left .result-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-left .result-info .correct {
+  color: #00c853; /* Màu xanh lá */
+}
+.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-left .result-info .incorrect {
+  color: #d32f2f; /* Màu đỏ */
+}
+.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-right {
+  display: flex;
+  align-items: center;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-right .radio-button input[type=radio] {
+  display: none;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-right .radio-button input[type=radio]:checked + label::before {
+  border-color: #6b4fd8;
+  background: #6b4fd8;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-right .radio-button label {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #6b4fd8;
+  cursor: pointer;
+  background: #fff;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-right .radio-button label::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: transparent;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .radio-button input[type=radio] {
+  display: none;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .radio-button input[type=radio]:checked + label::before {
+  border-color: #6b4fd8;
+  background: #6b4fd8;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .radio-button label {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #6b4fd8;
+  cursor: pointer;
+  background: #fff;
+}
+.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .radio-button label::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: transparent;
+  border-radius: 50%;
+  transition: background 0.3s ease;
 }
 
 .modal-overlay-mobile.show {
