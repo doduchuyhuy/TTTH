@@ -4953,113 +4953,10 @@ a {
   font-weight: 550;
   margin-bottom: 10px;
 }
-.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section {
-  background: #f6f3fe; /* Màu nền nhạt */
-  border-radius: 12px;
-  border: 1px solid #7551b6;
-  padding: 16px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-}
-.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-left {
-  flex: 3;
+.modal-overlay-mobile .modal-section-mobile .modal-footer .footer-section-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-left .section-header h3 {
-  margin: 0;
-  font-size: 16px;
-  color: #453d5d; /* Màu tím nhạt */
-  font-weight: 550;
-}
-.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-left .section-header .question-count {
-  font-size: 14px;
-  color: #72727a;
-}
-.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-left .progress span {
-  display: block;
-  font-size: 12px;
-  margin-bottom: 4px;
-  color: #72727a; /* Màu tím nhạt */
-}
-.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-left .progress .progress-bar {
-  background: #e4cfff; /* Màu nền thanh tiến độ */
-  border-radius: 8px;
-  height: 6px;
-  position: relative;
-  overflow: hidden;
-}
-.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-left .progress .progress-bar .progress-fill {
-  background: #e0cffb; /* Màu tím cho thanh tiến độ */
-  height: 100%;
-  width: 0%; /* Chỉnh độ rộng dựa vào tiến độ */
-  transition: width 0.3s ease;
-}
-.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-left .result-info {
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-}
-.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-left .result-info .correct {
-  color: #00c853; /* Màu xanh lá */
-}
-.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-left .result-info .incorrect {
-  color: #d32f2f; /* Màu đỏ */
-}
-.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-right {
-  display: flex;
-  align-items: center;
-}
-.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-right .radio-button input[type=radio] {
-  display: none;
-}
-.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-right .radio-button input[type=radio]:checked + label::before {
-  border-color: #6b4fd8;
-  background: #6b4fd8;
-}
-.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-right .radio-button label {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  border: 2px solid #6b4fd8;
-  cursor: pointer;
-  background: #fff;
-}
-.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .quiz-section-right .radio-button label::before {
-  content: "";
-  display: block;
-  width: 8px;
-  height: 8px;
-  background: transparent;
-  border-radius: 50%;
-  transition: background 0.3s ease;
-}
-.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .radio-button input[type=radio] {
-  display: none;
-}
-.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .radio-button input[type=radio]:checked + label::before {
-  border-color: #6b4fd8;
-  background: #6b4fd8;
-}
-.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .radio-button label {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  border: 2px solid #6b4fd8;
-  cursor: pointer;
-  background: #fff;
-}
-.modal-overlay-mobile .modal-section-mobile .modal-footer .quiz-section .radio-button label::before {
-  content: "";
-  display: block;
-  width: 8px;
-  height: 8px;
-  background: transparent;
-  border-radius: 50%;
-  transition: background 0.3s ease;
+  gap: 20px;
 }
 
 .modal-overlay-mobile.show {
@@ -8579,6 +8476,95 @@ input:checked + .slider:before {
 }
 .textarea-custom::placeholder {
   color: #9ca3af;
+}
+
+.radio-card {
+  border-radius: 12px;
+  gap: 10px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  cursor: pointer;
+}
+.radio-card .radio__input_card {
+  display: none;
+}
+.radio-card.active {
+  background: #f6f3fe; /* Nền màu tím nhạt khi được chọn */
+  border: 1px solid #7551b6; /* Viền màu tím khi được chọn */
+}
+.radio-card .radio__input_card:checked ~ .radio__radio::after {
+  display: block;
+}
+.radio-card .radio__radio {
+  width: 17px;
+  height: 17px;
+  border: 1px solid #626262;
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding: 2px;
+  flex-shrink: 0;
+  background-color: rgba(234, 234, 234, 0.5803921569);
+}
+.radio-card .radio__radio::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: #196ebf;
+  border-radius: 50%;
+}
+.radio-card .quiz-section {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.radio-card .quiz-section .section-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #453d5d; /* Màu tím nhạt */
+  font-weight: 550;
+}
+.radio-card .quiz-section .section-header .question-count {
+  font-size: 14px;
+  color: #72727a;
+}
+.radio-card .quiz-section .progress span {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+  color: #72727a; /* Màu tím nhạt */
+}
+.radio-card .quiz-section .progress .progress-bar {
+  background: #e4cfff; /* Màu nền thanh tiến độ */
+  border-radius: 8px;
+  height: 6px;
+  position: relative;
+  overflow: hidden;
+}
+.radio-card .quiz-section .progress .progress-bar .progress-fill {
+  background: #e0cffb; /* Màu tím cho thanh tiến độ */
+  height: 100%;
+  width: 0%; /* Chỉnh độ rộng dựa vào tiến độ */
+  transition: width 0.3s ease;
+}
+.radio-card .quiz-section .result-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.radio-card .quiz-section .result-info .correct {
+  color: #00c853; /* Màu xanh lá */
+}
+.radio-card .quiz-section .result-info .incorrect {
+  color: #d32f2f; /* Màu đỏ */
+}
+.radio-card .radio__input_card:checked ~ .radio__radio {
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */

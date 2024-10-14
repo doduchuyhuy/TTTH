@@ -1,0 +1,105 @@
+.radio-card{
+    // background: #f6f3fe; /* Màu nền nhạt */
+    border-radius: 12px;
+    gap: 10px;
+    // border: 1px solid #7551b6;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid transparent; // Viền mặc định
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    cursor: pointer;
+    .radio__input_card{
+        display: none;
+    }
+    
+    &.active {
+        background: #f6f3fe; /* Nền màu tím nhạt khi được chọn */
+        border: 1px solid #7551b6; /* Viền màu tím khi được chọn */
+    }
+    
+
+    .radio__input_card:checked ~ .radio__radio::after{
+        display: block;
+    }
+    .radio__radio{
+        width: 17px;
+        height: 17px;
+        border: 1px solid #626262;
+        border-radius: 50%;
+        box-sizing: border-box;
+        padding: 2px;
+        flex-shrink: 0;
+        background-color: #eaeaea94;
+    }
+    .radio__radio::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: none;
+        background: #196ebf;
+        border-radius: 50%;
+    }
+    .quiz-section{
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .section-header {
+            h3 {
+                margin: 0;
+                font-size: 16px;
+                color: #453d5d; /* Màu tím nhạt */
+                font-weight: 550;
+            }
+    
+            .question-count {
+                font-size: 14px;
+                color: #72727a;
+            }
+        }
+    
+        .progress {
+            span {
+                display: block;
+                font-size: 12px;
+                margin-bottom: 4px;
+                color: #72727a; /* Màu tím nhạt */
+            }
+    
+            .progress-bar {
+                background: #e4cfff; /* Màu nền thanh tiến độ */
+                border-radius: 8px;
+                height: 6px;
+                position: relative;
+                overflow: hidden;
+    
+                .progress-fill {
+                    background: #e0cffb; /* Màu tím cho thanh tiến độ */
+                    height: 100%;
+                    width: 0%; /* Chỉnh độ rộng dựa vào tiến độ */
+                    transition: width 0.3s ease;
+                }
+            }
+        }
+        .result-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+    
+            .correct {
+                color: #00c853; /* Màu xanh lá */
+            }
+    
+            .incorrect {
+                color: #d32f2f; /* Màu đỏ */
+            }
+        }
+    }
+
+    .radio__input_card:checked ~ .radio__radio{
+        background-color: #fff;
+    }
+
+}

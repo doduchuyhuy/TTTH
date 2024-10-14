@@ -1329,30 +1329,50 @@
             </div>
             <div class="modal-footer">
                 <p>Chọn phần thi</p>
-                <div class="quiz-section">
-                    <div class="quiz-section-left">
-                        <div class="section-header">
-                            <h3>Phần 1</h3>
-                            <span class="question-count">(32 câu)</span>
-                        </div>
-                        <div class="progress">
-                            <span>Tiến độ (0/32)</span>
-                            <div class="progress-bar">
-                                <div class="progress-fill"></div>
+                <div class="footer-section-container">
+                    <label for="myRadioId10" class="radio-card">
+                        <input type="radio" name="myRadioField" id="myRadioId10" class="radio__input_card">
+                        <div class="quiz-section">
+                            <div class="section-header">
+                                <h3>Phần 1</h3>
+                                <span class="question-count">(32 câu)</span>
+                            </div>
+                            <div class="progress">
+                                <span>Tiến độ (0/32)</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                            <div class="result-info">
+                                <span class="correct">Đúng: <span class="correct-count">0 câu</span></span>
+                                <span class="incorrect">Sai: <span class="incorrect-count">0 câu</span></span>
                             </div>
                         </div>
-                        <div class="result-info">
-                            <span class="correct">Đúng: <span class="correct-count">0 câu</span></span>
-                            <span class="incorrect">Sai: <span class="incorrect-count">0 câu</span></span>
+                        <div class="radio__radio"></div>
+                    </label>
+                    <label for="myRadioId11" class="radio-card">
+                        <input type="radio" name="myRadioField" id="myRadioId11" class="radio__input_card">
+                        <div class="quiz-section">
+                            <div class="section-header">
+                                <h3>Phần 1</h3>
+                                <span class="question-count">(32 câu)</span>
+                            </div>
+                            <div class="progress">
+                                <span>Tiến độ (0/32)</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                            <div class="result-info">
+                                <span class="correct">Đúng: <span class="correct-count">0 câu</span></span>
+                                <span class="incorrect">Sai: <span class="incorrect-count">0 câu</span></span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="quiz-section-right">
-                        <div class="radio-button">
-                            <input type="radio" id="section1" name="quiz-section" checked>
-                            <label for="section1"></label>
-                        </div>
-                    </div>
+                        <div class="radio__radio"></div>
+                    </label>
                 </div>
+               
+                
                 
             </div>
         </div>
@@ -1543,14 +1563,29 @@ $('.root').on('touchend', function() {
 
 <script>     
     $(document).ready(function() {
-    $('.radio__input').on('change', function() {
-        // Xóa class 'select' khỏi tất cả các 'content-item'
-        $('.content-item').removeClass('select');
+        $('.radio__input').on('change', function() {
+            // Xóa class 'select' khỏi tất cả các 'content-item'
+            $('.content-item').removeClass('select');
 
-        // Thêm class 'select' vào 'content-item' cha của radio đã chọn
-        $(this).closest('.content-item').addClass('select');
+            // Thêm class 'select' vào 'content-item' cha của radio đã chọn
+            $(this).closest('.content-item').addClass('select');
+        });
+    });
+
+
+    $(document).ready(function() {
+    // Khi radio input với class 'radio__input_card' thay đổi
+    $('.radio__input_card').change(function() {
+        // Xóa class 'active' khỏi tất cả radio-card
+        $('.radio-card').removeClass('active');
+        
+        // Thêm class 'active' cho thẻ radio-card chứa radio input được chọn
+        if ($(this).is(':checked')) {
+            $(this).closest('.radio-card').addClass('active');
+        }
     });
 });
+
 
 </script>
 
