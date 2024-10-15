@@ -1,6 +1,49 @@
 @use "../abstracts";
 #edu-quiz{
     // margin-top: 100px;
+    .left-content{
+        @include abstracts.breakpoint(xl) {
+            width: 100%;
+            height: auto;
+            top: unset;
+            left: 0;
+            bottom: 0;
+            display: block;
+        }
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #3987c7; // Matches the blue background in your image
+            padding: 12px 25px;
+            .left{
+                display: flex;
+                gap: 45px;
+                .total-question{
+                    color: #fff; 
+                }
+            }
+            .right{
+                display: flex;
+                gap: 45px;
+            }
+            
+            i {
+                font-size: 18px;
+                color: #fff; // White color for the icons
+                 // Add space between the icons
+                
+                &:hover {
+                    color: #dcdcdc; // Light grey on hover for a slight effect
+                }
+            }
+        }
+        
+    }
     .container-exam{
         .row{
             .left{
@@ -261,7 +304,7 @@
                     .section-md{
                         display: flex;
                         justify-content: space-between;
-                        padding: 15px;
+                        padding: 15px 15px 10px 15px;
                     }
                     .questions-section{
                         // display: flex;

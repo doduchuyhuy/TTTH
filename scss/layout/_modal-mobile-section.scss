@@ -16,6 +16,9 @@
         background: #fff;
         width: 100%;
         max-height: 70%; /* Giới hạn chiều cao của modal */
+        display: flex;
+        flex-direction: column;
+        
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         padding: 16px;
@@ -48,16 +51,24 @@
         .modal-footer{
             padding:20px;
             p{
-                
                 font-weight: 550;
-                margin-bottom: 10px;
             }
-            .footer-section-container{
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-            }
+        }
+        .footer-section-container{
+            padding: 0 20px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            overflow-y: auto;
+            /* Ẩn thanh cuộn trên IE và Edge */
+            -ms-overflow-style: none;
+
+            /* Ẩn thanh cuộn trên Firefox */
+            scrollbar-width: none;
             
+            &::-webkit-scrollbar {
+                display: none;  /* Ẩn thanh cuộn trên các trình duyệt sử dụng WebKit như Chrome và Safari */
+            } 
         }
     }
 }

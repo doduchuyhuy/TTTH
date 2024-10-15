@@ -2015,6 +2015,46 @@ a {
   font-size: 1em;
   transition: 0.5s;
 }
+#edu-quiz .left-content {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+}
+@media (max-width: 1199.98px) {
+  #edu-quiz .left-content {
+    width: 100%;
+    height: auto;
+    top: unset;
+    left: 0;
+    bottom: 0;
+    display: block;
+  }
+}
+#edu-quiz .left-content .navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3987c7;
+  padding: 12px 25px;
+}
+#edu-quiz .left-content .navigation .left {
+  display: flex;
+  gap: 45px;
+}
+#edu-quiz .left-content .navigation .left .total-question {
+  color: #fff;
+}
+#edu-quiz .left-content .navigation .right {
+  display: flex;
+  gap: 45px;
+}
+#edu-quiz .left-content .navigation i {
+  font-size: 18px;
+  color: #fff;
+}
+#edu-quiz .left-content .navigation i:hover {
+  color: #dcdcdc;
+}
 #edu-quiz .container-exam .row .left .root {
   background-color: rgb(255, 255, 255);
   color: rgb(17, 24, 39);
@@ -2260,7 +2300,7 @@ a {
 #edu-quiz .container-exam .row .left .header-md .section-md {
   display: flex;
   justify-content: space-between;
-  padding: 15px;
+  padding: 15px 15px 10px 15px;
 }
 #edu-quiz .container-exam .row .left .header-md .questions-section {
   border-bottom: 1px solid #ddd;
@@ -4916,6 +4956,8 @@ a {
   background: #fff;
   width: 100%;
   max-height: 70%; /* Giới hạn chiều cao của modal */
+  display: flex;
+  flex-direction: column;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   padding: 16px;
@@ -4951,12 +4993,20 @@ a {
 }
 .modal-overlay-mobile .modal-section-mobile .modal-footer p {
   font-weight: 550;
-  margin-bottom: 10px;
 }
-.modal-overlay-mobile .modal-section-mobile .modal-footer .footer-section-container {
+.modal-overlay-mobile .modal-section-mobile .footer-section-container {
+  padding: 0 20px 20px 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  overflow-y: auto;
+  /* Ẩn thanh cuộn trên IE và Edge */
+  -ms-overflow-style: none;
+  /* Ẩn thanh cuộn trên Firefox */
+  scrollbar-width: none;
+}
+.modal-overlay-mobile .modal-section-mobile .footer-section-container::-webkit-scrollbar {
+  display: none; /* Ẩn thanh cuộn trên các trình duyệt sử dụng WebKit như Chrome và Safari */
 }
 
 .modal-overlay-mobile.show {
@@ -8479,6 +8529,7 @@ input:checked + .slider:before {
 }
 
 .radio-card {
+  -webkit-tap-highlight-color: transparent;
   border-radius: 12px;
   gap: 10px;
   padding: 16px;
@@ -8486,7 +8537,6 @@ input:checked + .slider:before {
   border: 1px solid transparent;
   display: flex;
   align-items: center;
-  flex: 1 1 auto;
   cursor: pointer;
 }
 .radio-card .radio__input_card {
@@ -8514,7 +8564,7 @@ input:checked + .slider:before {
   width: 100%;
   height: 100%;
   display: none;
-  background: #196ebf;
+  background: #6736ac;
   border-radius: 50%;
 }
 .radio-card .quiz-section {
