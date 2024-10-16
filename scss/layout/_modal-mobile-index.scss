@@ -1,0 +1,126 @@
+.modal-overlay-index-mobile{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4); /* Màu nền mờ khi modal hiển thị */
+    display: flex;
+    // justify-content: flex-end; 
+    align-items: end;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 1000; /* Đảm bảo modal nằm trên các thành phần khác */
+    .modal-index-mobile{
+        background: #fff;
+        width: 100%;
+        max-height: 45%; /* Giới hạn chiều cao của modal */
+        display: flex;
+        flex-direction: column;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        // padding: 16px;
+        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        transform: translateY(100%);
+        transition: transform 0.3s ease-in-out;
+        .modal-header{
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            .title-index-mobile{
+                flex: 3;
+                display: block;
+                text-align: center;
+                font-weight: 550;
+                font-size: 1.5rem;
+            }
+            .close-modal-new{  
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 3.5rem;
+                height: 3.5rem;
+                border-radius: 50%;
+                color: #333;
+                background: #16182308;
+                font-size: 2rem;
+                cursor: pointer;
+                &:hover {
+                    background: rgba(0, 0, 0, 0.04);
+                    
+                }
+            }
+        }
+        .modal-body{
+            padding: 15px;
+            overflow-y: auto ;
+            .index-container{
+                display: grid;
+                grid-template-columns: repeat(6, 1fr); 
+                gap: 10px;
+                .index-item{
+                    background-color: #ebebeb;
+                    border-radius: 12px;
+                    height: 6.2rem;
+                    border: 1px solid #ddd;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .index-item-core{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 5px;
+                        .index-item-core-title{
+                            font-size: 1.2rem;
+                        }
+                        .fa-circle-xmark{
+                            color: #d42418;
+                        }
+                        .fa-circle-check{
+                            color: #3b8d35;
+                        }
+                        .fa-circle-exclamation{
+                           color: #71717b;
+                        }
+                    }
+
+                    &.failure{
+                        background-color: #feadaa;
+                        border: none;
+                    }
+                    &.success{
+                        background-color: #b7e4c7;
+                        border: none;
+                    }
+                    &.approximate{
+                        background-color: #fbc92e;
+                        border: none;
+                    }
+                    &.selected{
+                        background: linear-gradient(to right bottom, rgb(10, 143, 220), rgb(0, 102, 204));
+                        border: none;
+                        .index-item-core-title{
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+}
+
+.modal-overlay-index-mobile.show {
+    opacity: 1;
+    visibility: visible;
+}
+.modal-overlay-index-mobile.show .modal-index-mobile {
+    transform: translateY(0); /* Hiển thị modal từ dưới lên */
+}
+
+
+

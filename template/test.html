@@ -30,7 +30,6 @@
 
 </style>
 <body>
-    
     <div id="edu-quiz">
         <div class="left-content">
             <div class="navigation">
@@ -1183,11 +1182,11 @@
 
 
 
-    <div id="SectionModal" class="modal-overlay-mobile">
+    <div id="SectionModal" class="modal-overlay-section-mobile">
         <div class="modal-section-mobile">
             <div class="modal-header">
                 <!-- <span class="close-modal-add-section">×</span> -->
-                <button class="close-modal-auth">
+                <button class="close-modal-new">
                     <span>×</span>
                 </button>
             </div>
@@ -1251,6 +1250,91 @@
                     </div>
                     <div class="radio__radio"></div>
                 </label>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="IndexModal" class="modal-overlay-index-mobile">
+        <div class="modal-index-mobile">
+            <div class="modal-header">
+                <span class="title-index-mobile">Chọn câu hỏi</span>
+                <div class="close-modal-new">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="index-container">
+                    <div class="index-item failure">
+                        <div class="index-item-core">
+                            <span class="index-item-core-title">Câu 1</span>
+                            <i class="fa-regular fa-circle-xmark"></i>
+                        </div>
+                    </div>
+                    <div class="index-item success">
+                        <div class="index-item-core">
+                            <span class="index-item-core-title">Câu 2</span>
+                            <i class="fa-regular fa-circle-check"></i>
+                        </div>
+                    </div>
+                    <div class="index-item approximate">
+                        <div class="index-item-core">
+                            <span class="index-item-core-title">Câu 3</span>
+                            <i class="fa-regular fa-circle-question"></i>
+                        </div>
+                    </div>
+                    <div class="index-item">
+                        <div class="index-item-core">
+                            <span class="index-item-core-title">Câu 4</span>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                        </div>
+                    </div>
+                    <div class="index-item selected">
+                        <div class="index-item-core">
+                            <span class="index-item-core-title">Câu 5</span>
+                        </div>
+                    </div>
+                    <div class="index-item">6</div>
+                    <div class="index-item">7</div>
+                    <div class="index-item">8</div>
+                    <div class="index-item">9</div>
+                    <div class="index-item">10</div>
+                    <div class="index-item">11</div>
+                    <div class="index-item">12</div>
+                    <div class="index-item">13</div>
+                    <div class="index-item">6</div>
+                    <div class="index-item">7</div>
+                    <div class="index-item">8</div>
+                    <div class="index-item">9</div>
+                    <div class="index-item">10</div>
+                    <div class="index-item">11</div>
+                    <div class="index-item">12</div>
+                    <div class="index-item">13</div>
+                    <div class="index-item">6</div>
+                    <div class="index-item">7</div>
+                    <div class="index-item">8</div>
+                    <div class="index-item">9</div>
+                    <div class="index-item">10</div>
+                    <div class="index-item">11</div>
+                    <div class="index-item">12</div>
+                    <div class="index-item">13</div>
+                    <div class="index-item">6</div>
+                    <div class="index-item">7</div>
+                    <div class="index-item">8</div>
+                    <div class="index-item">9</div>
+                    <div class="index-item">10</div>
+                    <div class="index-item">11</div>
+                    <div class="index-item">12</div>
+                    <div class="index-item">13</div>
+                    <div class="index-item">6</div>
+                    <div class="index-item">7</div>
+                    <div class="index-item">8</div>
+                    <div class="index-item">9</div>
+                    <div class="index-item">10</div>
+                    <div class="index-item">11</div>
+                    <div class="index-item">12</div>
+                    <div class="index-item">13</div>
+                </div>
             </div>
         </div>
     </div>
@@ -1475,10 +1559,23 @@ $('.root').on('touchend', function() {
         $('body').addClass('no-scroll');
     });
 
+    $('.fa-book').on('click', function() {
+        console.log('haha')
+        $('.modal-overlay-index-mobile').addClass('show');
+        $('body').addClass('no-scroll');
+    });
+
     // Đóng modal khi nhấn vào nền mờ hoặc nhấn ESC
-    $('.modal-overlay-mobile').on('click', function(event) {
-        if ($(event.target).is('.modal-overlay-mobile')) {
-            $('.modal-overlay-mobile').removeClass('show');
+    $('.modal-overlay-section-mobile').on('click', function(event) {
+        if ($(event.target).is('.modal-overlay-section-mobile')) {
+            $('.modal-overlay-section-mobile').removeClass('show');
+            $('body').removeClass('no-scroll');
+        }
+    });
+
+    $('.modal-overlay-index-mobile').on('click', function(event) {
+        if ($(event.target).is('.modal-overlay-index-mobile')) {
+            $('.modal-overlay-index-mobile').removeClass('show');
             $('body').removeClass('no-scroll');
         }
     });
