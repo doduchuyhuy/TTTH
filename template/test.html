@@ -1457,19 +1457,46 @@ $(document).ready(function() {
         }
     }
 
+    // function scrollToActiveTab() {
+    //     const activeTab = $(tabs[currentIndex]);
+    //     if (activeTab.length) {
+    //         const tabOffset = activeTab.position().left + container.scrollLeft();
+    //         const containerWidth = container.width();
+    //         const tabWidth = activeTab.outerWidth();
+            
+    //         // Cuộn sao cho tab hiện tại nằm ở giữa màn hình (nếu có thể)
+    //         container.animate({
+    //             scrollLeft: tabOffset - containerWidth / 2 + tabWidth / 2
+    //         }, 100);
+    //     }
+    // }
+
+
     function scrollToActiveTab() {
         const activeTab = $(tabs[currentIndex]);
         if (activeTab.length) {
             const tabOffset = activeTab.position().left + container.scrollLeft();
             const containerWidth = container.width();
             const tabWidth = activeTab.outerWidth();
+            const maxScrollLeft = container[0].scrollWidth - containerWidth;  // Maximum scrollable width
             
-            // Cuộn sao cho tab hiện tại nằm ở giữa màn hình (nếu có thể)
+            let scrollPosition = tabOffset - containerWidth / 2 + tabWidth / 2;
+
+            // Ensure the indicator doesn't scroll past the max scrollable width
+            if (scrollPosition > maxScrollLeft) {
+                scrollPosition = maxScrollLeft;
+            }
+            // Ensure the indicator doesn't scroll too far to the left
+            if (scrollPosition < 0) {
+                scrollPosition = 0;
+            }
+
             container.animate({
-                scrollLeft: tabOffset - containerWidth / 2 + tabWidth / 2
+                scrollLeft: scrollPosition
             }, 100);
         }
     }
+
 
     tabs.click(function() {
         const newIndex = $(this).index();
@@ -1499,7 +1526,7 @@ $('.root').on('touchend', function() {
     const diffY = startY - endY;
 
     // Kiểm tra khoảng cách vuốt và hướng
-    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 40) {
+    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 20) {
         // Vuốt phải (diffX > 0) và chưa đến câu hỏi cuối
         if (diffX > 0 && currentIndex < totalQuestions - 1) {
             showQuestion(currentIndex + 1);
