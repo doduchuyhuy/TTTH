@@ -2015,13 +2015,13 @@ a {
   font-size: 1em;
   transition: 0.5s;
 }
-#edu-quiz .left-content {
+#edu-quiz .footer-content-mobile {
   display: none;
   position: fixed;
   z-index: 1000;
 }
 @media (max-width: 1199.98px) {
-  #edu-quiz .left-content {
+  #edu-quiz .footer-content-mobile {
     width: 100%;
     height: auto;
     top: unset;
@@ -2030,32 +2030,103 @@ a {
     display: block;
   }
 }
-#edu-quiz .left-content .navigation {
+#edu-quiz .footer-content-mobile .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #3987c7;
-  padding: 12px 25px;
+  padding: 0 15px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-#edu-quiz .left-content .navigation .left {
+#edu-quiz .footer-content-mobile .navigation .left {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+#edu-quiz .footer-content-mobile .navigation .left .total-question {
+  color: #fff;
+}
+#edu-quiz .footer-content-mobile .navigation .right {
   display: flex;
   gap: 45px;
 }
-#edu-quiz .left-content .navigation .left .total-question {
+#edu-quiz .footer-content-mobile .navigation i {
   color: #fff;
+  padding: 15px;
+  -webkit-tap-highlight-color: transparent;
 }
-#edu-quiz .left-content .navigation .right {
-  display: flex;
-  gap: 45px;
-}
-#edu-quiz .left-content .navigation i {
-  font-size: 18px;
-  color: #fff;
-}
-#edu-quiz .left-content .navigation i:hover {
+#edu-quiz .footer-content-mobile .navigation i:hover {
   color: #dcdcdc;
+}
+#edu-quiz .top-content-mobile {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+}
+@media (max-width: 1199.98px) {
+  #edu-quiz .top-content-mobile {
+    width: 100%;
+    height: auto;
+    top: unset;
+    left: 0;
+    right: 0;
+    display: block;
+  }
+}
+#edu-quiz .top-content-mobile .header-md .container-top-content {
+  padding: 10px;
+  background-color: #3987c7;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#edu-quiz .top-content-mobile .header-md .container-top-content .section-left-number {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+#edu-quiz .top-content-mobile .header-md .container-top-content i {
+  padding: 10px;
+  -webkit-tap-highlight-color: transparent;
+}
+#edu-quiz .top-content-mobile .header-md .container-top-content i:hover {
+  color: #dcdcdc;
+}
+#edu-quiz .top-content-mobile .header-md .questions-section {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none; /* Ẩn scrollbar trên Firefox */
+  position: relative;
+  scroll-behavior: smooth;
+}
+#edu-quiz .top-content-mobile .header-md .questions-section .question-tab {
+  -webkit-tap-highlight-color: transparent; /* Xóa highlight trên iOS và Android */
+  -webkit-user-select: none; /* Ngăn chặn chọn văn bản khi nhấn vào tab */
+  user-select: none; /* Ngăn chặn chọn văn bản khi nhấn vào tab */
+  touch-action: manipulation; /* Đảm bảo chỉ thao tác chạm */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #72757c;
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+#edu-quiz .top-content-mobile .header-md .questions-section .question-tab.active {
+  color: #3987c7;
+}
+#edu-quiz .top-content-mobile .header-md .questions-section .indicator {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: #3987c7;
+  transition: transform 0.3s ease;
 }
 #edu-quiz .container-exam .row .left .root {
   background-color: rgb(255, 255, 255);
@@ -2337,6 +2408,11 @@ a {
   background-color: #3987c7;
   transition: transform 0.3s ease;
 }
+@media (max-width: 1199.98px) {
+  #edu-quiz .container-exam .row .center {
+    margin-top: 95px;
+  }
+}
 #edu-quiz .container-exam .row .center .root {
   background-color: rgb(255, 255, 255);
   color: rgb(17, 24, 39);
@@ -2345,6 +2421,11 @@ a {
   box-shadow: rgba(0, 0, 0, 0.04) 0px 10px 10px 4px;
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 1199.98px) {
+  #edu-quiz .container-exam .row .center .root {
+    box-shadow: none;
+  }
 }
 #edu-quiz .container-exam .row .center .root .header {
   display: flex;
@@ -2552,9 +2633,6 @@ a {
   top: 50%;
   transform: translate(-50%, -50%);
   color: rgb(10, 143, 220);
-}
-#edu-quiz .container-exam .row .center .root ~ .root {
-  margin-top: 10px;
 }
 #edu-quiz .container-exam .row .right .root {
   background-color: rgb(255, 255, 255);
@@ -4962,42 +5040,20 @@ a {
   flex-direction: column;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  padding: 16px;
   box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
   transform: translateY(100%);
   transition: transform 0.3s ease-in-out;
 }
 .modal-overlay-section-mobile .modal-section-mobile .modal-header {
-  margin-bottom: 40px;
+  padding: 15px;
   display: flex;
 }
 .modal-overlay-section-mobile .modal-section-mobile .modal-header .close-modal-new {
-  padding: 0;
-  font-weight: 500;
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  color: #333;
-  background: rgba(22, 24, 35, 0.031372549);
-  font-size: 2.8rem;
-  line-height: 0;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  box-shadow: none;
-}
-.modal-overlay-section-mobile .modal-section-mobile .modal-header .close-modal-new:hover {
-  background: rgba(0, 0, 0, 0.04);
+  margin-left: auto;
 }
 .modal-overlay-section-mobile .modal-section-mobile .modal-body {
   border-bottom: 1px solid #ddd;
-  padding: 0px 20px 20px 20px;
+  padding: 0 20px 20px 20px;
 }
 .modal-overlay-section-mobile .modal-section-mobile .modal-body p {
   font-weight: 550;
@@ -5032,12 +5088,12 @@ a {
   display: none; /* Ẩn thanh cuộn trên các trình duyệt sử dụng WebKit như Chrome và Safari */
 }
 
-.modal-overlay-mobile.show {
+.modal-overlay-section-mobile.show {
   opacity: 1;
   visibility: visible;
 }
 
-.modal-overlay-mobile.show .modal-section-mobile {
+.modal-overlay-section-mobile.show .modal-section-mobile {
   transform: translateY(0); /* Hiển thị modal từ dưới lên */
 }
 
@@ -5079,22 +5135,6 @@ a {
   text-align: center;
   font-weight: 550;
   font-size: 1.5rem;
-}
-.modal-overlay-index-mobile .modal-index-mobile .modal-header .close-modal-new {
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
-  color: #333;
-  background: rgba(22, 24, 35, 0.031372549);
-  font-size: 2rem;
-  cursor: pointer;
-}
-.modal-overlay-index-mobile .modal-index-mobile .modal-header .close-modal-new:hover {
-  background: rgba(0, 0, 0, 0.04);
 }
 .modal-overlay-index-mobile .modal-index-mobile .modal-body {
   padding: 15px;
@@ -8758,6 +8798,23 @@ input:checked + .slider:before {
 }
 .radio-card .radio__input_card:checked ~ .radio__radio {
   background-color: #fff;
+}
+
+.close-modal-new {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  color: #333;
+  background: rgba(22, 24, 35, 0.031372549);
+  font-size: 2rem;
+  cursor: pointer;
+}
+.close-modal-new:hover {
+  background: rgba(0, 0, 0, 0.04);
 }
 
 /*# sourceMappingURL=main.css.map */

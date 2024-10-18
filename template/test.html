@@ -24,14 +24,10 @@
 
 
 
-
-
-
-
 </style>
 <body>
     <div id="edu-quiz">
-        <div class="left-content">
+        <div class="footer-content-mobile">
             <div class="navigation">
                 <div class="left">
                     <i class="fas fa-chevron-left"></i>
@@ -43,10 +39,49 @@
                 </div>
             </div>            
         </div>
+
+        <div class="top-content-mobile">
+            <div class="header-md">
+                <div class="container-top-content">
+                    <div class="section-left-number">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        <span class="section-left">Phần 1</span>
+                    </div>
+                    <div class="timer-md">
+                        00 : 02 : 49
+                    </div>
+                    <div class="click-bars">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                </div>
+                
+                <!-- <div class="section-md">
+                    <div>Phần 1</div>
+                    <div>
+                        <i class="fa fa-bars"></i>
+                    </div>
+                </div> -->
+                <div class="questions-section">
+                    <div class="question-tab">Câu 1</div>
+                    <div class="question-tab">Câu 2</div>
+                    <div class="question-tab">Câu 3</div>
+                    <div class="question-tab">Câu 4</div>
+                    <div class="question-tab">Câu 5</div>
+                    <div class="question-tab">Câu 6</div>
+                    <div class="question-tab">Câu 7</div>
+                    <div class="question-tab">Câu 8</div>
+                    <div class="question-tab">Câu 9</div>
+                    <div class="question-tab">Câu 10</div>
+                    <div class="indicator"></div>
+                </div>
+            </div>      
+        </div>
+
+
         <div class="container-exam container">
             <div class="row">
                 <div class="col-3 col-xl-12 left">
-                    <div class="header-md">
+                    <!-- <div class="header-md">
                         <div class="timer-md">
                             00 : 02 : 49
                         </div>
@@ -67,10 +102,10 @@
                             <div class="question-tab">Câu 8</div>
                             <div class="question-tab">Câu 9</div>
                             <div class="question-tab">Câu 10</div>
-                            <div class="indicator"></div> <!-- Dòng kẻ xanh -->
+                            <div class="indicator"></div> 
                         </div>
                         
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-6 col-xl-12 center mt-1">
                     <div class="root">
@@ -1186,9 +1221,9 @@
         <div class="modal-section-mobile">
             <div class="modal-header">
                 <!-- <span class="close-modal-add-section">×</span> -->
-                <button class="close-modal-new">
-                    <span>×</span>
-                </button>
+                <div class="close-modal-new">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
             </div>
             <div class="modal-body">
                 <p>Tự động chuyển câu</p>
@@ -1582,7 +1617,7 @@ $('.root').on('touchend', function() {
     // Hiển thị modal khi nhấn vào fa-bars
     $('.fa-bars').on('click', function() {
         console.log('hihi')
-        $('.modal-overlay-mobile').addClass('show');
+        $('.modal-overlay-section-mobile').addClass('show');
         $('body').addClass('no-scroll');
     });
 
