@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bố cục với Header và Footer cố định</title>
+  <style>
+    /* Đặt chiều cao cho html và body để đảm bảo chiếm toàn bộ màn hình */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden; /* Ngăn cuộn trên body */
+      font-family: Arial, sans-serif;
+    }
+
+    /* Container chính sử dụng flexbox */
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100%; /* Chiều cao 100% của viewport */
+    }
+
+    /* Định dạng cho header và cố định nó ở trên cùng */
+    .header {
+      flex: 0 0 auto; /* Không co giãn, giữ chiều cao tự động */
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    /* Nội dung ở giữa sẽ chiếm toàn bộ không gian còn lại và cuộn nội dung */
+    .content {
+      flex: 1 1 auto; /* Chiếm không gian còn lại, cho phép co giãn */
+      background-color: #f1f1f1;
+      overflow-y: auto; /* Cuộn dọc nếu nội dung vượt quá */
+      padding: 20px;
+    }
+
+    /* Định dạng cho footer và cố định nó ở dưới cùng */
+    .footer {
+      flex: 0 0 auto; /* Không co giãn, giữ chiều cao tự động */
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header cố định ở trên -->
+    <header class="header">
+      Đây là Header
+    </header>
+
+    <!-- Nội dung nằm ở giữa và có thể cuộn -->
+    <section class="content">
+      <p>Nội dung phần giữa. Nội dung này có thể rất dài và phần này sẽ tự động điều chỉnh chiều cao, chiếm toàn bộ không gian còn lại giữa header và footer. Nếu nội dung vượt quá chiều cao của màn hình, một thanh cuộn sẽ xuất hiện ở đây.</p>
+      <!-- Thêm nhiều nội dung để kiểm tra việc cuộn -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+      <!-- Bạn có thể thêm nhiều đoạn văn hơn để kiểm tra -->
+      <p>Nội dung phần giữa. Nội dung này có thể rất dài và phần này sẽ tự động điều chỉnh chiều cao, chiếm toàn bộ không gian còn lại giữa header và footer. Nếu nội dung vượt quá chiều cao của màn hình, một thanh cuộn sẽ xuất hiện ở đây.</p>
+      <!-- Thêm nhiều nội dung để kiểm tra việc cuộn -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+      <p>Nội dung phần giữa. Nội dung này có thể rất dài và phần này sẽ tự động điều chỉnh chiều cao, chiếm toàn bộ không gian còn lại giữa header và footer. Nếu nội dung vượt quá chiều cao của màn hình, một thanh cuộn sẽ xuất hiện ở đây.</p>
+      <!-- Thêm nhiều nội dung để kiểm tra việc cuộn -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+      <p>Nội dung phần giữa. Nội dung này có thể rất dài và phần này sẽ tự động điều chỉnh chiều cao, chiếm toàn bộ không gian còn lại giữa header và footer. Nếu nội dung vượt quá chiều cao của màn hình, một thanh cuộn sẽ xuất hiện ở đây.</p>
+      <!-- Thêm nhiều nội dung để kiểm tra việc cuộn -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+      <p>Nội dung phần giữa. Nội dung này có thể rất dài và phần này sẽ tự động điều chỉnh chiều cao, chiếm toàn bộ không gian còn lại giữa header và footer. Nếu nội dung vượt quá chiều cao của màn hình, một thanh cuộn sẽ xuất hiện ở đây.</p>
+      <!-- Thêm nhiều nội dung để kiểm tra việc cuộn -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+      <p>Nội dung phần giữa. Nội dung này có thể rất dài và phần này sẽ tự động điều chỉnh chiều cao, chiếm toàn bộ không gian còn lại giữa header và footer. Nếu nội dung vượt quá chiều cao của màn hình, một thanh cuộn sẽ xuất hiện ở đây.</p>
+      <!-- Thêm nhiều nội dung để kiểm tra việc cuộn -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+      <p>Nội dung phần giữa. Nội dung này có thể rất dài và phần này sẽ tự động điều chỉnh chiều cao, chiếm toàn bộ không gian còn lại giữa header và footer. Nếu nội dung vượt quá chiều cao của màn hình, một thanh cuộn sẽ xuất hiện ở đây.</p>
+      <!-- Thêm nhiều nội dung để kiểm tra việc cuộn -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+      <p>Nội dung phần giữa. Nội dung này có thể rất dài và phần này sẽ tự động điều chỉnh chiều cao, chiếm toàn bộ không gian còn lại giữa header và footer. Nếu nội dung vượt quá chiều cao của màn hình, một thanh cuộn sẽ xuất hiện ở đây.</p>
+      <!-- Thêm nhiều nội dung để kiểm tra việc cuộn -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+      <p>Nội dung phần giữa. Nội dung này có thể rất dài và phần này sẽ tự động điều chỉnh chiều cao, chiếm toàn bộ không gian còn lại giữa header và footer. Nếu nội dung vượt quá chiều cao của màn hình, một thanh cuộn sẽ xuất hiện ở đây.</p>
+      <!-- Thêm nhiều nội dung để kiểm tra việc cuộn -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+    </section>
+
+    <!-- Footer cố định ở dưới -->
+    <footer class="footer">
+      Đây là Footer
+    </footer>
+  </div>
+
+</body>
+</html>

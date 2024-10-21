@@ -61,6 +61,7 @@ table {
 
 html {
   font-size: 62.5%;
+  height: 100%;
   font-family: Inter, sans-serif;
   --background-back:#feb343;
   --background-font:#232323;
@@ -83,6 +84,8 @@ html {
 body {
   font-size: 1.4rem;
   line-height: 1.5;
+  height: 100%;
+  overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -2015,18 +2018,19 @@ a {
   font-size: 1em;
   transition: 0.5s;
 }
+@media (max-width: 1199.98px) {
+  #edu-quiz {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
 #edu-quiz .footer-content-mobile {
   display: none;
-  position: fixed;
-  z-index: 1000;
 }
 @media (max-width: 1199.98px) {
   #edu-quiz .footer-content-mobile {
-    width: 100%;
-    height: auto;
-    top: unset;
-    left: 0;
-    bottom: 0;
+    flex: 0 0 auto; /* Không co giãn, giữ chiều cao tự động */
     display: block;
   }
 }
@@ -2047,6 +2051,24 @@ a {
 #edu-quiz .footer-content-mobile .navigation .left .total-question {
   color: #fff;
 }
+#edu-quiz .footer-content-mobile .navigation .center {
+  position: relative;
+  top: -25px; /* Di chuyển lên trên */
+}
+#edu-quiz .footer-content-mobile .navigation .center .center-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #4eac88; /* Màu xanh lục */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #fff;
+}
+#edu-quiz .footer-content-mobile .navigation .center .center-icon i.check-icon {
+  color: white;
+  font-size: 32px;
+}
 #edu-quiz .footer-content-mobile .navigation .right {
   display: flex;
   gap: 45px;
@@ -2061,16 +2083,10 @@ a {
 }
 #edu-quiz .top-content-mobile {
   display: none;
-  position: fixed;
-  z-index: 1000;
 }
 @media (max-width: 1199.98px) {
   #edu-quiz .top-content-mobile {
-    width: 100%;
-    height: auto;
-    top: unset;
-    left: 0;
-    right: 0;
+    flex: 0 0 auto; /* Không co giãn, giữ chiều cao tự động */
     display: block;
   }
 }
@@ -2127,6 +2143,14 @@ a {
   height: 2px;
   background-color: #3987c7;
   transition: transform 0.3s ease;
+}
+@media (max-width: 1199.98px) {
+  #edu-quiz .container-exam {
+    flex: 1 1 auto; /* Chiếm không gian còn lại, cho phép co giãn */
+    background-color: #f1f1f1;
+    overflow-y: auto; /* Cuộn dọc nếu nội dung vượt quá */
+    padding: 20px;
+  }
 }
 #edu-quiz .container-exam .row .left .root {
   background-color: rgb(255, 255, 255);
@@ -2407,11 +2431,6 @@ a {
   height: 2px;
   background-color: #3987c7;
   transition: transform 0.3s ease;
-}
-@media (max-width: 1199.98px) {
-  #edu-quiz .container-exam .row .center {
-    margin-top: 95px;
-  }
 }
 #edu-quiz .container-exam .row .center .root {
   background-color: rgb(255, 255, 255);

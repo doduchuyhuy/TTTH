@@ -1,17 +1,17 @@
 @use "../abstracts";
 #edu-quiz{
     // margin-top: 100px;
+    @include abstracts.breakpoint(xl) {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
     .footer-content-mobile{
         display: none;
-        position: fixed;
-        z-index: 1000;
         @include abstracts.breakpoint(xl) {
-            width: 100%;
-            height: auto;
-            top: unset;
-            left: 0;
-            bottom: 0;
+            flex: 0 0 auto; /* Không co giãn, giữ chiều cao tự động */
             display: block;
+    
         }
         .navigation {
             display: flex;
@@ -27,6 +27,24 @@
                 gap: 45px;
                 .total-question{
                     color: #fff; 
+                }
+            }
+            .center{
+                position: relative;
+                top: -25px; /* Di chuyển lên trên */
+                .center-icon {
+                    width: 50px;
+                    height: 50px;
+                    background-color: #4eac88; /* Màu xanh lục */
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 3px solid #fff;
+                    i.check-icon {
+                        color: white;
+                        font-size: 32px;
+                    }
                 }
             }
             .right{
@@ -50,14 +68,8 @@
     }
     .top-content-mobile{
         display: none;
-        position: fixed;
-        z-index: 1000;
         @include abstracts.breakpoint(xl) {
-            width: 100%;
-            height: auto;
-            top: unset;
-            left: 0;
-            right: 0;
+            flex: 0 0 auto; /* Không co giãn, giữ chiều cao tự động */
             display: block;
         }
         .header-md{
@@ -122,6 +134,12 @@
         }
     }
     .container-exam{
+        @include abstracts.breakpoint(xl) {
+            flex: 1 1 auto; /* Chiếm không gian còn lại, cho phép co giãn */
+            background-color: #f1f1f1;
+            overflow-y: auto; /* Cuộn dọc nếu nội dung vượt quá */
+            padding: 20px;
+        }
         .row{
             .left{
                 .root{
@@ -427,9 +445,6 @@
                 }
             }
             .center{
-                @include abstracts.breakpoint(xl) {
-                    margin-top: 95px;
-                }
                 .root{
                     @include abstracts.breakpoint(xl) {
                         box-shadow: none;
