@@ -12,29 +12,20 @@
     position: absolute;
     top: 10%; /* Adjust this value to move the modal up */
     .modal-header{
-        color: #111827;
-        font-size: 18px;
-        font-weight: 500;
-        // margin-bottom: 25px;
-        text-align: center;
-        position: relative;
-        padding: 25px;
-        .close-modal-add-section {
-            position: absolute;
-            color: #0000008A;
-            line-height: 1.5;
-            // padding: 10px;
+        padding: 15px 10px 30px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .how{
             width: 35px;
             height: 35px;
-            right: 10px;
-            top: 10px;
-            font-size: 25px;
-            cursor: pointer;
-            user-select: none;
-            &:hover {
-                background: rgba(0, 0, 0, 0.04);
-                border-radius: 50%;
-            }
+        }
+        .title-index-mobile{
+            color: #111827;
+            flex: 3;
+            display: block;
+            text-align: center;
+            font-size: 1.75rem;
         }
     }
     .modal-body{

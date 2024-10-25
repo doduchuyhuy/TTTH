@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixed Sidebar Layout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  flex: 0 0 auto; /* Giữ nguyên chiều cao của header */
+}
+
+.main {
+  display: flex;
+  flex: 1; /* Chiếm toàn bộ chiều cao còn lại */
+  overflow: hidden;
+}
+
+.sidebar {
+  background-color: #555;
+  color: #fff;
+  width: 200px; /* Độ rộng sidebar cố định */
+  flex-shrink: 0; /* Đảm bảo sidebar không bị thu nhỏ */
+  padding: 1em;
+}
+
+.content {
+  background-color: #f4f4f4;
+  flex: 1; /* Chiếm không gian còn lại bên cạnh sidebar */
+  padding: 1em;
+  overflow-y: auto; /* Cho phép cuộn dọc chỉ ở content */
+}
+
+</style>
+<body>
+  <div class="container">
+    <header class="header">Header</header>
+    <div class="main">
+      <aside class="sidebar">Sidebar</aside>
+      <section class="content">
+        <!-- Nội dung content dài để thử cuộn -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eum a libero molestias aut explicabo! Sunt, repellat harum natus in sint omnis nobis necessitatibus error eius eum nihil quis placeat?
+        </p>
+        <!-- Thêm nhiều phần tử để cuộn content -->
+      </section>
+    </div>
+  </div>
+</body>
+</html>

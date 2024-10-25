@@ -20,13 +20,13 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="nav-edu">
+    
+    <div id="content-edu">
         <header id="header-edu">
             <div class="container-header">
                 <div class="left">
                     <!-- <img src="../assets/svg/new1exam.svg" alt=""> -->
                     <picture>
-                        
                         <!-- Ảnh cho màn hình trung bình (tablet) -->
                         <source media="(min-width: 768px)" srcset="../assets/svg/new1exam.svg">
                 
@@ -42,32 +42,9 @@
                         <input type="search" placeholder="Search...">
                         <button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
                     </div>
-                    <!-- <div class="search-box">
-                        <div class="box-search">
-                            <input type="text" class="input-box" placeholder="Search any thing" autocomplete="off">
-                            <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                        </div>
-                        <ul class="result-box">
-                            <li>
-                                JS
-                            </li>
-                            <li>
-                                PHP
-                            </li>
-                            <li>
-                                JS
-                            </li>
-                            <li>
-                                PHP
-                            </li>
-                        </ul>
-                    </div> -->
+                    
                 </div>
                 <div class="right">
-                    <!-- <button class="button-edu">
-                        <img src="../assets/svg/create-exam.svg" alt="">
-                        Thêm câu hỏi
-                    </button> -->
                     <div class="profile" id="profile">
                         <h3 class="d-lg-none">Đỗ Đức Huy<br><span>Chuyên viên</span></h3>
                         <div class="imgBx">
@@ -93,34 +70,32 @@
                     </div>
                 </div>
             </div>
-        </header>            
-    </div>
-    <div id="content-edu">
-        <div class="left-content">
-            <ul>
-                <li>
-                    <a class="active" href="">
-                        <i class="fa-solid fa-house"></i>
-                        <span>Trang chủ</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <i class="fa-brands fa-square-github"></i>
-                        <span>Đề thi của tôi</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <i class="fa-solid fa-paperclip"></i>
-                        <span>Chính sách</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="right-content">
+        </header>
+        <div class="container-content-edu">
+            <div class="left-content">
+                <ul>
+                    <li>
+                        <a class="active" href="">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Trang chủ</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-square-github"></i>
+                            <span>Đề thi của tôi</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-paperclip"></i>
+                            <span>Chính sách</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
             <div class="container-edu-list-exam">
-                <div class="toolbar mb-4">
+                <div class="toolbar">
                     <button class="new-btn">
                       <i class="fas fa-plus"></i> New
                     </button>
@@ -146,66 +121,19 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- <div class="selection-info">
-                      <span>198 selected</span>
-                      <span><i class="fas fa-trash"></i> Delete</span>
-                    </div> -->
-                  </div>
-                  <div class="table">
+                </div>
+                <div class="table">
                     <div class="table-row header">
-                      <!-- <div class="table-cell checkbox"></div> -->
-                      <div class="table-cell">STT</div>
-                      <div class="table-cell">Tên bài thi</div>
-                      <div class="table-cell">Tổng điểm</div>
-                      <div class="table-cell">Câu hỏi</div>
-                      <div class="table-cell">Trạng thái</div>
-                      <div class="table-cell">Ngày tạo</div>
-                      <div class="table-cell">Ngày chỉnh sửa</div>
-                      <div class="table-cell">Hành động</div>
-                      
+                        <div class="table-cell">STT</div>
+                        <div class="table-cell">Tên bài thi</div>
+                        <div class="table-cell">Tổng điểm</div>
+                        <div class="table-cell">Câu hỏi</div>
+                        <div class="table-cell">Trạng thái</div>
+                        <div class="table-cell">Ngày tạo</div>
+                        <div class="table-cell">Ngày chỉnh sửa</div>
+                        <div class="table-cell">Hành động</div>
                     </div>
                     <div class="table-row">
-                        <!-- <div class="table-cell checkbox">
-                          <div class="checkbox-item"> 
-                            <input type="checkbox" id="modecheckbox">
-                            <label for="modecheckbox">
-                              <span class="custom-checkbox">
-                                <i class="fas fa-check"></i>
-                              </span>
-                            </label>
-                          </div>                       
-                        </div> -->
-                        <div class="table-cell">3.488</div>
-                        <div class="table-cell">3488 1925-ĐHTM-PCTT Xác minh... 3488 1925-ĐHTM-PCTT Xác minh...</div>
-                        <div class="table-cell">06/09/2024</div>
-                        <div class="table-cell">BDT g/q</div>
-                        <div class="table-cell">BDT g/q</div>
-                        <div class="table-cell yellow">24/09/2024</div>
-                        <div class="table-cell pink">No</div>
-                        <div class="table-cell">
-                            <div class="icon-wrapper">
-                                <i class="fa-regular fa-pen-to-square"></i>
-                                <span class="tooltip">Sửa</span>
-                            </div>
-                            <div class="icon-wrapper">
-                                <i class="fa-regular fa-trash-can"></i>
-                                <span class="tooltip">Xóa</span>
-                            </div>
-                        </div>
-                       
-                    </div>
-                    <div class="table-row">
-                        <!-- <div class="table-cell checkbox">
-                          <div class="checkbox-item"> 
-                            <input type="checkbox" id="modecheckbox">
-                            <label for="modecheckbox">
-                              <span class="custom-checkbox">
-                                <i class="fas fa-check"></i>
-                              </span>
-                            </label>
-                          </div>
-                                                   
-                        </div> -->
                         <div class="table-cell">3.488</div>
                         <div class="table-cell">3488 1925-ĐHTM-PCTT Xác minh... 3488 1925-ĐHTM-PCTT Xác minh...</div>
                         <div class="table-cell">06/09/2024</div>
@@ -385,8 +313,29 @@
                         </div>
                         
                     </div>
+                    <div class="table-row">
+                        <div class="table-cell">3.488</div>
+                        <div class="table-cell">3488 1925-ĐHTM-PCTT Xác minh... 3488 1925-ĐHTM-PCTT Xác minh...</div>
+                        <div class="table-cell">06/09/2024</div>
+                        <div class="table-cell">BDT g/q</div>
+                        <div class="table-cell">BDT g/q</div>
+                        <div class="table-cell yellow">24/09/2024</div>
+                        <div class="table-cell pink">No</div>
+                        <div class="table-cell">
+                            <div class="icon-wrapper">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                                <span class="tooltip">Sửa</span>
+                            </div>
+                            <div class="icon-wrapper">
+                                <i class="fa-regular fa-trash-can"></i>
+                                <span class="tooltip">Xóa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                     
-                  </div>
+                
+                
             </div>
         </div>       
     </div> 
@@ -408,7 +357,30 @@
             sttWidth = $('.table-row .table-cell:nth-child(1)').outerWidth();
             $('.table-row .table-cell:nth-child(2)').css('left', sttWidth + 'px');
         });
+
     });
+
+
+    
+
+   
+
+
+    
+
+//     $(document).ready(function () {
+//   function adjustStickyColumns() {
+//     var sttWidth = $('.table-row .table-cell:nth-child(1)').outerWidth();
+//     $('.table-row .table-cell:nth-child(2)').css('left', sttWidth + 'px');
+//   }
+  
+//   adjustStickyColumns();
+  
+//   $(window).resize(function () {
+//     adjustStickyColumns();
+//   });
+// });
+
 
 </script>
         

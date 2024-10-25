@@ -1,0 +1,55 @@
+#header-edu{
+    flex: 0 0 auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    background-color: rgb(255, 255, 255);
+    padding: 0 28px 0 28px;
+    .container-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        .left{
+            
+        }
+        .center{
+            @media (max-width: 768px) {
+                .form-input{
+                    width: 100%;
+                }
+            }
+        }
+        .right{
+            // display: flex;
+            // align-items: center;
+            // gap: 10px;
+            .signin-signup{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                button{
+                    border: none;
+                    outline: none;
+                    box-shadow: none;
+                    display: block;
+                    background: transparent;
+                    font-weight: 600;
+                }
+                button:nth-of-type(2) {
+                    flex-shrink: 0;
+                    padding: 9px 20px;
+                    border-radius: 99px;
+                    color: #fff;
+                    background: linear-gradient(to right bottom, rgb(10, 143, 220), rgb(0, 102, 204));// Màu xanh gradient
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: opacity .25s;          // ví dụ: thay đổi con trỏ khi hover
+                
+                    &:hover {
+                      background: linear-gradient(to right bottom, rgb(5, 120, 190), rgb(0, 85, 170));
+                    }
+                }
+            }
+        }
+        
+    }
+}  

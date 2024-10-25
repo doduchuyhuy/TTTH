@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bố cục với Header cố định và Sidebar thay đổi thành Footer</title>
+  <style>
+    /* Đặt chiều cao cho html và body để đảm bảo chiếm toàn bộ màn hình */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden; /* Ngăn cuộn trên body */
+      font-family: Arial, sans-serif;
+    }
+
+    /* Container chính sử dụng flexbox */
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100%; /* Chiều cao 100% của viewport */
+    }
+
+    /* Header luôn ở trên cùng */
+    .header {
+      flex-shrink: 0; /* Không cho phép co lại */
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    /* Nội dung chính và sidebar, hiển thị dạng hàng ngang */
+    .main-content {
+      display: flex;
+      flex: 1;
+      overflow: hidden; /* Ngăn cuộn ngang */
+    }
+
+    /* Sidebar mặc định nằm bên trái và hiển thị theo chiều dọc */
+    .sidebar {
+      background-color: #333;
+      color: white;
+      width: 200px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column; /* Hiển thị theo chiều dọc */
+      justify-content: flex-start;
+    }
+
+    /* Nội dung chính nằm cạnh sidebar */
+    .content {
+      flex: 1;
+      background-color: #f1f1f1;
+      padding: 20px;
+      overflow-y: auto; /* Cuộn nội dung khi quá dài */
+    }
+
+    /* Định dạng link trong sidebar */
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+
+    /* Media Query cho thiết bị di động */
+    @media (max-width: 768px) {
+      /* Đổi layout thành chiều dọc */
+      .main-content {
+        flex-direction: column;
+        flex: 1;
+        overflow-y: auto; /* Nội dung cuộn trên màn hình nhỏ */
+      }
+      
+      /* Sidebar nằm dưới cùng và hiển thị theo chiều ngang */
+      .sidebar {
+        width: 100%;
+        height: 60px;
+        flex-direction: row;
+        justify-content: space-around; /* Phân bố các link đều nhau */
+        align-items: center;
+        order: 1; /* Đảm bảo sidebar nằm dưới cùng */
+      }
+
+      /* Đảm bảo nội dung nằm phía trên sidebar */
+      .content {
+        order: 0;
+        flex: 1;
+        overflow-y: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header cố định ở trên -->
+    <header class="header">
+      Đây là Header
+    </header>
+
+    <!-- Container chính chứa nội dung và sidebar -->
+    <div class="main-content">
+
+        <!-- Sidebar mặc định nằm bên trái -->
+      <nav class="sidebar">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+      </nav>
+      <!-- Nội dung chính -->
+      <section class="content">
+        <p>Nội dung phần giữa. Phần này sẽ tự động điều chỉnh chiều cao và chiếm toàn bộ không gian còn lại. Nếu nội dung vượt quá chiều cao màn hình, thanh cuộn sẽ xuất hiện ở đây.</p>
+        <!-- Thêm nhiều nội dung để kiểm tra việc cuộn -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+      </section>
+
+      
+    </div>
+  </div>
+
+</body>
+</html>

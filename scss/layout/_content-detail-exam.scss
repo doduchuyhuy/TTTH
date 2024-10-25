@@ -1,9 +1,9 @@
 .container-content-detail-exam{
     display: flex;
+    flex: 1;
     gap: 20px;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 20px;
+    overflow: auto;
     .detail-exam-left{
         .card-item-detail {
             background-color: #fff;
@@ -257,9 +257,7 @@
     /* XS (extra small) dưới 576px */
     
     @media (max-width: 575.98px) {
-        margin-bottom: 50px;
         flex-direction: column;
-        width: 100%; /* Full width */
         .detail-exam-left{
             width: 100%;
         }

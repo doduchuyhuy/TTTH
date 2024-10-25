@@ -32,7 +32,9 @@ body {
     font-size: 1.4rem;
     line-height: 1.5;
     height: 100%;
-    overflow: hidden;
+    // overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    
     // background-color:#f7f7f9 ;
     // @include abstracts.breakpoint(md) {
     //     background-color:#fff ;
