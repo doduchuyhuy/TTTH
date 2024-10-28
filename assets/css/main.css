@@ -85,6 +85,7 @@ body {
   font-size: 1.4rem;
   line-height: 1.5;
   height: 100%;
+  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -3128,9 +3129,11 @@ a {
 .container-edu-list-exam {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  padding: 20px;
-  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  gap: 20px;
+  padding: 30px 0;
 }
 .container-edu-list-exam .toolbar {
   display: flex;
@@ -3139,7 +3142,7 @@ a {
   padding: 0 20px;
 }
 .container-edu-list-exam .toolbar .new-btn {
-  background-color: #0078d4;
+  background: linear-gradient(to right bottom, rgb(10, 143, 220), rgb(0, 102, 204));
   color: white;
   padding: 6px 12px;
   border: none;
@@ -3182,8 +3185,6 @@ a {
   font-weight: bold;
 }
 .container-edu-list-exam .table {
-  flex: 1;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   border-radius: 6px;
@@ -3253,6 +3254,10 @@ a {
   top: 0;
   z-index: 999;
 }
+.container-edu-list-exam .pagination-table {
+  display: none;
+  margin: auto;
+}
 
 .container-edu-list-exam {
   /* XS (extra small) dưới 576px */
@@ -3265,7 +3270,11 @@ a {
 }
 @media (max-width: 575.98px) {
   .container-edu-list-exam {
+    width: 100%;
     margin: 0;
+  }
+  .container-edu-list-exam .table {
+    overflow-y: hidden;
   }
   .container-edu-list-exam .table .table-row {
     min-width: 1000px;
@@ -3283,12 +3292,18 @@ a {
   }
   .container-edu-list-exam .table .table-row .table-cell:nth-child(2) {
     flex: 1;
+  }
+  .container-edu-list-exam .pagination-table {
+    display: block;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
   .container-edu-list-exam {
     width: 540px;
   }
+  .container-edu-list-exam .table {
+    overflow-y: hidden;
+  }
   .container-edu-list-exam .table .table-row {
     min-width: 1000px;
   }
@@ -3305,6 +3320,9 @@ a {
   }
   .container-edu-list-exam .table .table-row .table-cell:nth-child(2) {
     flex: 1;
+  }
+  .container-edu-list-exam .pagination-table {
+    display: block;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -3339,7 +3357,7 @@ a {
   gap: 20px;
   flex: 1;
   overflow: auto;
-  padding: 20px;
+  padding: 20px 30px;
   /* XS (extra small) dưới 576px */
   /* SM (small) từ 576px đến 767px */
   /* MD (medium) từ 768px đến 991px */
@@ -3693,9 +3711,9 @@ a {
 }
 .container-edu-add-edit-exam .quizz-add .add-exam .right-col {
   width: 75%;
-  padding: 0 20px;
 }
 .container-edu-add-edit-exam .quizz-add .add-exam .right-col .list-all-questions .list-question-header {
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -3727,14 +3745,13 @@ a {
   background-color: rgba(0, 0, 0, 0.12);
 }
 .container-edu-add-edit-exam .quizz-add .add-exam .right-col .list-all-questions .list-question-body {
-  padding-right: 20px;
+  padding: 0 20px 20px 20px;
   display: grid;
   grid-template-columns: 1fr 1fr; /* Mỗi cột chiếm 1 phần đều nhau */
   gap: 20px; /* Khoảng cách giữa các cột */
   max-height: calc(-300px + 100vh);
   height: min(600px, 100vh - 175px);
   overflow-y: auto;
-  padding-bottom: 20px;
 }
 .container-edu-add-edit-exam .quizz-add .add-exam .right-col .list-all-questions .list-question-body p {
   text-align: center;
@@ -8856,6 +8873,53 @@ input:checked + .slider:before {
 }
 .close-modal-new:hover {
   background: rgba(0, 0, 0, 0.04);
+}
+
+.pagination-table {
+  border-radius: 8px;
+}
+.pagination-table ul {
+  display: inline-flex;
+  gap: -1px;
+  font-size: 14px;
+  border-radius: 8px;
+}
+.pagination-table ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 12px;
+  height: 32px;
+  line-height: 20px;
+  color: #6b7280;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-left: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+.pagination-table ul li a:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+.pagination-table ul li:first-child a {
+  border-radius: 8px 0 0 8px;
+  border-left: 1px solid #d1d5db;
+}
+.pagination-table ul li:last-child a {
+  border-radius: 0 8px 8px 0;
+}
+.pagination-table ul a[aria-current=page] {
+  color: #2563eb;
+  background-color: #eff6ff;
+  border-color: #d1d5db;
+}
+.pagination-table ul a[aria-current=page]:hover {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+.pagination-table ul a[aria-current=page].dark {
+  background-color: #374151;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=main.css.map */

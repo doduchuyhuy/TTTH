@@ -2,16 +2,18 @@
 .container-edu-list-exam{
     display: flex;
     flex-direction: column;
-    flex: 1;
-    padding: 20px;
-    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    gap: 20px;
+    padding: 30px 0;
     .toolbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0 20px;
         .new-btn {
-          background-color: #0078d4;
+          background: linear-gradient(to right bottom, rgb(10, 143, 220), rgb(0, 102, 204));
           color: white;
           padding: 6px 12px;
           border: none;
@@ -63,8 +65,6 @@
       }
 
     .table {
-      flex: 1;
-      margin-top: 20px;
       display: flex;
       flex-direction: column;
       border-radius: 6px;
@@ -142,6 +142,10 @@
           z-index: 999;
         }
       }
+    }
+    .pagination-table{
+      display: none;
+      margin: auto;
     } 
       
            
@@ -150,10 +154,10 @@
 .container-edu-list-exam{
   /* XS (extra small) dưới 576px */
   @media (max-width: 575.98px) {
-      // order: 0;
-      // flex: 1;
+      width: 100%;
       margin: 0;
       .table{
+        overflow-y: hidden;
         .table-row{
           min-width: 1000px;
           .table-cell{
@@ -174,6 +178,9 @@
           
         }
       }
+      .pagination-table{
+        display: block;
+      }
       
   }
 
@@ -181,6 +188,7 @@
   @media (min-width: 576px) and (max-width: 767.98px) {
       width: 540px;
       .table{
+        overflow-y: hidden;
         .table-row{
           min-width: 1000px;
           .table-cell{
@@ -200,6 +208,9 @@
           }
           
         }
+      }
+      .pagination-table{
+        display: block;
       }
       
   }
