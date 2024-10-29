@@ -1,0 +1,46 @@
+.select-pro {
+    label {
+      display: block;
+      margin-bottom: 8px;    // mb-2
+      font-size: 14px;       // text-sm
+      font-weight: 500;      // medium
+      color: #1f2937;        // text-gray-900
+  
+      // Dark mode
+      .dark & {
+        color: #ffffff;      // text-white
+      }
+    }
+  
+    select {
+      background-color: #f9fafb; // bg-gray-50
+      border: 1px solid #d1d5db; // border-gray-300
+      color: #1f2937;            // text-gray-900
+      font-size: 14px;           // text-sm
+      border-radius: 8px;        // rounded-lg
+      display: block;
+      width: 100%;
+      padding: 10px;             // p-2.5
+  
+      &:focus {
+        outline: none;
+        ring-color: #3b82f6;     // focus:ring-blue-500
+        border-color: #3b82f6;   // focus:border-blue-500
+      }
+  
+      // Dark mode styles
+      .dark & {
+        background-color: #374151;   // dark:bg-gray-700
+        border-color: #4b5563;       // dark:border-gray-600
+        color: #ffffff;              // dark:text-white
+        &::placeholder {
+          color: #9ca3af;            // dark:placeholder-gray-400
+        }
+        &:focus {
+          ring-color: #3b82f6;       // dark:focus:ring-blue-500
+          border-color: #3b82f6;     // dark:focus:border-blue-500
+        }
+      }
+    }
+  }
+  

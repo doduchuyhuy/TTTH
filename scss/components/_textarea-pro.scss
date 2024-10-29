@@ -1,0 +1,41 @@
+.textareapro {
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #1f2937;
+  
+      .dark & {
+        color: #ffffff;
+      }
+    }
+  
+    textarea {
+      background-color: #f9fafb;
+      border: 1px solid #d1d5db;
+      color: #1f2937;
+      border-radius: 8px;
+      display: block;
+      width: 100%;
+      padding: 10px;
+      resize: vertical;
+  
+      &:focus {
+        outline: none;
+        border-color: #3b82f6;
+      }
+  
+      .dark & {
+        background-color: #374151;
+        border-color: #4b5563;
+        color: #ffffff;
+        &::placeholder {
+          color: #9ca3af;
+        }
+        &:focus {
+          border-color: #3b82f6;
+        }
+      }
+    }
+  }

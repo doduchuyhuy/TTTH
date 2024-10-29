@@ -4,16 +4,20 @@
     gap: 15px;
     flex: 1;
     overflow: auto;
-    padding: 20px 40px;
+    padding: 25px 40px;
+    background-color: rgb(249 250 251);
     h3{
         font-weight: 600;
         font-size: 16px;
     }
     .quizz-add{
         background-color: #fff;
-        border-radius: 0.5rem;
-        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-        box-shadow: rgba(0, 0, 0, 0.04) 0px 10px 10px 4px;
+        
+        
+
+        
+
+        box-shadow: rgba(0, 0, 0, 0.133) 0px 1.6px 3.6px 0px, rgba(0, 0, 0, 0.11) 0px 0.3px 0.9px 0px;
         // padding: 0 2rem 2rem 2rem;
         border-radius: 16px;
         .add-exam{
@@ -238,22 +242,34 @@
   }
 
 
+  @media (max-width: 768px) {
+    input, textarea {
+        font-size: 16px; /* Kích thước font phù hợp cho giao diện di động */
+    }
+}
+
   .container-edu-add-edit-exam{
     /* XS (extra small) dưới 576px */
     @media (max-width: 575.98px) {
+        background-color: #fff;
+        padding: 10px 10px;
         width: 100%; /* Full width */
         .quizz-add{
+            border: none;
+            box-shadow: none;
             .add-exam{
                 flex-direction: column;
                 gap: 20px;
                 .left-col{
                     width: 100%;
+                    border-right: none;
                 }
                 .right-col{
                     width: 100%;
                     .list-all-questions{
                         .list-question-body{
-                            
+                            max-height: none;
+                            height: auto;
                             grid-template-columns: 1fr;
                         }
                     }
@@ -267,18 +283,25 @@
   
     /* SM (small) từ 576px đến 767px */
     @media (min-width: 576px) and (max-width: 767.98px) {
-        width: 540px;
+        background-color: #fff;
+        padding: 10px 10px;
+        width: 100%;
         .quizz-add{
+            border: none;
+            box-shadow: none;
             .add-exam{
                 flex-direction: column;
                 gap: 20px;
                 .left-col{
                     width: 100%;
+                    border-right: none;
                 }
                 .right-col{
                     width: 100%;
                     .list-all-questions{
                         .list-question-body{
+                            max-height: none;
+                            height: auto;
                             grid-template-columns: 1fr;
                         }
                     }
@@ -298,11 +321,14 @@
                 gap: 20px;
                 .left-col{
                     width: 100%;
+                    border-right: none;
                 }
                 .right-col{
                     width: 100%;
                     .list-all-questions{
                         .list-question-body{
+                            max-height: none;
+                            height: auto;
                             grid-template-columns: 1fr;
                         }
                     }
