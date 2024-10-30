@@ -127,9 +127,9 @@
                             <div class="line"></div>
                         </div>
                     </div>
-                    <div class="quiz-add-body mt-2">
-                        <div class="row information-exam">
-                            <div class="col-4">
+                    <div class="quiz-add-body">
+                        <div class="information-exam">
+                            <div class="information-left">
                                 <div class="import-image">
                                     <div class="box-image">
                                         <img src="../assets/svg/add-image.svg" alt="">
@@ -137,8 +137,8 @@
                                     <p>Ảnh đại diện</p>
                                 </div>
                             </div>
-                            <div class="col-8">
-                                <div>
+                            <div class="information-right">
+                                <div class="information-body">
                                     <!-- <div class="input2 mt-2">
                                         <label for="exam-name" class="floating-label">Tên đề thi*</label>
                                         <input type="text" class="exam-name" id="exam-name" placeholder="Nhập tên đề thi">
@@ -148,7 +148,16 @@
                                         <input
                                             type="text"
                                             id="exam-name"
-                                            placeholder="QHQT50"
+                                            placeholder="TTQT"
+                                            required
+                                        />
+                                    </div>
+                                    <div class="inputpro">
+                                        <label for="exam-branch">Khóa</label>
+                                        <input
+                                            type="text"
+                                            id="exam-branch"
+                                            placeholder="TTQT50"
                                             required
                                         />
                                     </div>
@@ -156,28 +165,36 @@
                                         <label for="exam-description" class="floating-label">Mô tả đề thi</label>
                                         <textarea class="exam-description" id="exam-description" placeholder="Nhập mô tả đề thi"></textarea>
                                     </div> -->
-                                    <div class="textareapro mt-2">
+                                    <div class="textareapro mt">
                                         <label for="exam-description">Mô tả phần thi</label>
                                         <textarea id="exam-description"></textarea>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="select-pro mt-2">
-                                                <label for="countries">Trạng thái</label>
-                                                <select id="countries">
-                                                    <option selected>Chọn trạng thái</option>
-                                                    <option value="US">Công khai</option>
-                                                    <option value="CA">Riêng tư</option>
-                                                    
-                                                </select>
-                                            </div>
+                                    <!-- <div class="select-pro">
+                                        <label for="countries">Trạng thái</label>
+                                        <select id="countries">
+                                            <option selected>Chọn trạng thái</option>
+                                            <option value="US">Công khai</option>
+                                            <option value="CA">Riêng tư</option>
                                             
+                                        </select>
+                                    </div> -->
+                                    <div class="dropdown">
+                                        <input type="text" class="textBox" placeholder="Chọn" readonly>
+                                        <div class="matching-select">
+                                            <div data-value="0">Chọn</div>
+                                            <div data-value="1s">Riêng tư</div>
+                                            <div data-value="5s">Công khai</div>
                                         </div>
-                                        
+                                        <div class="title">Trạng thái</div>
+                                        <i class="dropdown-icon fa fa-chevron-down"></i> <!-- Sử dụng Font Awesome -->
                                     </div>
-                                    <button class="button-edu mt-2">
-                                        Xác nhận
-                                    </button>                           
+                                    
+                                                              
+                                </div>
+                                <div class="information-footer">
+                                    <button class="button-edu">
+                                        Lưu
+                                    </button> 
                                 </div>
                             </div>
                         </div>
@@ -1190,6 +1207,29 @@
             // Kiểm tra nếu click xảy ra trên chính nền modal (không phải nội dung bên trong)
             if ($(event.target).is('.modal-overlay')) {
                 $(this).hide();
+            }
+        });
+
+
+        // Sử dụng event delegation để lắng nghe sự kiện click cho tất cả các dropdown
+        $(document).on('click', '.dropdown .matching-select div', function() {
+            var value = $(this).data('value'); // Lấy giá trị từ data-value
+            var textBox = $(this).closest('.dropdown').find('.textBox'); // Tìm input trong dropdown hiện tại
+            textBox.val(value ? $(this).text().trim() : ''); // Đặt giá trị cho input tương ứng
+        });
+
+        // Sử dụng event delegation để toggle dropdown
+        $(document).on('click', '.dropdown', function(e) {
+            e.stopPropagation(); // Ngăn chặn sự kiện click lan ra ngoài
+            // Đóng tất cả các dropdown khác trước khi toggle dropdown hiện tại
+            $('.dropdown').not(this).removeClass('active');
+            $(this).toggleClass('active');
+        });
+
+        // Đóng dropdown khi click ngoài
+        $(document).on('click', function(e) {
+            if (!$(e.target).closest('.dropdown').length) {
+                $('.dropdown').removeClass('active');
             }
         });
 

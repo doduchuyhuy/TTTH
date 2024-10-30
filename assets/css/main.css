@@ -3637,55 +3637,85 @@ a {
   box-shadow: rgba(0, 0, 0, 0.133) 0px 1.6px 3.6px 0px, rgba(0, 0, 0, 0.11) 0px 0.3px 0.9px 0px;
   border-radius: 16px;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .information-exam {
+  display: flex;
+  gap: 20px;
+  padding: 25px;
+}
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .information-exam .information-left {
+  flex: 1;
+}
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .information-exam .information-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .information-exam .information-right .information-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .information-exam .information-right .information-body .dropdown input {
+  border: 1px solid #d1d5db;
+}
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .information-exam .information-right .information-body .dropdown .title {
+  width: 68px;
+  color: #1f1f1f;
+}
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .information-exam .information-right .information-footer .button-edu {
+  display: block;
+  margin-left: auto;
+}
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam {
   display: flex;
   padding-bottom: 20px;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .left-col {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .left-col {
   width: 25%;
   padding: 0 20px;
   border-right: 1px solid rgba(0, 0, 0, 0.12);
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .left-col .list-all-sections .list-section-header {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .left-col .list-all-sections .list-section-header {
   display: flex;
   justify-content: space-between;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .left-col .list-all-sections .list-section-header .section-header-1 {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .left-col .list-all-sections .list-section-header .section-header-1 {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .left-col .list-all-sections .list-section-header .section-header-2 button {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .left-col .list-all-sections .list-section-header .section-header-2 button {
   font-size: 13px;
   height: auto;
   padding: 6px 8px;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .left-col .list-all-sections .list-section-body p {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .left-col .list-all-sections .list-section-body p {
   text-align: center;
   font-style: italic;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .left-col .list-all-sections .list-section-body .section-item {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .left-col .list-all-sections .list-section-body .section-item {
   display: flex;
   justify-content: space-between;
   padding: 10px;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .left-col .list-all-sections .list-section-body .section-item .section-item-left {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .left-col .list-all-sections .list-section-body .section-item .section-item-left {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .left-col .list-all-sections .list-section-body .section-item .section-item-right {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .left-col .list-all-sections .list-section-body .section-item .section-item-right {
   font-size: 15px;
   display: flex;
   align-items: center;
   gap: 20px;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .left-col .list-all-sections .list-section-body .section-item .section-item-right .icon-wrapper {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .left-col .list-all-sections .list-section-body .section-item .section-item-right .icon-wrapper {
   position: relative;
   display: inline-block;
   cursor: pointer;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .left-col .list-all-sections .list-section-body .section-item .section-item-right .icon-wrapper .tooltip {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .left-col .list-all-sections .list-section-body .section-item .section-item-right .icon-wrapper .tooltip {
   font-size: 11px;
   position: absolute;
   bottom: 100%;
@@ -3701,49 +3731,49 @@ a {
   visibility: hidden;
   transition: opacity 0.2s ease, visibility 0.2s ease;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .left-col .list-all-sections .list-section-body .section-item .section-item-right .icon-wrapper:hover .tooltip {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .left-col .list-all-sections .list-section-body .section-item .section-item-right .icon-wrapper:hover .tooltip {
   opacity: 1;
   visibility: visible;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .left-col .list-all-sections .list-section-body .section-item.active {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .left-col .list-all-sections .list-section-body .section-item.active {
   background-color: rgb(217, 217, 217);
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .right-col {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .right-col {
   width: 75%;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .right-col .list-all-questions .list-question-header {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-header {
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .right-col .list-all-questions .list-question-header .question-header-1 {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-header .question-header-1 {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .right-col .list-all-questions .list-question-header .question-header-2 {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-header .question-header-2 {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .right-col .list-all-questions .list-question-header .question-header-2 button {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-header .question-header-2 button {
   font-size: 13px;
   height: auto;
   padding: 6px 8px;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .right-col .list-all-questions .list-question-header .question-header-2 button .fa-circle-plus {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-header .question-header-2 button .fa-circle-plus {
   font-size: 16px;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .right-col .list-all-questions .list-question-header .question-header-2 button .fa-square-plus {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-header .question-header-2 button .fa-square-plus {
   font-size: 16px;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .right-col .list-all-questions .list-question-header .question-header-2 button.disabled {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-header .question-header-2 button.disabled {
   color: rgba(0, 0, 0, 0.26);
   box-shadow: none;
   background-color: rgba(0, 0, 0, 0.12);
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .right-col .list-all-questions .list-question-body {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-body {
   padding: 0 20px 20px 20px;
   display: grid;
   grid-template-columns: 1fr 1fr; /* Mỗi cột chiếm 1 phần đều nhau */
@@ -3752,11 +3782,11 @@ a {
   height: min(600px, 100vh - 175px);
   overflow-y: auto;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .right-col .list-all-questions .list-question-body p {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-body p {
   text-align: center;
   font-style: italic;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .right-col .list-all-questions .list-question-body .root {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-body .root {
   background-color: rgb(255, 255, 255);
   color: rgb(17, 24, 39);
   border-radius: 16px;
@@ -3766,19 +3796,19 @@ a {
   border: 1px solid rgba(0, 0, 0, 0.12);
   align-self: start; /* Đảm bảo rằng cột sẽ chỉ cao theo nội dung */
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .right-col .list-all-questions .list-question-body .root .header {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-body .root .header {
   padding: 16px 24px 0px;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .right-col .list-all-questions .list-question-body .root .header .header-content {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-body .root .header .header-content {
   display: flex;
   justify-content: space-between;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .right-col .list-all-questions .list-question-body .root .header .header-content .header-content-mng {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-body .root .header .header-content .header-content-mng {
   display: flex;
   gap: 15px;
   cursor: pointer;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .right-col .list-all-questions .list-question-body .root .header h3 {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-body .root .header h3 {
   color: rgb(17, 24, 39);
   font-weight: 600;
   font-size: 16px;
@@ -3787,23 +3817,23 @@ a {
   white-space: nowrap;
   width: 100%;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .right-col .list-all-questions .list-question-body .root .content {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-body .root .content {
   padding: 16px 24px;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .right-col .list-all-questions .list-question-body .root .content .content-content {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-body .root .content .content-content {
   max-height: 320px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   overflow-y: auto;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .right-col .list-all-questions .list-question-body .root .content .content-content .content-item {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-body .root .content .content-content .content-item {
   display: flex;
   flex-direction: column;
   gap: 15px;
   overflow: auto;
 }
-.container-edu-add-edit-exam .quizz-add .add-exam .right-col .list-all-questions .list-question-body .root .content .content-content button {
+.container-edu-add-edit-exam .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-body .root .content .content-content button {
   display: inline-flex;
   -webkit-box-align: center;
   align-items: center;
@@ -3857,6 +3887,9 @@ a {
     border: none;
     box-shadow: none;
   }
+  .container-edu-add-edit-exam .quizz-add .information-exam {
+    flex-direction: column;
+  }
   .container-edu-add-edit-exam .quizz-add .add-exam {
     flex-direction: column;
     gap: 20px;
@@ -3883,6 +3916,9 @@ a {
   .container-edu-add-edit-exam .quizz-add {
     border: none;
     box-shadow: none;
+  }
+  .container-edu-add-edit-exam .quizz-add .information-exam {
+    flex-direction: column;
   }
   .container-edu-add-edit-exam .quizz-add .add-exam {
     flex-direction: column;
@@ -7081,7 +7117,6 @@ a {
 }
 
 .dropdown {
-  flex: 1;
   position: relative;
   width: 150px;
   height: 45px;
