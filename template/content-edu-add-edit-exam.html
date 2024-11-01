@@ -128,7 +128,7 @@
                         </div>
                     </div>
                     <div class="quiz-add-body">
-                        <div class="information-exam">
+                        <!-- <div class="information-exam">
                             <div class="information-left">
                                 <div class="import-image">
                                     <div class="box-image">
@@ -139,45 +139,19 @@
                             </div>
                             <div class="information-right">
                                 <div class="information-body">
-                                    <!-- <div class="input2 mt-2">
+                                    <div class="input2">
                                         <label for="exam-name" class="floating-label">Tên đề thi*</label>
-                                        <input type="text" class="exam-name" id="exam-name" placeholder="Nhập tên đề thi">
-                                    </div> -->
-                                    <div class="inputpro">
-                                        <label for="exam-name">Tên đề thi</label>
-                                        <input
-                                            type="text"
-                                            id="exam-name"
-                                            placeholder="TTQT"
-                                            required
-                                        />
+                                        <input type="text" class="exam-name" id="exam-name" placeholder="TTQT">
                                     </div>
-                                    <div class="inputpro">
-                                        <label for="exam-branch">Khóa</label>
-                                        <input
-                                            type="text"
-                                            id="exam-branch"
-                                            placeholder="TTQT50"
-                                            required
-                                        />
+                                    <div class="input2">
+                                        <label for="exam-department" class="floating-label">Khoa*</label>
+                                        <input type="text" class="exam-name" id="exam-epartment" placeholder="TTQT50">
                                     </div>
-                                    <!-- <div class="textarea2 mt-2">
+    
+                                    <div class="textarea2">
                                         <label for="exam-description" class="floating-label">Mô tả đề thi</label>
-                                        <textarea class="exam-description" id="exam-description" placeholder="Nhập mô tả đề thi"></textarea>
-                                    </div> -->
-                                    <div class="textareapro mt">
-                                        <label for="exam-description">Mô tả phần thi</label>
-                                        <textarea id="exam-description"></textarea>
+                                        <textarea class="exam-description" id="exam-description" placeholder=""></textarea>
                                     </div>
-                                    <!-- <div class="select-pro">
-                                        <label for="countries">Trạng thái</label>
-                                        <select id="countries">
-                                            <option selected>Chọn trạng thái</option>
-                                            <option value="US">Công khai</option>
-                                            <option value="CA">Riêng tư</option>
-                                            
-                                        </select>
-                                    </div> -->
                                     <div class="dropdown">
                                         <input type="text" class="textBox" placeholder="Chọn" readonly>
                                         <div class="matching-select">
@@ -186,7 +160,7 @@
                                             <div data-value="5s">Công khai</div>
                                         </div>
                                         <div class="title">Trạng thái</div>
-                                        <i class="dropdown-icon fa fa-chevron-down"></i> <!-- Sử dụng Font Awesome -->
+                                        <i class="dropdown-icon fa fa-chevron-down"></i>
                                     </div>
                                     
                                                               
@@ -197,7 +171,7 @@
                                     </button> 
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
         
                         <!-- <div class="add-exam">
                             <div class="left-col">
@@ -426,12 +400,8 @@
                                                 </div>      
                                             </div>
                                         </div>
-                                        
-                                        
-                                        
                                     </div>
                                 </div>
-        
                             </div>
                         </div> -->
                     </div>
@@ -1107,9 +1077,293 @@
 </div>
 <script>     
     $(document).ready(function(){
+        // Nội dung HTML cho từng khối
+        const contentInformationExam = `
+           <div class="information-exam">
+                            <div class="information-left">
+                                <div class="import-image">
+                                    <div class="box-image">
+                                        <img src="../assets/svg/add-image.svg" alt="">
+                                    </div>
+                                    <p>Ảnh đại diện</p>
+                                </div>
+                            </div>
+                            <div class="information-right">
+                                <div class="information-body">
+                                    <div class="input2">
+                                        <label for="exam-name" class="floating-label">Tên đề thi*</label>
+                                        <input type="text" class="exam-name" id="exam-name" placeholder="TTQT">
+                                    </div>
+                                    <div class="input2">
+                                        <label for="exam-department" class="floating-label">Khoa*</label>
+                                        <input type="text" class="exam-name" id="exam-epartment" placeholder="TTQT50">
+                                    </div>
+    
+                                    <div class="textarea2">
+                                        <label for="exam-description" class="floating-label">Mô tả đề thi</label>
+                                        <textarea class="exam-description" id="exam-description" placeholder=""></textarea>
+                                    </div>
+                                    <div class="dropdown">
+                                        <input type="text" class="textBox" placeholder="Chọn" readonly>
+                                        <div class="matching-select">
+                                            <div data-value="0">Chọn</div>
+                                            <div data-value="1s">Riêng tư</div>
+                                            <div data-value="5s">Công khai</div>
+                                        </div>
+                                        <div class="title">Trạng thái</div>
+                                        <i class="dropdown-icon fa fa-chevron-down"></i> <!-- Sử dụng Font Awesome -->
+                                    </div>
+                                    
+                                                              
+                                </div>
+                                <div class="information-footer">
+                                    <button class="button-edu">
+                                        Lưu
+                                    </button> 
+                                </div>
+                            </div>
+                        </div>
+        `;
+
+        const contentAddExam = `
+            <div class="add-exam">
+                            <div class="left-col">
+                                <div class="list-all-sections">
+                                    <div class="list-section-header">
+                                        <div class="section-header-1">
+                                            <i class="fa-solid fa-list"></i>
+                                            <h3>Danh sách các phần thi</h3>
+                                        </div>
+                                        <div class="section-header-2">
+                                            <button class="button-edu" id="addSection">
+                                                <img src="../assets/svg/add-section.svg" alt="">
+                                                Thêm Phần Thi
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="list-section-body mt-3">
+                                        <p style="display: none;">Hiện tại chưa có phần thi nào, bạn cần thêm mới phần thi để có thể thêm câu hỏi</p>
+                                        <div class="section-item active">
+                                            <div class="section-item-left">
+                                                <img src="../assets/svg/book.svg" alt="">
+                                                Phần 1
+                                            </div>
+                                            <div class="section-item-right">
+                                                <div class="icon-wrapper">
+                                                    <i class="fa-regular fa-pen-to-square"></i>
+                                                    <span class="tooltip">Sửa</span>
+                                                </div>
+                                                <div class="icon-wrapper">
+                                                    <i class="fa-regular fa-trash-can"></i>
+                                                    <span class="tooltip">Xóa</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-col">
+                                <div class="list-all-questions">
+                                    <div class="list-question-header">
+                                        <div class="question-header-1">
+                                            <i class="fa-solid fa-circle-question"></i>
+                                            <h3>Danh sách câu hỏi</h3>
+                                        </div>
+                                        <div class="question-header-2">
+                                            <button id="addQuestion" class="button-edu disabled">
+                                                <i class="fa-solid fa-circle-plus"></i>
+                                                Thêm Câu Hỏi
+                                            </button>
+                                            <button id="addQuestionText" class="button-edu">
+                                                <i class="fa-solid fa-square-plus"></i>
+                                                Thêm Nhanh
+                                            </button>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="list-question-body mt-3">
+                                        <p style="display: none;">Không tìm thấy câu hỏi nào</p>
+                                        <div class="root">
+                                            <div class="header">
+                                                <div class="header-content">
+                                                    <span>
+                                                        Câu 1(1 đáp án)
+                                                    </span>
+                                                    <div class="header-content-mng">
+                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                        <i class="fa-regular fa-trash-can"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <div class="content-header">
+                                                    <h4>Vì sao hàng hóa có hai thuộc tính là giá trị và giá trị sử dụng?</h4>
+                                                </div>
+                                                <hr>
+                                                <div class="content-content">
+                                                    <div class="content-item">
+                                                        <div >
+                                                            a. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                                        </div>
+                                                        <div>
+                                                            a. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                                        </div>
+                                                        <div>
+                                                            a. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                                        </div>
+                                                        <div>
+                                                            a. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                                        </div>
+                                                    </div>
+                                                </div>      
+                                            </div>
+                                        </div>
+                                        <div class="root">
+                                            <div class="header">
+                                                <div class="header-content">
+                                                    <span>
+                                                        Câu 1(1 đáp án)
+                                                    </span>
+                                                    <div class="header-content-mng">
+                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                        <i class="fa-regular fa-trash-can"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <div class="content-header">
+                                                    <h4>Vì sao hàng hóa có hai thuộc tính là giá trị và giá trị sử dụng?</h4>
+                                                </div>
+                                                <hr>
+                                                <div class="content-content">
+                                                    <div class="content-item">
+                                                        <div >
+                                                            a. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                                        </div>
+                                                        <div>
+                                                            a. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                                        </div>
+                                                        <div>
+                                                            a. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                                        </div>
+                                                        <div>
+                                                            a. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                                        </div>
+                                                    </div>
+                                                </div>      
+                                            </div>
+                                        </div>
+                                        <div class="root">
+                                            <div class="header">
+                                                <div class="header-content">
+                                                    <span>
+                                                        Câu 1(1 đáp án)
+                                                    </span>
+                                                    <div class="header-content-mng">
+                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                        <i class="fa-regular fa-trash-can"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <div class="content-header">
+                                                    <h4>Vì sao hàng hóa có hai thuộc tính là giá trị và giá trị sử dụng?</h4>
+                                                </div>
+                                                <hr>
+                                                <div class="content-content">
+                                                    <div class="content-item">
+                                                        <div >
+                                                            a. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                                        </div>
+                                                        <div>
+                                                            a. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>      
+                                            </div>
+                                        </div>
+                                        <div class="root">
+                                            <div class="header">
+                                                <div class="header-content">
+                                                    <span>
+                                                        Câu 1(1 đáp án)
+                                                    </span>
+                                                    <div class="header-content-mng">
+                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                        <i class="fa-regular fa-trash-can"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <div class="content-header">
+                                                    <h4>Vì sao hàng hóa có hai thuộc tính là giá trị và giá trị sử dụng?</h4>
+                                                </div>
+                                                <hr>
+                                                <div class="content-content">
+                                                    <div class="content-item">
+                                                        <div >
+                                                            a. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                                        </div>
+                                                        <div>
+                                                            a. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                                        </div>
+                                                        <div>
+                                                            a. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                                        </div>
+                                                        <div>
+                                                            a. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                                        </div>
+                                                    </div>
+                                                </div>      
+                                            </div>
+                                        </div>
+                                        <div class="root">
+                                            <div class="header">
+                                                <div class="header-content">
+                                                    <span>
+                                                        Câu 1(1 đáp án)
+                                                    </span>
+                                                    <div class="header-content-mng">
+                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                        <i class="fa-regular fa-trash-can"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <div class="content-header">
+                                                    <h4>Vì sao hàng hóa có hai thuộc tính là giá trị và giá trị sử dụng?</h4>
+                                                </div>
+                                                <hr>
+                                                <div class="content-content">
+                                                    <div class="content-item">
+                                                        <div >
+                                                            a. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                                        </div>
+                                                        <div>
+                                                            a. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                                        </div>
+                                                        <div>
+                                                            a. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                                        </div>
+                                                        <div>
+                                                            a. Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể Vì có hai loại lao động là lao động trừu tượng và lao động cụ thể
+                                                        </div>
+                                                    </div>
+                                                </div>      
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        `;
         const $tabBtns = $('.tab_btn');
         const $contents = $('.content');
         const $line = $('.line');
+
+        const $quizAddBody = $('.quiz-add-body');
+
         function handleTabClick(e) {
             const $tab = $(this);
             const tabIndex = $tab.data('tab');
@@ -1145,6 +1399,16 @@
             setTimeout(() => {
                 ripple.remove();
             }, 600); // Ripple duration should match the CSS animation duration
+
+            // Clear the current content in .quiz-add-body
+            $quizAddBody.empty();
+            // Render the new content based on the selected tab
+            if (tabIndex === 0) {
+                $quizAddBody.html(contentInformationExam);
+            } else if (tabIndex === 1) {
+                $quizAddBody.html(contentAddExam);
+            }
+
         }
 
         // Add click event to each tab button
@@ -1157,6 +1421,9 @@
             width: $tabBtns.first().outerWidth(),
             left: $tabBtns.first().position().left
         });
+
+        // Load initial content (Thông tin cơ bản)
+        $quizAddBody.html(contentInformationExam);
 
         
         $('#addSection').click(function() {
@@ -1232,12 +1499,6 @@
                 $('.dropdown').removeClass('active');
             }
         });
-
-
-        
-
-        
-
         
         $('#nav-edu').load("./template/nav-edu.html", function(){
                 $('#profile').on('click', function(e) {
@@ -1251,6 +1512,11 @@
                     }
                 });
         });
+
+        
+
+
+
 
     });   
 </script>    

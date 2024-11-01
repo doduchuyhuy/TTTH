@@ -33,15 +33,18 @@
                     .information-body{
                         display: flex;
                         flex-direction: column;
-                        gap: 20px;
+                        gap: 30px;
                         .dropdown{
                             input{
                                 border: 1px solid #d1d5db;
                             }
                             .title{
                                 width: 68px;
-                                color: #1f1f1f;
+                                // color: #1f1f1f;
                             }
+                        }
+                        .floating-label{
+                            // color: #1f1f1f;
                         }
                         
 
@@ -56,7 +59,7 @@
             }
             .add-exam{
                 display: flex;
-                padding-bottom: 20px;
+                padding: 20px;
                 
                 .left-col{
                     width: 25%;
@@ -285,32 +288,37 @@
     /* XS (extra small) dưới 576px */
     @media (max-width: 575.98px) {
         background-color: #fff;
-        padding: 10px 10px;
+        // padding: 10px 10px;
+        padding: 0;
         width: 100%; /* Full width */
         .quizz-add{
             border: none;
             box-shadow: none;
-            .information-exam{
-                flex-direction: column;
-            }
-            .add-exam{
-                flex-direction: column;
-                gap: 20px;
-                .left-col{
-                    width: 100%;
-                    border-right: none;
+            .quiz-add-body{
+                .information-exam{
+                    flex-direction: column;
                 }
-                .right-col{
-                    width: 100%;
-                    .list-all-questions{
-                        .list-question-body{
-                            max-height: none;
-                            height: auto;
-                            grid-template-columns: 1fr;
+                .add-exam{
+                    flex-direction: column;
+                    padding: 20px 0;
+                    gap: 20px;
+                    .left-col{
+                        width: 100%;
+                        border-right: none;
+                    }
+                    .right-col{
+                        width: 100%;
+                        .list-all-questions{
+                            .list-question-body{
+                                max-height: none;
+                                height: auto;
+                                grid-template-columns: 1fr;
+                            }
                         }
                     }
                 }
             }
+            
         }
         
         
@@ -325,54 +333,57 @@
         .quizz-add{
             border: none;
             box-shadow: none;
-            .information-exam{
-                flex-direction: column;
-            }
-            .add-exam{
-                flex-direction: column;
-                gap: 20px;
-                .left-col{
-                    width: 100%;
-                    border-right: none;
+            .quiz-add-body{
+                .information-exam{
+                    flex-direction: column;
                 }
-                .right-col{
-                    width: 100%;
-                    .list-all-questions{
-                        .list-question-body{
-                            max-height: none;
-                            height: auto;
-                            grid-template-columns: 1fr;
+                .add-exam{
+                    flex-direction: column;
+                    gap: 20px;
+                    .left-col{
+                        width: 100%;
+                        border-right: none;
+                    }
+                    .right-col{
+                        width: 100%;
+                        .list-all-questions{
+                            .list-question-body{
+                                max-height: none;
+                                height: auto;
+                                grid-template-columns: 1fr;
+                            }
                         }
                     }
                 }
-            }
-        }
-        
-        
+            }  
+        }     
     }
   
     /* MD (medium) từ 768px đến 991px */
     @media (min-width: 768px) and (max-width: 991.98px) {
         width: 720px;
         .quizz-add{
-            .add-exam{
-                flex-direction: column;
-                gap: 20px;
-                .left-col{
-                    width: 100%;
-                    border-right: none;
-                }
-                .right-col{
-                    width: 100%;
-                    .list-all-questions{
-                        .list-question-body{
-                            max-height: none;
-                            height: auto;
-                            grid-template-columns: 1fr;
+            .quiz-add-body{
+                .add-exam{
+                    flex-direction: column;
+                    gap: 20px;
+                    .left-col{
+                        width: 100%;
+                        border-right: none;
+                    }
+                    .right-col{
+                        width: 100%;
+                        .list-all-questions{
+                            .list-question-body{
+                                max-height: none;
+                                height: auto;
+                                grid-template-columns: 1fr;
+                            }
                         }
                     }
                 }
             }
+            
         }
         
         
