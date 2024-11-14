@@ -1,81 +1,78 @@
-
 .container-edu-list-exam{
-    display: flex;
     flex: 1;
-    flex-direction: column;
-    // margin-left: auto;
-    // margin-right: auto;
-    overflow: hidden;
+    overflow-y: hidden;
     background-color: rgb(249 250 251);
     gap: 20px;
     padding: 30px;
-    .toolbar {
+    .toolbar-des {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      .new-btn {
+        background: linear-gradient(to right bottom, rgb(10, 143, 220), rgb(0, 102, 204));
+        color: white;
+        padding: 6px 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        padding: 0 20px;
-        .new-btn {
-          background: linear-gradient(to right bottom, rgb(10, 143, 220), rgb(0, 102, 204));
-          color: white;
-          padding: 6px 12px;
-          border: none;
-          border-radius: 4px;
+        i {
+          margin-right: 8px;
+        }
+      }
+      .options {
+        display: flex;
+        gap: 20px;
+        span {
           cursor: pointer;
+          color: #555;
           display: flex;
           align-items: center;
-      
+    
           i {
-            margin-right: 8px;
-          }
-        }
-      
-        .options {
-          display: flex;
-          gap: 20px;
-      
-          span {
-            cursor: pointer;
-            color: #555;
-            display: flex;
-            align-items: center;
-      
-            i {
-              margin-right: 5px;
-            }
-          }
-        }
-      
-        .selection-info {
-            color: #555;
-            display: flex;
-            align-items: center;
-      
-          span {
-            margin-left: 10px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            i {
-              margin-left: 5px;
-            }
-          }
-      
-          span:first-child {
-            font-weight: bold;
+            margin-right: 5px;
           }
         }
       }
+      .selection-info {
+          color: #555;
+          display: flex;
+          align-items: center;
+    
+        span {
+          margin-left: 10px;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          i {
+            margin-left: 5px;
+          }
+        }
+    
+        span:first-child {
+          font-weight: bold;
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      .toolbar-des{
+        display: none;
+      }
+    }
+    
+
+    
 
     .table {
-      display: flex;
-      flex-direction: column;
+      height: 80%;
       border-radius: 6px;
       overflow-y: auto; /* Cho phép cuộn dọc */
       overflow-x: auto; /* Cho phép cuộn ngang */
       .table-row {
         display: flex;
         border-bottom: 1px solid #ddd;
-
         &:nth-child(odd) {
           background-color: #F3F2F1;
         }
@@ -87,15 +84,13 @@
         &:last-child {
           border-bottom: none;
         }
-    
         .table-cell {
           padding: 15px;
           flex: 1;
-          display: flex;
-          align-items: center;
+          // align-items: center;
     
           &:nth-child(1) { 
-              flex: 0.5;
+              flex: 0.3;
           }
     
           &:nth-child(2) { 
@@ -138,7 +133,7 @@
     
         &.header {
           font-weight: bold;
-          background-color: #fff; /* No background for header */
+          background-color: #fff;
           position: sticky;
           top: 0;
           z-index: 999;
@@ -149,17 +144,90 @@
       display: none;
       margin: auto;
     } 
-      
-           
+             
 }
+
+
+.toolbar-mob {
+  background-color: rgb(249 250 251);
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  .new-btn {
+    background: linear-gradient(to right bottom, rgb(10, 143, 220), rgb(0, 102, 204));
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    i {
+      margin-right: 8px;
+    }
+  }
+  .options {
+    display: flex;
+    gap: 20px;
+    span {
+      cursor: pointer;
+      color: #555;
+      display: flex;
+      align-items: center;
+
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+  .selection-info {
+      color: #555;
+      display: flex;
+      align-items: center;
+
+    span {
+      margin-left: 10px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      i {
+        margin-left: 5px;
+      }
+    }
+
+    span:first-child {
+      font-weight: bold;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .toolbar-mob {
+    display: flex;
+  }
+}
+
+
+/* Class sticky cho toolbar khi dính vào thẻ header */
+// .toolbar.sticky {
+//   position: absolute;
+//   // top: 80px;
+//   left: 0;
+//   right: 0;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+// }
+
 
 .container-edu-list-exam{
   /* XS (extra small) dưới 576px */
+
   @media (max-width: 575.98px) {
-      width: 100%;
-      margin: 0;
+      padding-top: 10px;
+      overflow-y: auto;
       .table{
-        overflow-y: hidden;
+        
+        height: auto;
+        overflow-y: unset;
         .table-row{
           min-width: 1000px;
           .table-cell{
@@ -188,9 +256,12 @@
 
   /* SM (small) từ 576px đến 767px */
   @media (min-width: 576px) and (max-width: 767.98px) {
+    padding-top: 10px;
       width: 540px;
+      overflow-y: auto;
       .table{
-        overflow-y: hidden;
+        height: auto;
+        overflow-y: unset;
         .table-row{
           min-width: 1000px;
           .table-cell{

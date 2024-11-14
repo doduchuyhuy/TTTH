@@ -1,0 +1,105 @@
+.badge {
+    font-size: 14px; // 0.75rem
+    font-weight: 500;
+    margin-inline-end: 8px; // 0.5rem
+    padding: 3px 10px; // 0.125rem 0.625rem
+    border-radius: 9999px; // rounded-full
+    display: inline-block;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+  
+    &--blue {
+      background-color: #ebf8ff; // bg-blue-100
+      color: #2b6cb0; // text-blue-800
+      .dark & {
+        background-color: #2a4365; // dark:bg-blue-900
+        color: #bee3f8; // dark:text-blue-300
+      }
+    }
+  
+    &--gray {
+      background-color: #f7fafc; // bg-gray-100
+      color: #2d3748; // text-gray-800
+      .dark & {
+        background-color: #4a5568; // dark:bg-gray-700
+        color: #e2e8f0; // dark:text-gray-300
+      }
+    }
+  
+    &--red {
+      background-color: #fff5f5; // bg-red-100
+      color: #c53030; // text-red-800
+      .dark & {
+        background-color: #742a2a; // dark:bg-red-900
+        color: #feb2b2; // dark:text-red-300
+      }
+    }
+  
+    &--green {
+      background-color: #f0fff4; // bg-green-100
+      color: #2f855a; // text-green-800
+      border-color: #68d391;
+      .dark & {
+        background-color: #22543d; // dark:bg-green-900
+        color: #c6f6d5; // dark:text-green-300
+      }
+    }
+  
+    &--yellow {
+      background-color: rgb(253 246 178); // bg-yellow-100
+      color: rgb(114 59 19); // text-yellow-800
+      border-color: rgba(250, 200, 21, 0.596); // border-yellow-300
+      .dark & {
+        background-color: #744210; // dark:bg-yellow-900
+        color: #faf089; // dark:text-yellow-300
+      }
+    }
+  
+    &--indigo {
+      background-color: #ebf4ff; // bg-indigo-100
+      color: #434190; // text-indigo-800
+      .dark & {
+        background-color: #3c366b; // dark:bg-indigo-900
+        color: #c3dafe; // dark:text-indigo-300
+      }
+    }
+  
+    &--purple {
+      background-color: #faf5ff; // bg-purple-100
+      color: #553c9a; // text-purple-800
+      .dark & {
+        background-color: #44337a; // dark:bg-purple-900
+        color: #d6bcfa; // dark:text-purple-300
+      }
+    }
+  
+    &--pink {
+      background-color: #fff5f7; // bg-pink-100
+      color: #b83280; // text-pink-800
+      .dark & {
+        background-color: #702459; // dark:bg-pink-900
+        color: #fbb6ce; // dark:text-pink-300
+      }
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .badge{
+        font-size: 12.5px;
+    }
+    
+  } 
+
+// <span class="badge badge--blue">Default</span>
+// <span class="badge badge--gray">Dark</span>
+// <span class="badge badge--red">Red</span>
+// <span class="badge badge--green">Green</span>
+// <span class="badge badge--yellow">Yellow</span>
+// <span class="badge badge--indigo">Indigo</span>
+// <span class="badge badge--purple">Purple</span>
+// <span class="badge badge--pink">Pink</span>
+
+
+

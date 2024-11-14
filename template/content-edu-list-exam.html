@@ -25,23 +25,25 @@
         <header id="header-edu">
             <div class="container-header">
                 <div class="left">
-                    <!-- <img src="../assets/svg/new1exam.svg" alt=""> -->
-                    <picture>
-                        <!-- Ảnh cho màn hình trung bình (tablet) -->
-                        <source media="(min-width: 768px)" srcset="../assets/svg/new1exam.svg">
-                
-                        <!-- Ảnh cho màn hình nhỏ (mobile) -->
-                        <source media="(max-width: 767px)" srcset="../assets/svg/logoCNTTDAV-sm.svg">
-                
-                        <!-- Ảnh mặc định nếu không có điều kiện nào ở trên phù hợp -->
-                        <img src="../assets/images/image-default.jpg" alt="Responsive Image">
-                    </picture>
+                    <div class="bars-responsive" onclick="toggleSidebar()">
+                        <i class="fa-solid fa-bars"></i>
+                        <picture>
+                            <!-- Ảnh cho màn hình trung bình (tablet) -->
+                            <source media="(min-width: 768px)" srcset="../assets/svg/new1exam.svg">
+                    
+                            <!-- Ảnh cho màn hình nhỏ (mobile) -->
+                            <source media="(max-width: 767px)" srcset="../assets/svg/logoCNTTDAV-sm.svg">
+                    
+                            <!-- Ảnh mặc định nếu không có điều kiện nào ở trên phù hợp -->
+                            <img src="../assets/images/image-default.jpg" alt="Responsive Image">
+                        </picture>
+                    </div>
                 </div>
                 <div class="center">
-                    <div class="form-input">
+                    <!-- <div class="form-input">
                         <input type="search" placeholder="Search...">
                         <button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
-                    </div>
+                    </div> -->
                     
                 </div>
                 <div class="right">
@@ -71,7 +73,20 @@
                 </div>
             </div>
         </header>
-        <div class="container-content-edu">
+        <div class="toolbar-mob">
+            <button class="new-btn">
+              <i class="fas fa-plus"></i> New
+            </button>
+            <div class="options">
+                <div class="search-box">
+                    <div class="box-search">
+                        <input type="text" class="input-box" placeholder="Tìm kiếm" autocomplete="off">
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-content-edu-table">
             <div class="left-content">
                 <ul>
                     <li>
@@ -82,8 +97,8 @@
                     </li>
                     <li>
                         <a href="">
-                            <i class="fa-brands fa-square-github"></i>
-                            <span>Đề thi của tôi</span>
+                            <i class="fa-regular fa-calendar"></i>
+                            <span>Quản lý sự kiện</span>
                         </a>
                     </li>
                     <li>
@@ -95,7 +110,7 @@
                 </ul>
             </div>
             <div class="container-edu-list-exam">
-                <div class="toolbar">
+                <div class="toolbar-des mb-2">
                     <button class="new-btn">
                       <i class="fas fa-plus"></i> New
                     </button>
@@ -105,7 +120,7 @@
                                 <input type="text" class="input-box" placeholder="Tìm kiếm" autocomplete="off">
                                 <button><i class="fa-solid fa-magnifying-glass"></i></button>
                             </div>
-                            <ul class="result-box" style="display: none;">
+                            <!-- <ul class="result-box" style="display: none;">
                                 <li>
                                     JS
                                 </li>
@@ -118,29 +133,27 @@
                                 <li>
                                     PHP
                                 </li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
                 </div>
                 <div class="table">
                     <div class="table-row header">
                         <div class="table-cell">STT</div>
-                        <div class="table-cell">Tên bài thi</div>
-                        <div class="table-cell">Tổng điểm</div>
-                        <div class="table-cell">Câu hỏi</div>
-                        <div class="table-cell">Trạng thái</div>
-                        <div class="table-cell">Ngày tạo</div>
-                        <div class="table-cell">Ngày chỉnh sửa</div>
+                        <div class="table-cell">Tên sự kiện</div>
+                        <div class="table-cell">Địa điểm</div>
+                        <div class="table-cell">Bắt đầu</div>
+                        <div class="table-cell">Kết thúc</div>
+                        <div class="table-cell">Thời gian</div>
                         <div class="table-cell">Hành động</div>
                     </div>
                     <div class="table-row">
-                        <div class="table-cell">3.488</div>
-                        <div class="table-cell">3488 1925-ĐHTM-PCTT Xác minh... 3488 1925-ĐHTM-PCTT Xác minh...</div>
-                        <div class="table-cell">06/09/2024</div>
-                        <div class="table-cell">BDT g/q</div>
-                        <div class="table-cell">BDT g/q</div>
-                        <div class="table-cell yellow">24/09/2024</div>
-                        <div class="table-cell pink">No</div>
+                        <div class="table-cell">1</div>
+                        <div class="table-cell">The 3rd International Sinology Symposium - Hội thảo Khoa học Quốc tế về Nghiên cứu Trung Quốc</div>
+                        <div class="table-cell">Khách sạn Sheraton, số 11 đường Xuân Diệu, Tây Hồ, Hà Nội</div>
+                        <div class="table-cell">08:15:00 28/11/2024</div>
+                        <div class="table-cell">16:45:00 28/11/2024</div>
+                        <div class="table-cell"><span class="badge badge--yellow">Còn 10 ngày</span></div>
                         <div class="table-cell">
                             <div class="icon-wrapper">
                                 <i class="fa-regular fa-pen-to-square"></i>
@@ -151,16 +164,14 @@
                                 <span class="tooltip">Xóa</span>
                             </div>
                         </div>
-                        
                     </div>
                     <div class="table-row">
-                        <div class="table-cell">3.488</div>
-                        <div class="table-cell">3488 1925-ĐHTM-PCTT Xác minh... 3488 1925-ĐHTM-PCTT Xác minh...</div>
-                        <div class="table-cell">06/09/2024</div>
-                        <div class="table-cell">BDT g/q</div>
-                        <div class="table-cell">BDT g/q</div>
-                        <div class="table-cell yellow">24/09/2024</div>
-                        <div class="table-cell pink">No</div>
+                        <div class="table-cell">2</div>
+                        <div class="table-cell">The 13th Ocean Dialogue</div>
+                        <div class="table-cell">Cần Thơ</div>
+                        <div class="table-cell">08:45:00 14/11/2024</div>
+                        <div class="table-cell">17:00:00 14/11/2024</div>
+                        <div class="table-cell"><span class="badge badge--green">Đang diễn ra</span></div>
                         <div class="table-cell">
                             <div class="icon-wrapper">
                                 <i class="fa-regular fa-pen-to-square"></i>
@@ -171,156 +182,14 @@
                                 <span class="tooltip">Xóa</span>
                             </div>
                         </div>
-                        
                     </div>
                     <div class="table-row">
-                        <div class="table-cell">3.488</div>
-                        <div class="table-cell">3488 1925-ĐHTM-PCTT Xác minh... 3488 1925-ĐHTM-PCTT Xác minh...</div>
-                        <div class="table-cell">06/09/2024</div>
-                        <div class="table-cell">BDT g/q</div>
-                        <div class="table-cell">BDT g/q</div>
-                        <div class="table-cell yellow">24/09/2024</div>
-                        <div class="table-cell pink">No</div>
-                        <div class="table-cell">
-                            <div class="icon-wrapper">
-                                <i class="fa-regular fa-pen-to-square"></i>
-                                <span class="tooltip">Sửa</span>
-                            </div>
-                            <div class="icon-wrapper">
-                                <i class="fa-regular fa-trash-can"></i>
-                                <span class="tooltip">Xóa</span>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">3.488</div>
-                        <div class="table-cell">3488 1925-ĐHTM-PCTT Xác minh... 3488 1925-ĐHTM-PCTT Xác minh...</div>
-                        <div class="table-cell">06/09/2024</div>
-                        <div class="table-cell">BDT g/q</div>
-                        <div class="table-cell">BDT g/q</div>
-                        <div class="table-cell yellow">24/09/2024</div>
-                        <div class="table-cell pink">No</div>
-                        <div class="table-cell">
-                            <div class="icon-wrapper">
-                                <i class="fa-regular fa-pen-to-square"></i>
-                                <span class="tooltip">Sửa</span>
-                            </div>
-                            <div class="icon-wrapper">
-                                <i class="fa-regular fa-trash-can"></i>
-                                <span class="tooltip">Xóa</span>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">3.488</div>
-                        <div class="table-cell">3488 1925-ĐHTM-PCTT Xác minh... 3488 1925-ĐHTM-PCTT Xác minh...</div>
-                        <div class="table-cell">06/09/2024</div>
-                        <div class="table-cell">BDT g/q</div>
-                        <div class="table-cell">BDT g/q</div>
-                        <div class="table-cell yellow">24/09/2024</div>
-                        <div class="table-cell pink">No</div>
-                        <div class="table-cell">
-                            <div class="icon-wrapper">
-                                <i class="fa-regular fa-pen-to-square"></i>
-                                <span class="tooltip">Sửa</span>
-                            </div>
-                            <div class="icon-wrapper">
-                                <i class="fa-regular fa-trash-can"></i>
-                                <span class="tooltip">Xóa</span>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">3.488</div>
-                        <div class="table-cell">3488 1925-ĐHTM-PCTT Xác minh... 3488 1925-ĐHTM-PCTT Xác minh...</div>
-                        <div class="table-cell">06/09/2024</div>
-                        <div class="table-cell">BDT g/q</div>
-                        <div class="table-cell">BDT g/q</div>
-                        <div class="table-cell yellow">24/09/2024</div>
-                        <div class="table-cell pink">No</div>
-                        <div class="table-cell">
-                            <div class="icon-wrapper">
-                                <i class="fa-regular fa-pen-to-square"></i>
-                                <span class="tooltip">Sửa</span>
-                            </div>
-                            <div class="icon-wrapper">
-                                <i class="fa-regular fa-trash-can"></i>
-                                <span class="tooltip">Xóa</span>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">3.488</div>
-                        <div class="table-cell">3488 1925-ĐHTM-PCTT Xác minh... 3488 1925-ĐHTM-PCTT Xác minh...</div>
-                        <div class="table-cell">06/09/2024</div>
-                        <div class="table-cell">BDT g/q</div>
-                        <div class="table-cell">BDT g/q</div>
-                        <div class="table-cell yellow">24/09/2024</div>
-                        <div class="table-cell pink">No</div>
-                        <div class="table-cell">
-                            <div class="icon-wrapper">
-                                <i class="fa-regular fa-pen-to-square"></i>
-                                <span class="tooltip">Sửa</span>
-                            </div>
-                            <div class="icon-wrapper">
-                                <i class="fa-regular fa-trash-can"></i>
-                                <span class="tooltip">Xóa</span>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">3.488</div>
-                        <div class="table-cell">3488 1925-ĐHTM-PCTT Xác minh... 3488 1925-ĐHTM-PCTT Xác minh...</div>
-                        <div class="table-cell">06/09/2024</div>
-                        <div class="table-cell">BDT g/q</div>
-                        <div class="table-cell">BDT g/q</div>
-                        <div class="table-cell yellow">24/09/2024</div>
-                        <div class="table-cell pink">No</div>
-                        <div class="table-cell">
-                            <div class="icon-wrapper">
-                                <i class="fa-regular fa-pen-to-square"></i>
-                                <span class="tooltip">Sửa</span>
-                            </div>
-                            <div class="icon-wrapper">
-                                <i class="fa-regular fa-trash-can"></i>
-                                <span class="tooltip">Xóa</span>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">3.488</div>
-                        <div class="table-cell">3488 1925-ĐHTM-PCTT Xác minh... 3488 1925-ĐHTM-PCTT Xác minh...</div>
-                        <div class="table-cell">06/09/2024</div>
-                        <div class="table-cell">BDT g/q</div>
-                        <div class="table-cell">BDT g/q</div>
-                        <div class="table-cell yellow">24/09/2024</div>
-                        <div class="table-cell pink">No</div>
-                        <div class="table-cell">
-                            <div class="icon-wrapper">
-                                <i class="fa-regular fa-pen-to-square"></i>
-                                <span class="tooltip">Sửa</span>
-                            </div>
-                            <div class="icon-wrapper">
-                                <i class="fa-regular fa-trash-can"></i>
-                                <span class="tooltip">Xóa</span>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">3.488</div>
-                        <div class="table-cell">3488 1925-ĐHTM-PCTT Xác minh... 3488 1925-ĐHTM-PCTT Xác minh...</div>
-                        <div class="table-cell">06/09/2024</div>
-                        <div class="table-cell">BDT g/q</div>
-                        <div class="table-cell">BDT g/q</div>
-                        <div class="table-cell yellow">24/09/2024</div>
-                        <div class="table-cell pink">No</div>
+                        <div class="table-cell">3</div>
+                        <div class="table-cell">Hội thảo "Nhìn lại chính sách của Campuchia thời gian gần đây và tác động đối với Việt Nam"</div>
+                        <div class="table-cell">Phòng Hội thảo Berlin, D310, Tầng 3, Học viện Ngoại giao</div>
+                        <div class="table-cell">13:00:28 8/11/2024</div>
+                        <div class="table-cell">16:00:00 8/11/2024</div>
+                        <div class="table-cell"><span class="badge badge--gray">Đã kết thúc</span></div>
                         <div class="table-cell">
                             <div class="icon-wrapper">
                                 <i class="fa-regular fa-pen-to-square"></i>
@@ -333,7 +202,7 @@
                         </div>
                     </div>
                 </div>
-                <nav class="pagination-table">
+                <!-- <nav class="pagination-table">
                     <ul>
                       <li>
                         <a href="#">Previous</a>
@@ -357,20 +226,23 @@
                         <a href="#">Next</a>
                       </li>
                     </ul>
-                </nav>
+                </nav> -->
                     
                 
                 
             </div>
               
-        </div>       
+        </div>
+        <div class="overlay" onclick="toggleSidebar()"></div>       
     </div> 
-            
-            
-            
-        
-        
+   
 <script>
+
+    function toggleSidebar() {
+        document.querySelector('.container-content-edu-table').classList.toggle('show-sidebar');
+        document.querySelector('.overlay').classList.toggle('active');
+    }
+
     $(document).ready(function () {
         // Tính toán chiều rộng của cột STT
         var sttWidth = $('.table-row .table-cell:nth-child(1)').outerWidth();
@@ -387,25 +259,12 @@
     });
 
 
-    
 
-   
 
 
     
 
-//     $(document).ready(function () {
-//   function adjustStickyColumns() {
-//     var sttWidth = $('.table-row .table-cell:nth-child(1)').outerWidth();
-//     $('.table-row .table-cell:nth-child(2)').css('left', sttWidth + 'px');
-//   }
-  
-//   adjustStickyColumns();
-  
-//   $(window).resize(function () {
-//     adjustStickyColumns();
-//   });
-// });
+
 
 
 </script>

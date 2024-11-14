@@ -9,7 +9,13 @@
         align-items: center;
         gap: 20px;
         .left{
-            
+            .bars-responsive{
+                display: flex;
+                align-items: center;
+                .fa-bars{
+                    display: none;
+                }
+            }
         }
         .center{
             @media (max-width: 768px) {
@@ -50,6 +56,24 @@
                 }
             }
         }
-        
     }
 }  
+
+
+#header-edu{
+ /* Media Query cho thiết bị di động */
+ @media (max-width: 768px) {
+    /* Đổi layout thành chiều dọc */
+    .container-header {
+        .left{
+            .bars-responsive{
+                gap: 30px;
+                .fa-bars{
+                    display: block;
+                    font-size: 20px;
+                }
+            }
+        }
+    }  
+  }
+}
