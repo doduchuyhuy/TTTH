@@ -1,0 +1,96 @@
+nav.breadcrumb-pro {
+    display: flex;
+  
+    ol {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px; // space-x-1
+      @media (min-width: 768px) {
+        gap: 8px; // md:space-x-2
+      }
+      &.rtl {
+        flex-direction: row-reverse;
+      }
+    }
+  
+    li {
+      display: inline-flex;
+      align-items: center;
+  
+      a {
+        display: inline-flex;
+        align-items: center;
+        font-size: 15px; // text-sm
+        font-weight: 550; // font-medium
+        // color: #4a5568; // text-gray-700
+        color: rgb(55 65 81);
+        text-decoration: none;
+        &:hover {
+          color: #2563eb; // hover:text-blue-600
+        }
+  
+        &.dark {
+          color: #a0aec0; // dark:text-gray-400
+          &:hover {
+            color: #fff; // dark:hover:text-white
+          }
+        }
+  
+        i {
+          margin-inline-end: 10px; // me-2.5
+        }
+      }
+    }
+  
+    .divider {
+      display: flex;
+      align-items: center;
+  
+      i {
+        transform-origin: center;
+        color: #cbd5e0; // text-gray-400
+        margin-inline: 4px; // mx-1
+        &.rtl {
+          transform: rotate(180deg);
+        }
+      }
+  
+      a {
+        margin-inline-start: 4px; // ms-1
+        font-size: 14px; // text-sm
+        font-weight: 500; // font-medium
+        color: #4a5568; // text-gray-700
+  
+        @media (min-width: 768px) {
+          margin-inline-start: 8px; // md:ms-2
+        }
+  
+        &:hover {
+          color: #2563eb; // hover:text-blue-600
+        }
+  
+        &.dark {
+          color: #a0aec0; // dark:text-gray-400
+          &:hover {
+            color: #fff; // dark:hover:text-white
+          }
+        }
+      }
+  
+      span {
+        margin-inline-start: 4px; // ms-1
+        font-size: 14px; // text-sm
+        font-weight: 500; // font-medium
+        color: #a0aec0; // text-gray-500
+  
+        @media (min-width: 768px) {
+          margin-inline-start: 8px; // md:ms-2
+        }
+  
+        &.dark {
+          color: #a0aec0; // dark:text-gray-400
+        }
+      }
+    }
+  }
+  

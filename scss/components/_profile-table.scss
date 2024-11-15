@@ -1,0 +1,64 @@
+.profile-table {
+    display: flex;
+    color: #1f2937;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+
+    &.dark {
+      color: #ffffff; // dark:text-white
+    }
+  
+    .profile-image {
+      width: 40px; // w-10
+      height: 40px; // h-10
+      border-radius: 50%; // rounded-full
+      
+    }
+  
+    .profile-info {
+      word-break: break-word; // Ngắt dòng chuỗi dài
+  overflow-wrap: break-word; // Đảm bảo chuỗi ngắt đúng
+  white-space: normal; // Cho phép xuống dòng
+      .profile-name {
+        font-size: 15px; // text-base
+        font-weight: 600; // font-semibold
+        
+      }
+  
+      .profile-email {
+        font-size: 14px; // text-sm
+        font-weight: 400; // font-normal
+        color: #6b7280; // text-gray-500
+      }
+    }
+  }
+
+.profile-table{
+  @media (max-width: 768px) {
+    .profile-image {
+      width: 30px; // w-10
+      height: 30px; // h-10
+      border-radius: 50%; // rounded-full
+    }
+  
+    .profile-info {
+      // padding-left: 10px; // ps-3
+  
+      .profile-name {
+        font-size: 12.5px; // text-base
+        font-weight: 600; // font-semibold
+      }
+  
+      .profile-email {
+        font-size: 12.5px; // text-sm
+        font-weight: 400; // font-normal
+        color: #6b7280; // text-gray-500
+      }
+    }
+    
+
+  }
+}
+  
+  
