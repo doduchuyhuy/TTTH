@@ -9,6 +9,29 @@
       justify-content: space-between;
       align-items: center;
       padding: 0 20px;
+      background-color: #ffffff;
+      padding-bottom: 20px;
+      padding-top: 10px;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      .option-left{
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        .toolbar-total{
+          .title-total{
+            font-size: 16px;
+            color: #6B7280 ;
+          }
+          .result-total{
+            font-size: 16px;
+            color: #000000;
+          }
+        }
+        .toolbar-button{
+          
+        }
+      }
       .new-btn {
         background: linear-gradient(to right bottom, rgb(10, 143, 220), rgb(0, 102, 204));
         color: white;
