@@ -3,13 +3,12 @@
     overflow-y: hidden;
     background-color: rgb(249 250 251);
     gap: 20px;
-    padding: 30px;
+    padding: 20px 30px 30px 30px;
     .toolbar-des {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 0 20px;
-      background-color: #ffffff;
       padding-bottom: 20px;
       padding-top: 10px;
       border-top-left-radius: 6px;
@@ -17,19 +16,30 @@
       .option-left{
         display: flex;
         align-items: center;
-        gap: 50px;
-        .toolbar-total{
-          .title-total{
-            font-size: 16px;
-            color: #6B7280 ;
-          }
-          .result-total{
-            font-size: 16px;
-            color: #000000;
-          }
-        }
-        .toolbar-button{
-          
+        gap: 45px;
+        .radio-item{
+            label{
+                padding: 8px;
+                .custom-radio{
+                    border-width: 2px;
+                    height: 20px;
+                    width: 20px;
+                }
+                .toolbar-total{
+                  .title-total{
+                 
+                    color: #6B7280 ;
+                  }
+                  .result-total{
+                   
+                    color: #000000;
+                  }
+                }
+              
+            }
+            input[type="radio"]:checked + label {
+                background-color: aliceblue;
+            }
         }
       }
       .new-btn {
@@ -80,173 +90,40 @@
       }
     }
     @media (max-width: 768px) {
+      .breadcrumb-pro{
+        // margin-bottom: 10px;
+        width: 100%;
+        padding: 18px;
+        position: fixed;
+        top: 67px;
+        background-color: rgb(249 250 251);
+        z-index: 991;
+      }
       .toolbar-des{
-        display: none;
+        width: 100%;
+        padding: 15px;
+        position: fixed;
+        top: 110px;
+        background-color: rgb(249 250 251);
+        z-index: 991;
+        flex-wrap: wrap;
+        gap: 15px;
+        .option-left{
+          flex-wrap: wrap;
+          gap: 8px !important;
+          .radio-item{
+            label{
+                .custom-radio{
+                    border-width: 2px;
+                    height: 18px;
+                    width: 18px;
+                }
+            }
+          }
+        }
+        
       }
-    }
-    
-    // .table {
-    //   height: 80%;
-    //   border-radius: 6px;
-    //   overflow-y: auto; /* Cho phép cuộn dọc */
-    //   overflow-x: auto; /* Cho phép cuộn ngang */
-    //   .table-row {
-    //     display: flex;
-    //     border-bottom: 1px solid #ddd;
-    //     &:nth-child(odd) {
-    //       background-color: #F3F2F1;
-    //     }
-    
-    //     &:nth-child(even) {
-    //       background-color: #fff; /* White background for even rows */
-    //     }
-    
-    //     &:last-child {
-    //       border-bottom: none;
-    //     }
-    //     .table-cell {
-    //       padding: 10px;
-    //       flex: 1;
-    //       // align-items: center;
-    
-    //       &:nth-child(1) { 
-    //           flex: 0.3;
-    //       }
-    
-    //       &:nth-child(2) { 
-    //         flex:3;
-          
-    //       }
-
-    //       &:last-child {
-    //         display: flex;
-    //         gap: 15px;
-    //         justify-content: center;
-    //       }
-    //       .icon-wrapper {
-    //         position: relative;
-    //         display: inline-block;
-    //         cursor: pointer;
-    //         .tooltip {
-    //             font-size: 11px;
-    //             position: absolute;
-    //             z-index: 9999;
-    //             bottom: 100%;
-    //             left: 50%;
-    //             transform: translateX(-50%);
-    //             background-color: rgba(97, 97, 97, 0.92);
-    //             color: #fff;
-    //             padding: 8px;
-    //             border-radius: 4px;
-    //             font-size: 12px;
-    //             white-space: nowrap;
-    //             opacity: 0;
-    //             visibility: hidden;
-    //             transition: opacity 0.2s ease, visibility 0.2s ease;
-    //         }
-    //         &:hover .tooltip {
-    //             opacity: 1;
-    //             visibility: visible;
-    //         }
-    //       }
-    //       .container-action{
-    //         display: flex;
-    //         flex-direction: column;
-    //         gap: 8px;
-    //         .item-action{
-    //           a{
-    //             color: #000000;
-    //           }
-    //         }
-    //       }
-    //     }
-    
-    //     &.header {
-    //       font-weight: bold;
-    //       background-color: #fff;
-    //       position: sticky;
-    //       top: 0;
-    //       z-index: 999;
-    //     }
-    //   }
-    // }
-    .pagination-table{
-      display: none;
-      margin: auto;
-    } 
-             
-}
-
-
-.toolbar-mob {
-  background-color: rgb(249 250 251);
-  display: none;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 20px;
-  .new-btn {
-    background: linear-gradient(to right bottom, rgb(10, 143, 220), rgb(0, 102, 204));
-    color: white;
-    padding: 6px 12px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    i {
-      margin-right: 8px;
-    }
-  }
-  .options {
-    display: flex;
-    gap: 20px;
-    span {
-      cursor: pointer;
-      color: #555;
-      display: flex;
-      align-items: center;
-
-      i {
-        margin-right: 5px;
-      }
-    }
-  }
-  .selection-info {
-      color: #555;
-      display: flex;
-      align-items: center;
-
-    span {
-      margin-left: 10px;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      i {
-        margin-left: 5px;
-      }
-    }
-
-    span:first-child {
-      font-weight: bold;
-    }
-  }
-}
-
-.breadcrumb-pro.mob{
-  display: none;
-  background-color: rgb(249, 250, 251);
-  padding: 20px 20px 0 20px;
-}
-@media (max-width: 768px) {
-  .toolbar-mob {
-    display: flex;
-  }
-  .breadcrumb-pro.mob{
-    display: block;
-  }
-  .breadcrumb-pro.des{
-    display: none;
-  }
+    }         
 }
 
 
@@ -256,32 +133,7 @@
   @media (max-width: 575.98px) {
       padding-top: 10px;
       overflow-y: auto;
-      // .table{
-      //   height: auto;
-      //   overflow-y: unset;
-      //   .table-row{
-      //     min-width: 1000px;
-      //     .table-cell{
-      //       padding: 8px;
-      //       font-size: 12.5px;
-      //       &:nth-child(1), 
-      //       &:nth-child(2) {
-      //         position: sticky; /* Makes the first two columns fixed */
-      //         left: 0;
-      //         z-index: 1; /* Ensure it is above other content */
-      //         background-color: #fff; /* Add background to prevent overlap */
-      //         box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
-      //       }
-      //       &:nth-child(2) { 
-      //         flex: 1;
-      //       }
-      //     }
-          
-      //   }
-      // }
-      // .pagination-table{
-      //   display: block;
-      // }
+      
       
   }
 
@@ -290,38 +142,21 @@
     padding-top: 10px;
       width: 540px;
       overflow-y: auto;
-      // .table{
-      //   height: auto;
-      //   overflow-y: unset;
-      //   .table-row{
-      //     min-width: 1000px;
-      //     .table-cell{
-      //       padding: 8px;
-      //       font-size: 12.5px;
-      //       &:nth-child(1), 
-      //       &:nth-child(2) {
-      //         position: sticky; /* Makes the first two columns fixed */
-      //         left: 0;
-      //         z-index: 1; /* Ensure it is above other content */
-      //         background-color: #fff; /* Add background to prevent overlap */
-      //         box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
-      //       }
-      //       &:nth-child(2) { 
-      //         flex: 1;
-      //       }
-      //     }
-          
-      //   }
-      // }
-      // .pagination-table{
-      //   display: block;
-      // }
+
       
   }
 
   /* MD (medium) từ 768px đến 991px */
   @media (min-width: 768px) and (max-width: 991.98px) {
       width: 720px;
+      .toolbar-des{
+        flex-wrap: wrap;
+        gap: 15px;
+        .option-left{
+          flex-wrap: wrap;
+          gap: 8px !important;
+        }
+      }
       
       
   }

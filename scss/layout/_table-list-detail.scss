@@ -1,5 +1,5 @@
 .table-list-detail {
-    height: 80%;
+    height: 75%;
     border-radius: 6px;
     overflow-y: auto; /* Cho phép cuộn dọc */
     overflow-x: auto; /* Cho phép cuộn ngang */
@@ -20,6 +20,7 @@
       .table-cell {
         padding: 10px;
         flex: 1;
+        word-break: break-all;
         &:nth-child(1) { 
             flex: 0.3;
         }
@@ -83,13 +84,14 @@
         background-color: #fff;
         position: sticky;
         top: 0;
-        z-index: 999;
+        z-index: 990;
       }
     }
   }
 
   @media (max-width: 575.98px) {
     .table-list-detail{
+      margin-top: 203px;
       height: auto;
       overflow-y: unset;
       .table-row{
@@ -112,15 +114,13 @@
         
       }
     }
-    // .pagination-table{
-    //   display: block;
-    // }
     
 }
 
 /* SM (small) từ 576px đến 767px */
 @media (min-width: 576px) and (max-width: 767.98px) {
     .table-list-detail{
+      margin-top: 203px;
       height: auto;
       overflow-y: unset;
       .table-row{

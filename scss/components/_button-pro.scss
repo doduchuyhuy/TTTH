@@ -1,0 +1,221 @@
+// Định nghĩa màu sắc
+$blue-300: #93c5fd;
+$blue-500: #3b82f6;
+$blue-700: #1a56db;
+$blue-800: #1e429f;
+$blue-900: #1e3a8a;
+
+$gray-300: #d1d5db;
+$gray-400: #9ca3af;
+$gray-600: #4b5563;
+$gray-800: #1f2937;
+$gray-900: #111827;
+
+$green-300: #86efac;
+$green-500: #22c55e;
+$green-600: #16a34a;
+$green-700: #046C4E;
+$green-800: #03543F;
+$green-900: #14532d;
+
+$red-300: #fca5a5;
+$red-500: #ef4444;
+$red-600: #dc2626;
+$red-700: #b91c1c;
+$red-800: #991b1b;
+$red-900: #7f1d1d;
+
+$yellow-300: #fde68a;
+$yellow-400: #facc15;
+$yellow-500: #eab308;
+$yellow-600: #ca8a04;
+$yellow-900: #854d0e;
+
+$purple-300: #c4b5fd;
+$purple-400: #a78bfa;
+$purple-500: #8b5cf6;
+$purple-700: #6d28d9;
+$purple-800: #5b21b6;
+$purple-900: #4c1d95;
+
+// Kiểu cơ bản cho nút
+.btn {
+  display: inline-block;
+  padding: 10px 20px; // py-2.5 (0.625rem), px-5 (1.25rem)
+  font-size: 14px; // text-sm (0.875rem)
+  font-weight: 500; // font-medium
+  border-radius: 8px; // rounded-lg (0.5rem)
+  text-align: center;
+  margin-right: 8px; // me-2 (0.5rem)
+  margin-bottom: 8px; // mb-2 (0.5rem)
+  border: 1px solid;
+  cursor: pointer;
+  background-color: #ffffff;
+//   transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  outline: none; // focus:outline-none
+}
+
+// Mixin cho hiệu ứng focus ring
+@mixin focus-ring($color) {
+  &:focus {
+    box-shadow: 0 0 0 4px $color;
+  }
+}
+
+// Nút màu xanh (Default)
+.btn-blue {
+  color: $blue-700;
+  border-color: $blue-700;
+
+  &:hover {
+    color: #ffffff;
+    background-color: $blue-800;
+  }
+
+//   @include focus-ring($blue-300);
+
+  @media (prefers-color-scheme: dark) {
+    color: $blue-500;
+    border-color: $blue-500;
+
+    &:hover {
+      color: #ffffff;
+      background-color: $blue-500;
+    }
+
+    @include focus-ring($blue-800);
+  }
+}
+
+// Nút màu đen (Dark)
+.btn-dark {
+  color: $gray-900;
+  border-color: $gray-800;
+
+  &:hover {
+    color: #ffffff;
+    background-color: $gray-900;
+  }
+
+  @include focus-ring($gray-300);
+
+  @media (prefers-color-scheme: dark) {
+    color: $gray-400;
+    border-color: $gray-600;
+
+    &:hover {
+      color: #ffffff;
+      background-color: $gray-600;
+    }
+
+    @include focus-ring($gray-800);
+  }
+}
+
+// Nút màu xanh lá (Green)
+.btn-green {
+  color: $green-700;
+  border-color: $green-700;
+
+  &:hover {
+    color: #ffffff;
+    background-color: $green-800;
+  }
+
+//   @include focus-ring($green-300);
+
+  @media (prefers-color-scheme: dark) {
+    color: $green-500;
+    border-color: $green-500;
+
+    &:hover {
+      color: #ffffff;
+      background-color: $green-600;
+    }
+
+    @include focus-ring($green-800);
+  }
+}
+
+// Nút màu đỏ (Red)
+.btn-red {
+  color: $red-700;
+  border-color: $red-700;
+
+  &:hover {
+    color: #ffffff;
+    background-color: $red-800;
+  }
+
+//   @include focus-ring($red-300);
+
+  @media (prefers-color-scheme: dark) {
+    color: $red-500;
+    border-color: $red-500;
+
+    &:hover {
+      color: #ffffff;
+      background-color: $red-600;
+    }
+
+    @include focus-ring($red-900);
+  }
+}
+
+// Nút màu vàng (Yellow)
+.btn-yellow {
+  color: $yellow-400;
+  border-color: $yellow-400;
+
+  &:hover {
+    color: #ffffff;
+    background-color: $yellow-500;
+  }
+
+  @include focus-ring($yellow-300);
+
+  @media (prefers-color-scheme: dark) {
+    color: $yellow-300;
+    border-color: $yellow-300;
+
+    &:hover {
+      color: #ffffff;
+      background-color: $yellow-400;
+    }
+
+    @include focus-ring($yellow-900);
+  }
+}
+
+// Nút màu tím (Purple)
+.btn-purple {
+  color: $purple-700;
+  border-color: $purple-700;
+
+  &:hover {
+    color: #ffffff;
+    background-color: $purple-800;
+  }
+
+  @include focus-ring($purple-300);
+
+  @media (prefers-color-scheme: dark) {
+    color: $purple-400;
+    border-color: $purple-400;
+
+    &:hover {
+      color: #ffffff;
+      background-color: $purple-500;
+    }
+
+    @include focus-ring($purple-900);
+  }
+}
+
+
+// <button type="button" class="btn btn-blue">Default</button>
+// <button type="button" class="btn btn-dark">Dark</button>
+// <button type="button" class="btn btn-green">Green</button>
+// <button type="button" class="btn btn-red">Red</button>
+// <button type="button" class="btn btn-yellow">Yellow</button>
+// <button type="button" class="btn btn-purple">Purple</button>
