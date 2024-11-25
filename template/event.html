@@ -9,16 +9,14 @@
 </head>
 <style>
      /* Content */
-     .content {
+     .event-content {
       margin-top: 122px;
       margin-left: 112px;
       padding: 20px 35px;
       transition: margin-left 0.3s ease;
       
     }
-
-
-    .content.sidebar-hidden {
+    .event-content.sidebar-hidden {
       margin-left: 0;
     }
 
@@ -27,11 +25,9 @@
       position: relative;
     }
 
-   
-
     /* Responsive */
     @media (max-width: 768px) {
-      .content {
+      .event-content {
         margin-left: 0;
         padding: 0px 20px 20px 20px;
       }
@@ -136,7 +132,7 @@
 
 
   <!-- Content -->
-  <div class="content" id="content">
+  <div class="event-content" id="content">
     <div class="table-container">
       <!-- Filters -->
       <div class="event-table-filter">
