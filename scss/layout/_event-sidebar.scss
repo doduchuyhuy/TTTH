@@ -49,6 +49,7 @@
 /* Responsive */
 @media (max-width: 768px) {
     .event-sidebar {
+      transform: translateX(-200px);
       width: 200px;
     }
 
@@ -56,3 +57,4 @@
       transform: translateX(-200px);
     }
 }
+
