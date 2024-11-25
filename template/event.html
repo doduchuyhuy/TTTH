@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="vn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>Document</title>
+</head>
+<style>
+     /* Content */
+     .content {
+      margin-top: 122px;
+      margin-left: 112px;
+      padding: 20px 35px;
+      transition: margin-left 0.3s ease;
+      
+    }
+
+
+    .content.sidebar-hidden {
+      margin-left: 0;
+    }
+
+    /* Table and Filters */
+    .table-container {
+      position: relative;
+    }
+
+   
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .content {
+        margin-left: 0;
+        padding: 0px 20px 20px 20px;
+      }
+    }
+</style>
+<body>
+    <!-- Header -->
+  <div class="event-header">
+    <div class="left">
+        <div class="bars-responsive">
+            <i class="fa-solid fa-bars" id="toggleSidebar"></i>
+            <picture>
+                <!-- Ảnh cho màn hình trung bình (tablet) -->
+                <source media="(min-width: 768px)" srcset="../assets/svg/new1exam.svg">
+        
+                <!-- Ảnh cho màn hình nhỏ (mobile) -->
+                <source media="(max-width: 767px)" srcset="../assets/svg/logoCNTTDAV-sm.svg">
+        
+                <!-- Ảnh mặc định nếu không có điều kiện nào ở trên phù hợp -->
+                <img src="../assets/images/image-default.jpg" alt="Responsive Image">
+            </picture>
+
+            
+        </div>
+    </div>
+    <div class="right">
+        <div class="profile" id="profile">
+            <h3 class="d-lg-none">Đỗ Đức Huy<br><span>Chuyên viên</span></h3>
+            <div class="imgBx">
+                <img src="../assets/images/unnamed.jpg" alt="">
+            </div>
+                <ul class="menu" id="menu">
+                    <li><a href="#">
+                        <ion-icon name="person-outline"></ion-icon>Profile
+                    </a></li>
+                    <li><a href="#">
+                        <ion-icon name="chatbubble-outline"></ion-icon>Inbox
+                    </a></li>
+                    <li><a href="#">
+                        <ion-icon name="settings-outline"></ion-icon>Settings
+                    </a></li>
+                    <li><a href="#">
+                        <ion-icon name="help-circle-outline"></ion-icon>Help
+                    </a></li>
+                    <li><a href="#">
+                        <ion-icon name="log-out-outline"></ion-icon>Profile
+                    </a></li>
+                </ul>
+        </div>
+    </div>
+  </div>
+
+
+  <!-- Sidebar -->
+  <div class="event-sidebar" id="sidebar">
+    <ul>
+        <li>
+            <a class="active" href="">
+                <i class="fa-solid fa-house"></i>
+                <span>Trang chủ</span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <i class="fa-regular fa-calendar"></i>
+                <span>Quản lý sự kiện</span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <i class="fa-solid fa-paperclip"></i>
+                <span>Chính sách</span>
+            </a>
+        </li>
+    </ul>
+  </div>
+
+
+  <!-- Breadcrumb -->
+  <div class="event-breadcrumb" id="breadcrumb">
+      <ol>
+        <li>
+          <a href="#">
+            Events
+          </a>
+        </li>
+        <!-- <li>
+          <div class="divider">
+            <i class="fas fa-chevron-right"></i>
+            <a href="#">Projects</a>
+          </div>
+        </li> -->
+        <li aria-current="page">
+          <div class="divider">
+            <i class="fas fa-chevron-right"></i>
+            <span>The 13th Ocean Dial The 13th Ocean Dial The 13th The 13th Ocean Dial The 13th Ocean Dial The 13th </span>
+          </div>
+        </li>
+      </ol>
+  </div>
+
+
+
+  <!-- Content -->
+  <div class="content" id="content">
+    <div class="table-container">
+      <!-- Filters -->
+      <div class="event-table-filter">
+          <div class="options">
+              <div class="search-box">
+                  <div class="box-search">
+                      <input type="text" class="input-box" placeholder="Tìm kiếm">
+                      <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                  </div>
+              </div>
+          </div>
+          <div class="option-left">
+            <div class="radio-item">
+                <input type="radio" name="filter" id="all">
+                <label for="all">
+                    <span class="custom-radio"></span> 
+                    <div class="toolbar-total">
+                        <span class="title-total">Tất cả:</span>
+                        <span class="result-total">20</span>
+                    </div>
+                </label>
+            </div>
+            <div class="radio-item">
+                <input type="radio" name="filter" id="QR">
+                <label for="QR">
+                    <span class="custom-radio"></span> 
+                    <div class="toolbar-total">
+                        <span class="title-total">Check-in:</span>
+                        <span class="result-total">20</span>
+                    </div>
+                </label>
+            </div>
+            <div class="radio-item">
+                <input type="radio" name="filter" id="checkin">
+                <label for="checkin">
+                    <span class="custom-radio"></span> 
+                    <div class="toolbar-total">
+                        <span class="title-total">Chưa check-in:</span>
+                        <span class="result-total">20</span>
+                    </div>
+                </label>
+            </div>
+            <div class="radio-item">
+                <input type="radio" name="filter" id="noncheckin">
+                <label for="noncheckin">
+                    <span class="custom-radio"></span> 
+                    <div class="toolbar-total">
+                        <span class="title-total">Chưa có QR:</span>
+                        <span class="result-total">20</span>
+                    </div>
+                </label>
+            </div>
+          </div>
+      </div>
+
+      <!-- Table -->
+      <div class="event-table-detail">
+        <div class="table-row header">
+            <div class="table-cell">STT</div>
+            <div class="table-cell">Họ và tên</div>
+            <div class="table-cell">Cơ quan</div>
+            <div class="table-cell">Điện thoại</div>
+            <div class="table-cell">Chữ ký</div>
+            <div class="table-cell">Check in</div>
+            <div class="table-cell">Mã QR</div>
+            <div class="table-cell">Hành động</div>
+
+        </div>
+        <div class="table-row">
+            <div class="table-cell">1</div>
+            <div class="table-cell">
+                <div class="profile-table">
+                    <img class="profile-image" src="https://events.nghiencuubiendong.vn/test_cloud_file?fid=3188" alt="Profile image">
+                    <div class="profile-info">
+                      <div class="profile-name">Đặng Đình Quý</div>
+                      <div class="profile-email">DangDinhQuy@dav.edu.vn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-cell">Khoa CTQT, Cố vấn HVNG</div>
+            <div class="table-cell">0965396866</div>
+            <div class="table-cell">none</div>
+            <div class="table-cell">14:05:07 15/11/2024</div>
+            <div class="table-cell">
+                <img class="qr-image" src="https://events.nghiencuubiendong.vn/images/code_gen/ncbd-event-37-165.png">
+            </div>  
+            <div class="table-cell">
+                <div class="container-action">
+                    <div class="item-action">
+                        <!-- <font-awesome-icon :icon="['fas', 'eye']" /> -->
+                         <a href="">
+                            <i class="fa-solid fa-eye"></i>
+                            Xem
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">2</div>
+            <div class="table-cell">
+                <div class="profile-table">
+                    <img class="profile-image" src="https://events.nghiencuubiendong.vn/test_cloud_file?fid=3520" alt="Profile image">
+                    <div class="profile-info">
+                      <div class="profile-name">Phạm Lan Dung</div>
+                      <div class="profile-email">phamlandung@dav.edu.vn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-cell">Q.GĐ HVNG</div>
+            <div class="table-cell">0983120768</div>
+            <div class="table-cell">none</div>
+            <div class="table-cell">14:08:07 15/11/2024</div>
+            <div class="table-cell">
+                <img class="qr-image" src="https://events.nghiencuubiendong.vn/images/code_gen/ncbd-event-37-165.png">
+            </div>  
+            <div class="table-cell">
+                <div class="container-action">
+                    <div class="item-action">
+                        <!-- <font-awesome-icon :icon="['fas', 'eye']" /> -->
+                         <a href="">
+                            <i class="fa-solid fa-eye"></i>
+                            Xem
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">2</div>
+            <div class="table-cell">
+                <div class="profile-table">
+                    <img class="profile-image" src="https://events.nghiencuubiendong.vn/test_cloud_file?fid=3520" alt="Profile image">
+                    <div class="profile-info">
+                      <div class="profile-name">Phạm Lan Dung</div>
+                      <div class="profile-email">phamlandung@dav.edu.vn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-cell">Q.GĐ HVNG</div>
+            <div class="table-cell">0983120768</div>
+            <div class="table-cell">none</div>
+            <div class="table-cell">14:08:07 15/11/2024</div>
+            <div class="table-cell">
+                <img class="qr-image" src="https://events.nghiencuubiendong.vn/images/code_gen/ncbd-event-37-165.png">
+            </div>  
+            <div class="table-cell">
+                <div class="container-action">
+                    <div class="item-action">
+                        <!-- <font-awesome-icon :icon="['fas', 'eye']" /> -->
+                         <a href="">
+                            <i class="fa-solid fa-eye"></i>
+                            Xem
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">2</div>
+            <div class="table-cell">
+                <div class="profile-table">
+                    <img class="profile-image" src="https://events.nghiencuubiendong.vn/test_cloud_file?fid=3520" alt="Profile image">
+                    <div class="profile-info">
+                      <div class="profile-name">Phạm Lan Dung</div>
+                      <div class="profile-email">phamlandung@dav.edu.vn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-cell">Q.GĐ HVNG</div>
+            <div class="table-cell">0983120768</div>
+            <div class="table-cell">none</div>
+            <div class="table-cell">14:08:07 15/11/2024</div>
+            <div class="table-cell">
+                <img class="qr-image" src="https://events.nghiencuubiendong.vn/images/code_gen/ncbd-event-37-165.png">
+            </div>  
+            <div class="table-cell">
+                <div class="container-action">
+                    <div class="item-action">
+                        <!-- <font-awesome-icon :icon="['fas', 'eye']" /> -->
+                         <a href="">
+                            <i class="fa-solid fa-eye"></i>
+                            Xem
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">2</div>
+            <div class="table-cell">
+                <div class="profile-table">
+                    <img class="profile-image" src="https://events.nghiencuubiendong.vn/test_cloud_file?fid=3520" alt="Profile image">
+                    <div class="profile-info">
+                      <div class="profile-name">Phạm Lan Dung</div>
+                      <div class="profile-email">phamlandung@dav.edu.vn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-cell">Q.GĐ HVNG</div>
+            <div class="table-cell">0983120768</div>
+            <div class="table-cell">none</div>
+            <div class="table-cell">14:08:07 15/11/2024</div>
+            <div class="table-cell">
+                <img class="qr-image" src="https://events.nghiencuubiendong.vn/images/code_gen/ncbd-event-37-165.png">
+            </div>  
+            <div class="table-cell">
+                <div class="container-action">
+                    <div class="item-action">
+                        <!-- <font-awesome-icon :icon="['fas', 'eye']" /> -->
+                         <a href="">
+                            <i class="fa-solid fa-eye"></i>
+                            Xem
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">2</div>
+            <div class="table-cell">
+                <div class="profile-table">
+                    <img class="profile-image" src="https://events.nghiencuubiendong.vn/test_cloud_file?fid=3520" alt="Profile image">
+                    <div class="profile-info">
+                      <div class="profile-name">Phạm Lan Dung</div>
+                      <div class="profile-email">phamlandung@dav.edu.vn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-cell">Q.GĐ HVNG</div>
+            <div class="table-cell">0983120768</div>
+            <div class="table-cell">none</div>
+            <div class="table-cell">14:08:07 15/11/2024</div>
+            <div class="table-cell">
+                <img class="qr-image" src="https://events.nghiencuubiendong.vn/images/code_gen/ncbd-event-37-165.png">
+            </div>  
+            <div class="table-cell">
+                <div class="container-action">
+                    <div class="item-action">
+                        <!-- <font-awesome-icon :icon="['fas', 'eye']" /> -->
+                         <a href="">
+                            <i class="fa-solid fa-eye"></i>
+                            Xem
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">2</div>
+            <div class="table-cell">
+                <div class="profile-table">
+                    <img class="profile-image" src="https://events.nghiencuubiendong.vn/test_cloud_file?fid=3520" alt="Profile image">
+                    <div class="profile-info">
+                      <div class="profile-name">Phạm Lan Dung</div>
+                      <div class="profile-email">phamlandung@dav.edu.vn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-cell">Q.GĐ HVNG</div>
+            <div class="table-cell">0983120768</div>
+            <div class="table-cell">none</div>
+            <div class="table-cell">14:08:07 15/11/2024</div>
+            <div class="table-cell">
+                <img class="qr-image" src="https://events.nghiencuubiendong.vn/images/code_gen/ncbd-event-37-165.png">
+            </div>  
+            <div class="table-cell">
+                <div class="container-action">
+                    <div class="item-action">
+                        <!-- <font-awesome-icon :icon="['fas', 'eye']" /> -->
+                         <a href="">
+                            <i class="fa-solid fa-eye"></i>
+                            Xem
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">2</div>
+            <div class="table-cell">
+                <div class="profile-table">
+                    <img class="profile-image" src="https://events.nghiencuubiendong.vn/test_cloud_file?fid=3520" alt="Profile image">
+                    <div class="profile-info">
+                      <div class="profile-name">Phạm Lan Dung</div>
+                      <div class="profile-email">phamlandung@dav.edu.vn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-cell">Q.GĐ HVNG</div>
+            <div class="table-cell">0983120768</div>
+            <div class="table-cell">none</div>
+            <div class="table-cell">14:08:07 15/11/2024</div>
+            <div class="table-cell">
+                <img class="qr-image" src="https://events.nghiencuubiendong.vn/images/code_gen/ncbd-event-37-165.png">
+            </div>  
+            <div class="table-cell">
+                <div class="container-action">
+                    <div class="item-action">
+                        <!-- <font-awesome-icon :icon="['fas', 'eye']" /> -->
+                         <a href="">
+                            <i class="fa-solid fa-eye"></i>
+                            Xem
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">2</div>
+            <div class="table-cell">
+                <div class="profile-table">
+                    <img class="profile-image" src="https://events.nghiencuubiendong.vn/test_cloud_file?fid=3520" alt="Profile image">
+                    <div class="profile-info">
+                      <div class="profile-name">Phạm Lan Dung</div>
+                      <div class="profile-email">phamlandung@dav.edu.vn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-cell">Q.GĐ HVNG</div>
+            <div class="table-cell">0983120768</div>
+            <div class="table-cell">none</div>
+            <div class="table-cell">14:08:07 15/11/2024</div>
+            <div class="table-cell">
+                <img class="qr-image" src="https://events.nghiencuubiendong.vn/images/code_gen/ncbd-event-37-165.png">
+            </div>  
+            <div class="table-cell">
+                <div class="container-action">
+                    <div class="item-action">
+                        <!-- <font-awesome-icon :icon="['fas', 'eye']" /> -->
+                         <a href="">
+                            <i class="fa-solid fa-eye"></i>
+                            Xem
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">2</div>
+            <div class="table-cell">
+                <div class="profile-table">
+                    <img class="profile-image" src="https://events.nghiencuubiendong.vn/test_cloud_file?fid=3520" alt="Profile image">
+                    <div class="profile-info">
+                      <div class="profile-name">Phạm Lan Dung</div>
+                      <div class="profile-email">phamlandung@dav.edu.vn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-cell">Q.GĐ HVNG</div>
+            <div class="table-cell">0983120768</div>
+            <div class="table-cell">none</div>
+            <div class="table-cell">14:08:07 15/11/2024</div>
+            <div class="table-cell">
+                <img class="qr-image" src="https://events.nghiencuubiendong.vn/images/code_gen/ncbd-event-37-165.png">
+            </div>  
+            <div class="table-cell">
+                <div class="container-action">
+                    <div class="item-action">
+                        <!-- <font-awesome-icon :icon="['fas', 'eye']" /> -->
+                         <a href="">
+                            <i class="fa-solid fa-eye"></i>
+                            Xem
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">2</div>
+            <div class="table-cell">
+                <div class="profile-table">
+                    <img class="profile-image" src="https://events.nghiencuubiendong.vn/test_cloud_file?fid=3520" alt="Profile image">
+                    <div class="profile-info">
+                      <div class="profile-name">Phạm Lan Dung</div>
+                      <div class="profile-email">phamlandung@dav.edu.vn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-cell">Q.GĐ HVNG</div>
+            <div class="table-cell">0983120768</div>
+            <div class="table-cell">none</div>
+            <div class="table-cell">14:08:07 15/11/2024</div>
+            <div class="table-cell">
+                <img class="qr-image" src="https://events.nghiencuubiendong.vn/images/code_gen/ncbd-event-37-165.png">
+            </div>  
+            <div class="table-cell">
+                <div class="container-action">
+                    <div class="item-action">
+                        <!-- <font-awesome-icon :icon="['fas', 'eye']" /> -->
+                         <a href="">
+                            <i class="fa-solid fa-eye"></i>
+                            Xem
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">2</div>
+            <div class="table-cell">
+                <div class="profile-table">
+                    <img class="profile-image" src="https://events.nghiencuubiendong.vn/test_cloud_file?fid=3520" alt="Profile image">
+                    <div class="profile-info">
+                      <div class="profile-name">Phạm Lan Dung</div>
+                      <div class="profile-email">phamlandung@dav.edu.vn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-cell">Q.GĐ HVNG</div>
+            <div class="table-cell">0983120768</div>
+            <div class="table-cell">none</div>
+            <div class="table-cell">14:08:07 15/11/2024</div>
+            <div class="table-cell">
+                <img class="qr-image" src="https://events.nghiencuubiendong.vn/images/code_gen/ncbd-event-37-165.png">
+            </div>  
+            <div class="table-cell">
+                <div class="container-action">
+                    <div class="item-action">
+                        <!-- <font-awesome-icon :icon="['fas', 'eye']" /> -->
+                         <a href="">
+                            <i class="fa-solid fa-eye"></i>
+                            Xem
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">2</div>
+            <div class="table-cell">
+                <div class="profile-table">
+                    <img class="profile-image" src="https://events.nghiencuubiendong.vn/test_cloud_file?fid=3520" alt="Profile image">
+                    <div class="profile-info">
+                      <div class="profile-name">Phạm Lan Dung</div>
+                      <div class="profile-email">phamlandung@dav.edu.vn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-cell">Q.GĐ HVNG</div>
+            <div class="table-cell">0983120768</div>
+            <div class="table-cell">none</div>
+            <div class="table-cell">14:08:07 15/11/2024</div>
+            <div class="table-cell">
+                <img class="qr-image" src="https://events.nghiencuubiendong.vn/images/code_gen/ncbd-event-37-165.png">
+            </div>  
+            <div class="table-cell">
+                <div class="container-action">
+                    <div class="item-action">
+                        <!-- <font-awesome-icon :icon="['fas', 'eye']" /> -->
+                         <a href="">
+                            <i class="fa-solid fa-eye"></i>
+                            Xem
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">2</div>
+            <div class="table-cell">
+                <div class="profile-table">
+                    <img class="profile-image" src="https://events.nghiencuubiendong.vn/test_cloud_file?fid=3520" alt="Profile image">
+                    <div class="profile-info">
+                      <div class="profile-name">Phạm Lan Dung</div>
+                      <div class="profile-email">phamlandung@dav.edu.vn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-cell">Q.GĐ HVNG</div>
+            <div class="table-cell">0983120768</div>
+            <div class="table-cell">none</div>
+            <div class="table-cell">14:08:07 15/11/2024</div>
+            <div class="table-cell">
+                <img class="qr-image" src="https://events.nghiencuubiendong.vn/images/code_gen/ncbd-event-37-165.png">
+            </div>  
+            <div class="table-cell">
+                <div class="container-action">
+                    <div class="item-action">
+                        <!-- <font-awesome-icon :icon="['fas', 'eye']" /> -->
+                         <a href="">
+                            <i class="fa-solid fa-eye"></i>
+                            Xem
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">2</div>
+            <div class="table-cell">
+                <div class="profile-table">
+                    <img class="profile-image" src="https://events.nghiencuubiendong.vn/test_cloud_file?fid=3520" alt="Profile image">
+                    <div class="profile-info">
+                      <div class="profile-name">Phạm Lan Dung</div>
+                      <div class="profile-email">phamlandung@dav.edu.vn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-cell">Q.GĐ HVNG</div>
+            <div class="table-cell">0983120768</div>
+            <div class="table-cell">none</div>
+            <div class="table-cell">14:08:07 15/11/2024</div>
+            <div class="table-cell">
+                <img class="qr-image" src="https://events.nghiencuubiendong.vn/images/code_gen/ncbd-event-37-165.png">
+            </div>  
+            <div class="table-cell">
+                <div class="container-action">
+                    <div class="item-action">
+                        <!-- <font-awesome-icon :icon="['fas', 'eye']" /> -->
+                         <a href="">
+                            <i class="fa-solid fa-eye"></i>
+                            Xem
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">2</div>
+            <div class="table-cell">
+                <div class="profile-table">
+                    <img class="profile-image" src="https://events.nghiencuubiendong.vn/test_cloud_file?fid=3520" alt="Profile image">
+                    <div class="profile-info">
+                      <div class="profile-name">Phạm Lan Dung</div>
+                      <div class="profile-email">phamlandung@dav.edu.vn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-cell">Q.GĐ HVNG</div>
+            <div class="table-cell">0983120768</div>
+            <div class="table-cell">none</div>
+            <div class="table-cell">14:08:07 15/11/2024</div>
+            <div class="table-cell">
+                <img class="qr-image" src="https://events.nghiencuubiendong.vn/images/code_gen/ncbd-event-37-165.png">
+            </div>  
+            <div class="table-cell">
+                <div class="container-action">
+                    <div class="item-action">
+                        <!-- <font-awesome-icon :icon="['fas', 'eye']" /> -->
+                         <a href="">
+                            <i class="fa-solid fa-eye"></i>
+                            Xem
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">2</div>
+            <div class="table-cell">
+                <div class="profile-table">
+                    <img class="profile-image" src="https://events.nghiencuubiendong.vn/test_cloud_file?fid=3520" alt="Profile image">
+                    <div class="profile-info">
+                      <div class="profile-name">Phạm Lan Dung</div>
+                      <div class="profile-email">phamlandung@dav.edu.vn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-cell">Q.GĐ HVNG</div>
+            <div class="table-cell">0983120768</div>
+            <div class="table-cell">none</div>
+            <div class="table-cell">14:08:07 15/11/2024</div>
+            <div class="table-cell">
+                <img class="qr-image" src="https://events.nghiencuubiendong.vn/images/code_gen/ncbd-event-37-165.png">
+            </div>  
+            <div class="table-cell">
+                <div class="container-action">
+                    <div class="item-action">
+                        <!-- <font-awesome-icon :icon="['fas', 'eye']" /> -->
+                         <a href="">
+                            <i class="fa-solid fa-eye"></i>
+                            Xem
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">2</div>
+            <div class="table-cell">
+                <div class="profile-table">
+                    <img class="profile-image" src="https://events.nghiencuubiendong.vn/test_cloud_file?fid=3520" alt="Profile image">
+                    <div class="profile-info">
+                      <div class="profile-name">Phạm Lan Dung</div>
+                      <div class="profile-email">phamlandung@dav.edu.vn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-cell">Q.GĐ HVNG</div>
+            <div class="table-cell">0983120768</div>
+            <div class="table-cell">none</div>
+            <div class="table-cell">14:08:07 15/11/2024</div>
+            <div class="table-cell">
+                <img class="qr-image" src="https://events.nghiencuubiendong.vn/images/code_gen/ncbd-event-37-165.png">
+            </div>  
+            <div class="table-cell">
+                <div class="container-action">
+                    <div class="item-action">
+                        <!-- <font-awesome-icon :icon="['fas', 'eye']" /> -->
+                         <a href="">
+                            <i class="fa-solid fa-eye"></i>
+                            Xem
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+  </div>
+
+
+
+  <!-- JavaScript -->
+  <script>
+    const toggleSidebarBtn = document.getElementById('toggleSidebar');
+    const sidebar = document.getElementById('sidebar');
+    const breadcrumb = document.getElementById('breadcrumb');
+    const content = document.getElementById('content');
+
+    // Toggle Sidebar
+    toggleSidebarBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('hidden');
+      breadcrumb.classList.toggle('sidebar-hidden');
+      content.classList.toggle('sidebar-hidden');
+    });
+
+
+  </script>
+
+</body>
+</html>

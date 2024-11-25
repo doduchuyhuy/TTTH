@@ -27,7 +27,6 @@
                 }
                 .toolbar-total{
                   .title-total{
-                 
                     color: #6B7280 ;
                   }
                   .result-total{
@@ -90,39 +89,47 @@
       }
     }
     @media (max-width: 768px) {
-      .breadcrumb-pro{
-        // margin-bottom: 10px;
+      .container-fixed{
         width: 100%;
-        padding: 18px;
+        
         position: fixed;
-        top: 67px;
+        top: 65px;
         background-color: rgb(249 250 251);
         z-index: 991;
-      }
-      .toolbar-des{
-        width: 100%;
-        padding: 15px;
-        position: fixed;
-        top: 110px;
-        background-color: rgb(249 250 251);
-        z-index: 991;
-        flex-wrap: wrap;
-        gap: 15px;
-        .option-left{
+        // padding: 15px 15px 0px 15px;
+        padding: 16px 0px 0px 0px;
+        .breadcrumb-pro{
+          margin-bottom: 10px;
+        }
+        .toolbar-des{
+          width: 100%;
+          padding: 0px 0px 10px 0px;
           flex-wrap: wrap;
-          gap: 8px !important;
-          .radio-item{
-            label{
-                .custom-radio{
-                    border-width: 2px;
-                    height: 18px;
-                    width: 18px;
-                }
+          gap: 10px;
+          .option-left{
+            flex-wrap: wrap;
+            gap: 4px !important;
+            .radio-item{
+              label{
+                  .custom-radio{
+                      border-width: 2px;
+                      height: 18px;
+                      width: 18px;
+                  }
+                  gap: 5px !important;
+                  .toolbar-total{
+                    .title-total{
+                      font-size: 13px;
+                    }
+                    .result-total{
+                      font-size: 13px;
+                    }
+                  }
+              }
             }
           }
         }
-        
-      }
+      } 
     }         
 }
 
@@ -131,7 +138,7 @@
   /* XS (extra small) dưới 576px */
 
   @media (max-width: 575.98px) {
-      padding-top: 10px;
+      padding: 10px 10px 100px 10px;
       overflow-y: auto;
       
       

@@ -1,7 +1,5 @@
-.table-list-detail {
-    height: 75%;
+.event-table-detail {
     border-radius: 6px;
-    overflow-y: auto; /* Cho phép cuộn dọc */
     overflow-x: auto; /* Cho phép cuộn ngang */
     .table-row {
       display: flex;
@@ -9,7 +7,6 @@
       &:nth-child(odd) {
         background-color: #F3F2F1;
       }
-  
       &:nth-child(even) {
         background-color: #fff; /* White background for even rows */
       }
@@ -90,9 +87,7 @@
   }
 
   @media (max-width: 575.98px) {
-    .table-list-detail{
-      height: auto;
-      overflow-y: unset;
+    .event-table-detail{
       .table-row{
         min-width: 1000px;
         .table-cell{
@@ -121,9 +116,7 @@
 
 /* SM (small) từ 576px đến 767px */
 @media (min-width: 576px) and (max-width: 767.98px) {
-    .table-list-detail{
-      height: auto;
-      overflow-y: unset;
+    .event-table-detail{
       .table-row{
         min-width: 1000px;
         .table-cell{

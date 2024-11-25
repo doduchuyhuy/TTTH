@@ -1,96 +1,125 @@
-nav.breadcrumb-pro {
-    display: flex;
+.event-breadcrumb {
+    // ol {
+    //   display: inline-flex;
+    //   align-items: center;
+    //   gap: 4px; // space-x-1
+    //   @media (min-width: 768px) {
+    //     gap: 8px; // md:space-x-2
+    //   }
+
+    //   &.rtl {
+    //     flex-direction: row-reverse;
+    //   }
+    // }
   
-    ol {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px; // space-x-1
-      @media (min-width: 768px) {
-        gap: 8px; // md:space-x-2
-      }
-      &.rtl {
-        flex-direction: row-reverse;
-      }
-    }
+    // li {
+    //   display: inline-flex;
+    //   align-items: center;
+    //   // @media (max-width: 768px) {
+    //   //   &:nth-child(1) { 
+    //   //     flex: 1;
+    //   //   }
   
-    li {
-      display: inline-flex;
-      align-items: center;
+    //   //   &:nth-child(2) { 
+    //   //     flex:3.5;
+        
+    //   //   }  
+    //   // }
+      
+
+    //   a {
+    //     display: inline-flex;
+    //     align-items: center;
+    //     font-size: 15px; // text-sm
+    //     font-weight: 550; // font-medium
+    //     color: rgb(55 65 81);
+    //     text-decoration: none;
+    //     @media (max-width: 768px) {
+    //       font-size: 12px;
+    //     }
+    //     &:hover {
+    //       color: #2563eb; // hover:text-blue-600
+    //     }
   
-      a {
-        display: inline-flex;
-        align-items: center;
-        font-size: 15px; // text-sm
-        font-weight: 550; // font-medium
-        // color: #4a5568; // text-gray-700
-        color: rgb(55 65 81);
-        text-decoration: none;
-        &:hover {
-          color: #2563eb; // hover:text-blue-600
-        }
+    //     &.dark {
+    //       color: #a0aec0; // dark:text-gray-400
+    //       &:hover {
+    //         color: #fff; // dark:hover:text-white
+    //       }
+    //     }
   
-        &.dark {
-          color: #a0aec0; // dark:text-gray-400
-          &:hover {
-            color: #fff; // dark:hover:text-white
-          }
-        }
+    //     i {
+    //       margin-inline-end: 10px; // me-2.5
+    //     }
+    //   }
+    // }
   
-        i {
-          margin-inline-end: 10px; // me-2.5
-        }
-      }
-    }
+    // .divider {
+    //   display: flex;
+    //   align-items: center;
   
-    .divider {
-      display: flex;
-      align-items: center;
+    //   i {
+    //     transform-origin: center;
+    //     color: #cbd5e0; // text-gray-400
+    //     margin-inline: 4px; // mx-1
+    //     &.rtl {
+    //       transform: rotate(180deg);
+    //     }
+    //   }
   
-      i {
-        transform-origin: center;
-        color: #cbd5e0; // text-gray-400
-        margin-inline: 4px; // mx-1
-        &.rtl {
-          transform: rotate(180deg);
-        }
-      }
+    //   a {
+    //     margin-inline-start: 4px; // ms-1
+    //     font-size: 14px; // text-sm
+    //     font-weight: 500; // font-medium
+    //     color: #4a5568; // text-gray-700
+
+    //     @media (max-width: 768px) {
+    //       font-size: 12px;
+    //     }
   
-      a {
-        margin-inline-start: 4px; // ms-1
-        font-size: 14px; // text-sm
-        font-weight: 500; // font-medium
-        color: #4a5568; // text-gray-700
+    //     @media (min-width: 768px) {
+    //       margin-inline-start: 8px; // md:ms-2
+    //     }
   
-        @media (min-width: 768px) {
-          margin-inline-start: 8px; // md:ms-2
-        }
+    //     &:hover {
+    //       color: #2563eb; // hover:text-blue-600
+    //     }
   
-        &:hover {
-          color: #2563eb; // hover:text-blue-600
-        }
+    //     &.dark {
+    //       color: #a0aec0; // dark:text-gray-400
+    //       &:hover {
+    //         color: #fff; // dark:hover:text-white
+    //       }
+    //     }
+    //   }
   
-        &.dark {
-          color: #a0aec0; // dark:text-gray-400
-          &:hover {
-            color: #fff; // dark:hover:text-white
-          }
-        }
-      }
+    //   span {
+    //     display: -webkit-box; /* Sử dụng box layout */
+    //     margin-inline-start: 4px; // ms-1
+    //     font-size: 14px; // text-sm
+    //     font-weight: 500; // font-medium
+    //     color: #a0aec0; // text-gray-500
+    //     -webkit-box-orient: vertical; /* Thiết lập hướng dọc */
+    //     overflow: hidden; /* Ẩn phần nội dung vượt quá */
+    //     text-overflow: ellipsis; /* Hiển thị dấu ba chấm */
+    //     -webkit-line-clamp: 1; /* Giới hạn số dòng (ở đây là 2 dòng) */
+    //     line-height: 1.5; /* Đặt chiều cao dòng */
+    //     max-height: 3em; /* Tương ứng với số dòng * chiều cao dòng */
+        
   
-      span {
-        margin-inline-start: 4px; // ms-1
-        font-size: 14px; // text-sm
-        font-weight: 500; // font-medium
-        color: #a0aec0; // text-gray-500
+    //     @media (min-width: 768px) {
+    //       margin-inline-start: 8px; // md:ms-2
+    //     }
+
+    //     @media (max-width: 768px) {
+    //       font-size: 12px;
+    //     }
+
   
-        @media (min-width: 768px) {
-          margin-inline-start: 8px; // md:ms-2
-        }
-  
-        &.dark {
-          color: #a0aec0; // dark:text-gray-400
-        }
-      }
-    }
+    //     &.dark {
+    //       color: #a0aec0; // dark:text-gray-400
+    //     }
+    //   }
+    // }
   }
   

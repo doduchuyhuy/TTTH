@@ -31,8 +31,8 @@ html {
 body {
     font-size: 1.4rem;
     line-height: 1.5;
-    height: 100%;
-    overflow: hidden;
+    // height: 100%;
+    // overflow: hidden;
     // -webkit-overflow-scrolling: touch;
     
     // background-color:#f7f7f9 ;
@@ -40,6 +40,9 @@ body {
     //     background-color:#fff ;
     //   }
 }
+
+
+  
 
 ::-webkit-scrollbar{
     width: 6px;

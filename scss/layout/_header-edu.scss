@@ -3,6 +3,9 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     background-color: rgb(255, 255, 255);
     padding: 0 28px 0 28px;
+    @media (max-width: 768px) {
+        border-bottom: none;
+    }
     .container-header{
         display: flex;
         justify-content: space-between;
@@ -25,9 +28,6 @@
             }
         }
         .right{
-            // display: flex;
-            // align-items: center;
-            // gap: 10px;
             .signin-signup{
                 display: flex;
                 align-items: center;

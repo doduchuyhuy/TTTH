@@ -1,0 +1,79 @@
+.event-table-filter{
+    width: 100%;
+    position: sticky;
+    top: 116px; /* Below header */
+    background-color: #f8f9fa;
+    padding: 10px;
+    z-index: 998;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    touch-action: manipulation; /* Tránh các xung đột cuộn */
+    -webkit-transform: translateZ(0); /* Kích hoạt GPU rendering */
+
+
+    
+    @media (max-width: 768px) {
+       flex-direction: column;
+       align-items: unset;
+       top: 111px;
+       padding-bottom: 4px; 
+    }
+    .options{
+        .search-box{
+            .box-search{
+                padding: 5px;
+            }
+        }
+    }
+    .option-left{
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        flex-wrap: wrap;
+        @media (max-width: 768px) {
+            gap: 5px;
+         }
+        .radio-item{
+            label{
+                padding: 8px;
+                gap: 5px;
+                @media (max-width: 768px) {
+                    padding: 4px;
+                 }
+                .custom-radio{
+                    border-width: 1px;
+                    height: 16px;
+                    width: 16px;
+                    background-color: #fff;
+                }
+                .custom-radio::before {
+                    height: 10px;
+                    width: 10px;
+                   
+                }
+                .toolbar-total{
+                    .title-total{
+                        color: #6B7280 ;
+                        @media (max-width: 768px) {
+                            font-size: 13px;
+                         }
+                    }
+                    .result-total{
+                        color: #000000;
+                        @media (max-width: 768px) {
+                            font-size: 13px;
+                         }
+                    }
+                }
+                
+            }
+            input[type="radio"]:checked + label {
+                background-color: aliceblue;
+            }
+        }
+    }
+
+}
