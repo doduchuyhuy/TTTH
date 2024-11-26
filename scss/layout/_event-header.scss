@@ -18,10 +18,11 @@
             align-items: center;
             gap: 10px;
             .fa-bars{
-                // display: none;
-                // @media (max-width: 768px) {
-                //     display: block;
-                // }
+                padding: 5px;
+                display: none;
+                @media (max-width: 768px) {
+                    display: block;
+                }
             }
         }
     }

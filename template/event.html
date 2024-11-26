@@ -8,32 +8,13 @@
     <title>Document</title>
 </head>
 <style>
-     /* Content */
-     .event-content {
-      margin-top: 122px;
-      margin-left: 112px;
-      padding: 20px 35px;
-      transition: margin-left 0.3s ease;
-      
-    }
-    .event-content.sidebar-hidden {
-      margin-left: 0;
-    }
-
-    /* Table and Filters */
-    .table-container {
-      position: relative;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .event-content {
-        margin-left: 0;
-        padding: 0px 20px 20px 20px;
-      }
-    }
+   
 </style>
 <body>
+
+     <!-- Overlay -->
+  <div class="event-overlay" id="overlay"></div>
+
     <!-- Header -->
   <div class="event-header">
     <div class="left">
@@ -114,12 +95,6 @@
             Events
           </a>
         </li>
-        <!-- <li>
-          <div class="divider">
-            <i class="fas fa-chevron-right"></i>
-            <a href="#">Projects</a>
-          </div>
-        </li> -->
         <li aria-current="page">
           <div class="divider">
             <i class="fas fa-chevron-right"></i>
@@ -752,15 +727,31 @@
   <script>
     const toggleSidebarBtn = document.getElementById('toggleSidebar');
     const sidebar = document.getElementById('sidebar');
-    const breadcrumb = document.getElementById('breadcrumb');
-    const content = document.getElementById('content');
+    const overlay = document.getElementById('overlay');
+  
 
     // Toggle Sidebar
     toggleSidebarBtn.addEventListener('click', () => {
-      sidebar.classList.toggle('hidden');
-      breadcrumb.classList.toggle('sidebar-hidden');
-      content.classList.toggle('sidebar-hidden');
+      sidebar.classList.toggle('show');
+      overlay.classList.toggle('active');
     });
+
+
+    // Close Sidebar when clicking on overlay
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('show');
+      overlay.classList.remove('active');
+    });
+
+
+    // Ensure Sidebar visibility based on screen size
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        sidebar.classList.remove('show');
+        overlay.classList.remove('active');
+      }
+    });
+
 
 
   </script>

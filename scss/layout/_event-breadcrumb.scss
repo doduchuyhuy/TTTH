@@ -138,12 +138,6 @@
 
 }
 
-.event-breadcrumb.sidebar-hidden {
-    left: 0;
-    width: 100%; /* Khi sidebar đóng, breadcrumb chiếm toàn bộ chiều rộng */
-}
-
-
 /* Responsive */
 @media (max-width: 768px) {
     .event-breadcrumb {

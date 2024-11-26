@@ -1,6 +1,6 @@
 .event-sidebar{
     position: fixed;
-    top: 73px; /* Below header */
+    top: 72px; /* Below header */
     left: 0;
     width: 112px;
     // background-color: #f9f9f9;
@@ -40,21 +40,17 @@
     }
 }
 
-.event-sidebar.hidden {
-    transform: translateX(-250px);
-    
-  }
+
 
 
 /* Responsive */
 @media (max-width: 768px) {
     .event-sidebar {
       transform: translateX(-200px);
-      width: 200px;
     }
 
-    .event-sidebar.hidden {
-      transform: translateX(-200px);
+    .event-sidebar.show {
+        transform: translateX(0);
     }
 }
 

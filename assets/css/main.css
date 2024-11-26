@@ -5503,6 +5503,15 @@ a {
   align-items: center;
   gap: 10px;
 }
+.event-header .left .bars-responsive .fa-bars {
+  padding: 5px;
+  display: none;
+}
+@media (max-width: 768px) {
+  .event-header .left .bars-responsive .fa-bars {
+    display: block;
+  }
+}
 .event-header .right .signin-signup {
   display: flex;
   align-items: center;
@@ -5532,7 +5541,7 @@ a {
 
 .event-sidebar {
   position: fixed;
-  top: 73px; /* Below header */
+  top: 72px; /* Below header */
   left: 0;
   width: 112px;
   background-color: #fff;
@@ -5568,18 +5577,13 @@ a {
   background: #e8ebed;
 }
 
-.event-sidebar.hidden {
-  transform: translateX(-250px);
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .event-sidebar {
     transform: translateX(-200px);
-    width: 200px;
   }
-  .event-sidebar.hidden {
-    transform: translateX(-200px);
+  .event-sidebar.show {
+    transform: translateX(0);
   }
 }
 .event-table-detail {
@@ -5826,11 +5830,6 @@ a {
   color: #a0aec0;
 }
 
-.event-breadcrumb.sidebar-hidden {
-  left: 0;
-  width: 100%; /* Khi sidebar đóng, breadcrumb chiếm toàn bộ chiều rộng */
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .event-breadcrumb {
@@ -5850,13 +5849,15 @@ a {
   align-items: center;
   gap: 2px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  touch-action: manipulation; /* Tránh các xung đột cuộn */
-  -webkit-transform: translateZ(0); /* Kích hoạt GPU rendering */
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .event-table-filter {
     flex-direction: column;
     align-items: unset;
+  }
+}
+@media (max-width: 768px) {
+  .event-table-filter {
     top: 111px;
     padding-bottom: 4px;
   }
@@ -5868,11 +5869,11 @@ a {
   display: flex;
   align-items: center;
   gap: 25px;
-  flex-wrap: wrap;
 }
 @media (max-width: 768px) {
   .event-table-filter .option-left {
     gap: 5px;
+    flex-wrap: wrap;
   }
 }
 .event-table-filter .option-left .radio-item label {
@@ -5926,8 +5927,19 @@ a {
     padding: 0px 20px 20px 20px;
   }
 }
-.event-content.sidebar-hidden {
-  margin-left: 0;
+
+.event-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.event-overlay.active {
+  display: block;
 }
 
 #single-top-meta {
