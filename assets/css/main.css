@@ -5653,6 +5653,9 @@ a {
 .event-table-detail .table-row .table-cell .container-action .item-action a {
   color: #000000;
 }
+.event-table-detail .table-row .table-cell .container-action .item-action a span {
+  margin-left: 5px;
+}
 .event-table-detail .table-row .table-cell .qr-image {
   width: 70px;
   height: 70px;
@@ -5688,6 +5691,10 @@ a {
   .event-table-detail .table-row .table-cell:nth-child(2) {
     flex: 1;
   }
+  .event-table-detail .table-row .table-cell .profile-table img {
+    width: 30px;
+    height: 30px;
+  }
 }
 /* SM (small) từ 576px đến 767px */
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -5706,6 +5713,140 @@ a {
     box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
   }
   .event-table-detail .table-row .table-cell:nth-child(2) {
+    flex: 1.5;
+  }
+  .event-table-detail .table-row .table-cell .profile-table img {
+    width: 30px;
+    height: 30px;
+  }
+}
+.event-table-list {
+  border-radius: 6px;
+  overflow-x: auto; /* Cho phép cuộn ngang */
+}
+.event-table-list .table-row {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+.event-table-list .table-row:nth-child(odd) {
+  background-color: #F3F2F1;
+}
+.event-table-list .table-row:nth-child(even) {
+  background-color: #fff; /* White background for even rows */
+}
+.event-table-list .table-row:last-child {
+  border-bottom: none;
+}
+.event-table-list .table-row .table-cell {
+  padding: 10px;
+  flex: 1;
+  word-break: break-all;
+}
+.event-table-list .table-row .table-cell:nth-child(1) {
+  flex: 0.3;
+}
+.event-table-list .table-row .table-cell:nth-child(2) {
+  flex: 2;
+}
+.event-table-list .table-row .table-cell:last-child {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.event-table-list .table-row .table-cell .icon-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.event-table-list .table-row .table-cell .icon-wrapper .tooltip {
+  font-size: 11px;
+  position: absolute;
+  z-index: 9999;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(97, 97, 97, 0.92);
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+.event-table-list .table-row .table-cell .icon-wrapper:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+.event-table-list .table-row .table-cell .container-action {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.event-table-list .table-row .table-cell .container-action .item-action a {
+  color: #000000;
+}
+.event-table-list .table-row .table-cell .container-action .item-action a span {
+  margin-left: 5px;
+}
+.event-table-list .table-row .table-cell .qr-image {
+  width: 70px;
+  height: 70px;
+  border: 1px solid green;
+  border-radius: 8px;
+}
+.event-table-list .table-row.header {
+  font-weight: bold;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 990;
+}
+
+@media (max-width: 575.98px) {
+  .event-table-list .table-row {
+    min-width: 1000px;
+  }
+  .event-table-list .table-row .table-cell {
+    padding: 8px;
+    font-size: 12.5px;
+  }
+  .event-table-list .table-row .table-cell:nth-child(1), .event-table-list .table-row .table-cell:nth-child(2) {
+    position: sticky; /* Makes the first two columns fixed */
+    left: 0;
+    z-index: 1; /* Ensure it is above other content */
+    background-color: #fff; /* Add background to prevent overlap */
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  .event-table-list .table-row .table-cell:nth-child(1) {
+    font-size: 10px;
+    flex: 0.1;
+  }
+  .event-table-list .table-row .table-cell:nth-child(2) {
+    flex: 1.5;
+  }
+}
+/* SM (small) từ 576px đến 767px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .event-table-list .table-row {
+    min-width: 1000px;
+  }
+  .event-table-list .table-row .table-cell {
+    padding: 8px;
+    font-size: 12.5px;
+  }
+  .event-table-list .table-row .table-cell:nth-child(1), .event-table-list .table-row .table-cell:nth-child(2) {
+    position: sticky; /* Makes the first two columns fixed */
+    left: 0;
+    z-index: 1; /* Ensure it is above other content */
+    background-color: #fff; /* Add background to prevent overlap */
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  .event-table-list .table-row .table-cell:nth-child(1) {
+    flex: 0.1;
+  }
+  .event-table-list .table-row .table-cell:nth-child(2) {
     flex: 1.5;
   }
 }
@@ -5859,7 +6000,6 @@ a {
 @media (max-width: 768px) {
   .event-table-filter {
     top: 111px;
-    padding-bottom: 4px;
   }
 }
 .event-table-filter .options .search-box .box-search {
