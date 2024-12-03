@@ -6137,6 +6137,7 @@ a {
 .quiz-curd .quizz-add .quiz-add-body .add-exam .left-col .list-all-sections .list-section-header {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 30px;
 }
 .quiz-curd .quizz-add .quiz-add-body .add-exam .left-col .list-all-sections .list-section-header .section-header-1 {
   display: flex;
@@ -6147,6 +6148,9 @@ a {
   font-size: 13px;
   height: auto;
   padding: 6px 8px;
+}
+.quiz-curd .quizz-add .quiz-add-body .add-exam .left-col .list-all-sections .list-section-body {
+  padding-bottom: 30px;
 }
 .quiz-curd .quizz-add .quiz-add-body .add-exam .left-col .list-all-sections .list-section-body p {
   text-align: center;
@@ -6201,6 +6205,7 @@ a {
 }
 .quiz-curd .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-header {
   padding: 0 20px;
+  padding-bottom: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6236,8 +6241,7 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Mỗi cột chiếm 1 phần đều nhau */
   gap: 20px; /* Khoảng cách giữa các cột */
-  max-height: calc(-300px + 100vh);
-  height: min(600px, 100vh - 175px);
+  height: 60vh;
   overflow-y: auto;
 }
 .quiz-curd .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-body p {
@@ -6330,10 +6334,6 @@ a {
   /* XS (extra small) dưới 576px */
   /* SM (small) từ 576px đến 767px */
   /* MD (medium) từ 768px đến 991px */
-  /* LG (large) từ 992px đến 1199px */
-  /* XL (extra large) từ 1200px đến 1399px */
-  /* XXL (extra extra large) từ 1400px đến 1569px */
-  /* XXXL (extra extra extra large) từ 1570px trở lên */
 }
 @media (max-width: 575.98px) {
   .quiz-curd {
@@ -6415,26 +6415,6 @@ a {
     max-height: none;
     height: auto;
     grid-template-columns: 1fr;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  .quiz-curd {
-    width: 960px;
-  }
-}
-@media (min-width: 1200px) and (max-width: 1399.98px) {
-  .quiz-curd {
-    width: 1140px;
-  }
-}
-@media (min-width: 1400px) and (max-width: 1669.98px) {
-  .quiz-curd {
-    width: 1320px;
-  }
-}
-@media (min-width: 1670px) {
-  .quiz-curd {
-    width: 1670px;
   }
 }
 

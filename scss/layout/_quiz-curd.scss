@@ -68,6 +68,7 @@
                         .list-section-header{
                             display: flex;
                             justify-content: space-between;
+                            padding-bottom: 30px;
                             .section-header-1{
                                 display: flex;
                                 align-items: center;
@@ -82,6 +83,7 @@
                             }
                         }
                         .list-section-body{
+                            padding-bottom: 30px;
                             p{
                                 text-align: center;
                                 font-style: italic;
@@ -141,6 +143,7 @@
                     .list-all-questions{
                         .list-question-header{
                             padding: 0 20px;
+                            padding-bottom: 30px;
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
@@ -176,8 +179,9 @@
                             display: grid;
                             grid-template-columns: 1fr 1fr; /* Mỗi cột chiếm 1 phần đều nhau */
                             gap: 20px; /* Khoảng cách giữa các cột */
-                            max-height: calc(-300px + 100vh);
-                            height: min(600px, 100vh - 175px);
+                            // max-height: calc(-300px + 100vh);
+                            // height: min(600px, 100vh - 175px);
+                            height: 60vh;
                             overflow-y: auto;
                             
                             
@@ -388,26 +392,26 @@
         
     }
   
-    /* LG (large) từ 992px đến 1199px */
-    @media (min-width: 992px) and (max-width: 1199.98px) {
-        width: 960px;
+    // /* LG (large) từ 992px đến 1199px */
+    // @media (min-width: 992px) and (max-width: 1199.98px) {
+    //     width: 960px;
         
-    }
+    // }
   
-    /* XL (extra large) từ 1200px đến 1399px */
-    @media (min-width: 1200px) and (max-width: 1399.98px) {
-        width: 1140px;
+    // /* XL (extra large) từ 1200px đến 1399px */
+    // @media (min-width: 1200px) and (max-width: 1399.98px) {
+    //     width: 1140px;
         
-    }
+    // }
   
-    /* XXL (extra extra large) từ 1400px đến 1569px */
-    @media (min-width: 1400px) and (max-width: 1669.98px) {
-        width: 1320px;
+    // /* XXL (extra extra large) từ 1400px đến 1569px */
+    // @media (min-width: 1400px) and (max-width: 1669.98px) {
+    //     width: 1320px;
        
-    }
+    // }
   
-    /* XXXL (extra extra extra large) từ 1570px trở lên */
-    @media (min-width: 1670px) {
-        width: 1670px;
-    }
+    // /* XXXL (extra extra extra large) từ 1570px trở lên */
+    // @media (min-width: 1670px) {
+    //     width: 1670px;
+    // }
   }
