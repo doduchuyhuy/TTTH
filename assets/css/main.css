@@ -6084,7 +6084,7 @@ a {
 
 .quiz-curd {
   margin-left: 112px;
-  padding: 102px 35px;
+  padding: 102px 35px 0px 35px;
   transition: margin-left 0.3s ease;
 }
 .quiz-curd h3 {
@@ -6099,7 +6099,7 @@ a {
 .quiz-curd .quizz-add .quiz-add-body .information-exam {
   display: flex;
   gap: 20px;
-  padding: 25px;
+  padding: 30px 25px 20px 0px;
 }
 .quiz-curd .quizz-add .quiz-add-body .information-exam .information-left {
   flex: 1;
@@ -6108,7 +6108,7 @@ a {
   flex: 2;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
 }
 .quiz-curd .quizz-add .quiz-add-body .information-exam .information-right .information-body {
   display: flex;
@@ -6241,7 +6241,8 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Mỗi cột chiếm 1 phần đều nhau */
   gap: 20px; /* Khoảng cách giữa các cột */
-  height: 60vh;
+  max-height: calc(-300px + 100vh);
+  height: min(600px, 100vh - 175px);
   overflow-y: auto;
 }
 .quiz-curd .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-body p {
@@ -6283,7 +6284,6 @@ a {
   padding: 16px 24px;
 }
 .quiz-curd .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-body .root .content .content-content {
-  max-height: 320px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -6334,6 +6334,7 @@ a {
   /* XS (extra small) dưới 576px */
   /* SM (small) từ 576px đến 767px */
   /* MD (medium) từ 768px đến 991px */
+  /* XL (extra large) từ 1200px đến 1399px */
 }
 @media (max-width: 575.98px) {
   .quiz-curd {
@@ -6415,6 +6416,12 @@ a {
     max-height: none;
     height: auto;
     grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .quiz-curd .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-body {
+    max-height: calc(-340px + 100vh);
+    height: min(600px, 100vh - 175px);
   }
 }
 
@@ -8667,7 +8674,7 @@ input:checked + .slider:before {
   border-radius: 8px;
   color: #333;
   width: 100%;
-  height: 150px; /* Chiều cao cố định cho textarea */
+  height: 75px; /* Chiều cao cố định cho textarea */
   outline: none;
   resize: none; /* Ngăn chặn người dùng thay đổi kích thước textarea */
 }
