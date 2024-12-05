@@ -6099,7 +6099,7 @@ a {
 .quiz-curd .quizz-add .quiz-add-body .information-exam {
   display: flex;
   gap: 20px;
-  padding: 30px 25px 20px 0px;
+  padding: 30px 25px 20px 20px;
 }
 .quiz-curd .quizz-add .quiz-add-body .information-exam .information-left {
   flex: 1;
@@ -6241,8 +6241,7 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Mỗi cột chiếm 1 phần đều nhau */
   gap: 20px; /* Khoảng cách giữa các cột */
-  max-height: calc(-300px + 100vh);
-  height: min(600px, 100vh - 175px);
+  height: 55vh;
   overflow-y: auto;
 }
 .quiz-curd .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-body p {
@@ -6339,6 +6338,8 @@ a {
 @media (max-width: 575.98px) {
   .quiz-curd {
     background-color: #fff;
+    margin-left: 0;
+    padding: 0px 20px 20px 20px;
     padding: 0;
     width: 100%; /* Full width */
   }
@@ -6370,7 +6371,8 @@ a {
 @media (min-width: 576px) and (max-width: 767.98px) {
   .quiz-curd {
     background-color: #fff;
-    padding: 10px 10px;
+    margin-left: 0;
+    padding: 0px 20px 20px 20px;
     width: 100%;
   }
   .quiz-curd .quizz-add {
@@ -6418,13 +6420,6 @@ a {
     grid-template-columns: 1fr;
   }
 }
-@media (min-width: 1200px) and (max-width: 1399.98px) {
-  .quiz-curd .quizz-add .quiz-add-body .add-exam .right-col .list-all-questions .list-question-body {
-    max-height: calc(-340px + 100vh);
-    height: min(600px, 100vh - 175px);
-  }
-}
-
 #single-top-meta {
   margin-top: 2px;
 }
