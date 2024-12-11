@@ -767,17 +767,17 @@
         $quizAddBody.html(contentInformationExam);
 
         
-        $('#addSection').click(function() {
+        $('.quiz-add-body').on('click', '#addSection', function() {
             // Hiển thị modal
             $('#addSectionModal').show();
         });
 
-        $('#addQuestionText').click(function() {
+        $('.quiz-add-body').on('click', '#addQuestionText', function() { 
             // Hiển thị modal
             $('#addQuestionTextModal').show();
         });
 
-        $('#addQuestion').click(function() {
+        $('.quiz-add-body').on('click', '#addQuestion', function() { 
             // Hiển thị modal
             $('#addQuestionModal').show();
             // CKEDITOR.replace( 'editor' );

@@ -8793,7 +8793,7 @@ input:checked + .slider:before {
   user-select: none;
 }
 .checkbox2 input[type=checkbox] {
-  display: none; /* Hide the default checkbox */
+  display: none; /* Ẩn checkbox mặc định */
 }
 .checkbox2 label {
   display: flex;
@@ -8805,31 +8805,31 @@ input:checked + .slider:before {
 .checkbox2 .custom-checkbox {
   height: 20px;
   width: 20px;
-  border: 2px solid #5f6368; /* Border color of the unchecked checkbox */
-  border-radius: 4px; /* Rounded corners for the checkbox */
+  border: 2px solid #5f6368; /* Màu viền của checkbox khi chưa chọn */
+  border-radius: 4px; /* Bo góc cho checkbox */
   position: relative;
-  background-color: white; /* Initial background color */
+  background-color: white; /* Màu nền ban đầu */
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
-.checkbox2 .custom-checkbox::before {
-  content: "\f00c"; /* Font Awesome checkmark icon */
-  font-family: "Font Awesome 5 Free"; /* Ensure this matches your Font Awesome version */
-  font-weight: 900; /* Necessary for solid icons */
-  font-size: 13px;
-  color: white; /* Color of the checkmark */
+.checkbox2 .custom-checkbox::after {
+  content: ""; /* Icon checkmark */
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(45deg);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 .checkbox2 input[type=checkbox]:checked + label .custom-checkbox {
-  border-color: rgb(10, 143, 220); /* Border color when checked */
-  background-color: rgb(10, 143, 220); /* Background color when checked */
+  border-color: rgb(10, 143, 220); /* Màu viền khi checkbox được chọn */
+  background-color: rgb(10, 143, 220); /* Màu nền khi checkbox được chọn */
 }
-.checkbox2 input[type=checkbox]:checked + label .custom-checkbox::before {
+.checkbox2 input[type=checkbox]:checked + label .custom-checkbox::after {
   opacity: 1;
   visibility: visible;
 }
