@@ -187,6 +187,10 @@ a {
   margin-bottom: 40px;
 }
 
+.error-text {
+  color: rgb(211, 47, 47);
+}
+
 .row > *, .container-fluid, .container-exam, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
   padding-right: calc(var(--grid-gutter-x) * 0.5);
